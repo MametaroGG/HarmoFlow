@@ -17,6 +17,9 @@ next: false
 
 项目是集中管理资源和场景的工作文件夹。在“项目设置”中可以更改根文件夹和纹理分辨率。场景扩展名为 `.harmos`。
 
+
+导入包内素材请参阅[Unity Package导入](./assets.md#unitypackage-import)。FBX中的变形及部件显示请参阅[网格与形态键](./viewport.md#mesh-visibility)。
+
 ## 选择合适的保存方式
 
 | 操作 | 用途 |

@@ -52,6 +52,12 @@ UV 에디터에서 그리기, 이동·확대/축소·회전, 와이어와 배경
 
 <a :href="withBase('/ko/help/layers.html')">레이어·마스크·합성 가이드 읽기 →</a>
 
+## 색조 보정·톤 커브·그라디언트 맵 {#adjustments}
+
+세 가지 조정 레이어의 용도와 설정, 다시 편집하는 방법, 저장과 PSD 내보내기 시 주의사항.
+
+[색조 보정·톤 커브·그라디언트 맵](./help/adjustments.md)
+
 ## 스탬프·텍스트·도형 {#stamps}
 
 이미지·텍스트·도형을 모델에 배치하는 방법과 각 스탬프의 설정.
@@ -111,6 +117,18 @@ PNG·JPG·TGA·EXR·PSD 출력, 채널과 노멀 방향, 파트 묶기.
 홈 화면, 필압과 그리기 감도, 화면 배치, VRAM, Lua와 플러그인 설정.
 
 <a :href="withBase('/ko/help/settings.html')">환경 설정·히스토리·확장 가이드 읽기 →</a>
+
+## 플러그인 설치 및 관리 {#plugins}
+
+Lua 확장과 DLL 플러그인의 추가, 실행, 업데이트, 오류 확인 방법과 기본 조정 기능과의 차이를 알아봅니다.
+
+[플러그인 설치 및 관리](./help/plugins.md)
+
+## 플러그인 만들기 {#plugin-development}
+
+Lua 확장 최소 예제부터 패널 등록, Undo, DLL SDK 구조, 빌드와 동작 확인까지 알아봅니다.
+
+[플러그인 만들기](./help/plugin-development.md)
 
 ## 단축키 한눈에 보기 {#shortcuts}
 

@@ -31,9 +31,9 @@ for (const locale of ['ja','en','zh','ko']) {
   assert(!/<video[^>]*autoplay/.test(html),'Viewport controller must own autoplay timing');
   assert.equal((html.match(/class="guide-media-placeholder"/g)||[]).length,pendingSlots);
   assert(!html.includes('src=""'));
-  assert.equal((html.match(/class="guide-flow(?:\s|\")/g)||[]).length,2,locale+' explanatory flows');
+  assert.equal((html.match(/class="guide-flow(?:\s|\")/g)||[]).length,5,locale+' explanatory flows');
 }
 const guide = fs.readFileSync(path.join(docs,'.vitepress/dist/guide.html'),'utf8');
 assert.equal((guide.match(/data-media-slot=/g)||[]).length,16);
 assert(!guide.includes('/screenshots/'));
-console.log('PASS: 16 shared media slots, 11 supplied screenshots, 8 viewport-controlled videos, 0 remaining reservations, no old screenshots or empty players, and 2 explanatory flows (static).');
+console.log('PASS: 16 shared media slots, 11 supplied screenshots, 8 viewport-controlled videos, 0 remaining reservations, no old screenshots or empty players, and 5 explanatory flows (static).');

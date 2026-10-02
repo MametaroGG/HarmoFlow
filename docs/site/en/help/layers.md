@@ -38,7 +38,7 @@ Use New adjustment layer in the Layers panel to add Color Adjustment, Gradient M
 
 When launched from the Plugins menu, preview the result in the viewport. Apply creates an adjustment layer; Cancel restores the previous appearance.
 
-<GuideMedia name="edit-adjustments" />
+For steps, parameter ranges, and how to choose among the three effects, see [Built-in adjustments](./adjustments.md).
 
 Use the controls at the top of the Layers panel to add, duplicate, delete, or group layers. When the Layers panel has focus, you can also press Delete to remove the selected layer (deleting a group also deletes its child layers). Drag layers to reorder them, and double-click groups to expand or collapse them. Change names, opacity, and blending modes in Properties. Normal uses standard compositing, Multiply darkens the underlying result, Add adds brightness, and Overlay adds contrast while retaining the underlying appearance.
 

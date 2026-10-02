@@ -22,8 +22,8 @@ const keysets = Object.values(dictionaries).map(d => Object.keys(d).sort());
 for (const keys of keysets) assert.deepEqual(keys, keysets[0]);
 for (const locale of ['en','zh','ko']) {
   const articles = localizedArticles[locale];
-  assert.equal(articles.length, 19);
-  assert.equal(new Set(articles.map(a => a.slug)).size, 19);
+  assert.equal(articles.length, 22);
+  assert.equal(new Set(articles.map(a => a.slug)).size, 22);
   for (const a of articles) {
     assert(a.title && a.description && a.category && a.searchText.length > 50);
     assert(fs.existsSync(path.join(dist,locale,'help',a.slug+'.html')));

@@ -20,8 +20,8 @@ const rootPages = [...expected].filter(f => f !== "404.html");
 for (const locale of ["en", "zh", "ko"]) for (const file of rootPages) expected.add(locale + "/" + file);
 const pages = files.filter((f) => f.endsWith(".html"));
 assert.deepEqual(new Set(pages), expected, "Unexpected page in public output");
-assert.equal(articles.length, 19);
-assert.equal(new Set(articles.map((a) => a.slug)).size, 19);
+assert.equal(articles.length, 22);
+assert.equal(new Set(articles.map((a) => a.slug)).size, 22);
 for (const a of articles) {
   assert(a.searchText.length > 30, `Missing full text for ${a.slug}`);
   assert(fs.existsSync(path.join(root, "site/help", a.slug + ".md")));
@@ -47,5 +47,5 @@ for (const file of files.filter((f) => /\.(html|js|json|css)$/.test(f))) {
     );
 }
 console.log(
-  `PASS: ${pages.length} public HTML pages, 19 legacy anchors, public-only search data and no private markers`,
+  `PASS: ${pages.length} public HTML pages, 22 article anchors, public-only search data and no private markers`,
 );

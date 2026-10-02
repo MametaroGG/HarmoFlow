@@ -48,6 +48,12 @@ Use layer types, blending, groups, masks, and clipping to control where your edi
 
 <a :href="withBase('/en/help/layers.html')">Read the guide: Layers, masks, and blending</a>
 
+## Color adjustment, tone curves, and gradient maps {#adjustments}
+
+Choose and edit the three adjustment layers, understand their controls, and preserve your settings when saving or exporting.
+
+[Color adjustment, tone curves, and gradient maps](./help/adjustments.md)
+
 ## Image, text, and shape stamps {#stamps}
 
 Place images, text, and shapes on a model and configure each type of stamp.
@@ -107,6 +113,18 @@ Export PNG, JPG, TGA, EXR, and PSD files; choose channels and normal orientation
 Configure the home screen, pen pressure and drawing behavior, workspace layout, VRAM, Lua, and plugins.
 
 <a :href="withBase('/en/help/settings.html')">Read the guide: Preferences, history, and extensions</a>
+
+## Installing and managing plugins {#plugins}
+
+Add, launch, update, and troubleshoot Lua extensions and DLL plugins. Learn how they differ from built-in adjustments.
+
+[Installing and managing plugins](./help/plugins.md)
+
+## Creating plugins {#plugin-development}
+
+Start with a minimal Lua extension, then learn panel registration, Undo, the DLL SDK, building, and testing.
+
+[Creating plugins](./help/plugin-development.md)
 
 ## Keyboard shortcut reference {#shortcuts}
 

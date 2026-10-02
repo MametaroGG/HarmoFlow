@@ -7,6 +7,10 @@ prev: false
 next: false
 ---
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 # 에셋 찾기와 가져오기 {#assets}
 
 ## 에셋 검색과 필터링
@@ -20,3 +24,29 @@ next: false
 ## 이미지를 스탬프나 브러시로 등록하기
 
 프로젝트 안의 이미지를 오른쪽 클릭하고 “Register as Image Stamp” 또는 “Register as Brush Tip”을 선택하세요. 전자는 스탬프의 이미지 탭을 열고, 후자는 브러시 패널을 엽니다. 기존 “PNG 브러시 가져오기”와 이미지 추가／드롭도 그대로 사용할 수 있습니다.
+
+## Unity Package 가져오기 {#unitypackage-import}
+
+Unity Package(.unitypackage)의 파일을 프로젝트 에셋 라이브러리에 풀어 넣을 수 있습니다. 패키지를 가져오는 것만으로 뷰포트의 모델이 바뀌지는 않습니다. 압축이 풀린 에셋에서 사용할 모델을 직접 선택하세요.
+
+<GuideFlow kind="unity-import" />
+
+<figure class="doc-menu-capture">
+<img :src="withBase('/graphics/guide/file-menu-import.png')" width="280" height="512" alt="실제 일본어 파일 메뉴. 모델 가져오기 아래에 Unity Package 가져오기가 있습니다." loading="lazy" />
+<figcaption>실제 일본어 인터페이스. Unity Package와 개별 모델은 서로 다른 메뉴로 가져옵니다.</figcaption>
+</figure>
+
+1. “파일 → Unity Package 가져오기...”에서 .unitypackage를 선택합니다. 에셋 브라우저의 추가 메뉴나 OS에서 패키지를 드롭하는 방법도 사용할 수 있습니다.
+2. 에셋 브라우저에서 풀린 폴더를 확인합니다. 찾을 수 없으면 검색·종류·폴더 필터를 해제하세요.
+3. 사용할 FBX 또는 지원되는 모델을 에셋 브라우저에서 뷰포트로 드래그합니다. “파일 → 모델 가져오기...”에서 개별 파일을 열 수도 있습니다.
+4. 필요한 이미지를 [채널](./channels.md)이나 [머티리얼 레이어](./materials.md)에 할당하고 결과를 확인합니다.
+5. 아직 저장하지 않았다면 프로젝트 폴더에 저장하여 가져온 에셋을 유지하세요. [프로젝트 저장](./projects.md)을 참고하세요.
+
+### 가져오는 내용과 제한 {#unitypackage-limits}
+
+- 패키지의 에셋 폴더 구조와 관련 파일을 풀어 넣습니다. 모델 선택 창은 FBX·OBJ·glTF·GLB·DAE·PLY·STL·3DS·Blend를 지원합니다. 형식을 지원한다고 해서 파일의 모든 기능이 재현되는 것은 아닙니다.
+- 이미지, 머티리얼 정의, .meta 등의 관련 파일도 풀린 폴더에 남습니다. 파일을 가져오는 것과 Unity 머티리얼 설정을 자동 적용하는 것은 별개이므로 이미지 할당과 대상 채널을 확인하세요.
+- **현재 Prefab 자동 가져오기는 비활성화되어 있습니다.** 패키지를 푼 다음 FBX 등 지원되는 모델을 선택하세요. Unity의 씬·스크립트·Animator 동작·사용자 셰이더를 실행하는 기능이 아니며, Unity와 완전히 같은 렌더링을 보장하지 않습니다.
+- **상대 경로가 같은 파일은 덮어써질 수 있습니다.** 다시 가져오거나 여러 패키지를 합치기 전에 프로젝트 사본을 보관하고, 충돌 여부를 확인하려면 별도 프로젝트를 사용하세요.
+
+모델이 보이지 않으면 패키지를 가져온 뒤 모델을 선택했는지 확인하세요. 색이나 무늬가 없으면 필요한 이미지가 포함되어 있는지, 올바른 텍스처 세트와 채널에 할당했는지 확인합니다. 셰이프 키는 [FBX 셰이프 키 가져오기](./viewport.md#shape-key-import)를 참고하세요.

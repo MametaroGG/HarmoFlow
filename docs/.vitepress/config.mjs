@@ -19,6 +19,8 @@ export default defineConfig({
       ["link", { rel: "alternate", hreflang: lang, href: new URL(base + prefix + route, "https://mametarogg.github.io").href }]);
   },
   srcDir: "site",
+  // Downloadable SDK Markdown is an asset, not an additional documentation route.
+  srcExclude: ["public/**"],
   appearance: false,
   cleanUrls: false,
   head: [["link", { rel: "icon", href: `${base}favicon.svg` }]],

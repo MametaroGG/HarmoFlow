@@ -73,15 +73,19 @@ next: false
 
 自动保存请参阅[保存与恢复](/zh/guide#projects)。“常规”中可设置包的解压位置。在“按键配置”中，可按操作名称或条件搜索，并修改键盘和鼠标绑定。
 
+<span id="lua-and-plugins"></span>
+
 ## Lua 与插件
 
 “脚本 (Lua)”可执行输入的代码或 Lua 文件，以及查看和清除日志。`hf` API 提供添加和编辑图层、蒙版、图片填充、材质预设、笔刷、模型导入、场景保存、打包和纹理导出等操作。图层编号从 1 开始。
 
 ```lua
-hf.log('レイヤー数: ' .. hf.layer_count())
-hf.add_layer('paint', '描き込み')
+hf.log('Layers: ' .. hf.layer_count())
+hf.add_layer('paint', 'Practice layer')
 ```
 
-从顶部“插件(P)”菜单启动插件。“添加／浏览插件...”可添加 .lua 或 .dll 文件，并查看加载状态。添加的文件在下次启动时仍可使用。也可将 DLL 文件直接放入可执行文件旁的 plugins 文件夹。
+从顶部“插件(P)”菜单启动插件。普通Lua脚本与注册面板的Lua扩展使用不同的执行方式。请按目的阅读详细指南。
 
-请仅添加来自可信来源的插件。DLL 插件使用 C ABI SDK，位于 `sdk/harmoflow_api.h`；开发示例位于 `examples/sample_plugin/`。
+- [安装与管理插件](./plugins.md)：添加、保存位置、启动、更新与排错
+- [制作插件](./plugin-development.md)：Lua最小示例、官方SDK下载、DLL构建与测试
+- [内置调整功能](./adjustments.md)：色调校正、色调曲线与渐变映射

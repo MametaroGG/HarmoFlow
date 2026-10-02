@@ -52,6 +52,12 @@ import { withBase } from 'vitepress'
 
 <a :href="withBase('/zh/help/layers.html')">阅读“图层、蒙版与混合” →</a>
 
+## 颜色调整、色调曲线与渐变映射 {#adjustments}
+
+了解三种调整图层的用途、参数、重新编辑方式，以及保存和 PSD 导出的限制。
+
+[颜色调整、色调曲线与渐变映射](./help/adjustments.md)
+
 ## 印章、文字与形状 {#stamps}
 
 将图片、文字和形状放置到模型上的方法，以及各类印章的设置。
@@ -111,6 +117,18 @@ BaseColor 等六种通道，以及工作、导出和预览分辨率的区别。
 首页、笔压与绘画手感、界面布局、VRAM、Lua 和插件的设置。
 
 <a :href="withBase('/zh/help/settings.html')">阅读“首选项、历史与扩展” →</a>
+
+## 安装与管理插件 {#plugins}
+
+添加、启动、更新 Lua 扩展和 DLL 插件，并排查加载错误。了解它们与内置调整功能的区别。
+
+[安装与管理插件](./help/plugins.md)
+
+## 制作插件 {#plugin-development}
+
+从最小 Lua 扩展示例入门，了解面板注册、撤销、DLL SDK 的结构，以及构建和测试方法。
+
+[制作插件](./help/plugin-development.md)
 
 ## 快捷键速查 {#shortcuts}
 

@@ -17,6 +17,9 @@ Choose File → New Project to set the project location, then use Import Model t
 
 A project is a working folder containing assets and scenes. Project Settings lets you change the root folder and texture resolution. Scene files use the `.harmos` extension.
 
+
+For package assets, see [Unity Package import](./assets.md#unitypackage-import). For FBX deformation and part display, see [Meshes and shape keys](./viewport.md#mesh-visibility).
+
 ## Choose a save method
 
 | Action | Purpose |

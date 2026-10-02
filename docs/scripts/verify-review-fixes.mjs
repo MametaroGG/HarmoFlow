@@ -13,7 +13,7 @@ const locales = [['ja-JP', ''], ['en', 'en/'], ['zh-CN', 'zh/'], ['ko-KR', 'ko/'
 const read = file => fs.readFileSync(path.join(dist, file), 'utf8');
 const alternates = html => Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(m => [m[1], m[2]]));
 const pages = fs.readdirSync(dist, { recursive: true }).filter(file => file.endsWith('.html') && file !== '404.html');
-assert.equal(pages.length, 96);
+assert.equal(pages.length, 108);
 for (const file of pages) {
   const route = file.replace(/^(en|zh|ko)\//, '').replace(/^index\.html$/, '');
   const expected = Object.fromEntries(locales.map(([lang, prefix]) => [lang, origin + base + prefix + route]));
@@ -37,8 +37,8 @@ for (const [, prefix] of locales) {
   assert(home.indexOf('</h1>') < home.indexOf('hero-launch-video'), `${prefix}: headline remains above the video`);
 
   const help = read(prefix + 'help.html');
-  assert.equal((help.match(/class="category-link-title"/g) || []).length, 19, `${prefix}: all help titles remain`);
-  assert.equal((help.match(/category-link-icon/g) || []).length, 19, `${prefix}: link affordances`);
+  assert.equal((help.match(/class="category-link-title"/g) || []).length, 22, `${prefix}: all help titles remain`);
+  assert.equal((help.match(/category-link-icon/g) || []).length, 22, `${prefix}: link affordances`);
   const breadcrumbs = read(prefix + 'guide.html').match(/<div class="breadcrumbs">([\s\S]*?)<\/div>/)?.[1];
   assert(breadcrumbs);
   assert.equal((breadcrumbs.match(/class="breadcrumb-divider"/g) || []).length, 1, `${prefix}: no repeated guide breadcrumb`);
@@ -141,4 +141,4 @@ assert.equal(opener.count, 1, 'A queued close must not steal focus from a reopen
 h.closeSearch(); flush();
 assert.equal(other.count, 1);
 
-console.log(`PASS: 96 reciprocal absolute language alternates; 4 launch players between hero requirements and layer demo, help lists, EULA links and deduplicated breadcrumbs; help contrast ${contrast(link.color, '#ffffff').toFixed(2)}:1; search/menu focus regressions`);
+console.log(`PASS: 108 reciprocal absolute language alternates; 4 launch players between hero requirements and layer demo, help lists, EULA links and deduplicated breadcrumbs; help contrast ${contrast(link.color, '#ffffff').toFixed(2)}:1; search/menu focus regressions`);

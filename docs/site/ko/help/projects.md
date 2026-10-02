@@ -17,6 +17,9 @@ next: false
 
 프로젝트는 에셋과 씬을 모아 두는 작업 폴더입니다. “프로젝트 설정”에서 루트 폴더와 텍스처 해상도를 변경할 수 있습니다. 씬 확장자는 `.harmos`입니다.
 
+
+패키지 에셋은 [Unity Package 가져오기](./assets.md#unitypackage-import)를, FBX 변형과 파트 표시는 [메시와 셰이프 키](./viewport.md#mesh-visibility)를 참고하세요.
+
 ## 저장 방법 구분하기
 
 | 작업 | 용도 |

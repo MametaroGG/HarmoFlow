@@ -2185,3 +2185,23 @@ html:lang(ko) { font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR"
   .hero-launch-video { margin-top: 24px; }
   .launch-video-frame { border-radius: 12px; }
 }
+
+/* Original concept figures keep labels readable on narrow guide pages. */
+.prose .guide-concept { margin: 2rem 0; padding: 1.25rem; background: #f2f8fb; border: 1px solid #dce9ef; border-radius: 16px; }
+.prose .guide-concept figcaption { margin-bottom: 1rem; color: #23475c; font-size: 1.1rem; font-weight: 700; }
+.guide-concept-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
+.guide-concept-card { min-width: 0; padding: 1rem; border-radius: 12px; background: #fff; border: 1px solid #dae7ed; }
+.guide-concept-number { display: block; margin-bottom: .35rem; font-size: .875rem; color: #196e8e; font-weight: 700; }
+.guide-concept-card strong { display: block; color: #22394d; font-size: 1.025rem; }
+.guide-concept-card svg { display: block; width: 100%; height: auto; margin: 1rem 0; }
+.guide-concept-card svg text { font-family: inherit; font-size: 17px; fill: #355267; }
+.prose .guide-concept-card p { font-size: .9375rem; line-height: 1.75; margin: 0; }
+.prose .guide-concept-note { margin: 1rem 0 0; font-size: .875rem; color: #526678; }
+.prose figure.doc-menu-capture { margin: 1.75rem 0; padding: 1.25rem; border: 1px solid #dce3ed; border-radius: 16px; background: #f5f8fb; text-align: center; }
+.prose figure.doc-menu-capture img { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; border: 0; border-radius: 5px; }
+.prose figure.doc-menu-capture figcaption { margin-top: 1rem; font-size: .9375rem; line-height: 1.8; color: #45566e; }
+@media(max-width: 900px) {
+  .guide-concept-cards { grid-template-columns: 1fr; }
+  .guide-concept-card svg { max-width: 330px; margin-inline: auto; }
+}
+@media(max-width: 640px) { .prose .guide-concept { padding: 1rem; } }

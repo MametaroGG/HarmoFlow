@@ -73,15 +73,19 @@ Global layers keep all sets resident. A single-set scene does not gain channel-m
 
 For autosave, see [Saving and recovery](/en/guide#projects). General includes the package extraction location setting. In Key Configuration, search by action name or condition to change keyboard and mouse bindings.
 
+<span id="lua-and-plugins"></span>
+
 ## Lua and plugins
 
 Scripts (Lua) lets you run entered code or Lua files, and inspect or clear logs. The `hf` API includes actions for adding and editing layers, masks, image fills, material presets, brushes, model imports, scene saves, packages, and texture exports. Layer numbering starts at 1.
 
 ```lua
-hf.log('レイヤー数: ' .. hf.layer_count())
-hf.add_layer('paint', '描き込み')
+hf.log('Layers: ' .. hf.layer_count())
+hf.add_layer('paint', 'Practice layer')
 ```
 
-Launch plugins from the top Plugins (P) menu. Add / Browse Plugins lets you add .lua or .dll files and check their loading status. Added files remain available the next time you start HarmoFlow. You can also place DLL files directly in the plugins folder beside the executable.
+Launch plugins from the top Plugins (P) menu. Ordinary Lua scripts and Lua extensions that register a panel use separate execution paths. Choose a detailed guide below.
 
-Only add plugins from sources you trust. DLL plugins use the C ABI SDK at `sdk/harmoflow_api.h`; a development sample is in `examples/sample_plugin/`.
+- [Install and manage plugins](./plugins.md): add, locate, launch, update, and troubleshoot plugins
+- [Create plugins](./plugin-development.md): minimal Lua examples, official SDK download, DLL builds and tests
+- [Built-in adjustments](./adjustments.md): color adjustment, tone curves, and gradient maps

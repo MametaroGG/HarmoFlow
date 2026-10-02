@@ -6,7 +6,7 @@
     "dev": "vitepress dev docs --host 127.0.0.1",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs --host 127.0.0.1",
-    "test": "node docs/scripts/verify-public.mjs && node docs/scripts/verify-locales.mjs && node docs/scripts/verify-guide-refresh.mjs && node docs/scripts/verify-guide-media.mjs && node docs/scripts/verify-guide-autoplay.mjs && node docs/scripts/verify-presentation.mjs && node docs/scripts/verify-pages.mjs && node docs/scripts/verify-requirements.mjs && node docs/scripts/verify-review-fixes.mjs",
+    "test": "node docs/scripts/verify-public.mjs && node docs/scripts/verify-locales.mjs && node docs/scripts/verify-guide-refresh.mjs && node docs/scripts/verify-guide-media.mjs && node docs/scripts/verify-guide-autoplay.mjs && node docs/scripts/verify-presentation.mjs && node docs/scripts/verify-pages.mjs && node docs/scripts/verify-requirements.mjs && node docs/scripts/verify-review-fixes.mjs && node docs/scripts/verify-plugin-guides.mjs",
     "check": "npm run build && npm test",
     "sync:help": "node docs/scripts/sync-help-index.mjs",
     "sync:guide": "node docs/scripts/sync-ja-guide.mjs"

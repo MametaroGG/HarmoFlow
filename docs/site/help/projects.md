@@ -17,6 +17,9 @@ next: false
 
 プロジェクトは素材とシーンをまとめる作業フォルダーです。「プロジェクト設定」ではルートフォルダーとテクスチャ解像度を変更できます。シーンの拡張子は `.harmos` です。
 
+
+Unity Packageから素材を取り込む場合は[Unity Packageの読み込み](./assets.md#unitypackage-import)、FBXに含まれる変形とパーツの表示は[メッシュ・シェイプキー](./viewport.md#mesh-visibility)を参照してください。
+
 ## 保存方法を使い分ける
 
 | 操作 | 用途 |
