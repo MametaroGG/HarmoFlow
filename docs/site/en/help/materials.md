@@ -1,7 +1,7 @@
 ---
 title: "Image fills, materials, and patterns"
 category: "Painting and editing"
-description: "Use image fills and UV transforms, adjust procedural patterns, and work with material presets."
+description: "Image fills and patterns, plus first-use material downloads, offline use, retries, and cache removal."
 outline: [2, 3]
 prev: false
 next: false
@@ -49,3 +49,35 @@ Save the current material and reuse it from the presets in the Project panel. Ch
 ### Paint selected areas
 
 Select a material in the material browser to use it with a brush, Polygon Fill, or UV Shell Fill. Select its existing material layer or folder to add more coverage with the same material. See [Fill faces and UV islands](/en/help/brush).
+
+## Material downloads and offline use {#material-downloads}
+
+The current installer includes the material catalog and previews, but excludes the source images for downloadable image materials. These image materials download on first use. **A download badge means the material still needs its images.** Browsing its entry offline does not mean the material itself is ready for offline use.
+
+Procedural materials and images you import yourself work without a material download. The full and trial editions maintain separate download caches.
+
+1. While online, choose a material from the library. Using a material whose images are missing starts the download.
+2. To prepare in advance, right-click it and choose **Download for offline use**. This prepares the images for later use.
+3. Wait for **Downloading → Verifying → Extracting** to finish in the Project panel.
+4. Once downloaded, the cached material is available offline. If you change the scene, layer, tool, or other target while it downloads, select the material again afterward to use it on the current target.
+
+To download a different material, wait for the current download or choose **Cancel download**. Prepare each material you will need before going offline.
+
+### Retry a failed or cancelled download {#material-download-retry}
+
+- Check your connection, then choose **Retry download** in the Project panel. You can also retry after cancellation.
+- Hover over the error message to see any available details. **Dismiss** closes the failed/cancelled status.
+- If a material reports that its provider has not published download files, retrying the connection alone will not make those files available.
+- If a downloaded material is not applied, select it again and check the target layer and enabled channels.
+
+### Remove a downloaded material {#material-cache-uninstall}
+
+To free disk space, right-click the material and choose **Uninstall downloaded material...**. Check the material name and downloaded size in the confirmation before continuing.
+
+| Removed | Kept |
+| --- | --- |
+| That material's downloaded data (cache) | Images already copied into projects, library entries and previews, and legacy bundled images if present |
+
+**Images already copied into your projects are kept.** The material also stays in the library, so its next use can download it again. An older installation may still have bundled images available to use. This does not mean that the current installer includes the source images for image materials. Keep the cache for materials you still need to use offline.
+
+Removal is unavailable during a download, painting, or another active operation. If the button is disabled, wait for processing to finish and check whether removable data exists. If additional files or links prevent safe removal, inspect the reported reason rather than deleting the whole folder manually. If removal fails, check the cache folder's permissions and whether another app is using it, then retry.

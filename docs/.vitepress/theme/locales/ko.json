@@ -217,5 +217,9 @@
   "Radeon RX 5500 XT・4GB版": "Radeon RX 5500 XT·4GB 버전",
   "Radeon RX 6600・8GB": "Radeon RX 6600·8GB",
   "CPUはIntel／AMDのいずれか、GPUはNVIDIA／AMDのいずれかを選ぶ形です。GPUにはVulkan 1.2対応ドライバーが必要です。": "CPU는 Intel 또는 AMD 중 하나, GPU는 NVIDIA 또는 AMD 중 하나를 선택하는 구성입니다. GPU에는 Vulkan 1.2 지원 드라이버가 필요합니다.",
-  "確定している必須条件は、WindowsとVulkan 1.2対応GPU・ドライバーです。": "확정된 필수 조건은 Windows와 Vulkan 1.2 지원 GPU·드라이버입니다."
+  "確定している必須条件は、WindowsとVulkan 1.2対応GPU・ドライバーです。": "확정된 필수 조건은 Windows와 Vulkan 1.2 지원 GPU·드라이버입니다.",
+  "購入・導入の案内": "구매 및 설치 안내",
+  "購入前FAQ": "구매 전 FAQ",
+  "インストール・更新手順": "설치·업데이트 절차",
+  "インストール、初回起動、更新前のバックアップから制作までをご案内します。": "설치, 첫 실행, 업데이트 전 백업부터 제작까지 안내합니다."
 }

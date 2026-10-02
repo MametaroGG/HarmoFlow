@@ -59,6 +59,8 @@ In Preferences → VRAM, start with a preset and adjust as needed. If performanc
 | Budget | VRAM budget and over-budget warnings. 0 means no budget limit |
 | Experimental Features | Neural texture compression, virtual texture cache, and reduced memory for non-edited texture sets. See the explanations below |
 
+To restrict painting itself to pixels inside UV islands, use [Remove UV padding (strict)](./brush.md#strict-uv-padding) in the Brush panel. It is separate from the storage and export behavior of **Outside mesh UVs**.
+
 ### Virtual texture cache
 
 The virtual texture cache losslessly compresses unselected sets to disk and restores them when selected. Full-resolution display is supported. At full resolution, unselected sets use BC7 display copies, which may show slight color differences. Editing and export data remain lossless.

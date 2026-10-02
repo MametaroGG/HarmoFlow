@@ -10,6 +10,7 @@ intro = intro.replaceAll(' →</span>', '</span>');
 const sections = articles.map(({slug}) => fs.readFileSync(path.join(site,'help',slug+'.md'),'utf8')
   .replace(/^---\n[\s\S]*?\n---\n/, '')
   .replace(/<script setup>[\s\S]*?<\/script>\s*/g, '')
+  .replace(/\]\(\.\.\/([^)]*)\)/g, '](/$1)')
   .replace(/\]\(\.\/([^)]*)\)/g, '](/help/$1)')
   .replace(/^(#{1,5}) /gm, '$1# ').trim());
 fs.writeFileSync(target, intro.trim()+'\n\n'+sections.join('\n\n')+'\n');

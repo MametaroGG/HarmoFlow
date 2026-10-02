@@ -440,12 +440,17 @@ onUnmounted(() => {
             >
           </div>
         </div>
+        <nav class="download-jump-links" :aria-label="t('購入・導入の案内')">
+          <a href="#purchase-faq">{{ t("購入前FAQ") }}</a>
+          <a href="#requirements-title">{{ t("動作環境") }}</a>
+          <a :href="href('/help/start') + '#app-install'">{{ t("インストール・更新手順") }}</a>
+        </nav>
         <SystemRequirements :t="t" />
         <div class="download-guidance">
           <div>
             <h3>{{ t("はじめてご利用の方へ") }}</h3>
             <p>
-              {{ t("モデルの読み込みから描画・保存まで、基本の流れをご案内します。") }}
+              {{ t("インストール、初回起動、更新前のバックアップから制作までをご案内します。") }}
             </p>
             <a class="text-link" :href="href('/help/start')"
               >{{ t("はじめるガイド") }}</a
@@ -459,6 +464,7 @@ onUnmounted(() => {
             <a class="text-link" :href="href('/terms')">{{ t("使用許諾契約を読む") }}</a>
           </div>
         </div>
+        <Content class="prose purchase-faq" />
       </section></template
     >
     <template v-else-if="page.isNotFound"

@@ -1,7 +1,7 @@
 ---
 title: "Projects, saving, and recovery"
 category: "Getting started"
-description: "Create projects and scenes, save and export packages, and recover work from autosaves."
+description: "Create projects and scenes, save and export packages, locate autosaves, and recover after a GPU error."
 outline: [2, 3]
 prev: false
 next: false
@@ -37,4 +37,25 @@ For package assets, see [Unity Package import](./assets.md#unitypackage-import).
 
 Enable autosave in Preferences → Autosave, then set the interval (1–60 minutes), filename prefix, whether to save only when changes have been made, and the number of saves to keep. A retention count of 0 keeps every save. You can also choose Autosave Now or open the save folder.
 
-Choose File → Recover from Autosave to select a saved snapshot. Recover from Previous Save restores the available previous save. After checking the recovered content, save the scene normally.
+Choose File → Recover autosave to select a saved snapshot. Recover previous save restores the available previous save. After checking the recovered content, save the scene normally.
+
+### Locate and choose an autosave {#autosave-location}
+
+For a saved project, snapshots are stored in its `autosave` folder. Unsaved sessions use HarmoFlow's application data area. Check Current folder and Open Autosave Folder in Preferences → Autosave to find the actual location.
+
+In Recover autosave, check the date, time, and target before choosing a snapshot. A project-associated autosave is added to the project's scenes folder as a separate scene named `<scene>_recovered_N`. Missing assets are restored; existing asset files are not changed. An unsaved session's autosave opens as an unsaved scene, and normal saving asks for a destination. The app also attempts to autosave your current work before recovery, but save important work normally first.
+
+Autosave does not replace normal saving or backups. The retention limit can remove older snapshots, so keep important versions using Save Scene As, incremental saves, or a backup. Do not delete or move the original project or autosaves while investigating recovery.
+
+## Recover work after a GPU error {#gpu-recovery}
+
+::: warning Recovery needs a successful autosave
+The app attempts a recovery autosave after a GPU error, but it may fail. Failed saves, missing data, or a forced exit can prevent recovery. Recovery of every unsaved change is not guaranteed.
+:::
+
+1. Record the cause, action, and Details in the error message. Check whether it says your work was autosaved or that the recovery autosave failed. If saving succeeded, choose Restart, or choose Quit and launch HarmoFlow again.
+2. If Restore your work appears on the next launch, check the target and choose Restore. Wait for loading to finish. Work may open as an unsaved scene if its original project is unavailable or it was never saved.
+3. Inspect the recovered model, layers, recent painting, materials, and images. Opening successfully does not by itself prove that everything was recovered.
+4. Once you have checked the content, choose Save Scene (Ctrl+S). **Restoring alone does not overwrite the original scene file; the file on disk stays unchanged until you save normally.** Use Save Scene As if you also want to retain the original save.
+
+If you want to restore later, **hover over Not now and record the autosave path shown in its tooltip before clicking the button.** Not now closes the recovery prompt without deleting the autosave. You can use Recover autosave later if needed. If there is no prompt, saving failed, or recovery itself closes the app again, preserve the original data and follow [GPU troubleshooting and support](./troubleshooting.md#gpu-errors). Check GPU load and the driver before repeatedly attempting the same recovery.

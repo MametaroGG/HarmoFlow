@@ -2205,3 +2205,11 @@ html:lang(ko) { font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR"
   .guide-concept-card svg { max-width: 330px; margin-inline: auto; }
 }
 @media(max-width: 640px) { .prose .guide-concept { padding: 1rem; } }
+
+/* Purchase answers stay visible, linkable, and readable on narrow screens. */
+.download-jump-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 24px; margin:-16px 0 32px; font-size:15px; }
+.download-jump-links a { color:#365aa4; text-decoration:underline; text-underline-offset:4px; }
+.purchase-faq { max-width:800px; margin:60px auto 0; text-align:left; }
+.purchase-faq h2 { border-top:1px solid #dce1ea; padding-top:34px; }
+.purchase-faq h3 { margin-top:30px; }
+.purchase-faq h3 + p { margin-top:10px; }

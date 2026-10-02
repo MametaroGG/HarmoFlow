@@ -1,7 +1,7 @@
 ---
 title: "Brushes, erasers, and color"
 category: "Painting and editing"
-description: "Set up brushes and erasers, adjust pen pressure and stabilization, fill faces, and pick colors."
+description: "Brush Flow and Opacity, strict UV padding control, pen pressure and stabilization, face fills, and color picking."
 outline: [2, 3]
 prev: false
 next: false
@@ -23,7 +23,8 @@ Select a paint layer, press B to switch to the Paint tool, and drag over the mod
 | --- | --- |
 | Size | Stroke width. You can also use the bracket keys or Ctrl+Alt+horizontal drag |
 | Hardness | How soft the brush edge is. Lower values produce softer edges |
-| Opacity | The opacity of a single painting operation, separate from the opacity of the whole layer |
+| Opacity | The opacity limit of one stroke, separate from the opacity of the whole layer |
+| Flow | Ink deposited with each brush dab. Lower values build up gradually where dabs overlap |
 | Spacing | The distance between brush dabs. Higher values make individual dabs more distinct |
 | Stabilization | How strongly input motion is smoothed |
 | Pressure Size | Use pen pressure to control brush size |
@@ -34,6 +35,32 @@ Select a paint layer, press B to switch to the Paint tool, and drag over the mod
 In the Brush panel, choose a preset from a category and save your adjusted settings as a preset. Use Import PNG Brush to add a custom tip. The eraser has its own panel for adjusting size, tip, and other settings.
 
 You can also right-click a project image and choose Register as Brush Tip to open it in the Brush panel.
+
+## Flow versus Opacity {#flow-opacity}
+
+A brush stroke is made from a sequence of small brush dabs. **Flow** controls the amount deposited by each dab; **Opacity** limits how strong a single stroke can become **before you lift the pen**.
+
+| Goal | Setting to adjust |
+| --- | --- |
+| Build up paint gradually as you go over the same area | Lower Flow |
+| Limit how strong one continuous stroke can become | Lower Opacity |
+| Add or remove pressure-dependent changes in strength | Toggle Pressure Opacity |
+
+For example, with Opacity at 50% and Flow at 10%, going over the same area without lifting the pen gradually builds up paint, up to that stroke's 50% limit. Lifting the pen and starting again creates another stroke that can add more paint. Flow at 0 deposits no ink. Compare the stroke preview at the top of the Brush panel and try a few strokes.
+
+The eraser also has Flow and Opacity: they control gradual removal and the erasing limit of one stroke. To fade an entire layer, use the layer's Opacity instead.
+
+## Remove UV padding (strict) {#strict-uv-padding}
+
+Enable **Remove UV padding (strict)** in the Brush/Eraser panel to paint **only pixels whose centers lie inside a UV island**, disabling paint padding. A pixel that partly touches the UV boundary is not painted if its center lies outside.
+
+- The default is off. Turn it on when you do not want paint padding outside UV islands
+- This is a scene-wide setting, not a per-brush setting. It is saved with the scene, and changes support Undo/Redo
+- Zoom in on a boundary in the UV Editor to compare the result. Because coverage follows exact pixel boundaries, check the model's seams as needed too
+
+::: tip To export transparent areas outside UVs
+This setting controls where paint is applied. **Preferences → VRAM → Textures → Outside mesh UVs** separately controls whether outside areas use the source image, become transparent, or keep the full texture. Strict painting alone does not make existing source-image pixels outside UVs transparent. Also check [outside-UV export handling](./export.md).
+:::
 
 ## Color blending and blur
 
