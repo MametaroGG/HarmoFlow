@@ -583,7 +583,7 @@ nav {
 }
 .help-heading > p:not(.eyebrow) {
   font-size: 14px;
-  color: #858b96;
+  color: #4f5968;
 }
 .help-search {
   display: flex;
@@ -626,14 +626,14 @@ nav {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 18px;
 }
 .help-category h2 > span {
-  color: #abaeb9;
+  color: #586273;
   font-size: 14px;
   letter-spacing: 0.08em;
-  font-weight: 400;
+  font-weight: 600;
 }
 .category-links {
   display: grid;
@@ -649,20 +649,40 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 22px 2px;
+  padding: 22px 12px;
   font-size: 14px;
-  border-bottom: 1px solid #f0f1f4;
+  font-weight: 500;
+  color: #263650;
+  border-bottom: 1px solid #e1e5ec;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
   line-height: 1.7;
 }
 .category-links a:last-child,
 .category-links a:nth-last-child(2):nth-child(odd) {
   border: 0;
 }
-.category-links a > span:last-child {
-  color: #a1a6b1;
+.category-link-title {
+  min-width: 0;
 }
-.category-links a:hover {
-  color: var(--accent);
+.category-link-icon {
+  flex-shrink: 0;
+  color: #586273;
+}
+.category-links a:hover,
+.category-links a:focus-visible {
+  color: #1946c7;
+  background: #f0f4ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.category-links a:focus-visible {
+  outline: 3px solid #2457e7;
+  outline-offset: 2px;
+}
+.category-links a:hover .category-link-icon,
+.category-links a:focus-visible .category-link-icon {
+  color: currentColor;
 }
 .help-contact {
   text-align: center;
@@ -673,7 +693,7 @@ nav {
 }
 .help-contact p {
   font-size: 14px;
-  color: #858c98;
+  color: #4f5968;
 }
 .empty-search {
   text-align: center;
@@ -686,11 +706,11 @@ nav {
 }
 .empty-search p {
   font-size: 14px;
-  color: #7a818d;
+  color: #4f5968;
 }
 .search-count {
   font-size: 14px;
-  color: #858b98;
+  color: #4f5968;
   margin-top: 17px;
 }
 .download-page {
@@ -1430,10 +1450,10 @@ nav {
   }
   .category-links a {
     font-size: 14px;
-    padding: 18px 0;
+    padding: 18px 8px;
   }
   .category-links a:nth-last-child(2):nth-child(odd) {
-    border-bottom: 1px solid #f0f1f4;
+    border-bottom: 1px solid #e1e5ec;
   }
   .help-contact h2 {
     font-size: 18px;
@@ -2157,7 +2177,7 @@ html:lang(ko) { font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR"
 @media (max-width: 700px) { .guide-media-gallery--pair { grid-template-columns: 1fr; } .guide-media-gallery { padding: .75rem; } }
 
 /* Published launch film: responsive player with native YouTube controls. */
-.launch-video-section { text-align: center; }
+.launch-video-section { text-align: center; padding-top: 48px; padding-bottom: 48px; }
 .launch-video-frame { width: 100%; max-width: 1040px; aspect-ratio: 16 / 9; margin: 32px auto 16px; overflow: hidden; border-radius: 20px; background: #101416; }
 .launch-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
 .launch-video-link { display: inline-block; padding: 10px 12px; text-decoration: underline; text-underline-offset: 4px; }

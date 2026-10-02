@@ -16,7 +16,7 @@ export default defineConfig({
     if (relative === "404.html") return [];
     const route = relative === "index.html" ? "" : relative;
     return [["ja-JP", ""], ["en", "en/"], ["zh-CN", "zh/"], ["ko-KR", "ko/"]].map(([lang, prefix]) =>
-      ["link", { rel: "alternate", hreflang: lang, href: base + prefix + route }]);
+      ["link", { rel: "alternate", hreflang: lang, href: new URL(base + prefix + route, "https://mametarogg.github.io").href }]);
   },
   srcDir: "site",
   appearance: false,

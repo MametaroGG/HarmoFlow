@@ -20,7 +20,8 @@ let searchOpener = null;
 const menu = ref(false),
   query = ref(""),
   modal = ref(false),
-  searchInput = ref(null);
+  searchInput = ref(null),
+  menuToggle = ref(null);
 const animationEnabled = ref(false);
 let motionMedia;
 const updateMotionPreference = () => { animationEnabled.value = !motionMedia.matches; };
@@ -41,6 +42,10 @@ const filtered = computed(() => {
 });
 const currentArticle = computed(() =>
   articles.value.find((a) => route.path.includes("/help/" + a.slug)),
+);
+const breadcrumbCategory = computed(() =>
+  currentArticle.value?.category ||
+  (route.path.includes("terms") ? t("ご利用条件") : t("ユーザーガイド")),
 );
 const headers = computed(() =>
   (page.value.headers || []).flatMap((h) => [h, ...(h.children || [])]),
@@ -70,14 +75,23 @@ const trapFocus = (e) => {
   }
 };
 const closeSearch = (returnFocus = true) => {
+  if (!modal.value) return;
   modal.value = false;
   query.value = "";
-  if (returnFocus) nextTick(() => searchOpener?.focus());
+  const opener = searchOpener;
+  searchOpener = null;
+  if (returnFocus) nextTick(() => {
+    if (!modal.value) opener?.focus();
+  });
 };
 const keyboard = (e) => {
   if (e.key === "Escape") {
-    closeSearch();
-    menu.value = false;
+    if (modal.value) {
+      closeSearch();
+    } else if (menu.value) {
+      menu.value = false;
+      nextTick(() => menuToggle.value?.focus());
+    }
   }
   if ((e.metaKey || e.ctrlKey) && e.key === "k") {
     e.preventDefault();
@@ -88,6 +102,7 @@ watch(
   () => route.path,
   () => {
     menu.value = false;
+    query.value = "";
     closeSearch(false);
   },
 );
@@ -143,6 +158,7 @@ onUnmounted(() => {
         ><a class="button nav-cta" :href="href('/download')"
           >{{ t("購入・ダウンロード") }}</a
         ><button
+          ref="menuToggle"
           class="menu-toggle"
           :aria-expanded="menu"
           :aria-label='t("メニュー")'
@@ -155,6 +171,14 @@ onUnmounted(() => {
   </header>
   <main id="main">
     <template v-if="layout === 'home'">
+      <section class="section launch-video-section" aria-labelledby="launch-video-title">
+        <p class="eyebrow">HarmoFlow IN ACTION</p>
+        <h2 id="launch-video-title">{{ t("映像で見る、HarmoFlow。") }}</h2>
+        <div class="launch-video-frame">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/x3csgJasBKg?si=dQy3UtQ5mmITG1EL" :title="t('HarmoFlow ローンチビデオ')" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a class="launch-video-link" href="https://www.youtube.com/watch?v=x3csgJasBKg" target="_blank" rel="noopener noreferrer">{{ t("YouTubeで見る") }}</a>
+      </section>
       <section class="hero" :class="'locale-' + locale">
         <div class="hero-glow"></div>
         <div class="hero-art" :class="{ 'is-paused': !animationEnabled }" aria-hidden="true">
@@ -192,14 +216,6 @@ onUnmounted(() => {
         <span>{{ t("3D & UV ペイント") }}</span><span>{{ t("レイヤー & マスク") }}</span
         ><span>NPR & PBR</span><span>{{ t("パス & スタンプ") }}</span>
       </div>
-      <section class="section launch-video-section" aria-labelledby="launch-video-title">
-        <p class="eyebrow">HarmoFlow IN ACTION</p>
-        <h2 id="launch-video-title">{{ t("映像で見る、HarmoFlow。") }}</h2>
-        <div class="launch-video-frame">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/x3csgJasBKg?si=dQy3UtQ5mmITG1EL" :title="t('HarmoFlow ローンチビデオ')" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <a class="launch-video-link" href="https://www.youtube.com/watch?v=x3csgJasBKg" target="_blank" rel="noopener noreferrer">{{ t("YouTubeで見る") }}</a>
-      </section>
       <section id="features" class="section intro-section">
         <p class="eyebrow">FEATURES</p>
         <h2>{{ t("テクスチャ制作に必要な機能。") }}</h2>
@@ -376,8 +392,8 @@ onUnmounted(() => {
                 )"
                 :key="article.slug"
                 :href="href('/help/' + article.slug)"
-                ><span>{{ article.title }}</span
-                ></a
+                ><span class="category-link-title">{{ article.title }}</span
+                ><SiteIcon name="chevron-right" class="category-link-icon" /></a
               >
             </div>
           </section>
@@ -458,11 +474,11 @@ onUnmounted(() => {
     <template v-else
       ><div class="article-shell">
         <div class="breadcrumbs">
-          <a :href="href('/help')">{{ t("ヘルプ") }}</a><span class="breadcrumb-divider" aria-hidden="true">/</span><span>{{
-            currentArticle?.category ||
-            (route.path.includes("terms") ? t("ご利用条件") : t("ユーザーガイド"))
-          }}</span
-          ><span class="breadcrumb-divider" aria-hidden="true">/</span><span>{{ page.title }}</span>
+          <a :href="href('/help')">{{ t("ヘルプ") }}</a>
+          <template v-if="breadcrumbCategory !== page.title">
+            <span class="breadcrumb-divider" aria-hidden="true">/</span><span>{{ breadcrumbCategory }}</span>
+          </template>
+          <span class="breadcrumb-divider" aria-hidden="true">/</span><span aria-current="page">{{ page.title }}</span>
         </div>
         <div class="article-grid">
           <aside class="article-toc">

@@ -11,9 +11,9 @@ title: "소프트웨어 사용권 계약"
 # HarmoFlow ソフトウェア使用許諾契約（EULA）
 
 Copyright (c) 2026 豆々庵. All rights reserved.
-豆々庵（https://mametarovv.booth.pm/）. 無断転載・再配布を禁じます.
+豆々庵（[https://mametarovv.booth.pm/](https://mametarovv.booth.pm/)）. 無断転載・再配布を禁じます.
 
-本ファイルは、BOOTH ショップ「豆々庵」（https://mametarovv.booth.pm/）で
+本ファイルは、BOOTH ショップ「豆々庵」（[https://mametarovv.booth.pm/](https://mametarovv.booth.pm/)）で
 購入した HarmoFlow（以下「本ソフトウェア」）の使用条件を定める
 エンドユーザーライセンス契約（EULA）です。
 本ソフトウェアをインストール、起動、または使用した時点で、
