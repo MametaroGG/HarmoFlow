@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="640" viewBox="0 0 800 640" role="img" aria-labelledby="title desc">
+<title id="title">Color, mask and base layers</title><desc id="desc">Three distinct flat planes show a cobalt color layer, a black-and-white ring mask and a neutral base. They align to create a cobalt ring on the finished base surface.</desc>
+<defs>
+<filter id="shadow" x="-40%" y="-50%" width="180%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="small-shadow" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="5"/></filter>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#f3f5f8"/></linearGradient>
+<linearGradient id="side" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8ebf0"/><stop offset="1" stop-color="#cbd2dd"/></linearGradient>
+<radialGradient id="ao"><stop offset="0" stop-color="#ffffff"/><stop offset=".455" stop-color="#737b86"/><stop offset=".52" stop-color="#b8bec7"/><stop offset=".64" stop-color="#edf0f4"/><stop offset=".81" stop-color="#ffffff"/><stop offset="1" stop-color="#e1e5eb"/></radialGradient>
+<radialGradient id="curvature"><stop offset="0" stop-color="#939ca9"/><stop offset=".455" stop-color="#343c47"/><stop offset=".5" stop-color="#525c6c"/><stop offset=".6" stop-color="#9ba4b2"/><stop offset=".8" stop-color="#aeb6c1"/><stop offset=".945" stop-color="#f8f9fc"/><stop offset="1" stop-color="#ffffff"/></radialGradient>
+<radialGradient id="height"><stop offset="0" stop-color="#242a34"/><stop offset=".46" stop-color="#515b6a"/><stop offset=".67" stop-color="#f7f9fd"/><stop offset=".77" stop-color="#ffffff"/><stop offset="1" stop-color="#4d5869"/></radialGradient>
+<g id="hf"><path d="M0 0H18V34H52V0H70V86H52V51H18V86H0Z M86 0H144V17H104V36H137V53H104V86H86Z"/></g>
+</defs>
+<style>
+.color-layer{animation:compose-color 8s cubic-bezier(.4,0,.2,1) infinite}
+.mask-layer{animation:compose-mask 8s cubic-bezier(.4,0,.2,1) infinite}
+.layer-label{animation:label-hold 8s ease-in-out infinite}
+.result-mark{animation:result 8s ease-in-out infinite;opacity:1}
+@keyframes compose-color{0%,21%,100%{transform:translateY(0);opacity:1}57%,75%{transform:translateY(264px);opacity:0}85%{opacity:0}}
+@keyframes compose-mask{0%,27%,100%{transform:translateY(0);opacity:1}61%,75%{transform:translateY(132px);opacity:0}85%{opacity:0}}
+@keyframes label-hold{0%,24%,100%{opacity:1}49%,81%{opacity:.15}}
+@keyframes result{0%,24%,100%{opacity:1}36%{opacity:.22}62%,84%{opacity:1}}
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style><rect width="800" height="640" fill="#fafbfc"/><ellipse cx="432" cy="537" rx="217" ry="22" fill="#24375a" opacity=".1" filter="url(#shadow)"/>
+<g stroke="#dfe5ed" stroke-width="1.2" stroke-dasharray="3 7"><path d="M201 159V423M481 97V361M661 198V462M381 260V524"/></g>
+<g transform="translate(0 264)"><path d="M201 164L381 265L661 203V212L381 274L201 173Z" fill="#d5dce6" stroke="#ccd4e0" stroke-linejoin="round"/>
+<g transform="matrix(1 -.22 .75 .42 201 159)"><rect width="280" height="240" rx="9" fill="#ffffff" stroke="#cdd5e2" stroke-width="1.4"/><g class="result-mark"><path d="M227 120A87 87 0 1 0 53 120A87 87 0 1 0 227 120Z M189 120A49 49 0 1 1 91 120A49 49 0 1 1 189 120Z" fill="#2457e7" fill-rule="evenodd" /></g></g></g><g class="mask-layer"><g transform="translate(0 132)"><path d="M201 164L381 265L661 203V212L381 274L201 173Z" fill="#d5dce6" stroke="#ccd4e0" stroke-linejoin="round"/>
+<g transform="matrix(1 -.22 .75 .42 201 159)"><rect width="280" height="240" rx="9" fill="#303743" stroke="#cdd5e2" stroke-width="1.4"/><path d="M227 120A87 87 0 1 0 53 120A87 87 0 1 0 227 120Z M189 120A49 49 0 1 1 91 120A49 49 0 1 1 189 120Z" fill="#ffffff" fill-rule="evenodd" /></g></g></g><g class="color-layer"><g transform="translate(0 0)"><path d="M201 164L381 265L661 203V212L381 274L201 173Z" fill="#d5dce6" stroke="#ccd4e0" stroke-linejoin="round"/>
+<g transform="matrix(1 -.22 .75 .42 201 159)"><rect width="280" height="240" rx="9" fill="#2457e7" stroke="#cdd5e2" stroke-width="1.4"/><path d="M18 15H262" stroke="#fff" stroke-opacity=".3" stroke-width="2.5"/></g></g></g><g class="layer-label"><text x="50" y="169" fill="#282d37" font-family="Arial, Helvetica, sans-serif" font-size="28" >Color</text><text x="50" y="301" fill="#282d37" font-family="Arial, Helvetica, sans-serif" font-size="28" >Mask</text><text x="50" y="433" fill="#282d37" font-family="Arial, Helvetica, sans-serif" font-size="28" >Base</text></g></svg>

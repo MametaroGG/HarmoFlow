@@ -1,0 +1,11 @@
+HarmoFlow website: layered painting and street-art decal concept movie
+
+3D models and original color/normal textures: user-supplied quadrocket(1).glb and rocketlaucher(1).glb.
+The supplied files contain no embedded author or license statement. No CC0 or other reuse license is asserted here.
+Additional street-art motifs were generated for this website and combined with the existing HarmoFlow brand mark and lettering.
+Varied painted panels and wraps are applied to the models' UV color textures, with chips, scratches and existing grime carried across the artwork.
+
+Rendering and animation: white model, base coat, color blocking, details, decals, and completed lighting/composite.
+The supplied tangent-space normal maps are interpreted as non-color data and introduced through detail and finishing stages.
+NPR and PBR movies are explanatory renders, not recordings of HarmoFlow or claims of identical renderer output.
+Original model files are not distributed in this website.

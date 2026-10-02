@@ -1,0 +1,13 @@
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+dist/
+.openai/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+
+_release/

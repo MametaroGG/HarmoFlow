@@ -1,0 +1,485 @@
+[
+  {
+    "id": "workspace-overview",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "制作画面の全体",
+        "caption": "3DビューとUVエディタを並べ、左側にレイヤー、右側に描画設定とチャンネルを表示した画面です。画像を開くと細部を確認できます。"
+      },
+      "en": {
+        "title": "The painting workspace",
+        "caption": "The 3D view and UV Editor sit side by side, with layers on the left and painting controls and channels on the right. Open the image to inspect details."
+      },
+      "zh": {
+        "title": "绘画工作区",
+        "caption": "3D视图与UV编辑器并排显示，左侧是图层，右侧是绘画设置和通道。打开图片可查看细节。"
+      },
+      "ko": {
+        "title": "페인팅 작업 화면",
+        "caption": "3D 뷰와 UV 에디터를 나란히 배치하고 왼쪽에 레이어, 오른쪽에 그리기 설정과 채널을 표시한 화면입니다. 이미지를 열어 세부 내용을 확인할 수 있습니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/workspace.png",
+        "width": 1919,
+        "height": 1032
+      }
+    ]
+  },
+  {
+    "id": "uv-editor",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "UVワイヤーの見え方",
+        "caption": "同じテクスチャを三角形表示とUVシェル表示で比較しています。内部の線を確認するか、島の輪郭を見るかで切り替えます。"
+      },
+      "en": {
+        "title": "UV wireframe views",
+        "caption": "The same texture is shown with triangle edges and UV-shell boundaries. Switch views to inspect internal edges or island outlines."
+      },
+      "zh": {
+        "title": "UV线框显示方式",
+        "caption": "同一张纹理分别显示三角形边线和UV壳边界。可根据需要查看内部边线或UV岛轮廓。"
+      },
+      "ko": {
+        "title": "UV 와이어프레임 보기",
+        "caption": "같은 텍스처의 삼각형 선과 UV 셸 경계를 비교합니다. 내부 선 또는 섬의 윤곽을 확인할 때 표시를 전환합니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/uv-triangles.png",
+        "width": 661,
+        "height": 674,
+        "labels": {
+          "ja": "三角形表示",
+          "en": "Triangles",
+          "zh": "三角形显示",
+          "ko": "삼각형 표시"
+        }
+      },
+      {
+        "src": "/captures/uv-shell.png",
+        "width": 663,
+        "height": 679,
+        "labels": {
+          "ja": "UVシェル表示",
+          "en": "UV shells",
+          "zh": "UV壳显示",
+          "ko": "UV 셸 표시"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesh-maps",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "生成されたメッシュマップを確認する",
+        "caption": "曲率・AO・オブジェクト空間法線・位置の4種類を、一覧のサムネイルと解像度で確認できます。この画面では各マップが1024×1024で表示されています。"
+      },
+      "en": {
+        "title": "Inspect generated mesh maps",
+        "caption": "Check curvature, AO, object-space normals and position in the list of thumbnails and resolutions. Each map is shown as 1024×1024 in this capture."
+      },
+      "zh": {
+        "title": "查看生成的网格贴图",
+        "caption": "可通过列表中的缩略图和分辨率查看曲率、AO、对象空间法线和位置四种贴图。此截图中各贴图均显示为1024×1024。"
+      },
+      "ko": {
+        "title": "생성된 메시 맵 확인하기",
+        "caption": "목록의 썸네일과 해상도로 곡률·AO·오브젝트 공간 노멀·위치 맵을 확인할 수 있습니다. 이 화면에서는 각 맵이1024×1024로 표시됩니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/mesh-maps.jpg",
+        "width": 346,
+        "height": 261
+      }
+    ]
+  },
+  {
+    "id": "brush-settings",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "ブラシと消しゴムの設定",
+        "caption": "筆跡のプレビューを見ながら、サイズ・硬さ・不透明度・流量・間隔などを調整します。ブラシと消しゴムにはそれぞれ設定があります。"
+      },
+      "en": {
+        "title": "Brush and eraser settings",
+        "caption": "Use the stroke preview to adjust size, hardness, opacity, flow and spacing. Brush and eraser settings are separate."
+      },
+      "zh": {
+        "title": "笔刷与橡皮擦设置",
+        "caption": "可通过笔迹预览调整大小、硬度、不透明度、流量和间距等。笔刷与橡皮擦分别设有各自的参数。"
+      },
+      "ko": {
+        "title": "브러시와 지우개 설정",
+        "caption": "획 미리보기를 보며 크기·경도·불투명도·흐름·간격 등을 조절합니다. 브러시와 지우개는 각각 설정할 수 있습니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/brush.png",
+        "width": 414,
+        "height": 372,
+        "labels": {
+          "ja": "ブラシ",
+          "en": "Brush",
+          "zh": "笔刷",
+          "ko": "브러시"
+        }
+      },
+      {
+        "src": "/captures/eraser.png",
+        "width": 403,
+        "height": 381,
+        "labels": {
+          "ja": "消しゴム",
+          "en": "Eraser",
+          "zh": "橡皮擦",
+          "ko": "지우개"
+        }
+      }
+    ]
+  },
+  {
+    "id": "layer-panel",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "レイヤー一覧の内容プレビュー",
+        "caption": "レイヤー一覧のサムネイルを非表示／表示にした比較です。歯車メニューで切り替え、必要に応じて描画内容を一覧で確認できます。"
+      },
+      "en": {
+        "title": "Layer-list content previews",
+        "caption": "Compare the layer list with its content thumbnails hidden and shown. Toggle previews from the gear menu to inspect painted content in the list."
+      },
+      "zh": {
+        "title": "图层列表内容预览",
+        "caption": "比较图层列表隐藏或显示内容缩略图时的状态。可通过齿轮菜单切换，按需在列表中查看绘制内容。"
+      },
+      "ko": {
+        "title": "레이어 목록 내용 미리보기",
+        "caption": "레이어 목록의 내용 썸네일을 숨기거나 표시한 상태를 비교합니다. 톱니바퀴 메뉴에서 전환해 목록에서 그린 내용을 확인할 수 있습니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/layer-previews-hidden.png",
+        "width": 491,
+        "height": 420,
+        "labels": {
+          "ja": "内容プレビュー：非表示",
+          "en": "Content previews hidden",
+          "zh": "隐藏内容预览",
+          "ko": "내용 미리보기 숨김"
+        }
+      },
+      {
+        "src": "/captures/layer-previews-shown.png",
+        "width": 483,
+        "height": 423,
+        "labels": {
+          "ja": "内容プレビュー：表示",
+          "en": "Content previews shown",
+          "zh": "显示内容预览",
+          "ko": "내용 미리보기 표시"
+        }
+      }
+    ]
+  },
+  {
+    "id": "stamp-settings",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "文字スタンプのプレビュー",
+        "caption": "フォントと文字列を指定し、プレビューで見た目を確認します。画像・テキスト・シェイプ・コピーのタブを切り替えられます。"
+      },
+      "en": {
+        "title": "Text-stamp preview",
+        "caption": "Choose a font and enter text, then check its appearance in the preview. The panel has Image, Text, Shape and Clone tabs."
+      },
+      "zh": {
+        "title": "文字印章预览",
+        "caption": "指定字体和文字内容后，在预览中确认外观。面板可切换图片、文字、形状和复制选项卡。"
+      },
+      "ko": {
+        "title": "텍스트 스탬프 미리보기",
+        "caption": "글꼴과 문자열을 지정하고 미리보기에서 모양을 확인합니다. 이미지·텍스트·도형·복사 탭을 전환할 수 있습니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/text-stamp.png",
+        "width": 450,
+        "height": 352
+      }
+    ]
+  },
+  {
+    "id": "path-settings",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "パスの塗りと枠線",
+        "caption": "閉じたパスを素材で塗り、黄色の外側枠線を付けた例です。UV側にも同じ形が表示されます。この例では内側枠線は無効です。"
+      },
+      "en": {
+        "title": "Path fill and outlines",
+        "caption": "A closed path filled with a material and a yellow outer outline. The same shape appears in the UV view. The inner outline is disabled in this example."
+      },
+      "zh": {
+        "title": "路径填充与描边",
+        "caption": "闭合路径使用材质填充，并设置了黄色外侧描边。UV视图中也显示相同形状。本例未启用内侧描边。"
+      },
+      "ko": {
+        "title": "패스 채우기와 윤곽선",
+        "caption": "닫힌 패스를 재질로 채우고 노란 바깥 윤곽선을 적용한 예입니다. UV 뷰에도 같은 모양이 나타납니다. 이 예에서는 안쪽 윤곽선을 사용하지 않습니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/path-fill-outline.png",
+        "width": 1623,
+        "height": 1030
+      }
+    ]
+  },
+  {
+    "id": "export-settings",
+    "kind": "image",
+    "src": null,
+    "copy": {
+      "ja": {
+        "title": "テクスチャの出力設定",
+        "caption": "書き出し解像度、画像形式、ノーマルマップの向きの選択肢をまとめた画面です。出力先に合わせて設定し、書き出すチャンネルを選びます。"
+      },
+      "en": {
+        "title": "Texture export settings",
+        "caption": "A combined view of the export-resolution, image-format and normal-map orientation choices. Match the destination requirements and select the channels to export."
+      },
+      "zh": {
+        "title": "纹理导出设置",
+        "caption": "汇总展示导出分辨率、图片格式和法线贴图方向的选项。请根据目标用途设置，并选择要导出的通道。"
+      },
+      "ko": {
+        "title": "텍스처 내보내기 설정",
+        "caption": "내보내기 해상도, 이미지 형식, 노멀 맵 방향의 선택지를 모아 보여주는 화면입니다. 사용할 환경에 맞게 설정하고 내보낼 채널을 선택합니다."
+      }
+    },
+    "images": [
+      {
+        "src": "/captures/export-settings.png",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  {
+    "id": "first-stroke",
+    "kind": "video",
+    "src": "/captures/first-paint.mp4",
+    "copy": {
+      "ja": {
+        "title": "3DとUVを見ながら描く",
+        "caption": "モデルの読み込み後、3Dで描いた色がUVに反映される流れと、素材を塗る操作を確認できます。"
+      },
+      "en": {
+        "title": "Paint while viewing 3D and UV",
+        "caption": "Watch painted colors update in the UV view and see materials applied after the model loads."
+      },
+      "zh": {
+        "title": "对照3D与UV绘画",
+        "caption": "可查看模型载入后，3D绘画同步反映到UV视图以及涂抹材质的操作。"
+      },
+      "ko": {
+        "title": "3D와 UV를 보며 그리기",
+        "caption": "모델을 불러온 뒤 3D에 칠한 색이 UV에 반영되는 과정과 재질을 칠하는 조작을 볼 수 있습니다."
+      }
+    },
+    "poster": "/captures/first-paint-poster.jpg"
+  },
+  {
+    "id": "blend-colors",
+    "kind": "video",
+    "src": "/captures/blend-colors.mp4",
+    "copy": {
+      "ja": {
+        "title": "描いた色をなじませる",
+        "caption": "赤とマゼンタの境界を「色混ぜ」でなじませる実際の操作です。ブラシが通った部分の色の変化を確認できます。"
+      },
+      "en": {
+        "title": "Blend existing paint",
+        "caption": "An actual recording of Color Mix blending the red and magenta paint. Watch how the colors change where the brush passes."
+      },
+      "zh": {
+        "title": "混合已有颜色",
+        "caption": "实际演示使用“色混合”柔化红色与品红色的边界。可观察笔刷经过区域的颜色变化。"
+      },
+      "ko": {
+        "title": "그린 색을 자연스럽게 혼합",
+        "caption": "빨간색과 마젠타의 경계를 색 혼합으로 다듬는 실제 조작 영상입니다. 브러시가 지나간 부분의 색 변화를 확인할 수 있습니다."
+      }
+    },
+    "poster": "/captures/blend-colors-poster.jpg"
+  },
+  {
+    "id": "organize-layers",
+    "kind": "video",
+    "src": "/captures/organize-layers.mp4",
+    "copy": {
+      "ja": {
+        "title": "レイヤーの順番を変える",
+        "caption": "グループやペイントレイヤーをドラッグして並べ替える実際の操作です。重ねる順番によって、モデルの見え方が変わります。"
+      },
+      "en": {
+        "title": "Reorder layers",
+        "caption": "An actual recording of dragging groups and a paint layer to reorder them. Changing the stacking order changes the appearance of the model."
+      },
+      "zh": {
+        "title": "调整图层顺序",
+        "caption": "实际演示拖动分组和绘画图层来改变排列顺序。叠放顺序变化时，模型的显示效果也会变化。"
+      },
+      "ko": {
+        "title": "레이어 순서 바꾸기",
+        "caption": "그룹과 페인트 레이어를 드래그해 순서를 바꾸는 실제 영상입니다. 쌓이는 순서에 따라 모델의 모습이 달라집니다."
+      }
+    },
+    "poster": "/captures/organize-layers-poster.jpg"
+  },
+  {
+    "id": "edit-adjustments",
+    "kind": "video",
+    "src": "/captures/edit-adjustments.mp4",
+    "copy": {
+      "ja": {
+        "title": "調整レイヤーを後から編集する",
+        "caption": "トーンカーブを調整レイヤーとして適用し、プロパティでカーブを編集する操作です。モデルとUVの色が連動して変化します。"
+      },
+      "en": {
+        "title": "Edit an adjustment layer later",
+        "caption": "Apply a Tone Curve as an adjustment layer, then edit its curve in Properties. The model and UV colors update together."
+      },
+      "zh": {
+        "title": "稍后编辑调整图层",
+        "caption": "将色调曲线作为调整图层应用后，在属性面板中继续编辑曲线。模型与UV视图的颜色会同步变化。"
+      },
+      "ko": {
+        "title": "조정 레이어를 나중에 편집하기",
+        "caption": "톤 커브를 조정 레이어로 적용한 뒤 속성에서 커브를 편집하는 영상입니다. 모델과 UV의 색이 함께 변합니다."
+      }
+    },
+    "poster": "/captures/edit-adjustments-poster.jpg"
+  },
+  {
+    "id": "place-stamp",
+    "kind": "video",
+    "src": "/captures/place-stamp.mp4",
+    "copy": {
+      "ja": {
+        "title": "プレビューして文字を配置する",
+        "caption": "文字のサイズ・位置・角度をプレビューで調整してから、モデルへ配置する実際の操作です。配置後の文字はUVとBaseColorにも反映されます。"
+      },
+      "en": {
+        "title": "Preview and place text",
+        "caption": "Adjust the text size, position and angle in the preview, then place it on the model. The placed text also appears in UV and BaseColor."
+      },
+      "zh": {
+        "title": "预览并放置文字",
+        "caption": "实际演示在预览中调整文字的大小、位置和角度，再将文字放置到模型上。放置后的文字也会反映到UV和BaseColor中。"
+      },
+      "ko": {
+        "title": "미리 보고 텍스트 배치하기",
+        "caption": "미리보기에서 글자의 크기·위치·각도를 조절한 뒤 모델에 배치하는 영상입니다. 배치한 글자는 UV와 BaseColor에도 반영됩니다."
+      }
+    },
+    "poster": "/captures/place-stamp-poster.jpg"
+  },
+  {
+    "id": "edit-path",
+    "kind": "video",
+    "src": "/captures/edit-path.mp4",
+    "copy": {
+      "ja": {
+        "title": "アンカーとハンドルで曲線を整える",
+        "caption": "既に作成したパスのアンカーやハンドルを動かし、曲線を編集する操作です。素材の塗りと黄色の枠線を保ちながら、UV側の形も変わります。"
+      },
+      "en": {
+        "title": "Refine curves with anchors and handles",
+        "caption": "Edit an existing path by moving its anchors and handles. Its material fill and yellow outline follow the curve, and the UV shape updates too."
+      },
+      "zh": {
+        "title": "用锚点和控制柄调整曲线",
+        "caption": "通过移动已有路径的锚点和控制柄来编辑曲线。材质填充和黄色描边会随曲线变化，UV中的形状也会同步更新。"
+      },
+      "ko": {
+        "title": "앵커와 핸들로 곡선 다듬기",
+        "caption": "이미 만든 패스의 앵커와 핸들을 움직여 곡선을 편집합니다. 재질 채우기와 노란 윤곽선을 유지하면서 UV의 모양도 함께 바뀝니다."
+      }
+    },
+    "poster": "/captures/edit-path-poster.jpg"
+  },
+  {
+    "id": "place-weathering",
+    "kind": "video",
+    "src": "/captures/place-weathering.mp4",
+    "copy": {
+      "ja": {
+        "title": "形状に合わせて汚しを置く",
+        "caption": "箱の凸エッジに擦り傷を配置し、パターンを調整する操作です。後半では泥汚れの素材を追加し、表面の見え方を変えています。"
+      },
+      "en": {
+        "title": "Place wear based on geometry",
+        "caption": "Place scratches along the box’s convex edges and adjust the pattern. Later, a mud material is added to change the surface appearance."
+      },
+      "zh": {
+        "title": "根据形状布置做旧效果",
+        "caption": "演示沿箱体凸边缘布置划痕并调整图案。后半段添加泥污材质，改变表面效果。"
+      },
+      "ko": {
+        "title": "형상에 맞춰 웨더링 배치하기",
+        "caption": "상자의 볼록한 모서리에 긁힌 자국을 배치하고 패턴을 조절합니다. 후반부에는 진흙 재질을 추가해 표면의 모습을 바꿉니다."
+      }
+    },
+    "poster": "/captures/place-weathering-poster.jpg"
+  },
+  {
+    "id": "calibrate-pressure",
+    "kind": "video",
+    "src": "/captures/calibrate-pressure.mp4",
+    "copy": {
+      "ja": {
+        "title": "試し描きで筆圧を調整",
+        "caption": "強弱をつけて試し描きし、自動調整の結果を確認して描き心地を整えます。"
+      },
+      "en": {
+        "title": "Calibrate pressure with test strokes",
+        "caption": "Draw test strokes with varied pressure, check the automatic calibration, and fine-tune the response."
+      },
+      "zh": {
+        "title": "通过试画校准笔压",
+        "caption": "用不同力度试画，检查自动校准结果并微调绘画手感。"
+      },
+      "ko": {
+        "title": "시험 그리기로 필압 조정",
+        "caption": "힘을 달리해 시험 획을 그리고 자동 조정 결과를 확인한 뒤 그리기 감도를 미세 조정합니다."
+      }
+    },
+    "poster": "/captures/calibrate-pressure-poster.jpg"
+  }
+]

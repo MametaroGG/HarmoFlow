@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img"><defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fcfdfc"/><stop offset="1" stop-color="#edf1f0"/></linearGradient>
+<linearGradient id="front" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5dd5c1"/><stop offset=".45" stop-color="#2d9f96"/><stop offset="1" stop-color="#16575a"/></linearGradient>
+<linearGradient id="side" x2="1" y2="1"><stop stop-color="#369b98"/><stop offset="1" stop-color="#143e48"/></linearGradient>
+<linearGradient id="top" x2=".7" y2="1"><stop stop-color="#c8f1e6"/><stop offset="1" stop-color="#55b6a9"/></linearGradient>
+<linearGradient id="violet" x2="1" y2="1"><stop stop-color="#c5b7e3"/><stop offset="1" stop-color="#7565a7"/></linearGradient>
+<linearGradient id="cream" x2=".5" y2="1"><stop stop-color="#f4e9d3"/><stop offset="1" stop-color="#d4c1a0"/></linearGradient>
+<radialGradient id="orb" cx=".33" cy=".25"><stop stop-color="#daf5ea"/><stop offset=".48" stop-color="#6dcaba"/><stop offset="1" stop-color="#1e6264"/></radialGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#537875" stroke-width=".5" opacity=".14"/></pattern>
+<pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".75" fill="#fff" opacity=".17"/></pattern>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V8" stroke="#143c43" opacity=".18"/></pattern>
+<filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<clipPath id="frontClip"><path d="M125 140Q124 112 148 104L305 55Q330 50 348 73L414 151Q427 169 420 197L376 377Q370 401 345 412L182 454Q160 460 148 440L97 343Q89 328 94 305Z"/></clipPath>
+<clipPath id="sideClip"><path d="M348 73L460 111Q482 119 479 146L464 309Q462 337 440 351L365 409L420 197Q427 170 414 151Z"/></clipPath>
+<g id="object">
+<ellipse cx="285" cy="480" rx="164" ry="26" fill="#21464a" opacity=".16" filter="url(#shadow)"/>
+<path d="M148 104L259 54Q280 45 304 52L460 111L348 73L305 55Z" fill="url(#top)" stroke="#8dcec2" stroke-width="1.5"/>
+<path d="M348 73L460 111Q482 119 479 146L464 309Q462 337 440 351L365 409L420 197Q427 170 414 151Z" fill="url(#side)"/>
+<g clip-path="url(#sideClip)"><path d="M373 175C407 151 449 221 483 204L482 250C439 277 399 206 382 217Z" fill="#d3c4a8"/><path d="M380 225C425 187 456 278 481 253L481 294C432 319 414 259 380 278Z" fill="#aaa0c9"/><path d="M459 107L440 324L366 410" fill="none" stroke="#b6e4d5" opacity=".22"/>
+</g>
+<path d="M125 140Q124 112 148 104L305 55Q330 50 348 73L414 151Q427 169 420 197L376 377Q370 401 345 412L182 454Q160 460 148 440L97 343Q89 328 94 305Z" fill="url(#front)" stroke="#276f70" stroke-width="1.3"/>
+<g clip-path="url(#frontClip)">
+<path d="M81 197C167 122 208 278 293 248S362 136 449 183L437 231C358 182 355 283 282 296S166 175 86 247Z" fill="url(#cream)"/>
+<path d="M79 252C166 182 205 333 282 309S365 206 431 242L420 282C351 252 347 342 275 355S164 227 82 292Z" fill="url(#violet)"/>
+<path d="M103 355C173 303 214 406 300 389S350 320 402 325" stroke="#a0e1cd" stroke-width="3" fill="none" opacity=".65"/>
+<path d="M137 142L189 391M308 72L189 391L366 374M104 323L403 176M169 107L277 278L345 410" fill="none" stroke="#e8fff0" stroke-width=".8" opacity=".22"/>
+<path d="M105 322L189 391L277 278L403 176L309 72" fill="none" stroke="#173e46" stroke-width=".7" opacity=".2"/>
+<path d="M139 141Q140 124 156 119L307 70Q323 64 335 80L397 154Q408 167 405 185" fill="none" stroke="#dcfff0" opacity=".63" stroke-width="2"/>
+<path d="M111 326L161 432Q166 441 179 438L342 398Q356 394 360 376" fill="none" stroke="#123e47" opacity=".43" stroke-width="3"/>
+<path d="M289 103L310 97L329 119L307 126Z" fill="#e6f0df" opacity=".9"/>
+<path d="M293 132L313 126L321 135L301 142Z" fill="#213f49"/>
+<path d="M306 345l40-11-5 22-40 11z" fill="#0d4851" opacity=".7"/>
+<path d="M311 349l26-7" stroke="#bceadb" stroke-width="2"/>
+<rect x="80" y="50" width="350" height="420" fill="url(#dots)"/>
+</g>
+<path d="M348 74L414 153Q425 170 420 191L375 378" fill="none" stroke="#b8e7d7" stroke-width="2" opacity=".65"/>
+</g>
+</defs><rect width="1200" height="680" rx="20" fill="url(#bg)"/><rect x="80" y="65" width="1040" height="550" fill="url(#grid)"/>
+<ellipse cx="610" cy="381" rx="390" ry="202" fill="none" stroke="#c6d3d0" stroke-dasharray="3 9"/>
+<ellipse cx="610" cy="381" rx="280" ry="143" fill="none" stroke="#d7e0dc"/>
+<path d="M607 79V605M110 381H1090" stroke="#cfdbd6" stroke-dasharray="5 9"/>
+<path d="M94 90H122M108 76V104M1084 90H1112M1098 76V104M94 590H122M108 576V604M1084 590H1112M1098 576V604" stroke="#8fa7a2"/>
+<g transform="translate(281 6) scale(1.18)"><use href="#object"/></g>
+<g transform="translate(165 140)"><circle r="48" fill="url(#orb)"/><circle r="57" fill="none" stroke="#c2d4cd"/><path d="M-35 0C-24-22 21-26 41-6M-42 13C-20-11 20-12 45 8" fill="none" stroke="#eff6e8" stroke-width="3" opacity=".65"/></g>
+<g transform="translate(930 385)"><circle r="43" fill="url(#violet)"/><path d="M-39-5Q-4-39 36-16M-41 10Q-6-21 42 0M-34 26Q0-3 38 18" fill="none" stroke="#e1d8ef" stroke-width="2"/><circle r="53" fill="none" stroke="#c8cdda"/></g>
+<path d="M132 447C154 409 172 483 199 441S234 471 263 425" fill="none" stroke="#3caca0" stroke-width="20" stroke-linecap="round"/>
+<path d="M132 447C154 409 172 483 199 441S234 471 263 425" fill="none" stroke="#c5f1dc" stroke-width="2" opacity=".7"/>
+<circle cx="264" cy="425" r="25" fill="none" stroke="#427c75" stroke-dasharray="3 4"/>
+<g transform="translate(875 132)"><rect width="150" height="72" rx="9" fill="#fff" stroke="#d8e0dc"/>
+<rect x="12" y="12" width="38" height="32" rx="4" fill="#4fb6a6"/><rect x="56" y="12" width="38" height="32" rx="4" fill="#ded0b5"/><rect x="100" y="12" width="38" height="32" rx="4" fill="#a69acb"/></g><text x="105" y="51" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#59716f" letter-spacing="2">SURFACE STUDY / 01</text><text x="126" y="221" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#59716f" letter-spacing="1.4">PBR MATERIAL</text><text x="880" y="190" font-family="Arial,Helvetica,sans-serif" font-size="9" fill="#59716f" >01</text><text x="924" y="190" font-family="Arial,Helvetica,sans-serif" font-size="9" fill="#59716f" >02</text><text x="968" y="190" font-family="Arial,Helvetica,sans-serif" font-size="9" fill="#59716f" >03</text><text x="876" y="473" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#59716f" letter-spacing="1.4">NPR DETAIL</text><text x="136" y="507" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#59716f" letter-spacing="1.4">PAINT DIRECTLY IN 3D</text><text x="884" y="592" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#59716f" letter-spacing="1">COLOR · SURFACE · LIGHT</text></svg>

@@ -1,0 +1,93 @@
+HarmoFlow ソフトウェア使用許諾契約（EULA）
+==========================================
+
+Copyright (c) 2026 豆々庵. All rights reserved.
+豆々庵（https://mametarovv.booth.pm/）. 無断転載・再配布を禁じます.
+
+本ファイルは、BOOTH ショップ「豆々庵」（https://mametarovv.booth.pm/）で
+購入した HarmoFlow（以下「本ソフトウェア」）の使用条件を定める
+エンドユーザーライセンス契約（EULA）です。
+本ソフトウェアをインストール、起動、または使用した時点で、
+本契約に同意したものとみなします。
+
+1. ライセンスの付与
+-------------------
+本ソフトウェアは有料の商用ソフトウェアです。豆々庵の BOOTH ショップまたは
+当該商品ページから正当な方法で購入した利用者に対し、非独占的かつ譲渡不能な
+使用権を、個人または購入時に明示された範囲で付与します。
+1 ライセンスは、原則として購入者本人 1 名の利用を想定しています。
+
+2. 禁止事項
+-----------
+利用者は、以下を行ってはなりません。
+- 本ソフトウェア本体、インストーラ、付属ファイルの再配布、貸与、レンタル、
+  サブライセンス、または BOOTH 購入ページ以外からの公開
+- 本ソフトウェアの逆コンパイル、逆アセンブル、リバースエンジニアリング、
+  ソースコードの抽出を目的とした解析（法令で明示的に認められる場合を除く）
+- ライセンス認証の回避、改ざん、不正利用
+- 本ソフトウェアまたは豆々庵の信用を害する表示、虚偽の所属・提携表示
+- 適用法令または公序良俗に反する利用
+
+3. 作成物の権利
+---------------
+本ソフトウェアを用いて作成したテクスチャ、画像、プロジェクトデータ、
+エクスポート成果物等（以下「作成物」）の権利は、利用者に帰属します。
+ただし、作成物に第三者の著作物やライセンス素材が含まれる場合は、
+当該第三者の条件に従うものとします。
+
+4. サードパーティソフトウェア
+-----------------------------
+本ソフトウェアには、オープンソース等の第三者ソフトウェアが組み込まれています。
+それらは本 EULA ではなく、各ライセンス条件に従います。
+配布物に同梱の THIRD_PARTY_NOTICES.txt および
+assets/about/third_party_notices.md、assets/third_party/liltoon/LICENSE 等を参照してください。
+
+5. 更新・サポート
+-----------------
+豆々庵は、本ソフトウェアの更新、機能追加、サポート、動作保証を行う義務を負いません。
+ただし、BOOTH 商品ページ等で別途明示した場合は、その内容が優先されます。
+
+6. 免責事項
+-----------
+本ソフトウェアは「現状有姿」で提供されます。
+豆々庵は、本ソフトウェアの正確性、完全性、特定目的への適合性、
+非侵害性、可用性について、明示または黙示を問わず一切保証しません。
+本ソフトウェアの使用または使用不能により生じた損害について、
+豆々庵は法令上認められる最大限の範囲で責任を負いません。
+
+7. 終了
+-------
+本契約に違反した場合、豆々庵は通知なく使用権を終了させることができます。
+使用権終了後も、第 4 条（サードパーティ）、第 6 条（免責）、
+第 8 条（準拠法）等の性質上存続すべき条項は効力を有します。
+
+8. 準拠法
+---------
+本契約は、日本法に準拠し、日本法に従って解釈されます。
+
+9. お問い合わせ
+---------------
+販売者: 豆々庵
+BOOTH ショップ: https://mametarovv.booth.pm/
+HarmoFlow 商品ページの BOOTH 問い合わせ、またはショップページの Contact より
+ご連絡ください。
+
+--------------------------------------------------------------------------------
+
+HarmoFlow End User License Agreement (Summary)
+==============================================
+
+Copyright (c) 2026 Mametaro-an (豆々庵). All rights reserved.
+Publisher BOOTH shop: https://mametarovv.booth.pm/
+
+HarmoFlow is commercial software sold on BOOTH by Mametaro-an.
+By installing or using HarmoFlow, you agree to this EULA.
+
+- You receive a personal, non-transferable license when you purchase legitimately.
+- You may not redistribute, resell, rent, or reverse engineer the software package.
+- You retain rights to textures and exports you create with HarmoFlow.
+- Third-party components remain under their own licenses; see THIRD_PARTY_NOTICES.txt.
+- The software is provided "as is" without warranty to the extent permitted by law.
+
+The Japanese text above is authoritative for distribution in Japan.
+

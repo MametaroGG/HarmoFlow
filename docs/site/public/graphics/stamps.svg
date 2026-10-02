@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="440" viewBox="0 0 720 440" role="img" aria-labelledby="title desc">
+<title id="title">Surface stamps</title><desc id="desc">A clear HF letterform is applied to the front of a beveled rectangular block. An outlined stencil presses onto the surface and leaves the cobalt imprint.</desc>
+<defs>
+<filter id="shadow" x="-40%" y="-50%" width="180%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="small-shadow" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="5"/></filter>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#f3f5f8"/></linearGradient>
+<linearGradient id="side" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8ebf0"/><stop offset="1" stop-color="#cbd2dd"/></linearGradient>
+<radialGradient id="ao"><stop offset="0" stop-color="#ffffff"/><stop offset=".455" stop-color="#737b86"/><stop offset=".52" stop-color="#b8bec7"/><stop offset=".64" stop-color="#edf0f4"/><stop offset=".81" stop-color="#ffffff"/><stop offset="1" stop-color="#e1e5eb"/></radialGradient>
+<radialGradient id="curvature"><stop offset="0" stop-color="#939ca9"/><stop offset=".455" stop-color="#343c47"/><stop offset=".5" stop-color="#525c6c"/><stop offset=".6" stop-color="#9ba4b2"/><stop offset=".8" stop-color="#aeb6c1"/><stop offset=".945" stop-color="#f8f9fc"/><stop offset="1" stop-color="#ffffff"/></radialGradient>
+<radialGradient id="height"><stop offset="0" stop-color="#242a34"/><stop offset=".46" stop-color="#515b6a"/><stop offset=".67" stop-color="#f7f9fd"/><stop offset=".77" stop-color="#ffffff"/><stop offset="1" stop-color="#4d5869"/></radialGradient>
+<g id="hf"><path d="M0 0H18V34H52V0H70V86H52V51H18V86H0Z M86 0H144V17H104V36H137V53H104V86H86Z"/></g>
+</defs>
+<style>
+.stencil{animation:stamp 6.4s ease-in-out infinite;opacity:0;transform:translate(-32px,-38px)}
+.imprint{animation:imprint 6.4s ease-in-out infinite;opacity:1}
+@keyframes stamp{0%,10%{opacity:0;transform:translate(-32px,-38px)}18%,30%{opacity:.48;transform:translate(-32px,-38px)}49%,56%{opacity:.62;transform:translate(0,0)}66%,100%{opacity:0;transform:translate(0,0)}}
+@keyframes imprint{0%,12%,68%,100%{opacity:1}25%,45%{opacity:.2}57%{opacity:1}}
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style><rect width="720" height="440" fill="#fafbfc"/><ellipse cx="385" cy="349" rx="192" ry="21" fill="#263a61" opacity=".105" filter="url(#shadow)"/>
+<path d="M197 128L269 85H568L496 128Z" fill="#f6f8fb" stroke="#dce2eb" stroke-linejoin="round"/>
+<path d="M496 128L568 85V286L496 329Z" fill="url(#side)" stroke="#cbd3df" stroke-linejoin="round"/>
+<path d="M197 128H496V329H197Z" fill="url(#paper)" stroke="#d6dee8" stroke-linejoin="round"/>
+<path d="M203 134H490V322H203Z" fill="#fff" stroke="#edf0f5"/>
+<path d="M496 129V328M202 128H495L563 88" fill="none" stroke="#fff" stroke-width="2"/>
+<g class="imprint" transform="translate(274 185)"><use xlink:href="#hf" fill="#2457e7"/></g>
+<g class="stencil"><g transform="translate(274 185)"><use xlink:href="#hf" fill="none" stroke="#2457e7" stroke-width="1.6"/></g>
+<path d="M254 194V168H281M410 168H438V194M254 263V290H281M410 290H438V263" fill="none" stroke="#2457e7" stroke-width="2" stroke-linecap="round"/>
+</g></svg>
