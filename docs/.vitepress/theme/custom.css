@@ -1721,13 +1721,34 @@ nav,.button,.nav-cta,.search-trigger { font-size:1rem; }
 .material-demo { position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; background:#f5f6f8; }
 .material-demo video,.material-demo>img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
 .material-demo video.is-poster { opacity:0; }
+/* Provisional specifications stay readable without horizontal scrolling. */
 .requirements { margin:45px 0; text-align:left; border-top:1px solid #dfe4ec; padding-top:38px; }
 .requirements h2 { font-size:1.625rem; }
-.requirements dl { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:24px 0; }
-.requirements dl>div { border:1px solid #e0e5ed; border-radius:12px; padding:22px 24px; background:#fff; }
-.requirements dt { font-size:.875rem; color:#526071; margin-bottom:10px; }
-.requirements dd { margin:0; font-size:1.125rem; font-weight:600; }
-.requirements-note { font-size:1rem; color:#526071; }
+.requirements h3 { margin:36px 0 12px; font-size:1.25rem; }
+.requirements-intro,.requirements-note { font-size:1rem; color:#526071; line-height:1.85; }
+.requirements-intro { margin:16px 0 24px; }
+.requirements-table { width:100%; table-layout:fixed; border-collapse:collapse; font-size:1rem; line-height:1.75; }
+.requirement-label-column { width:22%; }
+.requirements-table th,.requirements-table td { padding:18px 20px; border-bottom:1px solid #e0e5ed; vertical-align:top; text-align:left; overflow-wrap:anywhere; }
+.requirements-table thead th { background:#f4f6fa; color:#263650; font-weight:600; }
+.requirements-table tbody th { font-weight:600; color:#526071; }
+.requirements-table td { color:#171b26; }
+.requirements-notes { margin:24px 0 32px; padding:20px 24px; border-left:3px solid #2457e7; background:#f4f7ff; color:#43536b; font-size:1rem; line-height:1.85; }
+.requirements-notes p { margin:0; }
+.requirements-notes ul { margin:12px 0 0; padding-left:1.3em; }
+.requirements-notes li+li { margin-top:6px; }
+.requirements-note { margin:18px 0; }
+.requirements-languages { display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:28px; padding-top:22px; border-top:1px solid #e0e5ed; font-size:1rem; line-height:1.8; }
+.requirements-languages strong { color:#526071; }
+@media(max-width:760px) {
+  .requirements-table { font-size:.9375rem; line-height:1.7; }
+  .requirements-table th,.requirements-table td { padding:14px 10px; }
+  .requirement-label-column { width:23%; }
+  .requirements-notes { padding:18px 18px; }
+}
+@media(max-width:380px) {
+  .requirements-table th,.requirements-table td { padding:12px 7px; }
+}
 .windows-badge { display:inline-flex; align-items:center; gap:9px; padding:7px 13px; border:1px solid #ccd8f6; border-radius:6px; color:#234a9a; background:#f5f8ff; font-size:.875rem; margin-bottom:20px; }
 @media(max-width:1100px) {
   .nav-wrap {gap:24px;} .nav-wrap nav {gap:18px;} .nav-actions {gap:12px;}
@@ -1744,7 +1765,6 @@ nav,.button,.nav-cta,.search-trigger { font-size:1rem; }
   .article-toc nav a,.breadcrumbs,.footer-grid>div:not(.footer-brand) a {font-size:.875rem;}
   .product-caption {font-size:.875rem;padding:16px;}
   .animation-control {margin-left:0;min-height:44px;}
-  .requirements dl {grid-template-columns:1fr;gap:14px;}
   .feature-visual {padding:6px;}
 }
 

@@ -4,6 +4,7 @@ import { useData, useRoute, useRouter, withBase } from "vitepress";
 import SiteIcon from "./SiteIcon.vue";
 import PaintDemo from "./PaintDemo.vue";
 import PaintTools from "./PaintTools.vue";
+import SystemRequirements from "./SystemRequirements.vue";
 import { articles as jaArticles, categories as jaCategories } from "./help-data.js";
 import { dictionaries, localizedArticles, languages } from "./locales/index.js";
 import { localeFromPath, localizedPath, languagePath } from "./locale-routing.js";
@@ -425,15 +426,7 @@ onUnmounted(() => {
             >
           </div>
         </div>
-        <section class="requirements" aria-labelledby="requirements-title">
-          <h2 id="requirements-title">{{ t("動作環境") }}</h2>
-          <dl>
-            <div><dt>{{ t("対応プラットフォーム") }}</dt><dd>Windows</dd></div>
-            <div><dt>{{ t("グラフィックス") }}</dt><dd>{{ t("Vulkan 1.2対応GPU・ドライバー") }}</dd></div>
-            <div class="requirement-languages"><dt>{{ t("対応言語") }}</dt><dd>{{ t("日本語・英語・中国語（簡体字）・韓国語") }}</dd></div>
-          </dl>
-          <p class="requirements-note">{{ t("CPU・メモリ・GPUの最低スペックと推奨スペックは、検証結果がまとまり次第掲載します。") }}</p>
-        </section>
+        <SystemRequirements :t="t" />
         <div class="download-guidance">
           <div>
             <h3>{{ t("はじめてご利用の方へ") }}</h3>

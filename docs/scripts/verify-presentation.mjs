@@ -28,7 +28,8 @@ assert(material.includes('IntersectionObserver') && material.includes('visibilit
 assert(material.includes('type="range"') && material.includes('@timeupdate') && material.includes('aria-pressed'));
 assert(layout.includes('prefers-reduced-motion') && layout.includes('animationEnabled'));
 const download = fs.readFileSync(path.join(root, '.vitepress/dist/download.html'), 'utf8');
-assert(download.includes('検証結果がまとまり次第掲載'));
+assert(download.includes('動作環境の目安（暫定）'));
+assert(!download.includes('検証結果がまとまり次第掲載'));
 assert(!layout.includes('name="arrow-'));
 assert(!home.includes('/screenshots/'));
 const cssText = fs.readFileSync(path.join(theme, 'custom.css'), 'utf8');
