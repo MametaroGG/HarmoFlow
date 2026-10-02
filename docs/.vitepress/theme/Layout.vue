@@ -171,14 +171,6 @@ onUnmounted(() => {
   </header>
   <main id="main">
     <template v-if="layout === 'home'">
-      <section class="section launch-video-section" aria-labelledby="launch-video-title">
-        <p class="eyebrow">HarmoFlow IN ACTION</p>
-        <h2 id="launch-video-title">{{ t("映像で見る、HarmoFlow。") }}</h2>
-        <div class="launch-video-frame">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/x3csgJasBKg?si=dQy3UtQ5mmITG1EL" :title="t('HarmoFlow ローンチビデオ')" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <a class="launch-video-link" href="https://www.youtube.com/watch?v=x3csgJasBKg" target="_blank" rel="noopener noreferrer">{{ t("YouTubeで見る") }}</a>
-      </section>
       <section class="hero" :class="'locale-' + locale">
         <div class="hero-glow"></div>
         <div class="hero-art" :class="{ 'is-paused': !animationEnabled }" aria-hidden="true">
@@ -203,6 +195,12 @@ onUnmounted(() => {
           <p class="hero-note">
             <SiteIcon name="monitor" class="windows-icon" /> {{ t("Windows向けに開発中 · Vulkan 1.2対応GPU") }}
           </p>
+        </div>
+        <div class="hero-launch-video" role="group" :aria-label="t('HarmoFlow ローンチビデオ')">
+          <div class="launch-video-frame">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x3csgJasBKg?si=dQy3UtQ5mmITG1EL" :title="t('HarmoFlow ローンチビデオ')" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <a class="launch-video-link" href="https://www.youtube.com/watch?v=x3csgJasBKg" target="_blank" rel="noopener noreferrer">{{ t("YouTubeで見る") }}</a>
         </div>
         <div class="hero-product">
           <PaintDemo :active="animationEnabled" :t="t" @pause="animationEnabled = false" @play="animationEnabled = true" />

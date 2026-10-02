@@ -25,13 +25,16 @@ for (const file of pages) {
 
 for (const [, prefix] of locales) {
   const home = read(prefix + 'index.html');
-  assert.match(home, /<main id="main">(?:<!--[\s\S]*?-->)*<section class="section launch-video-section"/, `${prefix}: launch video is the first section`);
+  assert.match(home, /<main id="main">(?:<!--[\s\S]*?-->)*<section class="[^"]*\bhero\b[^"]*"/, `${prefix}: original hero remains the first section`);
+  assert(!home.includes('launch-video-section'), `${prefix}: no separate launch-video section`);
   assert.equal((home.match(/youtube\.com\/embed\/x3csgJasBKg/g) || []).length, 1);
   const player = home.match(/<iframe\b[^>]*src="https:\/\/www\.youtube\.com\/embed\/x3csgJasBKg[^>]+>/)?.[0];
   assert(player && player.includes('loading="eager"') && player.includes('allowfullscreen'), `${prefix}: visible, controllable player`);
   assert(!player.includes('autoplay=1'), 'Launch video must not force autoplay');
   assert(home.includes('href="https://www.youtube.com/watch?v=x3csgJasBKg"'), 'YouTube fallback missing');
-  assert(home.indexOf('launch-video-section') < home.search(/<section class="[^"]*\bhero\b/), 'Video must precede the existing hero');
+  assert(player.includes('title="') && !player.includes('controls=0'), `${prefix}: named player keeps native controls`);
+  assert.match(home, /<p class="hero-note">[\s\S]*?<\/p><\/div><div class="hero-launch-video" role="group" aria-label="[^"]+"><div class="launch-video-frame">[\s\S]*?<\/iframe><\/div><a class="launch-video-link"[^>]+>[^<]+<\/a><\/div><div class="hero-product">/, `${prefix}: player sits directly after requirements and before the existing layer demo`);
+  assert(home.indexOf('</h1>') < home.indexOf('hero-launch-video'), `${prefix}: headline remains above the video`);
 
   const help = read(prefix + 'help.html');
   assert.equal((help.match(/class="category-link-title"/g) || []).length, 19, `${prefix}: all help titles remain`);
@@ -138,4 +141,4 @@ assert.equal(opener.count, 1, 'A queued close must not steal focus from a reopen
 h.closeSearch(); flush();
 assert.equal(other.count, 1);
 
-console.log(`PASS: 96 reciprocal absolute language alternates; 4 first-section launch players, help lists, EULA links and deduplicated breadcrumbs; help contrast ${contrast(link.color, '#ffffff').toFixed(2)}:1; search/menu focus regressions`);
+console.log(`PASS: 96 reciprocal absolute language alternates; 4 launch players between hero requirements and layer demo, help lists, EULA links and deduplicated breadcrumbs; help contrast ${contrast(link.color, '#ffffff').toFixed(2)}:1; search/menu focus regressions`);
