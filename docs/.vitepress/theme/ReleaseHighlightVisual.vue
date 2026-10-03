@@ -44,7 +44,7 @@ const timingWidth = (value) => `${100 * value / Math.max(props.visual.before, pr
 
 <style scoped>
 .release-highlight-visual { margin: 0; color: #263f36; }
-.rh-visual-frame { position: relative; aspect-ratio: 3 / 2; min-height: 225px; border: 1px solid #dce7da; border-radius: 9px; background: #f5f8f3; overflow: hidden; }
+.rh-visual-frame { position: relative; width: 100%; aspect-ratio: 3 / 2; min-height: 225px; border: 1px solid #dce7da; border-radius: 9px; background: #f5f8f3; overflow: hidden; }
 .rh-visual-frame svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; fill: none; }
 .rh-timing-chart { position: absolute; inset: 0; padding: 21px; display: flex; flex-direction: column; justify-content: center; gap: 15px; }
 .rh-timing-chart p { margin: 0; font-size: 14px; font-weight: 700; line-height: 1.6; }
