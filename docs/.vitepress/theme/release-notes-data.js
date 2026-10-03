@@ -18,10 +18,10 @@
  */
 const recompositeTiming = { kind: 'recomposite', before: 922, after: 32, unit: 'ms' };
 const performance = {
-  ja: '再合成の最適化による反応速度の向上：4K・不透明な素材1000レイヤーで、不透明度変更が約29倍高速化（中央値922ms→32ms）。改善幅は操作や環境によって異なります。',
-  en: 'Recompositing optimization improves responsiveness: opacity changes are approximately 29× faster with 1,000 layers of opaque materials at 4K (median: 922 ms → 32 ms). Gains vary by operation and environment.',
-  zh: '通过优化重新合成，提升响应速度：在 4K、1000 个不透明材质图层的条件下，不透明度更改约提速 29 倍（中位数 922ms→32ms）。改善幅度因操作和环境而异。',
-  ko: '재합성 최적화로 반응 속도 향상: 4K·불투명 소재 1000개 레이어에서 불투명도 변경이 약 29배 빨라졌습니다(중앙값 922ms→32ms). 개선 폭은 작업과 환경에 따라 달라집니다.',
+  ja: '再合成の最適化による反応速度の向上：4K・不透明な素材1000レイヤーで、不透明度変更が約29倍高速化（中央値922ms→32ms）。開発環境での計測（RTX 4070 SUPER / Core i5-12400F / DDR4 64GB）です。改善幅は操作や環境によって異なります。',
+  en: 'Recompositing optimization improves responsiveness: opacity changes are approximately 29× faster with 1,000 layers of opaque materials at 4K (median: 922 ms → 32 ms). Measured in the development environment (RTX 4070 SUPER / Core i5-12400F / DDR4 64GB). Gains vary by operation and environment.',
+  zh: '通过优化重新合成，提升响应速度：在 4K、1000 个不透明材质图层的条件下，不透明度更改约提速 29 倍（中位数 922ms→32ms）。在开发环境中测得（RTX 4070 SUPER / Core i5-12400F / DDR4 64GB）。改善幅度因操作和环境而异。',
+  ko: '재합성 최적화로 반응 속도 향상: 4K·불투명 소재 1000개 레이어에서 불투명도 변경이 약 29배 빨라졌습니다(중앙값 922ms→32ms). 개발 환경(RTX 4070 SUPER / Core i5-12400F / DDR4 64GB)에서 측정한 결과입니다. 개선 폭은 작업과 환경에 따라 달라집니다.',
 };
 
 export const releases = [{

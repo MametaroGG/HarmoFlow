@@ -86,6 +86,12 @@ const benchmark011 = update011.content.ja.highlights.find(item => item.visual?.k
 assert(benchmark011.description.includes('4K・不透明な素材1000レイヤー'), 'Preserve the supplied benchmark workload');
 assert(benchmark011.description.includes('不透明度変更が約29倍高速化（中央値922ms→32ms）'), 'Preserve operation, approximation, medians and units');
 assert(benchmark011.description.includes('改善幅は操作や環境によって異なります'), 'Keep the performance qualifier prominent');
+const developmentEnvironmentLabels = {
+  ja: '開発環境での計測',
+  en: 'Measured in the development environment',
+  zh: '在开发环境中测得',
+  ko: '개발 환경',
+};
 for (const locale of locales) {
   const item = update011.content[locale].highlights.find(item => item.visual?.kind === 'recomposite');
   assert.equal(item.visual.before, 922);
@@ -94,6 +100,11 @@ for (const locale of locales) {
   const prefix = locale === 'ja' ? '' : locale + '/';
   const html = fs.readFileSync(path.join(dist, prefix + 'updates.html'), 'utf8');
   assert(html.includes('922') && html.includes('32') && html.includes('29'), locale + ': measurement renders');
+  for (const context of [developmentEnvironmentLabels[locale], 'RTX 4070 SUPER', 'Core i5-12400F', 'DDR4 64GB']) {
+    assert(item.description.includes(context), locale + ': performance highlight includes the measured development environment');
+    assert(update011.content[locale].changes.improved.some(text => text.includes(context)), locale + ': detailed performance notes preserve the development environment');
+    assert(html.includes(context), locale + ': development environment renders');
+  }
   if (releases.every(item => !item.date)) assert(!/<time\b/.test(html), 'No release dates were provided');
   assert(html.indexOf('id="release-history"') < html.indexOf('id="introduction"'), 'Confirmed update notes precede the general product introduction');
 }
