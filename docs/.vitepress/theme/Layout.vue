@@ -4,6 +4,7 @@ import { useData, useRoute, useRouter, withBase } from "vitepress";
 import SiteIcon from "./SiteIcon.vue";
 import PaintDemo from "./PaintDemo.vue";
 import PaintTools from "./PaintTools.vue";
+import UpdateFeatures from "./UpdateFeatures.vue";
 import SystemRequirements from "./SystemRequirements.vue";
 import { articles as jaArticles, categories as jaCategories } from "./help-data.js";
 import { dictionaries, localizedArticles, languages } from "./locales/index.js";
@@ -268,6 +269,7 @@ onUnmounted(() => {
             /><span class="visual-label">LAYERS & MASKS</span>
           </div>
         </div>
+        <UpdateFeatures :locale="locale" />
       </section>
       <PaintTools :active="animationEnabled" :t="t" @play="animationEnabled = true" />
       <section class="tools-section">

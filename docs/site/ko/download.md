@@ -44,4 +44,6 @@ HarmoFlow는 Windows 전용이며 Vulkan 1.2 호환 GPU와 드라이버가 필�
 
 ### 업데이트와 지원은 어떻게 되나요? {#faq-support}
 
+Ver.0.1.1은 업데이트 자동 확인과 알림을 지원합니다. 알림 아이콘 사용 방법은 [업데이트 자동 알림](./help/start.md#automatic-update-notifications)을 참고하세요.
+
 최신 버전 안내와 판매 조건은 BOOTH 상품 페이지를 확인하세요. 사용권 계약 제5조에 따라 별도 명시가 없다면 판매자는 업데이트·기능 추가·지원·작동 보장의 의무를 부담하지 않습니다. 업데이트 전에는 [백업과 업데이트 절차](./help/start.md#update-backup)를 확인하세요. HarmoFlow BOOTH 상품의 문의 기능이나 [豆々庵 상점](https://mametarovv.booth.pm/)의 메시지 기능(일본어 UI의 「メッセージ」)으로 문의할 수 있습니다.

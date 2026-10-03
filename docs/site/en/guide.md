@@ -16,11 +16,15 @@ Start with the basics or choose a topic below. Each guide covers a focused part 
 
 Import a model, edit layers, and save your work. The essentials for painting your first texture.
 
+Also covers automatic update notifications and pre-update backups in Ver.0.1.1.
+
 <a :href="withBase('/en/help/start.html')">Read the guide: Getting started</a>
 
 ## Workspace and mesh parts {#workspace}
 
 Learn the workspace layout, what each panel does, and how to switch between mesh parts and texture sets.
+
+Includes the right-click-and-slide pie menu for the 3D viewport and UV canvas.
 
 <a :href="withBase('/en/help/workspace.html')">Read the guide: Workspace and mesh parts</a>
 
@@ -45,6 +49,8 @@ Set up brushes and erasers, adjust pen pressure and stabilization, fill faces, a
 ## Layers, masks, and blending {#layers}
 
 Use layer types, blending, groups, masks, and clipping to control where your edits appear.
+
+Also explains the recompositing improvement in Ver.0.1.1 when changing opacity.
 
 <a :href="withBase('/en/help/layers.html')">Read the guide: Layers, masks, and blending</a>
 

@@ -27,9 +27,14 @@ const performance = {
 export const releases = [{
   id: 'v0-1-1',
   version: 'Ver.0.1.1',
+  video: {
+    youtubeId: 'V4Ehv4t5r1M',
+    watchUrl: 'https://www.youtube.com/watch?v=V4Ehv4t5r1M',
+  },
   content: {
     ja: {
       title: 'Ver.0.1.1の更新内容',
+      videoTitle: 'HarmoFlow Ver.0.1.1 アップデート紹介動画',
       summary: 'パイメニューの追加、再合成の最適化、アップデート自動通知機能の追加。3つの更新内容を紹介します。',
       highlights: [
         { title: 'パイメニューの追加', description: 'パイメニューを追加しました。', visual: { kind: 'pie-menu', label: '中心の周囲に項目を配置するパイメニューの概念図', note: '概念図です。実際の画面・項目数・配置を示すものではありません。' } },
@@ -40,6 +45,7 @@ export const releases = [{
     },
     en: {
       title: 'What changed in Ver.0.1.1',
+      videoTitle: 'HarmoFlow Ver.0.1.1 update showcase',
       summary: 'Three updates: a pie menu, recompositing optimization, and automatic update notifications.',
       highlights: [
         { title: 'Pie menu added', description: 'A pie menu has been added.', visual: { kind: 'pie-menu', label: 'Concept diagram of a pie menu with items arranged around a center', note: 'Concept diagram; the actual interface, item count, and layout may differ.' } },
@@ -50,6 +56,7 @@ export const releases = [{
     },
     zh: {
       title: 'Ver.0.1.1 更新内容',
+      videoTitle: 'HarmoFlow Ver.0.1.1 更新介绍视频',
       summary: '三项更新：新增饼状菜单、优化重新合成、新增自动更新通知功能。',
       highlights: [
         { title: '新增饼状菜单', description: '新增了饼状菜单。', visual: { kind: 'pie-menu', label: '围绕中心排列菜单项的饼状菜单原理示意图', note: '原理示意图，并非实际界面、菜单项数量或布局。' } },
@@ -60,6 +67,7 @@ export const releases = [{
     },
     ko: {
       title: 'Ver.0.1.1 업데이트 내용',
+      videoTitle: 'HarmoFlow Ver.0.1.1 업데이트 소개 영상',
       summary: '파이 메뉴 추가, 재합성 최적화, 업데이트 자동 알림 기능 추가. 세 가지 변경 사항을 소개합니다.',
       highlights: [
         { title: '파이 메뉴 추가', description: '파이 메뉴를 추가했습니다.', visual: { kind: 'pie-menu', label: '중심 주위에 항목을 배치하는 파이 메뉴 개념도', note: '개념도이며 실제 화면, 항목 수 또는 배치를 나타내지 않습니다.' } },

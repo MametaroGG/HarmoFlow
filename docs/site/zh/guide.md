@@ -20,11 +20,15 @@ import { withBase } from 'vitepress'
 
 从导入模型、编辑图层到保存，了解绘制第一张纹理的基本步骤。
 
+还介绍 Ver.0.1.1 的自动更新通知和更新前备份。
+
 <a :href="withBase('/zh/help/start.html')">阅读“开始使用” →</a>
 
 ## 界面与网格部件 {#workspace}
 
 界面布局、各面板的作用，以及切换网格部件和纹理集的方法。
+
+包括在 3D 视口和 UV 画布中按住右键滑动使用的饼状菜单。
 
 <a :href="withBase('/zh/help/workspace.html')">阅读“界面与网格部件” →</a>
 
@@ -49,6 +53,8 @@ import { withBase } from 'vitepress'
 ## 图层、蒙版与混合 {#layers}
 
 图层类型和混合方式，以及利用分组、蒙版和剪贴进行局部编辑。
+
+还介绍 Ver.0.1.1 在更改不透明度时的重新合成优化。
 
 <a :href="withBase('/zh/help/layers.html')">阅读“图层、蒙版与混合” →</a>
 

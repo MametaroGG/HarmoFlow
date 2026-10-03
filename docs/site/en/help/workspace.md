@@ -1,7 +1,7 @@
 ---
 title: "Workspace and mesh parts"
 category: "Getting started"
-description: "Learn the workspace layout, what each panel does, and how to switch between mesh parts and texture sets."
+description: "Workspace layout, panel roles, the pie menu, and switching between mesh parts and texture sets."
 outline: [2, 3]
 prev: false
 next: false
@@ -16,6 +16,18 @@ import { withBase } from 'vitepress'
 ## Workspace layout
 
 <GuideMedia name="workspace-overview" />
+
+## Switch tools with the pie menu {#pie-menu}
+
+In Ver.0.1.1, you can open a pie menu around the cursor in the 3D viewport or UV canvas.
+
+1. Press the right mouse button over the 3D viewport or UV canvas.
+2. Keep the button held and slide toward the item you want.
+3. Release the right button to select it. Press Esc to cancel. Releasing without sliding also closes the menu without selecting anything.
+
+Switch between tools such as brush painting, color blending, and UV shell fill close to where you work. Existing right-button bindings, such as camera controls and brush-size adjustments, take priority when their key combinations are held. See the [shortcut reference](./shortcuts.md) for keyboard and mouse controls.
+
+The pie-menu trigger is a fixed gesture. If it does not open, release modifier keys such as Ctrl, Shift, or Alt and finish drawing or text entry before trying again.
 
 ## Texture sets and mesh parts
 

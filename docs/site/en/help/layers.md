@@ -60,6 +60,12 @@ Pasting follows the same placement rule but retains the source texture set. If a
 Toggle visibility to compare a layer's effect, or use Solo to view that layer alone. Lock a layer to prevent painting. Merge Down is available only for paint layers that meet conditions such as being visible, having no mask, using 100% opacity, and containing compatible strokes. If the button is disabled, the layers cannot be merged in their current state.
 
 
+## Response when changing opacity {#recompositing-performance}
+
+Ver.0.1.1 optimizes recompositing to reduce the wait for results after changing a layer's opacity. Use the usual opacity control; no separate tool is needed.
+
+Gains vary by operation and environment. See the [Ver.0.1.1 update notes](../updates.md#release-v0-1-1) for the workload, development environment, and measured results.
+
 ## Control visibility with masks
 
 <figure class="doc-diagram">

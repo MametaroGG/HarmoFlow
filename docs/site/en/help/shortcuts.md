@@ -21,6 +21,7 @@ Fixed actions cannot be changed. Ordinary left-click and combinations that confl
 
 | Action | Key or gesture |
 | --- | --- |
+| Pie menu | Hold right-click, slide, then release to select. Esc cancels (3D viewport / UV canvas; existing right-button bindings take priority) |
 | Paint / Color blending / Path / Text | B / U / P / T |
 | Rotate camera | Alt+left drag |
 | Zoom camera | Mouse wheel, Alt+right drag, Ctrl+left drag (right or up to zoom in, left or down to zoom out) |

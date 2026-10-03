@@ -44,4 +44,6 @@ The EULA prohibits redistribution, lending, and similar sharing of the software 
 
 ### What about updates and support? {#faq-support}
 
+Ver.0.1.1 supports automatic update checks and notifications. See [automatic update notifications](./help/start.md#automatic-update-notifications) for how to use the notification icon.
+
 Check the BOOTH product page for current release information and sales conditions. Section 5 of the EULA does not oblige the publisher to provide updates, new features, support, or an operation guarantee unless separately stated. Before updating, follow the [backup and update steps](./help/start.md#update-backup). Contact the publisher through the HarmoFlow BOOTH product inquiry option or the messaging feature (「メッセージ」 in Japanese) on the [Mametaro-an shop](https://mametarovv.booth.pm/).

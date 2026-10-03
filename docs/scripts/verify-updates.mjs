@@ -54,7 +54,7 @@ for (const locale of locales) {
   assert.equal((html.match(/youtube-nocookie\.com\/embed\/x3csgJasBKg/g) || []).length, 1, locale + ': introduction video');
   assert(text.includes(copy.introNote), locale + ': product film is separate from release notes');
   assert(!html.includes('autoplay=1'), 'Do not autoplay release films');
-  const player = html.match(/<iframe\b[^>]*youtube-nocookie[^>]*>/)?.[0];
+  const player = html.match(/<iframe\b[^>]*youtube-nocookie\.com\/embed\/x3csgJasBKg[^>]*>/)?.[0];
   assert(player?.includes('width="1280"') && player.includes('height="720"') && player.includes('allowfullscreen'), locale + ': stable accessible player');
   assert(player.includes(`title="${copy.introVideoTitle}"`), locale + ': video title');
   assert.equal((html.match(/<article[^>]*class="[^"]*\brn-feature-card\b[^"]*"/g) || []).length, featureGuides.length, locale + ': complete feature summary');
@@ -81,7 +81,9 @@ for (const locale of locales) {
 // Keep the owner-provided 0.1.1 measurement attached to its exact workload.
 const update011 = releases.find(item => item.id === 'v0-1-1');
 assert(update011 && update011.version === 'Ver.0.1.1', 'Version from the provided update notes');
-assert(!update011.date && !update011.video && !update011.sourceUrl, 'Do not invent a date, public announcement URL, or version-video association');
+assert(!update011.date && !update011.sourceUrl, 'Do not infer an app release date or announcement URL from the published video');
+assert.equal(update011.video.youtubeId, 'V4Ehv4t5r1M', 'Use the owner-published 0.1.1 update video');
+assert.equal(update011.video.watchUrl, 'https://www.youtube.com/watch?v=V4Ehv4t5r1M');
 const benchmark011 = update011.content.ja.highlights.find(item => item.visual?.kind === 'recomposite');
 assert(benchmark011.description.includes('4K・不透明な素材1000レイヤー'), 'Preserve the supplied benchmark workload');
 assert(benchmark011.description.includes('不透明度変更が約29倍高速化（中央値922ms→32ms）'), 'Preserve operation, approximation, medians and units');
@@ -99,6 +101,12 @@ for (const locale of locales) {
   assert.equal(item.visual.unit, 'ms');
   const prefix = locale === 'ja' ? '' : locale + '/';
   const html = fs.readFileSync(path.join(dist, prefix + 'updates.html'), 'utf8');
+  const releasePlayer = html.match(/<iframe\b[^>]*youtube-nocookie\.com\/embed\/V4Ehv4t5r1M[^>]*>/g) || [];
+  assert.equal(releasePlayer.length, 1, locale + ': one 0.1.1 update player');
+  assert(releasePlayer[0].includes(`title="${update011.content[locale].videoTitle}"`), locale + ': localized update video title');
+  assert(releasePlayer[0].includes('width="1280"') && releasePlayer[0].includes('height="720"') && releasePlayer[0].includes('allowfullscreen'), locale + ': reserved accessible update player');
+  assert(html.includes(`href="${update011.video.watchUrl}"`), locale + ': direct link to the update video');
+  assert(html.indexOf('id="release-v0-1-1"') < html.indexOf(releasePlayer[0]) && html.indexOf(releasePlayer[0]) < html.indexOf('class="rn-release-highlights"'), locale + ': update video precedes its feature details');
   assert(html.includes('922') && html.includes('32') && html.includes('29'), locale + ': measurement renders');
   for (const context of [developmentEnvironmentLabels[locale], 'RTX 4070 SUPER', 'Core i5-12400F', 'DDR4 64GB']) {
     assert(item.description.includes(context), locale + ': performance highlight includes the measured development environment');

@@ -1,7 +1,7 @@
 ---
 title: "Getting started"
 category: "Getting started"
-description: "Installation, first launch, pre-update backups, version checks, and your first painting."
+description: "Installation, first launch, automatic update notifications, pre-update backups, and your first painting."
 outline: [2, 3]
 prev: false
 next: false
@@ -28,6 +28,16 @@ Check the [system requirements](../download.md#requirements-title) and [startup 
 - Change the interface language under Window → Language. Use Window → Reset Layout if you lose track of the panels.
 - Full and Trial install separately and have separate preferences and material caches. **The Trial supports editing and project saving, but texture export is disabled.** Projects saved in the Trial can be opened in the Full edition.
 - The material catalog is included. Downloadable image materials need an internet connection on first use. Before working away from a connection, see [material downloads and offline use](./materials.md#material-downloads).
+
+## Automatic update notifications {#automatic-update-notifications}
+
+In Ver.0.1.1, HarmoFlow checks for a newer version in the background at startup. When an update is found, a blue download icon appears to the right of the search box at the top of the window. Click it to see the current version, the newer version, and “What's new”.
+
+- **Get update** opens the download page in your browser. Only the check and notification are automatic; you download and run the installer yourself. Prepare a backup using the steps below first.
+- **Later** closes the dialog. The notification icon remains, so you can reopen it during the same session.
+- **Skip this update** hides notifications for that version, including after restarting. A newer version can still trigger a notification.
+
+No notification appears when you are offline or the check fails. An absent icon does not necessarily mean you have the latest version. To check again, confirm your internet connection and restart HarmoFlow, or visit the [BOOTH product page](https://mametarovv.booth.pm/items/8754692) directly. The [update page](../updates.md) also includes changes and showcase videos.
 
 ## Back up before updating {#update-backup}
 
