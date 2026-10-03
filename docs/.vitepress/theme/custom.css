@@ -2200,7 +2200,7 @@ html:lang(ko) { font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR"
 .prose .guide-concept-card p { font-size: .9375rem; line-height: 1.75; margin: 0; }
 .prose .guide-concept-note { margin: 1rem 0 0; font-size: .875rem; color: #526678; }
 .prose figure.doc-menu-capture { margin: 1.75rem 0; padding: 1.25rem; border: 1px solid #dce3ed; border-radius: 16px; background: #f5f8fb; text-align: center; }
-.prose figure.doc-menu-capture img { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; border: 0; border-radius: 5px; }
+.prose figure.doc-menu-capture img { display: block; max-width: 100%; height: auto; margin: 0 auto; border: 0; border-radius: 5px; }
 .prose figure.doc-menu-capture figcaption { margin-top: 1rem; font-size: .9375rem; line-height: 1.8; color: #45566e; }
 @media(max-width: 900px) {
   .guide-concept-cards { grid-template-columns: 1fr; }

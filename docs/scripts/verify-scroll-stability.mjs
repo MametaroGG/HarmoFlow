@@ -71,6 +71,30 @@ for (const item of videos) {
   assert(new RegExp(`aspect-ratio:\\s*${item.width}\\s*/\\s*${item.height}`).test(video), `${item.id}: reserve the true ratio before the poster loads`);
 }
 
+// Standalone menu captures also need their natural size before lazy loading.
+const menuCaptures = [
+  { file: 'window-menu-panels.png', article: 'viewport' },
+  { file: 'file-menu-import.png', article: 'assets' },
+];
+let menuCaptureInstances = 0;
+for (const capture of menuCaptures) {
+  const png = fs.readFileSync(path.join(docs, 'site/public/graphics/guide', capture.file));
+  assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${capture.file}: PNG signature`);
+  assert.equal(png.toString('ascii', 12, 16), 'IHDR', `${capture.file}: PNG dimensions header`);
+  const width = png.readUInt32BE(16), height = png.readUInt32BE(20);
+  const pages = ['guide.html', ...['', 'en/', 'zh/', 'ko/'].map(prefix => `${prefix}help/${capture.article}.html`)];
+  for (const page of pages) {
+    const html = read(`.vitepress/dist/${page}`);
+    const images = [...html.matchAll(/<figure\b[^>]*class="doc-menu-capture"[^>]*>([\s\S]*?)<\/figure>/g)]
+      .flatMap(figure => [...figure[1].matchAll(/<img\b[^>]*>/g)].map(match => match[0]))
+      .filter(image => image.includes(`/graphics/guide/${capture.file}`));
+    assert.equal(images.length, 1, `${page}: standalone ${capture.file}`);
+    assert(images[0].includes(`width="${width}"`) && images[0].includes(`height="${height}"`), `${page}: ${capture.file} reserves the actual PNG dimensions`);
+    assert(!/style="[^"]*\bwidth:\s*auto\b/.test(images[0]), `${page}: do not override the menu image width`);
+    menuCaptureInstances++;
+  }
+}
+
 // Native fragment navigation and VitePress both clear the responsive header.
 const css = postcss.parse(read('.vitepress/theme/custom.css'));
 const values = (selector, media) => {
@@ -91,6 +115,13 @@ assert.equal(parseFloat(desktop['--site-header-height']), 82);
 assert.equal(parseFloat(mobile['--site-header-height']), 66);
 assert.equal(values('.guide-media-image a')['max-width'], '100%', 'Natural screenshot frames fit narrow screens');
 assert.equal(values('.prose .guide-media-image img').width, '100%', 'Images use the reserved frame width before loading');
+const menuImageSelectors = new Set(['img', '.prose img', '.doc-menu-capture img', '.prose .doc-menu-capture img', '.prose figure.doc-menu-capture img']);
+css.walkRules(rule => {
+  if (rule.selectors.some(selector => menuImageSelectors.has(selector))) {
+    rule.walkDecls('width', decl => assert.notEqual(decl.value, 'auto', `${rule.selector}: retain the menu image width attribute before loading`));
+  }
+});
+assert.equal(values('.prose figure.doc-menu-capture img')['max-width'], '100%', 'Menu captures still fit narrow screens');
 
 // Hash-only navigation never updates route.path, including a repeated hash.
 const layout = read('.vitepress/theme/Layout.vue');
@@ -116,4 +147,4 @@ closeMenuOnNavigate({ target: { closest: () => null } });
 assert.equal(menu.value, true, 'Non-link navigation content is not a link activation');
 assert(/<nav\b[^>]*@click="closeMenuOnNavigate"/.test(layout), 'Navigation activation is connected to menu dismissal');
 
-console.log(`PASS: ${videos.length} real MP4 dimensions, ${screenshots} reserved screenshot frames, pre-load rendered ratios, responsive anchor/header offsets, and same/repeated-link menu dismissal (static and logic checks; browser scroll QA remains required).`);
+console.log(`PASS: ${videos.length} real MP4 dimensions, ${screenshots} reserved screenshot frames, ${menuCaptureInstances} menu captures with real PNG dimensions and no auto-width override, pre-load rendered ratios, responsive anchor/header offsets, and same/repeated-link menu dismissal (static and logic checks; browser scroll QA remains required).`);
