@@ -32,7 +32,7 @@ next: false
 | Mask / Clipping | Information defining which areas are visible / a restriction based on the painted area of the layer below |
 | Anchor / Handle | A point on a path / a control used to adjust a curve's direction and shape |
 | Shape Key | Data that blends vertex deformations by weight to change expressions or other shapes |
-| Linear / sRGB | A space used for numerical color calculations / a nonlinear color encoding used for display. Do not confuse data maps with color images |
+| Linear / sRGB | Color values proportional to light intensity / a nonlinear encoding used for display. Color images and data maps such as roughness use different handling |
 | VRAM / BC7 | GPU memory / a texture compression format for GPUs |
 | IBL / F0 / ACES | Lighting from an environment image / base reflectance when viewed straight on / tone mapping that fits brightness into the display range |
 | High-Poly / Cage / UDIM | A detailed model / geometry defining the range of projection rays / a method using multiple UV tiles. These are not currently supported by mesh map baking |

@@ -37,4 +37,4 @@ Drag an image from the project onto a channel to assign it. Set the viewport pre
 
 Working resolution can be 512 / 1024 / 2048 / 4096. Export resolution also offers 8192 (8K); 8K is an export setting, not a working resolution. Working, export, and preview resolutions are separate settings. Higher-resolution exports require more memory and processing time.
 
-Manual Texture Assignment lets you assign images to channels of an imported material. Use Clear to remove an assignment. This is separate from image Fill settings on a layer.
+Manual Texture Bind lets you assign images to channels of an imported material. Use Clear to remove an assignment. This is separate from image Fill settings on a layer.

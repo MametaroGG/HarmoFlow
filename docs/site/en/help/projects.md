@@ -26,18 +26,20 @@ For package assets, see [Unity Package import](./assets.md#unitypackage-import).
 | --- | --- |
 | Save Scene | Save the current editing state. Ctrl+S |
 | Save Scene As | Save the editing state under a different name |
-| Save Incrementally | Keep a new numbered version. Ctrl+Alt+S |
+| Incremental Save | Keep a new numbered version. Ctrl+Alt+S |
 | Open Scene | Resume from a saved editing state |
-| Export as Package | Bundle the project into a `.harmopackage` file to take with you |
-| Export to Previous Location | Reuse the previous package export location |
+| Export Package | Bundle the project into a `.harmopackage` file to take with you |
+| Export Package Again | Immediately overwrite the last exported package without a confirmation dialog. Hover over the command to check the destination first |
 | Open Package | Extract the package to the configured location and open it |
-| Open with Selected Extraction Location | Choose where to extract this package and open it |
+| Open Package Into... | Choose where to extract this package and open it |
+
+Package export first saves the current scene. For unsaved work, it creates a project folder beside the package. The package includes workspace.json and the scenes, assets, and autosave folders; other files at the project root are not included. Before sharing a package, check its other scenes and autosaves for work you cannot share.
 
 ## Autosave and recovery
 
 Enable autosave in Preferences → Autosave, then set the interval (1–60 minutes), filename prefix, whether to save only when changes have been made, and the number of saves to keep. A retention count of 0 keeps every save. You can also choose Autosave Now or open the save folder.
 
-Choose File → Recover autosave to select a saved snapshot. Recover previous save restores the available previous save. After checking the recovered content, save the scene normally.
+Choose File → Recover autosave to select a saved snapshot. Recover previous save creates and opens a separate recovered scene from an available previous save, keeping the original scene file. After checking the recovered content, save the scene normally.
 
 ### Locate and choose an autosave {#autosave-location}
 
@@ -58,4 +60,8 @@ The app attempts a recovery autosave after a GPU error, but it may fail. Failed 
 3. Inspect the recovered model, layers, recent painting, materials, and images. Opening successfully does not by itself prove that everything was recovered.
 4. Once you have checked the content, choose Save Scene (Ctrl+S). **Restoring alone does not overwrite the original scene file; the file on disk stays unchanged until you save normally.** Use Save Scene As if you also want to retain the original save.
 
-If you want to restore later, **hover over Not now and record the autosave path shown in its tooltip before clicking the button.** Not now closes the recovery prompt without deleting the autosave. You can use Recover autosave later if needed. If there is no prompt, saving failed, or recovery itself closes the app again, preserve the original data and follow [GPU troubleshooting and support](./troubleshooting.md#gpu-errors). Check GPU load and the driver before repeatedly attempting the same recovery.
+If you want to restore later, **hover over Not now and record the autosave path shown in its tooltip before clicking the button.** Not now closes the recovery prompt without deleting the autosave.
+
+To recover saved work later, open its original project before choosing File → Recover autosave. The list shows autosaves for the current project; in an unsaved session, it shows application-data autosaves. If the snapshot is missing from the list, compare the recorded path with Current folder.
+
+If there is no prompt, saving failed, or recovery itself closes the app again, preserve the original data and follow [GPU troubleshooting and support](./troubleshooting.md#gpu-errors). Check GPU load and the driver before repeatedly attempting the same recovery.

@@ -17,16 +17,19 @@ import { withBase } from 'vitepress'
 
 <GuideMedia name="export-settings" />
 
-Choose an output location, format, and resolution in the Export panel. Supported formats include PNG, JPG, TGA, EXR, and PSD. Saving a scene so you can resume editing and exporting finished textures as images are separate operations.
+Choose the output location and format in the Export panel, and set Export Resolution in the Channels panel. Supported formats include PNG, JPG, TGA, EXR, and PSD. Saving a scene so you can resume editing and exporting finished textures as images are separate operations.
 
 To export only geometry maps, use PNG export in the mesh map baking window. These maps contain linear data. A new folder is created at the output location.
+
+Texture export from the Export panel requires the Full edition. In the Trial, save the scene and open it in the Full edition to export.
 
 ## Output settings
 
 1. Choose the export resolution in Channels.
 2. In Export, specify the output folder, base name, and format.
 3. Enable the channels you need and choose the normal map convention.
-4. Click Export Textures.
+4. Existing files with the same output names are overwritten without a confirmation dialog. Change the output folder or base name to keep an earlier export. Export into a subfolder creates a folder named after the base name inside the chosen output folder.
+5. Click Export Textures.
 
 | Setting | When to use it |
 | --- | --- |
@@ -34,12 +37,12 @@ To export only geometry maps, use PNG export in the mesh map baking window. Thes
 | JPG | Use for smaller color images. Because it uses lossy compression, choose PNG or another suitable format for data maps |
 | TGA | Use when the destination workflow requires TGA |
 | EXR | Use for workflows that support EXR. Changing the format alone does not increase the precision of the original editing data |
-| PSD | One file per channel, with raster layers and editable opacity/blend settings. Save .harmos too for editable HarmoFlow strokes and adjustment parameters. See the details below |
+| PSD | One file per enabled channel in each output texture set, with raster layers and editable opacity/blend settings. Save .harmos too for editable HarmoFlow strokes and adjustment parameters. See the details below |
 | OpenGL / DirectX | Choose the green-channel orientation of tangent-space Normal maps to match the destination's settings |
 
 ### What PSD retains
 
-Creates one PSD per channel. Paint, Fill, and path layers are saved as image layers with their original names, order, and visibility. Opacity and blend modes (Normal, Multiply, Add, and Overlay) remain editable PSD settings. Add maps to Linear Dodge (Add).
+A separate PSD is created for each enabled channel in each output texture set. Paint, Fill, and path layers are saved as image layers with their original names, order, and visibility. Opacity and blend modes (Normal, Multiply, Add, and Overlay) remain editable PSD settings. Add maps to Linear Dodge (Add).
 
 Masks and clipping are baked into pixel transparency. Folders retain their hierarchy, names, visibility, and collapsed state, using Pass Through blending. For ordinary Paint, Fill, and Path channel compositing, no extra layer is added solely to compensate for compositing differences.
 
@@ -51,7 +54,9 @@ Adjustment layers are exported as raster image layers for their target channels.
 
 The exported adjustment image depends on the composited layers below its position. Changing those underlying layers in the PSD does not automatically recalculate HarmoFlow's adjustment.
 
-Standard image formats are exported separately for each channel. Combine Parts with the Same Material is enabled by default. It combines the UV regions of parts that use the same material into one texture set for export, while keeping different materials separate. Where UVs overlap, painting from the first part takes priority. If you have painted different images on overlapping UVs, turn this setting off to export each part separately.
+## Merge parts for export
+
+Image and PSD exports create a file for each output texture set and enabled channel. Merge parts sharing a material is enabled by default. It combines the UV regions of parts assigned to the same material in the original model into one texture set for export, while keeping different materials separate. Where UVs overlap, painting from the first part takes priority. If you have painted different images on overlapping UVs, turn this setting off to export each part separately.
 
 ## Pixels outside mesh UVs
 

@@ -30,7 +30,13 @@ Automatically generated maps appear in the Mesh Maps list in Texture Set Setting
 
 ## Baking resolution and supported features
 
-Automatic baking uses 1024px per texture set. Use Rebake to update the maps. In File → Bake Mesh Maps, choose 256 / 512 / 1024 / 2048px to export four types of PNG maps. The manual-export resolution does not apply to automatic baking.
+Automatic baking uses 1024px per texture set. Use Rebake to update the maps. The manual-export resolution does not apply to automatic baking.
+
+1. Open File → Bake Mesh Maps... and select Texture set index and Resolution. Choose a resolution of 256 / 512 / 1024 / 2048px.
+2. Click Bake mesh maps and wait for completion.
+3. Check the displayed texture set and image size before choosing “Export four PNG maps...”.
+
+Changing Resolution alone does not replace the displayed automatic bake.
 
 ::: details Current supported features
 This is self-baking based on all parts of the current model. AO uses 64 hemisphere rays with a maximum distance of 15% of the model's diagonal length. Curvature is calculated from face angles and distance from edges.

@@ -19,7 +19,7 @@ Plugins add control panels and image filters to HarmoFlow. This page explains **
 | --- | --- | --- |
 | Lua extension (`.lua`) | Plugins → Add / Browse Plugins... | Register a panel with sliders and buttons to group layer operations together |
 | DLL plugin (`.dll`) | The same add/browse screen | Register image filters and other features using native code. Requires a Windows x64 build |
-| Regular Lua script (`.lua`) | Window → Scripts (Lua) → Run / Run File... | Run an `hf` API operation once. This is separate from registering a panel |
+| Regular Lua script (`.lua`) | Window → Scripting (Lua) → Run / Run File... | Run an `hf` API operation once. This is separate from registering a panel |
 
 **A regular Lua script and a Lua plugin extension are different, even though both use the `.lua` extension.** A Lua file added as a plugin must use `hf.register_panel` to register a panel. Passing a regular script to the add/browse screen will not create the plugin panel you expect.
 
@@ -29,13 +29,15 @@ Save your current scene and check the source of the file and the HarmoFlow versi
 
 ## From installation to launch {#install-plugin}
 
-1. Open Plugins (P) → Add / Browse Plugins... in the top menu.
+1. Open Plugins → Add / Browse Plugins... in the top menu.
 2. Choose Add Plugin... and select the distributed `.lua` or `.dll` file.
-3. The file is copied to the app's storage location and loading begins. Lua extension registration runs at a frame when it can be processed safely, so the add confirmation alone does not mean registration is complete. Also check the loading status in the list.
-4. Open the top Plugins (P) menu again and choose the registered item. **The add/browse screen is for management; launch plugins from the Plugins menu.**
+3. The file is copied to the app's storage location and loading begins. Lua extensions register after painting and other ongoing operations finish. Check the registration result in the Lua extensions list, even after the add confirmation appears.
+4. Open the top Plugins menu again and choose the registered item. **The add/browse screen is for management; launch plugins from the Plugins menu.**
 5. Check the results in a small test scene. If the extension adds layers, also check that the layer list contains the intended result.
 
-Successfully added files are loaded again the next time you start the app. If no item appears in the launch menu, see [Troubleshooting loading problems](#plugin-troubleshooting).
+Added files are considered for loading the next time you start the app. If no item appears in the launch menu, see [Troubleshooting loading problems](#plugin-troubleshooting).
+
+The current implementation automatically attempts only the first 16 Lua files, sorted by filename, at startup. A running session can hold up to 32 extensions, but keep `extensions/` to 16 `.lua` files or fewer if all must load again on restart.
 
 ## Where are the files stored? {#plugin-folders}
 
@@ -68,6 +70,7 @@ There are no dedicated commands to reload, unload, or delete plugins while the a
 | --- | --- |
 | A file with the same name exists / cannot add the file | Existing files are not overwritten. Quit the app, check the old file, and then replace it |
 | No menu item after adding Lua | Check the Lua loading result in the list. Make sure it is an extension that registers a panel with `hf.register_panel`, rather than a regular script |
+| Some Lua extensions are missing after restart | Startup attempts only the first 16 files in filename order, including invalid files. Check the number of `.lua` files directly inside `extensions/` |
 | Duplicate Lua panel ID | Check whether an older version or a copy of the same extension remains in `extensions/` |
 | `Could not load DLL` | Check the author's instructions to confirm it is built for Windows x64 and that the required runtime libraries and dependent DLLs are present |
 | `DLL exports no hf_plugin_init` | The HarmoFlow entry point was not found. The DLL may be for another app, or its build configuration may be incorrect |

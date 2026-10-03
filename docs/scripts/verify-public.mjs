@@ -32,6 +32,33 @@ for (const article of articles)
     guide.includes(`id="${article.slug}"`),
     `Legacy anchor missing: ${article.slug}`,
   );
+// Emphasis adjacent to CJK punctuation must render, not leak Markdown markers.
+for (const file of pages) {
+  const page = fs.readFileSync(path.join(dist, file), "utf8");
+  const prose = page.replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, "").replace(/<[^>]*>/g, "");
+  assert(!prose.includes("**"), `Unrendered bold Markdown in ${file}`);
+}
+// Standardize authored Japanese asset terminology while retaining quoted terms.
+for (const file of pages.filter(file => !/^(en|zh|ko)\//.test(file) && file !== 'terms.html')) {
+  const prose = fs.readFileSync(path.join(dist, file), 'utf8').replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<[^>]*>/g, '');
+  assert(!prose.includes('素材'), `Japanese asset terminology not standardized in ${file}`);
+}
+assert(articles.every(article => ![article.title, article.category, article.description, article.searchText].some(text => text.includes('素材'))), 'Japanese search uses asset terminology');
+for (const file of ['help/assets.html', 'guide.html']) {
+  const page = fs.readFileSync(path.join(dist, file), 'utf8');
+  for (const id of ['素材を検索・絞り込む', '素材を取り込んて\u3099使う']) assert(page.includes(`id="${id}"`), `${file}: retain old Japanese heading anchor ${id}`);
+}
+const emphasis = {
+  "help/start.html": "現在使っている種類（製品版／体験版）",
+  "guide.html": "現在使っている種類（製品版／体験版）",
+  "zh/help/start.html": "同一版本类型（正式版／试用版）",
+  "ko/help/start.html": "같은 판(정식판／체험판)",
+  "ko/help/adjustments.html": "Gradient Map(그라디언트 맵)",
+  "ko/help/plugin-development.html": "<code>my_first_panel.lua</code>",
+};
+for (const [file, text] of Object.entries(emphasis)) {
+  assert(fs.readFileSync(path.join(dist, file), "utf8").includes(`<strong>${text}</strong>`), `Expected semantic emphasis in ${file}`);
+}
 const prohibited = [
   "HF_INTERNAL_PUBLICATION_SENTINEL_2026",
   "development-plan.md",

@@ -193,7 +193,7 @@ onUnmounted(() => {
             >
           </div>
           <p class="hero-note">
-            <SiteIcon name="monitor" class="windows-icon" /> {{ t("Windows向けに開発中 · Vulkan 1.2対応GPU") }}
+            <SiteIcon name="monitor" class="windows-icon" /> {{ t("Windows専用 · Vulkan 1.2対応GPUが必要") }}
           </p>
         </div>
         <div class="hero-launch-video" role="group" :aria-label="t('HarmoFlow ローンチビデオ')">

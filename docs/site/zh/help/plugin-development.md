@@ -64,9 +64,9 @@ hf.register_panel {
 ## 2. 加载并验证运行结果 {#test-lua-panel}
 
 1. 打开一个具有 UV 的小型模型，保存为测试场景。
-2. 通过“插件(P) → 添加／浏览插件... → 添加插件...”选择 `my_first_panel.lua`。
+2. 通过“插件 → 添加／浏览插件... → 添加插件...”选择 `my_first_panel.lua`。
 3. 在列表中确认 Lua 扩展已成功注册。
-4. 从“插件(P)”打开 **My First Panel**，点击一次 **Add paint layer**。
+4. 从“插件”打开 **My First Panel**，点击一次 **Add paint layer**。
 5. 确认新增了一个图层，同时确认 Ctrl+Z 能撤销添加，Ctrl+Y 能重做。
 6. 保存场景后重新打开，确认生成的图层仍然存在。
 
@@ -96,6 +96,8 @@ Lua 扩展的操作只能使用以下范围的 `hf` API，不能直接使用普�
 - 每个扩展最多 8 个面板，最多可加载 32 个扩展
 - 文件大小上限为 1 MiB；ID、标题和标签必须为非空字符串，且不超过 256 字节
 - 面板 ID 必须在所有扩展中唯一；同一面板内的控件 ID、操作 ID 也不能重复
+
+当前实现启动时只会按文件名顺序尝试加载前16个Lua文件。运行期间最多可加载32个扩展，但如果希望重启后全部自动加载，请将 `extensions/` 目录下的 `.lua` 文件控制在16个以内。
 
 ### 带滑块的示例
 
@@ -216,7 +218,7 @@ HF_EXPORT int hf_plugin_init(const HfHost* host, HfPluginInfo* info) {
 5. 保存测试场景，按照[添加步骤](./plugins.md#install-plugin)加载 DLL。同时检查管理界面的信息和插件菜单。打开 **Guide Grayscale**，在 BaseColor 中依次尝试预览 → 取消 → 再次打开 → 应用。还需确认图层、撤销／重做、保存和重新加载。
 6. 修改源代码后，退出 HarmoFlow，替换为重新构建的 DLL，再重新启动。
 
-在 Microsoft 的 **x64 开发人员命令提示符**中，进入解压头文件和 C 示例的文件夹，执行以下命令。编译器安装和许可事项请遵循相应开发工具提供方的说明。
+在 Microsoft 的 **x64 Native Tools Command Prompt**中，进入解压头文件和 C 示例的文件夹，执行以下命令。编译器安装和许可事项请遵循相应开发工具提供方的说明。
 
 ```bat
 cl /nologo /LD /O2 /W4 /I . guide_gray.c /link /OUT:guide_gray.dll

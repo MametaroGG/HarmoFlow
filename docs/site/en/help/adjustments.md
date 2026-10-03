@@ -44,7 +44,7 @@ Start with small brightness and contrast changes, then adjust saturation and hue
 
 The horizontal axis is the original value (**Input**); the vertical axis is the corrected value (**Output**). Shadows are toward the lower left and highlights toward the upper right. Raising the curve above the diagonal brightens those values; lowering it darkens them.
 
-1. Choose **RGB (Master)** to adjust overall tone, or **Red (R)**, **Green (G)**, or **Blue (B)** for individual color control.
+1. In **Channel**, choose **RGB (Master)** to adjust overall tone, or **Red (R)**, **Green (G)**, or **Blue (B)** for individual color control.
 2. Click the graph to add a point and drag it to reshape the curve. You can also edit the selected point with Input and Output.
 3. Lower shadows slightly and raise highlights slightly to increase contrast. Reduce **Strength** if the effect is too strong: 0 gives no adjustment and 1 gives the full effect.
 

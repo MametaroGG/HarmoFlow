@@ -17,9 +17,15 @@ import { withBase } from 'vitepress'
 
 ## Create a path
 
-Press P to switch to the Path tool, then click the model to place anchors. Press Enter to finish an open path, C to close it, F to close and fill it, or Esc to cancel. While drawing, Delete / Backspace removes the last anchor. You can also click the starting point to close the path.
+Press P to switch to the Path tool. Click the model to place a corner anchor, or drag while holding the button to create handles for a curve. While drawing a new path, click its last anchor to retract the outgoing handle.
 
-Click a completed path to edit it again. Drag anchors or handles to refine the contour, click a curve to add a point, and press Delete to remove the selected point. Clicking the last anchor to retract its outgoing handle creates a corner. Click outside the path, or press Enter or Esc, to finish editing. You can also edit in the UV Editor while checking the positions of UV islands.
+Press Enter to finish an open path, C to close it, F to close and fill it, or Esc to cancel. While drawing, Delete / Backspace removes the last anchor. You can also click the starting point to close the path.
+
+Create each path within one texture set. Open paths need at least two anchors; closed paths need at least three. Use C/F while drawing with the pointer over the 3D viewport.
+
+Click a completed path in the 3D view to edit it again. Drag anchors or handles to refine the contour, click a curve to add a point, and press Delete to remove the selected point. Double-click an anchor to switch between corner and smooth. Click outside the path, or press Enter or Esc, to finish editing.
+
+You can also edit in the UV Editor while checking the positions of UV islands. See [UV Editor](./uv.md#uv-path-editing) for its controls.
 
 <GuideMedia name="edit-path" />
 
@@ -29,6 +35,6 @@ Set the fill, outer outline, and inner outline independently in the Paths panel.
 
 ## Materials for fills and outlines
 
-A path's fill, outer outline, and inner outline can each use a different material. Select the corresponding swatch, then choose a material from Materials or drag it from the material browser. Clicking a material in the browser also assigns it to the selected fill or outline. Choose Solid Color to return to the original color.
+A path's fill, outer outline, and inner outline can each use a different material. Select the corresponding swatch, then choose a material with the Material button or drag it from the Asset Browser. Clicking a material in the browser also assigns it to the selected fill or outline. Choose Solid Color to return to the original color.
 
 Material maps and compositing are retained. Adjust width and opacity per path. These settings support scene saving and Undo/Redo.

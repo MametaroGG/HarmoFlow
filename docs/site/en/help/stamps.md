@@ -36,7 +36,7 @@ Aligned keeps the relative source position across strokes. When it is off, each 
 
 | Tab | Settings and uses |
 | --- | --- |
-| Image | Add or drop an image. Set size, opacity, and rotation to place patterns or decals You can also right-click a project image and choose Register as Image Stamp to open it in the Image tab. |
+| Image | Add or drop an image. Set size, opacity, and rotation to place patterns or decals. You can also right-click a project image and choose Register as Image Stamp to open it in the Image tab. |
 | Text | Set the text, system font, size, opacity, letter spacing, line spacing, alignment, and rotation |
 | Shape | Choose a rectangle, ellipse, polygon, or star. Set fill, line width, number of corners, star inner-radius ratio, size, opacity, and rotation |
 

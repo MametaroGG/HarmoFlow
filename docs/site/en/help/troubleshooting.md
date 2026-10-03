@@ -45,13 +45,13 @@ An out-of-memory operation may roll back to its previous state without closing t
 ## UVs show only an outline
 
 ::: details What to do
-In Wireframe Settings, change the display mode to Triangles. UV Shell mode draws only the boundary of each island.
+In Wire Settings, change the display mode to Triangles. UV Shells mode draws only the boundary of each island.
 :::
 
 ## Wireframe lines look too dark or dense
 
 ::: details What to do
-Reduce line width and opacity, or switch to UV Shell mode. Turn off UV Wireframe when you want to inspect the texture itself.
+Reduce line width and opacity, or switch to UV Shells mode. Turn off UV wire when you want to inspect the texture itself.
 :::
 
 ## Cannot switch parts

@@ -15,13 +15,15 @@ next: false
 
    Enable a procedural pattern and adjust properties such as color and Roughness.
 
-2. **Choose Shape-Based Placement**
+2. **Choose Mesh placement**
 
-   Choose Convex Edges, Concave Edges, or Occluded Dirt (AO). Everywhere places the pattern without restricting it by geometry.
+   Choose Convex edges, Concave edges, or Occluded dirt (AO). Whole surface does not restrict placement by geometry.
+
+   If mesh maps are still baking, wait for placement to update. If it does not update, check the displayed error and use Rebake mesh maps.
 
 3. **Adjust the strength and pattern**
 
-   Use Shape Mask Strength to control the influence of geometry, and adjust Amount, Detail, and other settings to refine the weathering distribution.
+   Use Mesh influence to control the influence of geometry, and adjust Amount, Scale, and other settings to refine the weathering distribution.
 
 <GuideMedia name="place-weathering" />
 

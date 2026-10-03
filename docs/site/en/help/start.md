@@ -38,11 +38,9 @@ Check the [system requirements](../download.md#requirements-title) and [startup 
 3. Get the newer installer for the **same edition (Full or Trial)** from BOOTH and run it using the existing installation location. The same-edition installer updates the existing installation.
 4. Confirm the version after launching. First use a test copy made from your backup to check models, images, layers, saving, and reopening. In the Full edition, also test the exports you need.
 
-### About update notices
+### Check the latest release
 
-At startup, HarmoFlow checks for a newer version when it can connect to the internet. **The check is notification-only: it does not automatically download or install the application.** Open store page takes you to BOOTH. Later closes the notice for this launch; Skip this version suppresses further notices for that version.
-
-An unavailable connection does not prevent startup. No notice does not prove that you have the latest version; you can also check the BOOTH product page.
+Check the [BOOTH product page](https://mametarovv.booth.pm/items/8754692) for the latest release and download files. Save your work and back up the project before updating. Get the newer installer for the edition you use (Full or Trial), then follow the update steps above.
 
 ## Find the version and changelog {#version-changelog}
 
@@ -58,7 +56,7 @@ See the [purchase FAQ](../download.md#purchase-faq) for purchase conditions and 
 
    Import a model from the File menu, or drag a model file from File Explorer into the window. Dropping onto the home screen also works; the workspace opens after import finishes. Supported formats include FBX, OBJ, glTF / GLB, DAE, PLY, STL, 3DS, and BLEND.
 
-   When dropping several models or images together, the first supported model is opened and the remaining files are imported into Project. Drops received during an import are processed afterward.
+   When dropping several models or images together, the first supported model is opened and the remaining files are imported into the project's asset library. Drops received during an import are processed afterward.
 
 2. **Select the part to edit**
 
@@ -76,14 +74,14 @@ Mesh maps are baked automatically when you import a model. If you configure weat
 
 ## glTF / GLB images and material assignments
 
-Importing glTF / GLB brings supported referenced images into Project and automatically assigns them to BaseColor, Normal, Metallic, Roughness, and Emission. Packed MetallicRoughness images are split into Roughness and Metallic. Supported color and strength values are also applied.
+Importing glTF / GLB brings supported referenced images into the project's asset library and automatically assigns them to BaseColor, Normal, Metallic, Roughness, and Emission. Packed MetallicRoughness images are split into Roughness and Metallic. Supported color and strength values are also applied.
 
-External geometry data and referenced images are included when the project is saved, so the saved project can be reopened independently of the original folder. To replace an image, use Manual Texture Assignment in the Channels panel. These imported material bindings are separate from image Fill on a layer.
+External geometry data and referenced images are included when the project is saved, so the saved project can be reopened independently of the original folder. To replace an image, use Manual Texture Bind in the Channels panel. These imported material bindings are separate from image Fill on a layer.
 
 ### Import warnings and limits
 
 An unreadable image produces a Console warning; other supported images that can be loaded are still applied. Missing geometry buffers or other files essential to the model can cause the whole model import to fail.
 
-Successfully imported AO images are retained in Project, but a dedicated channel for displaying or applying imported AO is not supported. This is separate from the automatically baked AO mesh map.
+Successfully imported AO images are retained in the project's asset library, but a dedicated channel for displaying or applying imported AO is not supported. This is separate from the automatically baked AO mesh map.
 
 Automatic image assignment uses UV0. Images referencing another UV set or texture-coordinate extensions such as KHR_texture_transform are skipped for automatic assignment, with a warning. This skips the referenced image; material color or scalar fallback values may still be generated.

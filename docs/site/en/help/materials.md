@@ -22,7 +22,7 @@ import { withBase } from 'vitepress'
 
 In a material layer's properties, enable the target channel and select an image under Image Fill, or drag one from the project. Assigning an image replaces that channel's constant value. Scalar channels use the image's R channel, and transparency uses its alpha. Use Clear to remove the image.
 
-UV transforms include tiling, position, rotation, and image repeat, and apply to all images on that layer. Use Reset UV to restore the defaults. Generate Normal from Height affects the entire scene. Turn it off when you want to use an assigned Normal image.
+UV transforms include tiling, position, rotation, and image repeat, and apply to all images on that layer. Use Reset UV to restore the defaults. Normal from Height (whole scene) affects the entire scene. Turn it off when you want to use an assigned Normal image.
 
 ## Create patterns
 
@@ -30,25 +30,33 @@ Choose Add Pattern, then select grunge, rust, mud splashes, scratches, dust, or 
 
 | Setting | What it controls |
 | --- | --- |
-| Detail / Scale | Pattern repetition and the size of individual features |
+| Scale | Pattern repetition and the size of individual features |
 | Amount | How much of the surface the pattern covers |
 | Contrast | How sharply the pattern's boundaries are defined |
 | Seed | A number that changes the arrangement while preserving the overall character |
-| Octaves | The number of detail layers added to the noise |
-| Color Variation | Color differences within the pattern |
-| Relief | Height variation added to the Height channel |
+| Detail | The number of detail layers added to the noise |
+| Variation | Color differences within the pattern |
+| Relief | Height variation where the pattern appears; enable the Height channel first |
 | Invert | Reverse the pattern's distribution |
-| Shape-Based Placement / Strength | Placement using convexity, concavity, and AO. See [Weathering](/en/guide#weathering) |
+| Mesh placement / Mesh influence | Placement using convexity, concavity, and AO. See [Weathering](/en/guide#weathering) |
 
-A pattern takes precedence over image Fill on the channels it uses. If an image does not appear, check the Pattern in Use indicator and whether the channel is enabled.
+A pattern takes precedence over image Fill on the channels it uses. If an image does not appear, check the “(the pattern shapes this one)” indicator and whether the channel is enabled.
 
 ## Material presets
 
-Save the current material and reuse it from the presets in the Project panel. Choose between applying a preset to the selected layer and adding it as a new material asset. Right-click a saved preset to update, rename, or delete it, or add it to favorites. The editing operations available for built-in presets differ from those for user-saved presets.
+Save the current material and reuse it from the presets in the Asset Browser.
+
+To replace an existing Fill layer with a single-layer preset, select an unlocked Fill layer and choose Apply to the selected layer. This replaces its channel values, images, and pattern settings; Undo restores them.
+
+Drag a material into the viewport to add new layer(s). A multilayer preset is inserted above the selected layer as an editable layer stack and folder.
+
+Right-click a saved preset to update, rename, or delete it, or add it to favorites. The editing operations available for built-in presets differ from those for user-saved presets.
 
 ### Paint selected areas
 
-Select a material in the material browser to use it with a brush, Polygon Fill, or UV Shell Fill. Select its existing material layer or folder to add more coverage with the same material. See [Fill faces and UV islands](/en/help/brush).
+Select the target texture set before choosing a material in the Asset Browser. Brush, Polygon Fill, and UV Shell Fill paint areas within the currently selected texture set. Select its existing material layer or folder to add more coverage with the same material. See [Fill faces and UV islands](/en/help/brush).
+
+Filling with a material also affects only the currently selected texture set. Other texture sets in the model are not changed automatically.
 
 ## Material downloads and offline use {#material-downloads}
 
@@ -58,14 +66,14 @@ Procedural materials and images you import yourself work without a material down
 
 1. While online, choose a material from the library. Using a material whose images are missing starts the download.
 2. To prepare in advance, right-click it and choose **Download for offline use**. This prepares the images for later use.
-3. Wait for **Downloading → Verifying → Extracting** to finish in the Project panel.
+3. Wait for **Downloading → Verifying → Extracting** to finish in the Asset Browser.
 4. Once downloaded, the cached material is available offline. If you change the scene, layer, tool, or other target while it downloads, select the material again afterward to use it on the current target.
 
 To download a different material, wait for the current download or choose **Cancel download**. Prepare each material you will need before going offline.
 
 ### Retry a failed or cancelled download {#material-download-retry}
 
-- Check your connection, then choose **Retry download** in the Project panel. You can also retry after cancellation.
+- Check your connection, then choose **Retry download** in the Asset Browser. You can also retry after cancellation.
 - Hover over the error message to see any available details. **Dismiss** closes the failed/cancelled status.
 - If a material reports that its provider has not published download files, retrying the connection alone will not make those files available.
 - If a downloaded material is not applied, select it again and check the target layer and enabled channels.

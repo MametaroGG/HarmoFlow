@@ -49,7 +49,7 @@ const hardware = [
         </tr>
       </tbody>
     </table>
-    <p class="requirements-note">{{ t('CPUはIntel／AMDのいずれか、GPUはNVIDIA／AMDのいずれかを選ぶ形です。GPUにはVulkan 1.2対応ドライバーが必要です。') }}</p>
+    <p class="requirements-note">{{ t('表の製品名は、CPUとGPUそれぞれの性能の目安です。GPUにはVulkan 1.2対応のドライバーが必要です。') }}</p>
     <p class="requirements-note">{{ t('確定している必須条件は、WindowsとVulkan 1.2対応GPU・ドライバーです。') }}</p>
     <p class="requirements-languages"><strong>{{ t('対応言語') }}</strong><span>{{ t('日本語・英語・中国語（簡体字）・韓国語') }}</span></p>
   </section>

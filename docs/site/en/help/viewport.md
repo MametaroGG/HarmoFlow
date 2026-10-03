@@ -15,19 +15,19 @@ import { withBase } from 'vitepress'
 
 ## Move the camera
 
-By default, rotate with Alt+left drag and pan with middle drag or Space+left drag. Zoom with the mouse wheel, Alt+right drag, or Ctrl+left drag; drag right or up to zoom in. Panning is unavailable in Pivot 360. If you have customized Key Configuration, check your current bindings.
+By default, rotate with Alt+left drag and pan with middle drag or Space+left drag. Zoom with the mouse wheel, Alt+right drag, or Ctrl+left drag; drag right or up to zoom in. Panning is unavailable in Pivot 360. If you have customized Key Config, check your current bindings.
 
-Use Front to return to the front view. In Free Rotation, panning moves the rotation center. Use Capture or F12 to save the viewport as a PNG.
+Use Front to return to the front view. In Free Orbit, panning moves the rotation center. Use Shot or F12 to save the viewport as a PNG.
 
-Use Focus Layer at the top of the viewport to move the camera toward the selected layer's painted area. The focus area is based on strokes for paint layers, the shape for paths, and the target mesh for materials. Selecting another layer while focused moves the view to that layer. Use Frame All to show the entire model. Empty paint and path layers cannot be focused.
+Use Layer Focus at the top of the viewport to move the camera toward the selected layer's painted area. Focus uses the strokes of a paint layer and the shape of a path layer. For material and adjustment layers, it uses mask strokes when an enabled mask contains them; otherwise it uses the target mesh's bounds. Selecting another layer while focused moves the view to that layer. Use Whole to show the entire model. Empty paint and path layers cannot be focused.
 
 ## Switch display modes
 
 The display menu includes PBR, NPR, individual views of the six channels, and layer masks. Choose the channel appropriate to your task, such as BaseColor for checking color or Roughness for its distribution. Use PBR to inspect surface properties with light reflections, and NPR to check a toon-style appearance. These views do not guarantee an exact match with external shaders.
 
-Shading Settings lets you adjust the light's azimuth, elevation, intensity, and color, along with ambient light intensity, saturation, and color. PBR settings include highlights, exposure, normal strength, base reflectance (F0), and ACES tone mapping. NPR settings include minimum and maximum brightness. Use Reset Shading Settings if you want to start over.
+Shading lets you adjust the light's azimuth, elevation, intensity, and color, along with ambient light intensity, saturation, and color. PBR settings include highlights, exposure, normal strength, base reflectance (F0), and ACES tone mapping. NPR settings include minimum and maximum brightness. Use Reset Shading Settings if you want to start over.
 
-Wireframe Settings controls visibility, back-face display, color, opacity, line width, and whether to hide the diagonals of detected quads. These settings are separate from the UV Editor's wireframe settings.
+Wire Settings controls visibility, back-face display, color, opacity, line width, and whether to hide the diagonals of detected quads. These settings are separate from the UV Editor's wireframe settings.
 
 ## Select and hide parts
 
@@ -60,9 +60,9 @@ Model-format support and shape-key support are different. Use FBX for shape-key 
 
 ### Weights and filters {#shape-key-controls}
 
-1. Filter by mesh or search by name to find a key. **Active only** restricts the list to keys with a nonzero weight.
+1. Filter by mesh or search by name to find a key. **Active only** shows keys whose weight is greater than 0.0001.
 2. Adjust **Weight** from 0–1. Zero means no deformation from that key; 1 means its full effect. You can use several keys together, so inspect their combined result.
-3. **Zero Active** sets the active keys to zero. **Reset All** restores the imported defaults, which are not necessarily all zero.
+3. The top-level **Zero Active** sets every key whose weight is greater than 0.0001 to zero, regardless of the current list filters. **Reset All** restores the imported defaults, which are not necessarily all zero.
 
 Each group also has **Reset** and **Zero Active**. These affect the keys in that group that pass the current filters. Use the top-level Reset All to restore every key. Weights are stored in the scene.
 

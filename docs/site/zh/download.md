@@ -18,7 +18,7 @@ HarmoFlow仅支持Windows，需要兼容Vulkan 1.2的GPU及驱动程序。CPU、
 
 ### 需要一直连接互联网吗？ {#faq-offline}
 
-下载应用以及首次使用需要下载的图像材质时需要联网。已下载的材质可离线使用，应用后的图像也会复制到项目中。浏览目录、使用程序化材质和手动导入的图像不需要下载材质。更新检查失败不会阻止启动。详情请查看[材质下载与离线使用](./help/materials.md#material-downloads)。
+下载应用以及首次使用需要下载的图像材质时需要联网。已下载的材质可离线使用，应用后的图像也会复制到项目中。浏览目录、使用程序化材质和手动导入的图像不需要下载材质。详情请查看[材质下载与离线使用](./help/materials.md#material-downloads)。
 
 ### 制作的纹理和图像归谁所有？ {#faq-output-rights}
 
@@ -36,7 +36,7 @@ HarmoFlow仅支持Windows，需要兼容Vulkan 1.2的GPU及驱动程序。CPU、
 
 ### 有团队许可证吗？ {#faq-team-license}
 
-团队许可证正在考虑中。如有意向，请通过[豆々庵店铺](https://mametarovv.booth.pm/)的Contact单独咨询。
+团队许可证正在考虑中。如有意向，请通过[豆々庵店铺](https://mametarovv.booth.pm/)的消息功能（日文界面为「メッセージ」）单独咨询。
 
 ### 可以把应用或安装程序交给他人吗？ {#faq-redistribution}
 
@@ -44,4 +44,4 @@ HarmoFlow仅支持Windows，需要兼容Vulkan 1.2的GPU及驱动程序。CPU、
 
 ### 更新和支持如何提供？ {#faq-support}
 
-最新版本信息与销售条件请查看BOOTH商品页面。根据使用许可协议第5条，除非另有说明，销售方没有提供更新、新功能、支持或运行保证的义务。更新前请参考[备份与更新步骤](./help/start.md#update-backup)。可通过HarmoFlow的BOOTH商品咨询入口，或[豆々庵店铺](https://mametarovv.booth.pm/)的Contact联系销售方。
+最新版本信息与销售条件请查看BOOTH商品页面。根据使用许可协议第5条，除非另有说明，销售方没有提供更新、新功能、支持或运行保证的义务。更新前请参考[备份与更新步骤](./help/start.md#update-backup)。可通过HarmoFlow的BOOTH商品咨询入口，或[豆々庵店铺](https://mametarovv.booth.pm/)的消息功能（日文界面为「メッセージ」）联系销售方。

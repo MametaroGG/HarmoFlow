@@ -68,9 +68,12 @@ Toggle visibility to compare a layer's effect, or use Solo to view that layer al
 </figure>
 
 1. Click a layer's mask area to add or select a mask.
+
+   A new mask starts black, so the whole layer is hidden at first. The original content is still there. Paint on the mask to reveal it.
+
 2. Paint on the mask to reveal more of the layer, or use the eraser to hide more of it.
 3. Switch back to the content to edit the original layer.
 
 Shift-click a mask to enable or disable it. Use the layer mask view to inspect its coverage. **Clipping** restricts a layer to the painted area of the layer below. **Lock Transparent Pixels** restricts new strokes to the existing painted area of the same paint layer.
 
-Paint Height controls the height effect of painting. Use Raise/Lower and Height Amount to set the direction and amount of relief.
+Stroke Height controls the height effect of painting. Use Raise/Lower and Height Amount to set the direction and amount of relief.

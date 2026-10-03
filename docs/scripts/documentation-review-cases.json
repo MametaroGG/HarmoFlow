@@ -1,0 +1,1925 @@
+[
+  {
+    "id": "A-F01",
+    "locale": "ja",
+    "article": "projects",
+    "allOf": [
+      "前回書き出したパッケージを上書きする",
+      "実行前にカーソルを重ね"
+    ]
+  },
+  {
+    "id": "A-F01",
+    "locale": "en",
+    "article": "projects",
+    "allOf": [
+      "Export Package Again",
+      "Immediately overwrite the last exported package without a confirmation dialog",
+      "Hover over the command"
+    ]
+  },
+  {
+    "id": "A-F01",
+    "locale": "zh",
+    "article": "projects",
+    "allOf": [
+      "再次导出资源包",
+      "不显示确认对话框，立即覆盖上次导出的资源包",
+      "核对输出路径"
+    ]
+  },
+  {
+    "id": "A-F01",
+    "locale": "ko",
+    "article": "projects",
+    "allOf": [
+      "패키지 다시 내보내기",
+      "확인 창 없이 마지막으로 내보낸 패키지를 즉시 덮어씁니다",
+      "출력 경로를 확인하세요"
+    ]
+  },
+  {
+    "id": "A-F02",
+    "locale": "ja",
+    "article": "projects",
+    "allOf": [
+      "workspace.json",
+      "scenes",
+      "assets",
+      "autosave",
+      "まず現在のシーンを保存します",
+      "同じ場所にプロジェクトフォルダーを作成",
+      "その他のファイルは含まれません",
+      "共有できない内容"
+    ]
+  },
+  {
+    "id": "A-F02",
+    "locale": "en",
+    "article": "projects",
+    "allOf": [
+      "workspace.json",
+      "scenes",
+      "assets",
+      "autosave",
+      "Package export first saves the current scene",
+      "creates a project folder beside the package",
+      "other files at the project root are not included",
+      "check its other scenes and autosaves"
+    ]
+  },
+  {
+    "id": "A-F02",
+    "locale": "zh",
+    "article": "projects",
+    "allOf": [
+      "workspace.json",
+      "scenes",
+      "assets",
+      "autosave",
+      "先保存当前场景",
+      "在资源包旁创建项目文件夹",
+      "不包含项目根目录中的其他文件",
+      "不宜分享的内容"
+    ]
+  },
+  {
+    "id": "A-F02",
+    "locale": "ko",
+    "article": "projects",
+    "allOf": [
+      "workspace.json",
+      "scenes",
+      "assets",
+      "autosave",
+      "먼저 현재 씬을 저장합니다",
+      "패키지 옆에 프로젝트 폴더를 만듭니다",
+      "프로젝트 루트의 다른 파일은 포함되지 않습니다",
+      "공유할 수 없는 내용"
+    ]
+  },
+  {
+    "id": "A-F03",
+    "locale": "ja",
+    "article": "export",
+    "allOf": [
+      "出力先と形式はエクスポートパネルで、書き出し解像度はチャンネルパネルで選びます"
+    ]
+  },
+  {
+    "id": "A-F03",
+    "locale": "en",
+    "article": "export",
+    "allOf": [
+      "Choose the output location and format in the Export panel, and set Export Resolution in the Channels panel."
+    ]
+  },
+  {
+    "id": "A-F03",
+    "locale": "zh",
+    "article": "export",
+    "allOf": [
+      "在“导出”面板中选择输出位置和格式，在“通道”面板中设置“导出分辨率”"
+    ]
+  },
+  {
+    "id": "A-F03",
+    "locale": "ko",
+    "article": "export",
+    "allOf": [
+      "내보내기 패널에서 출력 위치와 형식을 선택하고, 채널 패널에서 “내보내기 해상도”를 설정합니다"
+    ]
+  },
+  {
+    "id": "A-F04",
+    "locale": "ja",
+    "article": "export",
+    "allOf": [
+      "出力するテクスチャセットごとに、有効な各チャンネルのPSD",
+      "## パーツをまとめて書き出す",
+      "PNGなどの画像とPSD",
+      "元のモデルで同じマテリアルが割り当てられたパーツ"
+    ]
+  },
+  {
+    "id": "A-F04",
+    "locale": "en",
+    "article": "export",
+    "allOf": [
+      "each enabled channel in each output texture set",
+      "## Merge parts for export",
+      "Image and PSD exports",
+      "Merge parts sharing a material",
+      "same material in the original model"
+    ]
+  },
+  {
+    "id": "A-F04",
+    "locale": "zh",
+    "article": "export",
+    "allOf": [
+      "每个输出纹理集中的每个已启用通道",
+      "## 合并部件后导出",
+      "图片和PSD导出",
+      "合并使用相同材质的部件",
+      "原模型中分配了相同材质的部件"
+    ]
+  },
+  {
+    "id": "A-F04",
+    "locale": "ko",
+    "article": "export",
+    "allOf": [
+      "출력 텍스처 세트마다 활성화한 각 채널의 PSD",
+      "## 파트를 병합하여 내보내기",
+      "이미지와 PSD는",
+      "같은 머티리얼을 사용하는 파트 병합",
+      "원본 모델에서 같은 머티리얼이 할당된 파트"
+    ]
+  },
+  {
+    "id": "A-F05",
+    "locale": "ja",
+    "article": "projects",
+    "allOf": [
+      "元のプロジェクトを開いてから",
+      "この一覧に表示されるのは現在のプロジェクトの自動保存",
+      "未保存セッションではアプリデータ内の自動保存",
+      "「現在の保存先」を照合"
+    ]
+  },
+  {
+    "id": "A-F05",
+    "locale": "en",
+    "article": "projects",
+    "allOf": [
+      "open its original project before choosing File → Recover autosave",
+      "The list shows autosaves for the current project",
+      "application-data autosaves",
+      "compare the recorded path with Current folder"
+    ]
+  },
+  {
+    "id": "A-F05",
+    "locale": "zh",
+    "article": "projects",
+    "allOf": [
+      "请先打开原项目",
+      "列表只显示当前项目的自动保存",
+      "应用数据目录中的自动保存",
+      "与“当前文件夹”进行核对"
+    ]
+  },
+  {
+    "id": "A-F05",
+    "locale": "ko",
+    "article": "projects",
+    "allOf": [
+      "먼저 원래 프로젝트를 연 다음",
+      "현재 프로젝트의 자동 저장이 표시",
+      "앱 데이터의 자동 저장",
+      "“현재 폴더”를 비교"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "en",
+    "article": "projects",
+    "allOf": [
+      "| Incremental Save |",
+      "| Export Package |",
+      "| Export Package Again |",
+      "| Open Package Into... |"
+    ],
+    "noneOf": [
+      "| Save Incrementally |",
+      "| Export as Package |",
+      "| Export to Previous Location |",
+      "| Open with Selected Extraction Location |"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "zh",
+    "article": "projects",
+    "allOf": [
+      "| 递增保存 |",
+      "| 导出资源包 |",
+      "| 再次导出资源包 |",
+      "| 打开资源包 |",
+      "| 打开资源包到... |"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "ko",
+    "article": "projects",
+    "allOf": [
+      "| 씬 다른 이름으로 저장 |",
+      "| 증분 저장 |",
+      "| 패키지 내보내기 |",
+      "| 패키지 다시 내보내기 |",
+      "| 패키지를 지정 위치에 열기... |"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "en",
+    "article": "assets",
+    "allOf": [
+      "Import File...",
+      "Import PNG Brush"
+    ],
+    "noneOf": [
+      "Import Files"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "zh",
+    "article": "assets",
+    "allOf": [
+      "导入 PNG 画笔...",
+      "画笔面板"
+    ],
+    "noneOf": [
+      "导入 PNG 笔刷",
+      "笔刷面板"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "en",
+    "article": "start",
+    "allOf": [
+      "Manual Texture Bind"
+    ],
+    "noneOf": [
+      "Manual Texture Assignment"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "zh",
+    "article": "start",
+    "allOf": [
+      "手动绑定纹理"
+    ],
+    "noneOf": [
+      "手动关联纹理"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "en",
+    "article": "export",
+    "allOf": [
+      "Merge parts sharing a material"
+    ],
+    "noneOf": [
+      "Combine Parts with the Same Material"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "zh",
+    "article": "export",
+    "allOf": [
+      "合并使用相同材质的部件",
+      "基本名称",
+      "偏好设置"
+    ],
+    "noneOf": [
+      "合并使用同一材质的部件",
+      "基础名称",
+      "首选项"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "ko",
+    "article": "export",
+    "allOf": [
+      "같은 머티리얼을 사용하는 파트 병합"
+    ],
+    "noneOf": [
+      "같은 머티리얼의 파트 묶기"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "en",
+    "article": "troubleshooting",
+    "allOf": [
+      "Wire Settings",
+      "UV Shells mode"
+    ],
+    "noneOf": [
+      "Wireframe Settings",
+      "UV Shell mode"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "ko",
+    "article": "workspace",
+    "allOf": [
+      "| UV 편집기 |"
+    ],
+    "noneOf": [
+      "| UV 에디터 |"
+    ]
+  },
+  {
+    "id": "A-F06",
+    "locale": "ko",
+    "article": "start",
+    "allOf": [
+      "채널, UV 편집기, 텍스처 세트 설정"
+    ]
+  },
+  {
+    "id": "A-F06-preserve",
+    "locale": "ja",
+    "article": "assets",
+    "allOf": [
+      "PNGブラシをインポート"
+    ]
+  },
+  {
+    "id": "A-F06-preserve",
+    "locale": "en",
+    "article": "assets",
+    "allOf": [
+      "Import PNG Brush"
+    ]
+  },
+  {
+    "id": "A-F06-preserve",
+    "locale": "ko",
+    "article": "assets",
+    "allOf": [
+      "PNG 브러시 가져오기"
+    ]
+  },
+  {
+    "id": "A-F07",
+    "locale": "ja",
+    "article": "assets",
+    "allOf": [
+      "「保存検索」と「パスでフィルタ」",
+      "非表示にしても絞り込み条件は残ります",
+      "上部の検索入力欄は表示されたまま"
+    ]
+  },
+  {
+    "id": "A-F07",
+    "locale": "en",
+    "article": "assets",
+    "allOf": [
+      "Saved searches and Filter by path",
+      "Their filters remain active when hidden",
+      "the text-search field at the top stays visible"
+    ]
+  },
+  {
+    "id": "A-F07",
+    "locale": "zh",
+    "article": "assets",
+    "allOf": [
+      "“已保存的搜索”和“按路径筛选”",
+      "隐藏后筛选条件仍然有效",
+      "顶部的搜索输入框仍会显示"
+    ]
+  },
+  {
+    "id": "A-F07",
+    "locale": "ko",
+    "article": "assets",
+    "allOf": [
+      "“저장된 검색”과 “경로별 필터”",
+      "숨겨도 필터 조건은 유지",
+      "위쪽 검색 입력란은 계속 표시"
+    ]
+  },
+  {
+    "id": "A-F08",
+    "locale": "ja",
+    "article": "projects",
+    "allOf": [
+      "別の復旧用シーンを作成して開きます",
+      "元のシーンファイルは残ります"
+    ]
+  },
+  {
+    "id": "A-F08",
+    "locale": "en",
+    "article": "projects",
+    "allOf": [
+      "creates and opens a separate recovered scene",
+      "keeping the original scene file"
+    ]
+  },
+  {
+    "id": "A-F08",
+    "locale": "zh",
+    "article": "projects",
+    "allOf": [
+      "创建并打开一个独立的恢复场景",
+      "保留原场景文件"
+    ]
+  },
+  {
+    "id": "A-F08",
+    "locale": "ko",
+    "article": "projects",
+    "allOf": [
+      "별도의 복구 씬을 만들어 열며",
+      "원본 씬 파일은 유지"
+    ]
+  },
+  {
+    "id": "A-F09",
+    "locale": "ja",
+    "article": "export",
+    "allOf": [
+      "確認画面を出さずに上書きします",
+      "出力先フォルダーかベース名を変更",
+      "「サブフォルダーに出力」"
+    ]
+  },
+  {
+    "id": "A-F09",
+    "locale": "en",
+    "article": "export",
+    "allOf": [
+      "Existing files with the same output names are overwritten without a confirmation dialog",
+      "Change the output folder or base name",
+      "Export into a subfolder"
+    ]
+  },
+  {
+    "id": "A-F09",
+    "locale": "zh",
+    "article": "export",
+    "allOf": [
+      "会直接覆盖，不显示确认对话框",
+      "更改输出文件夹或基本名称",
+      "“输出到子文件夹”"
+    ]
+  },
+  {
+    "id": "A-F09",
+    "locale": "ko",
+    "article": "export",
+    "allOf": [
+      "확인 창 없이 덮어씁니다",
+      "출력 폴더나 기본 이름을 바꾸세요",
+      "“하위 폴더에 출력”"
+    ]
+  },
+  {
+    "id": "A-F09-order",
+    "locale": "ja",
+    "article": "export",
+    "before": "確認画面を出さずに上書きします",
+    "after": "5. 「テクスチャをエクスポート」"
+  },
+  {
+    "id": "A-F09-order",
+    "locale": "en",
+    "article": "export",
+    "before": "Existing files with the same output names are overwritten without a confirmation dialog",
+    "after": "5. Click Export Textures."
+  },
+  {
+    "id": "A-F09-order",
+    "locale": "zh",
+    "article": "export",
+    "before": "会直接覆盖，不显示确认对话框",
+    "after": "5. 点击“导出纹理”"
+  },
+  {
+    "id": "A-F09-order",
+    "locale": "ko",
+    "article": "export",
+    "before": "확인 창 없이 덮어씁니다",
+    "after": "5. “텍스처 내보내기”"
+  },
+  {
+    "id": "known-asset-browser",
+    "locale": "ja",
+    "article": "assets",
+    "allOf": [
+      "アセットブラウザーには"
+    ]
+  },
+  {
+    "id": "known-asset-browser",
+    "locale": "en",
+    "article": "assets",
+    "allOf": [
+      "The Asset Browser shows"
+    ]
+  },
+  {
+    "id": "known-asset-browser",
+    "locale": "zh",
+    "article": "assets",
+    "allOf": [
+      "资产浏览器显示"
+    ]
+  },
+  {
+    "id": "known-asset-browser",
+    "locale": "ko",
+    "article": "assets",
+    "allOf": [
+      "에셋 브라우저에는"
+    ]
+  },
+  {
+    "id": "known-project-library",
+    "locale": "ja",
+    "article": "start",
+    "allOf": [
+      "プロジェクトのアセットライブラリ"
+    ]
+  },
+  {
+    "id": "known-project-library",
+    "locale": "en",
+    "article": "start",
+    "allOf": [
+      "the project's asset library"
+    ]
+  },
+  {
+    "id": "known-project-library",
+    "locale": "zh",
+    "article": "start",
+    "allOf": [
+      "项目资源库"
+    ]
+  },
+  {
+    "id": "known-project-library",
+    "locale": "ko",
+    "article": "start",
+    "allOf": [
+      "프로젝트 에셋 라이브러리"
+    ]
+  },
+  {
+    "id": "A-W01",
+    "locale": "zh",
+    "article": "export",
+    "allOf": [
+      "请同时保存.harmos场景。"
+    ]
+  },
+  {
+    "id": "A-W01",
+    "locale": "ko",
+    "article": "export",
+    "allOf": [
+      ".harmos 씬도 저장하세요.",
+      "마스크와 클리핑은 픽셀 투명도에 베이크합니다."
+    ]
+  },
+  {
+    "id": "A-W02",
+    "locale": "ja",
+    "article": "export",
+    "allOf": [
+      "エクスポートパネルからのテクスチャ出力は製品版で利用できます"
+    ]
+  },
+  {
+    "id": "A-W02",
+    "locale": "en",
+    "article": "export",
+    "allOf": [
+      "Texture export from the Export panel requires the Full edition"
+    ]
+  },
+  {
+    "id": "A-W02",
+    "locale": "zh",
+    "article": "export",
+    "allOf": [
+      "从“导出”面板导出纹理需要正式版"
+    ]
+  },
+  {
+    "id": "A-W02",
+    "locale": "ko",
+    "article": "export",
+    "allOf": [
+      "내보내기 패널의 텍스처 내보내기는 정식판에서 사용할 수 있습니다"
+    ]
+  },
+  {
+    "id": "UI-uv-wire",
+    "locale": "en",
+    "article": "troubleshooting",
+    "allOf": [
+      "Turn off UV wire"
+    ],
+    "noneOf": [
+      "Turn off UV Wireframe"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "ja",
+    "article": "materials",
+    "allOf": [
+      "| 細部 |",
+      "| 凹凸 | Heightチャンネルを有効にしたとき"
+    ]
+  },
+  {
+    "id": "PL-03",
+    "locale": "ja",
+    "article": "materials",
+    "allOf": [
+      "ロックしていないFillレイヤー",
+      "「選択中のレイヤーに適用」",
+      "チャンネル値・画像・パターン設定が置き換わり"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "ja",
+    "article": "materials",
+    "allOf": [
+      "現在選択中のテクスチャセット"
+    ]
+  },
+  {
+    "id": "PL-02",
+    "locale": "ja",
+    "article": "paths",
+    "allOf": [
+      "作図中に最後のアンカー",
+      "アンカーをダブルクリック",
+      "./uv.md#uv-path-editing"
+    ]
+  },
+  {
+    "id": "PL-06",
+    "locale": "ja",
+    "article": "paths",
+    "allOf": [
+      "1つのテクスチャセット",
+      "2点以上",
+      "3点以上",
+      "ポインターを3Dビューポート"
+    ]
+  },
+  {
+    "id": "PL-04",
+    "locale": "ja",
+    "article": "mesh-maps",
+    "allOf": [
+      "2. 「メッシュマップをベイク」",
+      "3. 表示されたテクスチャセットと画像サイズ",
+      "解像度の選択だけでは"
+    ]
+  },
+  {
+    "id": "PL-05",
+    "locale": "ja",
+    "article": "layers",
+    "allOf": [
+      "新しいマスクは黒で始まる"
+    ]
+  },
+  {
+    "id": "PL-09",
+    "locale": "ja",
+    "article": "layers",
+    "allOf": [
+      "コピーはその時点の内容を保持"
+    ]
+  },
+  {
+    "id": "PL-07",
+    "locale": "ja",
+    "article": "weathering",
+    "allOf": [
+      "自動ベイク中",
+      "「メッシュマップを再ベイク」"
+    ]
+  },
+  {
+    "id": "PRESERVE-CURRENT-UV-WORDING",
+    "locale": "ja",
+    "article": "brush",
+    "allOf": [
+      "現在のUVに"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "ja",
+    "article": "brush",
+    "allOf": [
+      "現在選択中のテクスチャセット"
+    ]
+  },
+  {
+    "id": "PL-09",
+    "locale": "ja",
+    "article": "brush",
+    "allOf": [
+      "「ブラシに登録」"
+    ]
+  },
+  {
+    "id": "PL-09",
+    "locale": "ja",
+    "article": "stamps",
+    "allOf": [
+      "「画像スタンプに登録」"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "en",
+    "article": "materials",
+    "allOf": [
+      "| Detail |",
+      "enable the Height channel first"
+    ]
+  },
+  {
+    "id": "PL-03",
+    "locale": "en",
+    "article": "materials",
+    "allOf": [
+      "unlocked Fill layer",
+      "Apply to the selected layer",
+      "This replaces its channel values, images, and pattern settings"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "en",
+    "article": "materials",
+    "allOf": [
+      "currently selected texture set"
+    ]
+  },
+  {
+    "id": "PL-02",
+    "locale": "en",
+    "article": "paths",
+    "allOf": [
+      "While drawing a new path",
+      "Double-click an anchor",
+      "./uv.md#uv-path-editing"
+    ]
+  },
+  {
+    "id": "PL-06",
+    "locale": "en",
+    "article": "paths",
+    "allOf": [
+      "within one texture set",
+      "at least two anchors",
+      "at least three",
+      "pointer over the 3D viewport"
+    ]
+  },
+  {
+    "id": "PL-04",
+    "locale": "en",
+    "article": "mesh-maps",
+    "allOf": [
+      "2. Click Bake mesh maps",
+      "3. Check the displayed texture set and image size",
+      "Changing Resolution alone"
+    ]
+  },
+  {
+    "id": "PL-05",
+    "locale": "en",
+    "article": "layers",
+    "allOf": [
+      "A new mask starts black"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "en",
+    "article": "weathering",
+    "allOf": [
+      "Mesh placement",
+      "Mesh influence"
+    ]
+  },
+  {
+    "id": "PL-07",
+    "locale": "en",
+    "article": "weathering",
+    "allOf": [
+      "Rebake mesh maps"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "en",
+    "article": "brush",
+    "allOf": [
+      "currently selected texture set"
+    ]
+  },
+  {
+    "id": "PL-08",
+    "locale": "en",
+    "article": "stamps",
+    "allOf": [
+      "patterns or decals. You can also"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "zh",
+    "article": "materials",
+    "allOf": [
+      "| 细节 |",
+      "需先启用 Height 通道"
+    ]
+  },
+  {
+    "id": "PL-03",
+    "locale": "zh",
+    "article": "materials",
+    "allOf": [
+      "未锁定的填充图层",
+      "应用到所选图层",
+      "替换通道数值、图片和图案设置"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "zh",
+    "article": "materials",
+    "allOf": [
+      "当前选中的纹理集"
+    ]
+  },
+  {
+    "id": "PL-02",
+    "locale": "zh",
+    "article": "paths",
+    "allOf": [
+      "绘制新路径时",
+      "双击锚点",
+      "./uv.md#uv-path-editing"
+    ]
+  },
+  {
+    "id": "PL-06",
+    "locale": "zh",
+    "article": "paths",
+    "allOf": [
+      "一个纹理集",
+      "至少需要两个锚点",
+      "至少需要三个",
+      "指针放在 3D 视口"
+    ]
+  },
+  {
+    "id": "PL-04",
+    "locale": "zh",
+    "article": "mesh-maps",
+    "allOf": [
+      "2. 点击“烘焙网格贴图”",
+      "3. 核对显示的纹理集和图片尺寸",
+      "仅更改分辨率"
+    ]
+  },
+  {
+    "id": "PL-05",
+    "locale": "zh",
+    "article": "layers",
+    "allOf": [
+      "新蒙版初始为黑色"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "zh",
+    "article": "weathering",
+    "allOf": [
+      "网格分布",
+      "网格影响强度"
+    ]
+  },
+  {
+    "id": "PL-07",
+    "locale": "zh",
+    "article": "weathering",
+    "allOf": [
+      "重新烘焙网格贴图"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "zh",
+    "article": "brush",
+    "allOf": [
+      "当前选中的纹理集"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "zh",
+    "article": "stamps",
+    "allOf": [
+      "| 图像 |",
+      "在图像选项卡中使用"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "ko",
+    "article": "materials",
+    "allOf": [
+      "| 디테일 |",
+      "먼저 Height 채널을 켜세요"
+    ]
+  },
+  {
+    "id": "PL-03",
+    "locale": "ko",
+    "article": "materials",
+    "allOf": [
+      "잠기지 않은 Fill 레이어",
+      "선택한 레이어에 적용",
+      "채널 값, 이미지, 패턴 설정이 바뀌며"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "ko",
+    "article": "materials",
+    "allOf": [
+      "현재 선택한 텍스처 세트"
+    ]
+  },
+  {
+    "id": "PL-02",
+    "locale": "ko",
+    "article": "paths",
+    "allOf": [
+      "새 패스를 그리는 중",
+      "앵커를 더블 클릭",
+      "./uv.md#uv-path-editing"
+    ]
+  },
+  {
+    "id": "PL-06",
+    "locale": "ko",
+    "article": "paths",
+    "allOf": [
+      "하나의 텍스처 세트",
+      "두 개 이상",
+      "세 개 이상",
+      "포인터를 3D 뷰포트"
+    ]
+  },
+  {
+    "id": "PL-04",
+    "locale": "ko",
+    "article": "mesh-maps",
+    "allOf": [
+      "2. “메시 맵 베이크”",
+      "3. 표시된 텍스처 세트와 이미지 크기",
+      "해상도만 바꾸면"
+    ]
+  },
+  {
+    "id": "PL-05",
+    "locale": "ko",
+    "article": "layers",
+    "allOf": [
+      "새 마스크는 검은색으로 시작"
+    ]
+  },
+  {
+    "id": "PL-01",
+    "locale": "ko",
+    "article": "weathering",
+    "allOf": [
+      "메시 배치",
+      "메시 영향도"
+    ]
+  },
+  {
+    "id": "PL-07",
+    "locale": "ko",
+    "article": "weathering",
+    "allOf": [
+      "메시 맵 다시 베이크"
+    ]
+  },
+  {
+    "id": "PRESERVE-SELECTED-TEXTURE-SET",
+    "locale": "ko",
+    "article": "brush",
+    "allOf": [
+      "현재 선택한 텍스처 세트"
+    ]
+  },
+  {
+    "id": "PL-08",
+    "locale": "ko",
+    "article": "stamps",
+    "allOf": [
+      "배치합니다. 프로젝트 이미지를"
+    ]
+  },
+  {
+    "id": "I-F1",
+    "locale": "ja",
+    "article": "plugins",
+    "allOf": [
+      "ファイル名順で先頭の16個",
+      "最大32個",
+      "`extensions/` 直下"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F1",
+    "locale": "ja",
+    "article": "plugin-development",
+    "allOf": [
+      "ファイル名順で先頭の16個",
+      "最大32個",
+      "`extensions/` 直下"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F1",
+    "locale": "en",
+    "article": "plugins",
+    "allOf": [
+      "first 16 Lua files, sorted by filename",
+      "up to 32 extensions",
+      "16 `.lua` files or fewer"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F1",
+    "locale": "en",
+    "article": "plugin-development",
+    "allOf": [
+      "first 16 Lua files, sorted by filename",
+      "up to 32 extensions",
+      "16 `.lua` files or fewer"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F1",
+    "locale": "zh",
+    "article": "plugins",
+    "allOf": [
+      "按文件名顺序尝试加载前16个Lua文件",
+      "最多可加载32个扩展",
+      "文件控制在16个以内"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F1",
+    "locale": "zh",
+    "article": "plugin-development",
+    "allOf": [
+      "按文件名顺序尝试加载前16个Lua文件",
+      "最多可加载32个扩展",
+      "文件控制在16个以内"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F1",
+    "locale": "ko",
+    "article": "plugins",
+    "allOf": [
+      "파일 이름순으로 앞의 Lua 파일 16개",
+      "최대 32개",
+      "파일을 16개 이하"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F1",
+    "locale": "ko",
+    "article": "plugin-development",
+    "allOf": [
+      "파일 이름순으로 앞의 Lua 파일 16개",
+      "최대 32개",
+      "파일을 16개 이하"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F2",
+    "locale": "zh",
+    "article": "adjustments",
+    "allOf": [
+      "New adjustment layer",
+      "Tone Curve",
+      "Gradient Map",
+      "Reset adjustment",
+      "Channel",
+      "RGB (Master)",
+      "Red (R)",
+      "Green (G)",
+      "Blue (B)",
+      "Input",
+      "Strength",
+      "Remove point",
+      "Curve presets",
+      "Add color",
+      "Remove",
+      "Reverse",
+      "Presets",
+      "色调校正",
+      "输出",
+      "线性、对比度、Soft contrast、Lift shadows、哑光和Darken",
+      "部分控件仍显示英文"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F2",
+    "locale": "ko",
+    "article": "adjustments",
+    "allOf": [
+      "New adjustment layer",
+      "Tone Curve",
+      "Gradient Map",
+      "Reset adjustment",
+      "Channel",
+      "RGB (Master)",
+      "Red (R)",
+      "Green (G)",
+      "Blue (B)",
+      "Input",
+      "Strength",
+      "Remove point",
+      "Curve presets",
+      "Add color",
+      "Remove",
+      "Reverse",
+      "Presets",
+      "색조 보정",
+      "| 색조 |",
+      "출력",
+      "선형, 대비, Soft contrast, Lift shadows, 무광, Darken",
+      "일부 컨트롤이 영어로 표시"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F3",
+    "locale": "en",
+    "article": "settings",
+    "allOf": [
+      "Speed-adaptive stabilization",
+      "Calibrate with test strokes",
+      "Auto adjust and review",
+      "Finish",
+      "Soft gives",
+      "Firm requires",
+      "Use internal file browser",
+      "Key Config",
+      "Bake intermediates",
+      "Import / GPU prep",
+      "| Experimental |"
+    ],
+    "noneOf": [
+      "Adjust Stabilization to Speed",
+      "Calibrate Pressure with Test Strokes",
+      "Key Configuration",
+      "Use Built-in File Browser"
+    ]
+  },
+  {
+    "id": "I-F3",
+    "locale": "zh",
+    "article": "settings",
+    "allOf": [
+      "偏好设置 → 绘画手感",
+      "偏好设置 → 常规 → 使用内置文件浏览器",
+      "偏好设置 → VRAM",
+      "进入工作区",
+      "随速度调整防抖",
+      "速度响应",
+      "笔压控制不透明度",
+      "通过试画校准",
+      "自动调整并预览",
+      "更软",
+      "“软”",
+      "“硬”"
+    ],
+    "noneOf": [
+      "首选项",
+      "进入工作界面",
+      "根据速度调整防抖",
+      "笔压控制浓度",
+      "试画并调整笔压"
+    ]
+  },
+  {
+    "id": "I-F3",
+    "locale": "ko",
+    "article": "settings",
+    "allOf": [
+      "환경 설정 → 필기감",
+      "속도에 따른 손떨림 보정",
+      "필압 불투명도",
+      "시험 그리기로 보정",
+      "자동 조정 및 확인",
+      "“부드럽게”",
+      "“단단하게”",
+      "“작업 기록”"
+    ],
+    "noneOf": [
+      "“그리기 감도”",
+      "환경 설정 → 그리기 감도",
+      "“히스토리”"
+    ]
+  },
+  {
+    "id": "I-F3",
+    "locale": "en",
+    "article": "shortcuts",
+    "allOf": [
+      "Preferences → Key Config"
+    ],
+    "noneOf": [
+      "Key Configuration"
+    ]
+  },
+  {
+    "id": "I-F3",
+    "locale": "zh",
+    "article": "shortcuts",
+    "allOf": [
+      "偏好设置 → 按键配置",
+      "| 偏好设置 | Ctrl+, |"
+    ],
+    "noneOf": [
+      "首选项"
+    ]
+  },
+  {
+    "id": "I-F4",
+    "locale": "en",
+    "article": "uv",
+    "allOf": [
+      "Fit resets rotation, position, and zoom.",
+      "UV wire",
+      "Wire Settings"
+    ],
+    "noneOf": [
+      "Frame All",
+      "UV Wireframe",
+      "Wireframe Settings"
+    ]
+  },
+  {
+    "id": "I-F4",
+    "locale": "zh",
+    "article": "uv",
+    "allOf": [
+      "“适应窗口”会重置旋转、平移和缩放",
+      "“线框设置”"
+    ],
+    "noneOf": [
+      "显示全部"
+    ]
+  },
+  {
+    "id": "I-F4",
+    "locale": "ko",
+    "article": "uv",
+    "allOf": [
+      "“화면에 맞추기”는 회전·이동·확대/축소를 모두 초기화",
+      "“와이어 설정”"
+    ],
+    "noneOf": [
+      "전체 보기"
+    ]
+  },
+  {
+    "id": "I-F5",
+    "locale": "en",
+    "article": "viewport",
+    "allOf": [
+      "Free Orbit",
+      "Shot or F12",
+      "Layer Focus",
+      "Use Whole",
+      "Shading lets",
+      "Wire Settings controls",
+      "Reset Shading Settings"
+    ],
+    "noneOf": [
+      "Free Rotation",
+      "Focus Layer",
+      "Frame All",
+      "Wireframe Settings"
+    ]
+  },
+  {
+    "id": "I-F5",
+    "locale": "zh",
+    "article": "viewport",
+    "allOf": [
+      "“整体”",
+      "“着色”",
+      "“显示全部”",
+      "“隐藏全部”",
+      "“仅活动项”",
+      "“活动项归零”",
+      "“已加载的模型没有形态键。”",
+      "“重置着色设置”",
+      "“线框设置”"
+    ],
+    "noneOf": [
+      "“全部”",
+      "“着色设置”",
+      "“全部显示”",
+      "“全部隐藏”",
+      "“仅显示使用中”",
+      "“仅将已应用项归零”"
+    ]
+  },
+  {
+    "id": "I-F5",
+    "locale": "ko",
+    "article": "viewport",
+    "allOf": [
+      "“레이어 초점”",
+      "“셰이딩”",
+      "“선택 항목 숨기기”",
+      "“선택 항목 표시”",
+      "“활성 항목만”",
+      "“활성 항목을 0으로”",
+      "“셰이딩 설정 초기화”",
+      "“와이어 설정”"
+    ],
+    "noneOf": [
+      "“레이어로”",
+      "“셰이딩 설정”",
+      "“선택 숨기기”",
+      "“선택 표시”",
+      "“사용 중인 항목만”",
+      "“적용 중인 항목만 0”"
+    ]
+  },
+  {
+    "id": "I-F6",
+    "locale": "ja",
+    "article": "settings",
+    "allOf": [
+      "下部にある「保存」",
+      "「閉じる」だけではVRAMの変更は適用されません",
+      "次にモデルを読み込むか解像度を変えたとき"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F6",
+    "locale": "en",
+    "article": "settings",
+    "allOf": [
+      "click Save at the bottom of Preferences",
+      "Closing the window without saving does not apply those changes",
+      "next model load or resolution change"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F6",
+    "locale": "zh",
+    "article": "settings",
+    "allOf": [
+      "窗口底部的“保存”",
+      "只关闭窗口不会应用这些更改",
+      "下次加载模型或更改分辨率时生效"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F6",
+    "locale": "ko",
+    "article": "settings",
+    "allOf": [
+      "창 아래의 “저장”",
+      "저장하지 않고 창만 닫으면 변경 내용이 적용되지 않습니다",
+      "다음 모델 불러오기 또는 해상도 변경 시"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F7",
+    "locale": "ja",
+    "article": "settings",
+    "allOf": [
+      "「筆圧の詳細設定」を開きます",
+      "ビューポート上のモデルに",
+      "読み込みやパスの編集"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F7",
+    "locale": "en",
+    "article": "settings",
+    "allOf": [
+      "expand Advanced pressure settings",
+      "on the model in the viewport",
+      "finish any current loading operation or path edit"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F7",
+    "locale": "zh",
+    "article": "settings",
+    "allOf": [
+      "展开“高级笔压设置”",
+      "在视口中的模型上",
+      "如果仍在加载或编辑路径"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F7",
+    "locale": "ko",
+    "article": "settings",
+    "allOf": [
+      "“고급 필압 설정”을 펼칩니다",
+      "뷰포트의 모델 위에",
+      "불러오기나 패스 편집이 진행 중이면"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F8",
+    "locale": "ja",
+    "article": "settings",
+    "allOf": [
+      "選択中のレイヤーが全テクスチャセットを対象にする場合は、全セットをメモリに保持します"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F8",
+    "locale": "en",
+    "article": "settings",
+    "allOf": [
+      "When the active layer targets all texture sets, all sets stay resident in memory."
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F8",
+    "locale": "zh",
+    "article": "settings",
+    "allOf": [
+      "当前活动图层以全部纹理集为目标时，所有纹理集都会保留在内存中。"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F8",
+    "locale": "ko",
+    "article": "settings",
+    "allOf": [
+      "현재 활성 레이어가 모든 텍스처 세트를 대상으로 하면 모든 세트를 메모리에 유지합니다."
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F9",
+    "locale": "ja",
+    "article": "viewport",
+    "allOf": [
+      "マテリアルレイヤーや調整レイヤー",
+      "有効なマスクにストロークがあれば",
+      "なければ対象メッシュの範囲",
+      "「レイヤーへ」"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F9",
+    "locale": "en",
+    "article": "viewport",
+    "allOf": [
+      "material and adjustment layers",
+      "mask strokes when an enabled mask contains them",
+      "otherwise it uses the target mesh's bounds"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F9",
+    "locale": "zh",
+    "article": "viewport",
+    "allOf": [
+      "对于材质图层和调整图层",
+      "已启用的蒙版包含笔画",
+      "否则使用目标网格的范围"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F9",
+    "locale": "ko",
+    "article": "viewport",
+    "allOf": [
+      "머티리얼 레이어와 조정 레이어",
+      "활성화된 마스크에 스트로크가 있으면",
+      "없으면 대상 메시의 범위"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F10",
+    "locale": "ja",
+    "article": "shortcuts",
+    "allOf": [
+      "パス作図をキャンセル / 作図中の最後のアンカーを削除",
+      "Esc / DeleteまたはBackspace",
+      "Space+左ドラッグ",
+      "Ctrl+Alt+左または右ボタンで水平ドラッグ",
+      "C・Fはパス作図中、ビューポート上",
+      "既存のパスを編集中は、選択したアンカーを削除",
+      "以下は既定の割り当てです"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F10",
+    "locale": "en",
+    "article": "shortcuts",
+    "allOf": [
+      "Cancel path drafting / remove the last draft anchor",
+      "Esc / Delete or Backspace",
+      "Space+left drag",
+      "with either the left or right button",
+      "viewport hovered while drafting a path",
+      "When editing an existing path, it deletes the selected anchor"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F10",
+    "locale": "zh",
+    "article": "shortcuts",
+    "allOf": [
+      "取消路径绘制 / 删除绘制中的最后一个锚点",
+      "Esc / Delete或Backspace",
+      "Space+左键拖动",
+      "Ctrl+Alt+左键或右键水平拖动",
+      "C、F仅在绘制路径时",
+      "编辑已有路径时，则删除选中的锚点"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F10",
+    "locale": "ko",
+    "article": "shortcuts",
+    "allOf": [
+      "패스 작도 취소 / 작도 중 마지막 앵커 삭제",
+      "Esc / Delete 또는 Backspace",
+      "Space+왼쪽 드래그",
+      "Ctrl+Alt+왼쪽 또는 오른쪽 버튼으로 가로 드래그",
+      "C·F는 패스 작도 중 뷰포트 위에서",
+      "기존 패스를 편집할 때는 선택한 앵커를 삭제"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F11",
+    "locale": "ja",
+    "article": "viewport",
+    "allOf": [
+      "ウェイトが0.0001より大きい",
+      "パネル上部の「適用中のみ0」",
+      "表示の絞り込みにかかわらず"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F11",
+    "locale": "en",
+    "article": "viewport",
+    "allOf": [
+      "weight is greater than 0.0001",
+      "top-level **Zero Active**",
+      "regardless of the current list filters"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F11",
+    "locale": "zh",
+    "article": "viewport",
+    "allOf": [
+      "权重大于0.0001",
+      "面板顶部的“活动项归零”",
+      "不受当前列表筛选条件限制"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F11",
+    "locale": "ko",
+    "article": "viewport",
+    "allOf": [
+      "가중치가 0.0001보다 큰",
+      "패널 위쪽의 “활성 항목을 0으로”",
+      "현재 목록 필터와 관계없이"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F12",
+    "locale": "en",
+    "article": "plugins",
+    "allOf": [
+      "Plugins",
+      "Scripting (Lua)"
+    ],
+    "noneOf": [
+      "Plugins (P)",
+      "Scripts (Lua)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "zh",
+    "article": "plugins",
+    "allOf": [
+      "插件"
+    ],
+    "noneOf": [
+      "插件(P)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "ko",
+    "article": "plugins",
+    "allOf": [
+      "플러그인",
+      "스크립트 (Lua)"
+    ],
+    "noneOf": [
+      "플러그인(P)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "ja",
+    "article": "plugins",
+    "allOf": [
+      "プラグイン(P)",
+      "スクリプト (Lua)"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F12",
+    "locale": "en",
+    "article": "plugin-development",
+    "allOf": [
+      "Plugins",
+      "Scripting (Lua)"
+    ],
+    "noneOf": [
+      "Plugins (P)",
+      "Scripts (Lua)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "zh",
+    "article": "plugin-development",
+    "allOf": [
+      "插件"
+    ],
+    "noneOf": [
+      "插件(P)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "ko",
+    "article": "plugin-development",
+    "allOf": [
+      "플러그인",
+      "스크립트 (Lua)"
+    ],
+    "noneOf": [
+      "플러그인(P)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "ja",
+    "article": "plugin-development",
+    "allOf": [
+      "プラグイン(P)",
+      "スクリプト (Lua)"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F12",
+    "locale": "en",
+    "article": "settings",
+    "allOf": [
+      "Plugins",
+      "Scripting (Lua)"
+    ],
+    "noneOf": [
+      "Plugins (P)",
+      "Scripts (Lua)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "zh",
+    "article": "settings",
+    "allOf": [
+      "插件"
+    ],
+    "noneOf": [
+      "插件(P)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "ko",
+    "article": "settings",
+    "allOf": [
+      "플러그인",
+      "스크립트 (Lua)"
+    ],
+    "noneOf": [
+      "플러그인(P)"
+    ]
+  },
+  {
+    "id": "I-F12",
+    "locale": "ja",
+    "article": "settings",
+    "allOf": [
+      "プラグイン(P)",
+      "スクリプト (Lua)"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F13",
+    "locale": "ja",
+    "article": "settings",
+    "allOf": [
+      "プラグインの追加やLuaファイルの実行では、引き続きOSのダイアログを使います"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F13",
+    "locale": "en",
+    "article": "settings",
+    "allOf": [
+      "Add Plugin and Run File in Scripting (Lua) continue to use the operating system's dialog."
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F13",
+    "locale": "zh",
+    "article": "settings",
+    "allOf": [
+      "添加插件和运行Lua文件仍使用操作系统的对话框"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-F13",
+    "locale": "ko",
+    "article": "settings",
+    "allOf": [
+      "플러그인 추가와 Lua 파일 실행은 계속 OS 대화상자를 사용합니다"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-UV-path-cross-owner",
+    "locale": "ja",
+    "article": "uv",
+    "allOf": [
+      "{#uv-path-editing}",
+      "パスの線上を左ダブルクリック",
+      "UVエディタ用の割り当て",
+      "3Dビューポートのパス編集とは操作が異なります"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-UV-path-cross-owner",
+    "locale": "en",
+    "article": "uv",
+    "allOf": [
+      "{#uv-path-editing}",
+      "double-click a path segment",
+      "with the left mouse button",
+      "UV Editor binding",
+      "3D viewport are different"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-UV-path-cross-owner",
+    "locale": "zh",
+    "article": "uv",
+    "allOf": [
+      "{#uv-path-editing}",
+      "路径线段上双击左键",
+      "UV编辑器绑定",
+      "与3D视口中的路径编辑手势不同"
+    ],
+    "noneOf": []
+  },
+  {
+    "id": "I-UV-path-cross-owner",
+    "locale": "ko",
+    "article": "uv",
+    "allOf": [
+      "{#uv-path-editing}",
+      "패스 선분을 왼쪽 더블 클릭",
+      "UV 편집기 할당",
+      "3D 뷰포트의 패스 편집 제스처와 다릅니다"
+    ],
+    "noneOf": []
+  }
+]

@@ -18,7 +18,7 @@ The Trial supports editing and saving projects, but texture export is disabled. 
 
 ### Do I need a constant internet connection? {#faq-offline}
 
-You need a connection to download the app and when first using downloadable image materials. Downloaded materials can be used offline; applied images are also copied into the project. Browsing the catalog, using procedural materials, and using manually imported images do not require a material download. An unsuccessful update check does not prevent startup. See [material downloads and offline use](./help/materials.md#material-downloads).
+You need a connection to download the app and when first using downloadable image materials. Downloaded materials can be used offline; applied images are also copied into the project. Browsing the catalog, using procedural materials, and using manually imported images do not require a material download. See [material downloads and offline use](./help/materials.md#material-downloads).
 
 ### Who owns the textures and images I create? {#faq-output-rights}
 
@@ -36,7 +36,7 @@ As a rule, each person needs one license. The same purchaser may use HarmoFlow o
 
 ### Are team licenses available? {#faq-team-license}
 
-Team licenses are currently under consideration. If you're interested, contact the publisher via Contact on the [Mametaro-an shop](https://mametarovv.booth.pm/) to discuss your needs.
+Team licenses are currently under consideration. If you're interested, contact the publisher via the messaging feature (「メッセージ」 in Japanese) on the [Mametaro-an shop](https://mametarovv.booth.pm/) to discuss your needs.
 
 ### Can I give the app or installer to someone else? {#faq-redistribution}
 
@@ -44,4 +44,4 @@ The EULA prohibits redistribution, lending, and similar sharing of the software 
 
 ### What about updates and support? {#faq-support}
 
-Check the BOOTH product page for current release information and sales conditions. Section 5 of the EULA does not oblige the publisher to provide updates, new features, support, or an operation guarantee unless separately stated. Before updating, follow the [backup and update steps](./help/start.md#update-backup). Contact the publisher through the HarmoFlow BOOTH product inquiry option or Contact on the [Mametaro-an shop](https://mametarovv.booth.pm/).
+Check the BOOTH product page for current release information and sales conditions. Section 5 of the EULA does not oblige the publisher to provide updates, new features, support, or an operation guarantee unless separately stated. Before updating, follow the [backup and update steps](./help/start.md#update-backup). Contact the publisher through the HarmoFlow BOOTH product inquiry option or the messaging feature (「メッセージ」 in Japanese) on the [Mametaro-an shop](https://mametarovv.booth.pm/).

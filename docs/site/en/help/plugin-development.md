@@ -64,9 +64,9 @@ This example adds one paint layer each time you click the button, without readin
 ## 2. Load and test the panel {#test-lua-panel}
 
 1. Open a small model with UVs and save a test scene.
-2. Choose `my_first_panel.lua` through Plugins (P) → Add / Browse Plugins... → Add Plugin...
+2. Choose `my_first_panel.lua` through Plugins → Add / Browse Plugins... → Add Plugin...
 3. Check that the Lua extension was registered successfully in the list.
-4. Open **My First Panel** from Plugins (P) and click **Add paint layer** once.
+4. Open **My First Panel** from Plugins and click **Add paint layer** once.
 5. Check that one layer was added. Also check that Ctrl+Z undoes the addition and Ctrl+Y redoes it.
 6. Save and reopen the scene to check that the resulting layer remains.
 
@@ -76,7 +76,7 @@ After editing the file, quit the app, replace the installed file in `extensions/
 
 ### Available operations
 
-Lua extension actions can use the following `hf` APIs. They cannot use every API available in the regular Scripts (Lua) screen.
+Lua extension actions can use the following `hf` APIs. They cannot use every API available in the regular Scripting (Lua) screen.
 
 | Purpose | API |
 | --- | --- |
@@ -96,6 +96,8 @@ You can register numeric sliders in the panel's `controls`. Read their values fr
 - Up to 8 panels per extension and 32 loaded extensions
 - Files up to 1 MiB; IDs, titles, and labels must be nonempty strings of at most 256 bytes
 - Panel IDs must be unique across all extensions. Control IDs and action IDs must not be duplicated within a panel
+
+The current implementation automatically attempts only the first 16 Lua files, sorted by filename, at startup. A running session can hold up to 32 extensions, but keep `extensions/` to 16 `.lua` files or fewer if all must load again on restart.
 
 ### Example with a slider
 
@@ -216,7 +218,7 @@ First, extract the official SDK ZIP linked above. You do not need the app's comp
 5. Save a test scene and load the DLL using the [installation steps](./plugins.md#install-plugin). Check both the information in the management screen and the Plugins menu. Open **Guide Grayscale** and try Preview → Cancel → Open again → Apply on BaseColor. Also check layers, Undo / Redo, saving, and reloading.
 6. After changing the source, quit HarmoFlow, replace the DLL with the rebuilt version, and restart.
 
-In Microsoft's **x64 Developer Command Prompt**, go to the folder where you extracted the header and C sample, then run the following commands. Follow the development tool provider's instructions for compiler installation and licensing.
+In Microsoft's **x64 Native Tools Command Prompt**, go to the folder where you extracted the header and C sample, then run the following commands. Follow the development tool provider's instructions for compiler installation and licensing.
 
 ```bat
 cl /nologo /LD /O2 /W4 /I . guide_gray.c /link /OUT:guide_gray.dll

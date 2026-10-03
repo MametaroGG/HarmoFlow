@@ -21,7 +21,7 @@ import { withBase } from 'vitepress'
 
 In HarmoFlow, each mesh part has its own texture set. Parts that use the same material are still treated as separate texture sets.
 
-Ordinary brushes and stamps paint within the texture set of the selected existing layer. To paint another part, switch sets in the list at the top of the Layers panel or Shift+Alt+right-click the model. A new material painted from the material browser targets the first part you touch.
+Ordinary brushes and stamps paint within the texture set of the selected existing layer. To paint another part, switch sets in the list at the top of the Layers panel or Shift+Alt+right-click the model. A new material painted from the Asset Browser also targets the currently selected texture set. Select the target set before painting. Other texture sets are not changed automatically.
 
 ## What each panel does
 

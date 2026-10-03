@@ -31,7 +31,7 @@ SDK API 3은 현재 개발 구현에 대응합니다. 사용 중인 HarmoFlow가
 
 ## 1. 최소 Lua 패널 만들기 {#first-lua-panel}
 
-텍스트 편집기에서 새 파일을 만들고 다음 내용을 **`my_first_panel.lua`**라는 이름으로 UTF-8(BOM 없음) 형식으로 저장합니다. Windows에서 파일 확장자를 표시하여 `.lua.txt`가 되지 않았는지 확인하세요.
+텍스트 편집기에서 새 파일을 만들고 다음 내용을 <strong><code>my_first_panel.lua</code></strong>라는 이름으로 UTF-8(BOM 없음) 형식으로 저장합니다. Windows에서 파일 확장자를 표시하여 `.lua.txt`가 되지 않았는지 확인하세요.
 
 ```lua
 hf.register_panel {
@@ -64,9 +64,9 @@ hf.register_panel {
 ## 2. 불러와서 동작 확인하기 {#test-lua-panel}
 
 1. UV가 있는 작은 모델을 열고 테스트용 씬을 저장합니다.
-2. “플러그인(P) → 플러그인 추가／보기... → 플러그인 추가...”에서 `my_first_panel.lua`를 선택합니다.
+2. “플러그인 → 플러그인 추가／보기... → 플러그인 추가...”에서 `my_first_panel.lua`를 선택합니다.
 3. 목록에서 Lua 확장이 올바르게 등록되었는지 확인합니다.
-4. “플러그인(P)”에서 **My First Panel**을 열고 **Add paint layer**를 한 번 누릅니다.
+4. “플러그인”에서 **My First Panel**을 열고 **Add paint layer**를 한 번 누릅니다.
 5. 레이어가 하나 늘었는지 확인합니다. Ctrl+Z로 추가를 취소하고 Ctrl+Y로 다시 실행할 수 있는지도 확인합니다.
 6. 씬을 저장하고 다시 열어 결과 레이어가 남아 있는지 확인합니다.
 
@@ -76,7 +76,7 @@ hf.register_panel {
 
 ### 사용할 수 있는 작업
 
-Lua 확장의 액션에서 사용할 수 있는 `hf` API는 다음 범위입니다. 일반 “스크립트(Lua)” 화면의 모든 API를 그대로 사용할 수 있는 것은 아닙니다.
+Lua 확장의 액션에서 사용할 수 있는 `hf` API는 다음 범위입니다. 일반 “스크립트 (Lua)” 화면의 모든 API를 그대로 사용할 수 있는 것은 아닙니다.
 
 | 용도 | API |
 | --- | --- |
@@ -96,6 +96,8 @@ Lua 확장의 액션에서 사용할 수 있는 `hf` API는 다음 범위입니�
 - 확장당 패널 최대 8개, 로드 가능한 확장 최대 32개
 - 파일은 최대 1 MiB. ID·제목·라벨은 비어 있지 않은 256바이트 이하 문자열
 - 패널 ID는 모든 확장에서 고유해야 하며, 컨트롤 ID·액션 ID도 패널 안에서 중복되지 않아야 함
+
+현재 구현은 시작할 때 파일 이름순으로 앞의 Lua 파일 16개까지만 로드를 시도합니다. 실행 중에는 확장을 최대 32개까지 로드할 수 있지만, 재시작 후에도 모두 자동으로 로드하려면 `extensions/` 바로 아래의 `.lua` 파일을 16개 이하로 유지하세요.
 
 ### 슬라이더가 있는 예제
 
@@ -216,7 +218,7 @@ HF_EXPORT int hf_plugin_init(const HfHost* host, HfPluginInfo* info) {
 5. 테스트용 씬을 저장하고 [추가 절차](./plugins.md#install-plugin)에 따라 DLL을 로드합니다. 관리 화면의 정보와 플러그인 메뉴를 모두 확인합니다. **Guide Grayscale**을 열고 BaseColor에서 미리보기 → 취소 → 다시 열기 → 적용을 시도합니다. 레이어, Undo／Redo, 저장·다시 불러오기도 확인합니다.
 6. 소스를 변경한 뒤에는 HarmoFlow를 종료하고 다시 빌드한 DLL로 교체한 다음 재시작합니다.
 
-Microsoft의 **x64 개발자 명령 프롬프트**에서 헤더와 C 예제를 압축 해제한 폴더로 이동한 뒤 다음 명령을 실행합니다. 컴파일러 설치와 라이선스는 해당 개발 도구 제공업체의 안내를 따르세요.
+Microsoft의 **x64 Native Tools Command Prompt**에서 헤더와 C 예제를 압축 해제한 폴더로 이동한 뒤 다음 명령을 실행합니다. 컴파일러 설치와 라이선스는 해당 개발 도구 제공업체의 안내를 따르세요.
 
 ```bat
 cl /nologo /LD /O2 /W4 /I . guide_gray.c /link /OUT:guide_gray.dll

@@ -30,7 +30,7 @@ Select a paint layer, press B to switch to the Paint tool, and drag over the mod
 | Pressure Size | Use pen pressure to control brush size |
 | Brush Tip | Choose a round tip or an imported image tip |
 | Symmetry | Paint symmetrically around the selected X / Y / Z axes |
-| Multichannel Painting | Enable the channels to paint and set their values |
+| Multi-Channel | Enable the channels to paint and set their values |
 
 In the Brush panel, choose a preset from a category and save your adjusted settings as a preset. Use Import PNG Brush to add a custom tip. The eraser has its own panel for adjusting size, tip, and other settings.
 
@@ -82,13 +82,13 @@ Each brush retains settings such as size, strength, and density. Press B to retu
 
 ## Fill faces and UV islands
 
-Polygon Fill fills the clicked face. UV Shell Fill fills the UV island containing that face. Check the highlighted area on hover before clicking. Apply Detected Quads treats detected pairs of triangles as a single quadrilateral.
+Polygon Fill fills the clicked face. UV Shell Fill fills the UV island containing that face. Check the highlighted area on hover before clicking. Apply Pseudo Quad treats detected pairs of triangles as a single quadrilateral.
 
 ### Paint with a material
 
-Select a material in the material browser, then paint it onto the model with a brush. Polygon Fill and UV Shell Fill apply color, normals, roughness, and other properties together to the region clicked in the 3D view or UV Editor. Changing the material keeps the current painting mode.
+Select the target texture set, then choose a material in the Asset Browser and paint with a brush. Polygon Fill and UV Shell Fill apply color, normals, roughness, and other properties together to the region clicked in the 3D view or UV Editor. Changing the material keeps the current painting mode.
 
-Select a previously painted material layer or material folder to add more coverage. The eraser removes coverage within the brush area. Ordinary painting on an existing layer is limited to that layer's texture set. A new material painted from the library targets the first part you touch.
+Select a previously painted material layer or material folder to add more coverage. The eraser removes coverage within the brush area. Repainting an existing material layer stays within that layer's texture set. A new material targets the currently selected texture set; other texture sets are not changed automatically.
 
 ## Eyedropper and palette
 
