@@ -1,7 +1,7 @@
 export const localeFromPath = (path = "") => /^(en|zh|ko)\//.exec(path.replace(/^\//, ""))?.[1] || "ja";
 export const localizedPath = (path, locale) => {
-  const isPage = path === "/" || path.startsWith("/#") || /^\/(?:help(?:\/[^/#.]+)?|guide|download|terms)$/.test(path);
-  const target = /^\/(?:help(?:\/[^/#.]+)?|guide|download|terms)$/.test(path) ? path + ".html" : path;
+  const isPage = path === "/" || path.startsWith("/#") || /^\/(?:help(?:\/[^/#.]+)?|guide|download|terms|updates)$/.test(path);
+  const target = /^\/(?:help(?:\/[^/#.]+)?|guide|download|terms|updates)$/.test(path) ? path + ".html" : path;
   return isPage && locale !== "ja" ? "/" + locale + target : target;
 };
 export const languagePath = (relativePath = "index.md", locale = "ja") => {

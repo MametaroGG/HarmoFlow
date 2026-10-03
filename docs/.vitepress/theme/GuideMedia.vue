@@ -34,14 +34,14 @@ onBeforeUnmount(() => releaseVideo?.());
     <div v-if="mediaImages.length" class="guide-media-gallery" :class="{'guide-media-gallery--pair': mediaImages.length > 1}">
       <div v-for="image in mediaImages" :key="image.src" class="guide-media-image">
         <p v-if="image.labels" class="guide-media-image-label">{{ imageLabel(image) }}</p>
-        <a :href="withBase(image.src)" target="_blank" rel="noopener" :aria-label="imageLabel(image)">
+        <a :href="withBase(image.src)" :style="{ width: image.width + 'px' }" target="_blank" rel="noopener" :aria-label="imageLabel(image)">
           <img :src="withBase(image.src)" :width="image.width" :height="image.height" :alt="imageLabel(image)" loading="lazy" />
         </a>
       </div>
     </div>
     <template v-else-if="item.src">
-      <video v-if="item.kind === 'video'" :key="item.src" ref="videoElement" :src="withBase(item.src)" :poster="item.poster ? withBase(item.poster) : undefined" controls muted playsinline preload="metadata" :aria-label="copy.title" />
-      <img v-else :src="withBase(item.src)" :alt="copy.title" loading="lazy" />
+      <video v-if="item.kind === 'video'" :key="item.src" ref="videoElement" :src="withBase(item.src)" :poster="item.poster ? withBase(item.poster) : undefined" :width="item.width" :height="item.height" :style="{ aspectRatio: item.width + ' / ' + item.height }" controls muted playsinline preload="metadata" :aria-label="copy.title" />
+      <img v-else :src="withBase(item.src)" :width="item.width" :height="item.height" :alt="copy.title" loading="lazy" />
     </template>
     <div v-else class="guide-media-placeholder">
       <span class="guide-media-kind"><SiteIcon name="monitor" />{{ text[item.kind] }}</span>

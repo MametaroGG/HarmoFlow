@@ -1,0 +1,15 @@
+/* Unmodified official LINE Seed JP webfonts. License: public/fonts/line-seed-jp/OFL.txt */
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("/fonts/line-seed-jp/LINESeedJP-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("/fonts/line-seed-jp/LINESeedJP-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}

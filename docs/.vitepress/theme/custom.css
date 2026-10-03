@@ -8,6 +8,8 @@
   --muted: #707783;
   --line: #e6e8ed;
   --accent: #6462dc;
+  --site-header-height: 82px;
+  --anchor-gap: 18px;
 }
 * {
   box-sizing: border-box;
@@ -48,7 +50,7 @@ summary:focus-visible {
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: calc(var(--site-header-height) + var(--anchor-gap));
 }
 p {
   line-height: 1.9;
@@ -90,7 +92,7 @@ kbd {
   top: 12px;
 }
 .site-header {
-  height: 82px;
+  height: var(--site-header-height);
   background: #ffffffed;
   border-bottom: 1px solid #eceef1;
   position: sticky;
@@ -1189,8 +1191,8 @@ nav {
   }
 }
 @media (max-width: 760px) {
-  .site-header {
-    height: 66px;
+  :root {
+    --site-header-height: 66px;
   }
   .nav-wrap {
     padding: 0 20px;
@@ -2173,7 +2175,7 @@ html:lang(ko) { font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR"
 .guide-media-image { min-width: 0; display: flex; flex-direction: column; align-items: center; }
 .prose .guide-media-image-label { width: 100%; margin: 0 0 .75rem; font-size: .9375rem; color: #253d62; font-weight: 600; text-align: center; }
 .guide-media-image a { display: block; max-width: 100%; }
-.prose .guide-media-image img { width: auto; max-width: 100%; height: auto; border-radius: 6px; }
+.prose .guide-media-image img { width: 100%; max-width: 100%; height: auto; border-radius: 6px; }
 @media (max-width: 700px) { .guide-media-gallery--pair { grid-template-columns: 1fr; } .guide-media-gallery { padding: .75rem; } }
 
 /* Launch film between the hero requirements note and the layer demo. */

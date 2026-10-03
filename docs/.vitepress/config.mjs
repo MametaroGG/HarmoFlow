@@ -15,14 +15,22 @@ export default defineConfig({
     const relative = pageData.relativePath.replace(/^(en|zh|ko)\//, "").replace(/\.md$/, ".html");
     if (relative === "404.html") return [];
     const route = relative === "index.html" ? "" : relative;
-    return [["ja-JP", ""], ["en", "en/"], ["zh-CN", "zh/"], ["ko-KR", "ko/"]].map(([lang, prefix]) =>
+    const alternates = [["ja-JP", ""], ["en", "en/"], ["zh-CN", "zh/"], ["ko-KR", "ko/"]].map(([lang, prefix]) =>
       ["link", { rel: "alternate", hreflang: lang, href: new URL(base + prefix + route, "https://mametarogg.github.io").href }]);
+    if (pageData.frontmatter.layout === "updates") {
+      for (const weight of ["Regular", "Bold"]) alternates.push(["link", {
+        rel: "preload", as: "font", type: "font/woff2", crossorigin: "",
+        href: `${base}fonts/line-seed-jp/LINESeedJP-${weight}.woff2`,
+      }]);
+    }
+    return alternates;
   },
   srcDir: "site",
   // Downloadable SDK Markdown is an asset, not an additional documentation route.
   srcExclude: ["public/**"],
   appearance: false,
   cleanUrls: false,
+  scrollOffset: { selector: '.site-header', padding: 18 },
   head: [["link", { rel: "icon", href: `${base}favicon.svg` }]],
   markdown: { headers: { level: [2, 3] } },
   vite: { server: { host: "0.0.0.0" } },

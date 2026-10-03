@@ -22,6 +22,9 @@ const menu = ref(false),
   modal = ref(false),
   searchInput = ref(null),
   menuToggle = ref(null);
+const closeMenuOnNavigate = (event) => {
+  if (event.target.closest('a[href]')) menu.value = false;
+};
 const animationEnabled = ref(false);
 let motionMedia;
 const updateMotionPreference = () => { animationEnabled.value = !motionMedia.matches; };
@@ -129,13 +132,14 @@ onUnmounted(() => {
       <a class="brand" :href="href('/')" :aria-label='t("HarmoFlow ホーム")'
         ><img :src="href('/logo.svg')" alt="" aria-hidden="true"
       /><span class="brand-wordmark">HarmoFlow</span></a>
-      <nav :aria-label='t("メインナビゲーション")' :class="{ open: menu }">
+      <nav :aria-label='t("メインナビゲーション")' :class="{ open: menu }" @click="closeMenuOnNavigate">
         <a :href="href('/#features')">{{ t("機能") }}</a
         ><a
           :href="href('/help')"
           :aria-current="layout === 'help' ? 'page' : undefined"
           >{{ t("ヘルプ") }}</a
         ><a :href="href('/guide')">{{ t("ユーザーガイド") }}</a
+        ><a :href="href('/updates')" :aria-current="layout === 'updates' ? 'page' : undefined">{{ t("更新情報") }}</a
         ><a class="mobile-download" :href="href('/download')"
           >{{ t("購入・ダウンロード") }}</a
         >
@@ -467,6 +471,7 @@ onUnmounted(() => {
         <Content class="prose purchase-faq" />
       </section></template
     >
+    <template v-else-if="layout === 'updates'"><Content /></template>
     <template v-else-if="page.isNotFound"
       ><section class="section not-found">
         <p class="eyebrow">404</p>
@@ -547,6 +552,7 @@ onUnmounted(() => {
         <h2>{{ t("サポート") }}</h2>
         <a :href="href('/help')">{{ t("ヘルプセンター") }}</a
         ><a :href="href('/guide')">{{ t("ユーザーガイド") }}</a
+        ><a :href="href('/updates')">{{ t("更新情報") }}</a
         ><a
           href="https://mametarovv.booth.pm/"
           target="_blank"

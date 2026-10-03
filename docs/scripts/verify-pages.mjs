@@ -9,7 +9,7 @@ assert(base.startsWith('/') && base.endsWith('/'), 'Use a site-absolute base wit
 const origin = 'https://mametarogg.github.io';
 const files = fs.readdirSync(dist, { recursive: true }).filter(file => fs.statSync(path.join(dist, file)).isFile());
 const htmlFiles = files.filter(file => file.endsWith('.html'));
-assert.equal(htmlFiles.length, 109);
+assert.equal(htmlFiles.length, 113);
 let references = 0;
 const errors = [];
 const decode = text => text.replaceAll('&amp;', '&').replaceAll('&#39;', "'").replaceAll('&quot;', '"');

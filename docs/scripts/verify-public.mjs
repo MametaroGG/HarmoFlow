@@ -13,6 +13,7 @@ const expected = new Set([
   "guide.html",
   "download.html",
   "terms.html",
+  "updates.html",
   "404.html",
   ...articles.map((a) => `help/${a.slug}.html`),
 ]);
@@ -40,7 +41,9 @@ for (const file of pages) {
 }
 // Standardize authored Japanese asset terminology while retaining quoted terms.
 for (const file of pages.filter(file => !/^(en|zh|ko)\//.test(file) && file !== 'terms.html')) {
-  const prose = fs.readFileSync(path.join(dist, file), 'utf8').replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<[^>]*>/g, '');
+  let prose = fs.readFileSync(path.join(dist, file), 'utf8').replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<[^>]*>/g, '');
+  // Preserve the developer-supplied 0.1.1 benchmark condition exactly.
+  if (file === 'updates.html') prose = prose.replaceAll('不透明な素材1000レイヤー', '');
   assert(!prose.includes('素材'), `Japanese asset terminology not standardized in ${file}`);
 }
 assert(articles.every(article => ![article.title, article.category, article.description, article.searchText].some(text => text.includes('素材'))), 'Japanese search uses asset terminology');

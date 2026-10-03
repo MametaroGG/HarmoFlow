@@ -1,0 +1,10 @@
+LINE Seed JP — © LY Corporation
+
+Official source: https://seed.line.me/index_jp.html
+Distribution: https://seed.line.me/src/images/fonts/LINE_Seed_JP.zip
+Original archive directory: LINESeedJP_20241105
+Downloaded: 2026-10-03 UTC
+
+The Regular and Bold WOFF2 files are unmodified official webfonts.
+The accompanying OFL.txt is retained from the official distribution.
+The renamed filenames do not change font data.

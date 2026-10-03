@@ -312,7 +312,9 @@
         "caption": "모델을 불러온 뒤 3D에 칠한 색이 UV에 반영되는 과정과 재질을 칠하는 조작을 볼 수 있습니다."
       }
     },
-    "poster": "/captures/first-paint-poster.jpg"
+    "poster": "/captures/first-paint-poster.jpg",
+    "width": 1920,
+    "height": 1080
   },
   {
     "id": "blend-colors",
@@ -336,7 +338,9 @@
         "caption": "빨간색과 마젠타의 경계를 색 혼합으로 다듬는 실제 조작 영상입니다. 브러시가 지나간 부분의 색 변화를 확인할 수 있습니다."
       }
     },
-    "poster": "/captures/blend-colors-poster.jpg"
+    "poster": "/captures/blend-colors-poster.jpg",
+    "width": 1918,
+    "height": 1032
   },
   {
     "id": "organize-layers",
@@ -360,7 +364,9 @@
         "caption": "그룹과 페인트 레이어를 드래그해 순서를 바꾸는 실제 영상입니다. 쌓이는 순서에 따라 모델의 모습이 달라집니다."
       }
     },
-    "poster": "/captures/organize-layers-poster.jpg"
+    "poster": "/captures/organize-layers-poster.jpg",
+    "width": 1920,
+    "height": 1080
   },
   {
     "id": "edit-adjustments",
@@ -384,7 +390,9 @@
         "caption": "톤 커브를 조정 레이어로 적용한 뒤 속성에서 커브를 편집하는 영상입니다. 모델과 UV의 색이 함께 변합니다."
       }
     },
-    "poster": "/captures/edit-adjustments-poster.jpg"
+    "poster": "/captures/edit-adjustments-poster.jpg",
+    "width": 1920,
+    "height": 1080
   },
   {
     "id": "place-stamp",
@@ -408,7 +416,9 @@
         "caption": "미리보기에서 글자의 크기·위치·각도를 조절한 뒤 모델에 배치하는 영상입니다. 배치한 글자는 UV와 BaseColor에도 반영됩니다."
       }
     },
-    "poster": "/captures/place-stamp-poster.jpg"
+    "poster": "/captures/place-stamp-poster.jpg",
+    "width": 1918,
+    "height": 1032
   },
   {
     "id": "edit-path",
@@ -432,7 +442,9 @@
         "caption": "이미 만든 패스의 앵커와 핸들을 움직여 곡선을 편집합니다. 재질 채우기와 노란 윤곽선을 유지하면서 UV의 모양도 함께 바뀝니다."
       }
     },
-    "poster": "/captures/edit-path-poster.jpg"
+    "poster": "/captures/edit-path-poster.jpg",
+    "width": 1918,
+    "height": 1032
   },
   {
     "id": "place-weathering",
@@ -456,7 +468,9 @@
         "caption": "상자의 볼록한 모서리에 긁힌 자국을 배치하고 패턴을 조절합니다. 후반부에는 진흙 재질을 추가해 표면의 모습을 바꿉니다."
       }
     },
-    "poster": "/captures/place-weathering-poster.jpg"
+    "poster": "/captures/place-weathering-poster.jpg",
+    "width": 1920,
+    "height": 998
   },
   {
     "id": "calibrate-pressure",
@@ -480,6 +494,8 @@
         "caption": "힘을 달리해 시험 획을 그리고 자동 조정 결과를 확인한 뒤 그리기 감도를 미세 조정합니다."
       }
     },
-    "poster": "/captures/calibrate-pressure-poster.jpg"
+    "poster": "/captures/calibrate-pressure-poster.jpg",
+    "width": 1920,
+    "height": 1080
   }
 ]

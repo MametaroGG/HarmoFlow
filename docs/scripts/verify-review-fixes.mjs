@@ -13,7 +13,7 @@ const locales = [['ja-JP', ''], ['en', 'en/'], ['zh-CN', 'zh/'], ['ko-KR', 'ko/'
 const read = file => fs.readFileSync(path.join(dist, file), 'utf8');
 const alternates = html => Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(m => [m[1], m[2]]));
 const pages = fs.readdirSync(dist, { recursive: true }).filter(file => file.endsWith('.html') && file !== '404.html');
-assert.equal(pages.length, 108);
+assert.equal(pages.length, 112);
 for (const file of pages) {
   const route = file.replace(/^(en|zh|ko)\//, '').replace(/^index\.html$/, '');
   const expected = Object.fromEntries(locales.map(([lang, prefix]) => [lang, origin + base + prefix + route]));
@@ -141,4 +141,4 @@ assert.equal(opener.count, 1, 'A queued close must not steal focus from a reopen
 h.closeSearch(); flush();
 assert.equal(other.count, 1);
 
-console.log(`PASS: 108 reciprocal absolute language alternates; 4 launch players between hero requirements and layer demo, help lists, EULA links and deduplicated breadcrumbs; help contrast ${contrast(link.color, '#ffffff').toFixed(2)}:1; search/menu focus regressions`);
+console.log(`PASS: 112 reciprocal absolute language alternates; 4 launch players between hero requirements and layer demo, help lists, EULA links and deduplicated breadcrumbs; help contrast ${contrast(link.color, '#ffffff').toFixed(2)}:1; search/menu focus regressions`);
