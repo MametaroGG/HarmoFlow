@@ -122,7 +122,7 @@ for (const prefix of ['', 'en', 'zh', 'ko']) {
   assert(read(prefix, 'help/brush').includes('50%') && read(prefix, 'help/brush').includes('10%'), `${prefix}: practical flow/opacity example`);
 }
 // Keep version updates distinct from choosing the full or trial edition.
-const updateFlowCopy = '新しいバージョンのインストーラーを実行';
+const updateFlowCopy = '新しいZIPを展開し、同じ種類のEXEを実行';
 assert(fs.readFileSync(path.join(docs, '.vitepress/theme/GuideFlow.vue'), 'utf8').includes(updateFlowCopy));
 for (const slug of ['help/start', 'guide']) {
   assert(html('', slug).includes(updateFlowCopy), `${slug}: clear version-update flow is rendered`);

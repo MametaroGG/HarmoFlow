@@ -1612,7 +1612,7 @@
       "左右にドラッグ",
       "C・Fはパス作図中、ビューポート上",
       "既存のパスを編集中は、選択したアンカーを削除",
-      "以下はVer.0.1.1の初期割り当てと固定操作です"
+      "以下はVer.0.1.1の初期割り当てと固定操作に、Ver.0.1.2のレイヤー操作を加えたものです"
     ],
     "noneOf": []
   },
@@ -1630,7 +1630,7 @@
       "Drag horizontally",
       "viewport hovered while drafting a path",
       "When editing an existing path, it deletes the selected anchor",
-      "initial bindings and fixed gestures in Ver.0.1.1"
+      "initial bindings and fixed gestures from Ver.0.1.1"
     ],
     "noneOf": []
   },

@@ -25,6 +25,149 @@ const performance = {
 };
 
 export const releases = [{
+  id: 'v0-1-2',
+  version: 'Ver.0.1.2',
+  date: '2026-10-04',
+  sourceUrl: 'https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2',
+  video: {
+    youtubeId: '7ICF2pMDIbM',
+    watchUrl: 'https://www.youtube.com/watch?v=7ICF2pMDIbM',
+  },
+  content: {
+    ja: {
+      title: 'Ver.0.1.2の更新内容',
+      videoTitle: 'HarmoFlow Ver.0.1.2 アップデート紹介動画',
+      summary: 'パイメニューでレイヤーを選び、設定を切り替え。UVアイランド境界での描画と、PNGの透明出力も改善しました。新しい3Dパスを含むシーンはVer.0.1.1以前では開けないため、更新前のファイルを残してください。',
+      highlights: [
+        { title: 'レイヤーの選択も、設定も。', description: '3DビューとUVエディタのパイメニューから、サムネイル付きのレイヤー一覧へ。ペンでのスクロール・タップ選択にも対応し、カード横から6つの設定を切り替えられます。', href: '/help/layers.html#layer-pie-menu' },
+        { title: 'UVの境界を越えて描く。', description: '3Dビューの通常ブラシは、同じパーツのつながった表面でUVアイランド境界を越えて描画できます。3Dビューで新しく作るパスの線・塗りが、境界で途切れたり飛んだりする問題も修正しました。', href: '/help/paths.html#path-uv-island-boundaries' },
+        { title: '描いていない部分は、透明に。', description: 'PNG出力から表示用の自動Base下地を除外。半透明の描画・マスク・レイヤーの不透明度を反映し、読み込んだテクスチャと自分で追加したFillレイヤーは出力に残します。', href: '/help/export.html#png-transparency' },
+      ],
+      changes: {
+        added: [
+          'パイメニューのレイヤー一覧にサムネイルを追加。右ボタンを押したまま「レイヤー」へ滑らせ、カードの上で離すと選択できます。3DビューとUVエディタに対応しています。',
+          'カード横から、表示、ロック、クリッピング、透明ピクセルロック、描画で高さ、単独表示を切り替えられます。設定へ滑らせ、離した場所の設定だけを変更できます。',
+        ],
+        improved: [
+          'ペンタブでもポインターを上・下に置いてレイヤー一覧をスクロールでき、中央へ戻すと停止します。ペン先のタップでもレイヤーを選択できます。',
+          '設定のオン状態を青い背景で表示。ボタンが伸びて一瞬つながるアニメーションを追加し、レイヤー数が多いときの選択・設定操作も最適化しました。',
+          'パスレイヤーを選ぶとパスツール、ペイントレイヤーを選ぶとブラシへ切り替わります。ぼかし、UVシェル塗り、ポリゴン塗りを使用中の場合は、その塗り方を保持します。',
+          'PNG出力では表示用に自動で付くBaseの下地を除外し、未描画部分を透明にします。半透明の描画、マスク、レイヤーの不透明度を反映し、読み込んだテクスチャと自分で追加したFillレイヤーは含めます。',
+          '製品版・体験版のインストーラーを更新しました。',
+        ],
+        fixed: [
+          '3Dビューの通常ブラシが、同じパーツのつながった表面でUVアイランド境界を越えて描画できるように修正しました。',
+          '3Dビューで新しく作成するパスの線・塗りが、UVアイランド境界で途切れたり別の位置へ飛んだりする問題を修正しました。以前に保存したUV座標のパスには、3Dビューでの作り直しが必要です。',
+        ],
+        notes: [
+          '新しい3Dパスを含むシーンはVer.0.1.1以前では開けません。旧版でも使うシーンは、変更前のファイルを残してください。',
+          'BOOTHの配布ページから選んだ版のZIPをダウンロード・展開し、中にあるEXEを実行してインストールしてください。',
+          'アセット一覧は本体に含まれています。画像アセットを初めて使う際はインターネット接続で必要なデータを取得します。取得済みのアセットは以降オフラインでも使用できます。',
+          'GitHubリリースに添付されたversion.jsonは、アプリの更新確認に使うバージョン情報です。',
+        ],
+      },
+    },
+    en: {
+      title: 'What changed in Ver.0.1.2',
+      videoTitle: 'HarmoFlow Ver.0.1.2 update showcase',
+      summary: 'Select layers and change their settings from the pie menu, with improved drawing across UV island boundaries and transparent PNG export. Scenes containing new 3D paths cannot be opened in Ver.0.1.1 or earlier, so keep a copy of the file from before the changes.',
+      highlights: [
+        { title: 'Select layers. Adjust settings.', description: 'Open a layer list with thumbnails from the pie menu in the 3D view or UV Editor. Scroll and tap to select with a pen, and toggle six settings beside each card.', href: '/help/layers.html#layer-pie-menu' },
+        { title: 'Draw across UV boundaries.', description: 'The regular 3D brush can paint across UV island boundaries on connected surfaces of the same part. Lines and fills of paths newly created in the 3D view no longer break or jump at those boundaries.', href: '/help/paths.html#path-uv-island-boundaries' },
+        { title: 'Keep unpainted areas transparent.', description: 'PNG export excludes the automatic Base used for display. It reflects semi-transparent painting, masks, and layer opacity, while keeping imported textures and Fill layers you added.', href: '/help/export.html#png-transparency' },
+      ],
+      changes: {
+        added: [
+          'The pie menu now opens a layer list with thumbnails. Hold the right button, slide to Layers, and release over a card to select it. Available in the 3D view and UV Editor.',
+          'Toggle Visibility, Lock, Clipping, Alpha lock, Stroke height, and Solo beside each card. Slide to a setting and release to change only that setting.',
+        ],
+        improved: [
+          'With a pen tablet, place the pointer above or below the layer list to scroll; return to the center to stop. You can also select a layer by tapping with the pen tip.',
+          'Enabled settings have a blue background, with an animation that briefly extends and connects the buttons. Layer selection and settings are also optimized for large layer counts.',
+          'Selecting a Path layer switches to the Path tool; selecting a Paint layer switches to the brush. If Blur, UV Shell Fill, or Polygon Fill is active, that painting mode is preserved.',
+          'PNG export excludes the automatically added Base used for display, leaving unpainted areas transparent. Semi-transparent painting, masks, and layer opacity are reflected; imported textures and Fill layers you added remain included.',
+          'The full-version and trial installers have been updated.',
+        ],
+        fixed: [
+          'The regular brush in the 3D view can now paint across UV island boundaries on connected surfaces of the same part.',
+          'Fixed lines and fills of paths newly created in the 3D view breaking or jumping elsewhere at UV island boundaries. Paths previously saved with UV coordinates must be recreated in the 3D view.',
+        ],
+        notes: [
+          'Scenes containing new 3D paths cannot be opened in Ver.0.1.1 or earlier. Keep the file from before the changes if you also need to use the scene in an older version.',
+          'Download the ZIP for your chosen edition from the BOOTH distribution page, extract it, and run the EXE inside to install.',
+          'The material catalog is included with the app. The first use of an image material requires an internet connection to retrieve its data. Downloaded materials can then be used offline.',
+          'The version.json attached to the GitHub release contains version information used by the app to check for updates.',
+        ],
+      },
+    },
+    zh: {
+      title: 'Ver.0.1.2 更新内容',
+      videoTitle: 'HarmoFlow Ver.0.1.2 更新介绍视频',
+      summary: '通过饼状菜单选择图层、切换设置，并改进了跨 UV 岛边界的绘制与透明 PNG 导出。包含新 3D 路径的场景无法在 Ver.0.1.1 及更早版本中打开，请保留修改前的文件。',
+      highlights: [
+        { title: '选择图层，随手调整。', description: '在 3D 视图或 UV 编辑器中，通过饼状菜单打开带缩略图的图层列表。支持用数位笔滚动和点选，还能在卡片旁切换六项设置。', href: '/help/layers.html#layer-pie-menu' },
+        { title: '跨越 UV 边界绘制。', description: '3D 视图的普通画笔可在同一部件的相连表面上跨 UV 岛边界绘制。在 3D 视图中新建路径的线条和填充，在边界处中断或跳到其他位置的问题也已修复。', href: '/help/paths.html#path-uv-island-boundaries' },
+        { title: '未绘制的部分，保持透明。', description: 'PNG 导出不再包含自动添加、用于显示的 Base 底层。导出会体现半透明绘制、蒙版和图层不透明度，并保留导入的纹理与自行添加的 Fill 图层。', href: '/help/export.html#png-transparency' },
+      ],
+      changes: {
+        added: [
+          '饼状菜单新增带缩略图的图层列表。按住右键滑向“图层”，在卡片上松开即可选择。支持 3D 视图和 UV 编辑器。',
+          '可在卡片旁切换显示、锁定、剪贴、锁定透明像素、笔触高度和单独显示。滑向某项设置后松开，只会更改松开位置对应的设置。',
+        ],
+        improved: [
+          '使用数位板时，将指针放在图层列表上方或下方即可滚动，回到中央即可停止。也可用笔尖轻点来选择图层。',
+          '已开启的设置以蓝色背景显示，并新增按钮伸展、短暂相连的动画。还优化了图层较多时的选择与设置操作。',
+          '选择路径图层时切换到路径工具，选择绘画图层时切换到画笔。若正在使用模糊、UV 壳填充或多边形填充，则保留当前绘制模式。',
+          'PNG 导出会排除自动添加、用于显示的 Base 底层，使未绘制区域保持透明，并体现半透明绘制、蒙版及图层不透明度。导入的纹理和自行添加的 Fill 图层仍会包含在输出中。',
+          '更新了正式版与试用版的安装程序。',
+        ],
+        fixed: [
+          '修复了 3D 视图普通画笔的绘制，使其可在同一部件的相连表面上跨 UV 岛边界绘制。',
+          '修复了在 3D 视图中新建路径的线条和填充，在 UV 岛边界处中断或跳到其他位置的问题。此前以 UV 坐标保存的路径需要在 3D 视图中重新创建。',
+        ],
+        notes: [
+          '包含新 3D 路径的场景无法在 Ver.0.1.1 及更早版本中打开。如果还需要在旧版中使用该场景，请保留修改前的文件。',
+          '从 BOOTH 发布页面下载所选版本的 ZIP，解压后运行其中的 EXE 进行安装。',
+          '素材列表已包含在软件中。首次使用图片素材时，需要联网获取相应数据；已获取的素材之后可离线使用。',
+          'GitHub 版本发布附件中的 version.json 是供软件检查更新使用的版本信息。',
+        ],
+      },
+    },
+    ko: {
+      title: 'Ver.0.1.2 업데이트 내용',
+      videoTitle: 'HarmoFlow Ver.0.1.2 업데이트 소개 영상',
+      summary: '파이 메뉴에서 레이어를 선택하고 설정을 바꿀 수 있습니다. UV 아일랜드 경계의 그리기와 투명 PNG 출력도 개선했습니다. 새 3D 패스가 포함된 씬은 Ver.0.1.1 이하에서 열 수 없으므로 변경 전 파일을 보관하세요.',
+      highlights: [
+        { title: '레이어 선택과 설정을 한곳에서.', description: '3D 뷰와 UV 편집기의 파이 메뉴에서 썸네일이 있는 레이어 목록을 여세요. 펜으로 스크롤하거나 탭해 선택하고, 카드 옆에서 여섯 가지 설정을 바꿀 수 있습니다.', href: '/help/layers.html#layer-pie-menu' },
+        { title: 'UV 경계를 넘어 그리기.', description: '3D 뷰의 일반 브러시가 같은 파트의 연결된 표면에서 UV 아일랜드 경계를 넘어 그릴 수 있습니다. 3D 뷰에서 새로 만든 패스의 선과 채우기가 경계에서 끊기거나 다른 위치로 튀는 문제도 수정했습니다.', href: '/help/paths.html#path-uv-island-boundaries' },
+        { title: '칠하지 않은 부분은 투명하게.', description: 'PNG 출력에서 표시용으로 자동 생성되는 Base 바탕을 제외합니다. 반투명 페인팅, 마스크, 레이어 불투명도를 반영하며, 불러온 텍스처와 직접 추가한 Fill 레이어는 유지합니다.', href: '/help/export.html#png-transparency' },
+      ],
+      changes: {
+        added: [
+          '파이 메뉴에 썸네일이 있는 레이어 목록을 추가했습니다. 오른쪽 버튼을 누른 채 “레이어”로 이동한 뒤 카드 위에서 놓으면 선택됩니다. 3D 뷰와 UV 편집기에서 사용할 수 있습니다.',
+          '카드 옆에서 표시, 잠금, 클리핑, 투명 픽셀 잠금, 스트로크 높이, 단독 표시를 전환할 수 있습니다. 설정 쪽으로 이동한 뒤 놓으면 해당 위치의 설정만 변경됩니다.',
+        ],
+        improved: [
+          '펜 태블릿에서도 포인터를 레이어 목록 위쪽이나 아래쪽에 두어 스크롤하고, 중앙으로 돌아오면 멈출 수 있습니다. 펜촉으로 탭하여 레이어를 선택할 수도 있습니다.',
+          '켜진 설정을 파란 배경으로 표시하고, 버튼이 늘어나 잠깐 이어지는 애니메이션을 추가했습니다. 레이어가 많을 때의 선택 및 설정 조작도 최적화했습니다.',
+          '패스 레이어를 선택하면 패스 도구로, 페인트 레이어를 선택하면 브러시로 전환됩니다. 흐림, UV 셸 채우기, 폴리곤 채우기를 사용 중이면 해당 그리기 모드를 유지합니다.',
+          'PNG 출력은 표시용으로 자동 추가되는 Base 바탕을 제외하여 칠하지 않은 부분을 투명하게 만듭니다. 반투명 페인팅, 마스크, 레이어 불투명도를 반영하며, 불러온 텍스처와 직접 추가한 Fill 레이어는 출력에 포함됩니다.',
+          '정식 버전과 체험판의 설치 프로그램을 업데이트했습니다.',
+        ],
+        fixed: [
+          '3D 뷰의 일반 브러시가 같은 파트의 연결된 표면에서 UV 아일랜드 경계를 넘어 그릴 수 있도록 수정했습니다.',
+          '3D 뷰에서 새로 만드는 패스의 선과 채우기가 UV 아일랜드 경계에서 끊기거나 다른 위치로 튀는 문제를 수정했습니다. 이전에 UV 좌표로 저장한 패스는 3D 뷰에서 다시 만들어야 합니다.',
+        ],
+        notes: [
+          '새 3D 패스가 포함된 씬은 Ver.0.1.1 이하에서 열 수 없습니다. 이전 버전에서도 사용할 씬은 변경 전 파일을 보관하세요.',
+          'BOOTH 배포 페이지에서 원하는 버전의 ZIP을 다운로드하고 압축을 푼 뒤, 안에 있는 EXE를 실행하여 설치하세요.',
+          '소재 목록은 앱에 포함되어 있습니다. 이미지 소재를 처음 사용할 때는 인터넷에 연결하여 필요한 데이터를 받습니다. 받은 소재는 이후 오프라인에서도 사용할 수 있습니다.',
+          'GitHub 릴리스에 첨부된 version.json은 앱의 업데이트 확인에 사용하는 버전 정보입니다.',
+        ],
+      },
+    },
+  },
+}, {
   id: 'v0-1-1',
   version: 'Ver.0.1.1',
   video: {

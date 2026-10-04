@@ -30,6 +30,8 @@ import { withBase } from 'vitepress'
 
 包括在 3D 视口和 UV 画布中按住右键滑动使用的饼状菜单。
 
+Ver.0.1.2 还在饼状菜单中加入了缩略图图层选择和图层设置。
+
 <a :href="withBase('/zh/help/workspace.html')">阅读“界面与网格部件” →</a>
 
 ## 视口、网格与显示 {#viewport}
@@ -74,6 +76,8 @@ import { withBase } from 'vitepress'
 
 用锚点和控制柄创建与编辑路径，以及调整填充和双重描边。
 
+使用 Ver.0.1.2 的新 3D 路径前，请了解 UV 岛边界的处理方式与旧版兼容性注意事项。
+
 <a :href="withBase('/zh/help/paths.html')">阅读“绘制与编辑路径” →</a>
 
 ## 图片填充、材质与图案 {#materials}
@@ -115,6 +119,8 @@ BaseColor 等六种通道，以及工作、导出和预览分辨率的区别。
 ## 导出图片 {#export}
 
 导出为 PNG、JPG、TGA、EXR 和 PSD，以及通道、法线方向与部件合并设置。
+
+Ver.0.1.2 的 PNG 导出会使未绘制区域透明，并保留导入的纹理和自行添加的 Fill 图层。
 
 <a :href="withBase('/zh/help/export.html')">阅读“导出图片” →</a>
 

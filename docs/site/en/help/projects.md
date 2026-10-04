@@ -51,6 +51,14 @@ Package export first saves the current scene. For unsaved work, it creates a pro
 
 The application remembers the destination for **Export Package Again**. Hover over the command to check it before use, including after switching projects.
 
+## Compatibility of scenes with new 3D paths {#scene-version-compatibility}
+
+::: warning If you also use Ver.0.1.1 or earlier
+Scenes containing the new 3D paths introduced in [Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2) cannot be opened in Ver.0.1.1 or earlier. Keep the file from before your changes if you also need to use the scene in an older version.
+:::
+
+Before adding new 3D paths or recreating older UV-coordinate paths in the 3D view, use Save Scene As or Incremental Save to work in a separate file, and retain the original without overwriting it. See [path UV-island boundaries](./paths.md#path-uv-island-boundaries) for which paths need recreation.
+
 ## Autosave and recovery
 
 Timed autosave is off by default. Its initial settings are every five minutes, only when changed, keeping 20 snapshots. The UI retention range is 0–50; 0 keeps all snapshots. Scheduled saves wait during painting or other active operations. Autosave now also works when timed autosave is off.

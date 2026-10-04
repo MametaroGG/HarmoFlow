@@ -4,6 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { releases, productIntroduction, featureGuides, updateCopy } from '../.vitepress/theme/release-notes-data.js';
 import { localizedPath, languagePath } from '../.vitepress/theme/locale-routing.js';
+import { articles as jaArticles } from '../.vitepress/theme/help-data.js';
 
 const docs = path.resolve(import.meta.dirname, '..');
 const dist = path.join(docs, '.vitepress/dist');
@@ -106,7 +107,7 @@ for (const locale of locales) {
   assert(releasePlayer[0].includes(`title="${update011.content[locale].videoTitle}"`), locale + ': localized update video title');
   assert(releasePlayer[0].includes('width="1280"') && releasePlayer[0].includes('height="720"') && releasePlayer[0].includes('allowfullscreen'), locale + ': reserved accessible update player');
   assert(html.includes(`href="${update011.video.watchUrl}"`), locale + ': direct link to the update video');
-  assert(html.indexOf('id="release-v0-1-1"') < html.indexOf(releasePlayer[0]) && html.indexOf(releasePlayer[0]) < html.indexOf('class="rn-release-highlights"'), locale + ': update video precedes its feature details');
+  assert(html.indexOf('id="release-v0-1-1"') < html.indexOf(releasePlayer[0]) && html.indexOf(releasePlayer[0]) < html.indexOf('class="rn-release-highlights"', html.indexOf(releasePlayer[0])), locale + ': update video precedes its feature details');
   assert(html.includes('922') && html.includes('32') && html.includes('29'), locale + ': measurement renders');
   for (const context of [developmentEnvironmentLabels[locale], 'RTX 4070 SUPER', 'Core i5-12400F', 'DDR4 64GB']) {
     assert(item.description.includes(context), locale + ': performance highlight includes the measured development environment');
@@ -115,6 +116,50 @@ for (const locale of locales) {
   }
   if (releases.every(item => !item.date)) assert(!/<time\b/.test(html), 'No release dates were provided');
   assert(html.indexOf('id="release-history"') < html.indexOf('id="introduction"'), 'Confirmed update notes precede the general product introduction');
+}
+// The 0.1.2 film, release notes and procedural guidance must ship together.
+const update012 = releases.find(item => item.id === 'v0-1-2');
+assert.equal(releases[0], update012, 'The latest release leads the history');
+assert.equal(update012.date, '2026-10-04', 'Use the date in the official release');
+assert.equal(update012.sourceUrl, 'https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2');
+assert.equal(update012.video.youtubeId, '7ICF2pMDIbM');
+const required012 = {
+  start: ['app-install', 'update-backup'],
+  workspace: ['pie-menu'],
+  layers: ['layer-pie-menu', 'layer-tool-selection'],
+  viewport: ['viewport-layer-pie'],
+  brush: ['brush-uv-island-boundaries'],
+  paths: ['path-uv-island-boundaries'],
+  uv: ['uv-island-boundaries'],
+  export: ['png-transparency'],
+  projects: ['scene-version-compatibility'],
+};
+const obsoleteInstaller = ['ZIPの解凍や分割BINの結合は不要', 'No ZIP extraction', '无需解压ZIP', 'ZIP 압축 해제나 분할 BIN 파일 결합이 필요하지'];
+for (const locale of locales) {
+  const prefix = locale === 'ja' ? '' : locale + '/';
+  const html = fs.readFileSync(path.join(dist, prefix + 'updates.html'), 'utf8');
+  const releaseHtml = html.slice(html.indexOf('id="release-v0-1-2"'), html.indexOf('id="release-v0-1-1"'));
+  const player = releaseHtml.match(/<iframe\b[^>]*youtube-nocookie\.com\/embed\/7ICF2pMDIbM[^>]*>/)?.[0];
+  assert(player?.includes(`title="${update012.content[locale].videoTitle}"`), locale + ': localized 0.1.2 PV');
+  assert(player.includes('width="1280"') && player.includes('height="720"'), locale + ': reserved PV dimensions');
+  assert(releaseHtml.indexOf(player) < releaseHtml.indexOf('class="rn-release-highlights"'), locale + ': PV before 0.1.2 details');
+  assert(html.includes('datetime="2026-10-04"') && html.includes('href="#release-v0-1-1"'), locale + ': dated release and preserved archive');
+  assert(releaseHtml.includes(update012.content[locale].summary), locale + ': prominent compatibility summary');
+  const index = locale === 'ja' ? jaArticles : JSON.parse(fs.readFileSync(path.join(docs, `.vitepress/theme/locales/help-${locale}.json`), 'utf8'));
+  for (const [slug, anchors] of Object.entries(required012)) {
+    const source = fs.readFileSync(path.join(docs, 'site', prefix, 'help', slug + '.md'), 'utf8');
+    const rendered = fs.readFileSync(path.join(dist, prefix, 'help', slug + '.html'), 'utf8');
+    for (const anchor of anchors) assert(source.includes(`{#${anchor}}`) && rendered.includes(`id="${anchor}"`), locale + ': source/rendered ' + anchor);
+    for (const content of [source, rendered, index.find(item => item.slug === slug).searchText]) {
+      assert(content.includes('Ver.0.1.2'), locale + ': 0.1.2 is searchable and rendered in ' + slug);
+      if (slug === 'start') {
+        assert(content.includes('ZIP') && content.includes('EXE'), locale + ': extract ZIP before installer');
+        for (const phrase of obsoleteInstaller) assert(!content.includes(phrase), locale + ': no obsolete installer claim');
+      }
+      if (['start', 'paths', 'projects'].includes(slug)) assert(content.includes('Ver.0.1.1'), locale + ': old-version compatibility boundary');
+      if (slug === 'export') for (const term of ['PNG', 'Base', 'Fill']) assert(content.includes(term), locale + ': scoped PNG transparency ' + term);
+    }
+  }
 }
 const component = fs.readFileSync(path.join(docs, '.vitepress/theme/ReleaseNotes.vue'), 'utf8');
 assert(component.includes("font-family: 'LINE Seed JP', sans-serif"), 'New content uses the requested font');

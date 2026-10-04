@@ -37,6 +37,16 @@ You can also edit in the UV Editor while checking the positions of UV islands. S
 
 While editing a completed path in the 3D view, drag from empty space to box-select several anchors. Drag a selected anchor to move them together, or press Delete to remove them. Drag the small circle beside a selected corner anchor to adjust its rounding.
 
+## New 3D paths and UV-island boundaries {#path-uv-island-boundaries}
+
+[Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2) fixes strokes and fills on **paths newly created in the 3D view** breaking or jumping to another position at UV-island boundaries. Each path still needs to stay within one texture set.
+
+To use this improvement for older paths saved with UV coordinates, recreate those paths in the 3D view. Opening an existing path alone does not turn it into a new 3D path.
+
+::: warning Keep the original file if you also use an older version
+Scenes containing the new 3D paths cannot be opened in Ver.0.1.1 or earlier. Check [scene version compatibility](./projects.md#scene-version-compatibility) before recreating paths.
+:::
+
 ## Fills and two outlines
 
 Set the fill, outer outline, and inner outline independently in the Paths panel. Fills have rounded/sharp corner options and opacity. Outlines have width, hardness, and opacity. Each can use its own painting channels. Swap the color swatches or choose None to create an outline-only or fill-only result. Use Rebake Paths to update the baked result.

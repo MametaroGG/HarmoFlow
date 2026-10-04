@@ -13,7 +13,7 @@ next: false
 
 <GuideFlow kind="app-install" />
 
-1. Download the Full or Trial installer from the [BOOTH product page](https://mametarovv.booth.pm/items/8754692). **Each edition is supplied as one EXE. No ZIP extraction or split BIN files are needed.** `full` in the filename identifies the Full edition; `trial` identifies the Trial.
+1. Download the Full or Trial installer from the [BOOTH product page](https://mametarovv.booth.pm/items/8754692). **Ver.0.1.2 is supplied as a ZIP. Download and extract the ZIP for your edition, then run the setup EXE inside.** `full` in the filename identifies the Full edition; `trial` identifies the Trial.
 2. Double-click the setup EXE. Choose Japanese, English, Simplified Chinese, or Korean for the wizard, read the license agreement, and continue only if you agree. You can also read the Full edition's [EULA](../terms.md) before purchasing.
 3. Choose the installation location and, optionally, a desktop shortcut. The Full installer also offers `.harmos` / `.harmopackage` file associations. The Trial does not change file associations.
 4. Launch from the completion screen or open **HarmoFlow** (**HarmoFlow Trial** for the Trial) from the Start menu. Keep the installed files together; do not move only the application EXE elsewhere.
@@ -31,7 +31,7 @@ Check the [system requirements](../download.md#requirements-title) and [startup 
 
 ## Automatic update notifications {#automatic-update-notifications}
 
-In Ver.0.1.1, HarmoFlow checks for a newer version in the background at startup. When an update is found, a blue download icon appears to the right of the search box at the top of the window. Click it to see the current version, the newer version, and “What's new”.
+Since Ver.0.1.1, HarmoFlow checks for a newer version in the background at startup. When an update is found, a blue download icon appears to the right of the search box at the top of the window. Click it to see the current version, the newer version, and “What's new”.
 
 - **Get update** opens the download page in your browser. Only the check and notification are automatic; you download and run the installer yourself. Prepare a backup using the steps below first.
 - **Later** closes the dialog. The notification icon remains, so you can reopen it during the same session.
@@ -43,9 +43,13 @@ No notification appears when you are offline or the check fails. An absent icon 
 
 <GuideFlow kind="update-backup" />
 
+::: warning Ver.0.1.2 3D paths and older versions
+Scenes containing new 3D paths cannot be opened in Ver.0.1.1 or earlier. Keep an unchanged copy of any scene you also need in an older version. See [3D path compatibility](./paths.md#path-uv-island-boundaries).
+:::
+
 1. Save the scene normally and close the app. **Copy the entire project folder to a separate location.** Keep its imported models and images, rather than copying only the `.harmos` file. You can also [export a package](./projects.md) for transport.
 2. Keep original downloads or separate backups of brushes and plugins you added. A scene saved by a newer version may not open in an older version, so keep the pre-update copy untouched.
-3. Get the newer installer for the **same edition (Full or Trial)** from BOOTH and run it using the existing installation location. The same-edition installer updates the existing installation.
+3. Download and extract the newer ZIP for the **same edition (Full or Trial)** from BOOTH. Run the setup EXE inside and choose the existing installation location. The same-edition installer updates the existing installation.
 4. Confirm the version after launching. First use a test copy made from your backup to check models, images, layers, saving, and reopening. In the Full edition, also test the exports you need.
 
 ### Check the latest release

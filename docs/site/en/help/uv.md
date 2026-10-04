@@ -33,6 +33,15 @@ While drafting a path, Finish commits it open, Close commits a closed path, and 
 
 Select a path layer, then move an anchor by left-dragging it in the UV Editor. By default, double-click a path segment away from existing anchors with the left mouse button to insert an anchor. This gesture follows the UV Editor binding in Preferences → Key Config. Path-editing gestures in the 3D viewport are different.
 
+## Check 3D painting at UV-island boundaries {#uv-island-boundaries}
+
+The boundary-painting improvements in [Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2) apply to painting in the 3D view.
+
+- The ordinary brush can paint across UV-island boundaries on connected surfaces of the same part. See the [brush guide](./brush.md#brush-uv-island-boundaries)
+- For paths newly created in the 3D view, the issue with strokes and fills breaking or jumping to another position at UV-island boundaries has been fixed. Older paths saved with UV coordinates need to be recreated in the 3D view
+
+Compare the UV Editor and 3D view to inspect results near a boundary. For older-version compatibility of scenes containing the new 3D paths, see the [path guide](./paths.md#path-uv-island-boundaries).
+
 ## Adjust the wireframe and background
 
 Toggle lines with UV wire, and adjust their color, opacity, and width in Wire Settings. The default wireframe uses thin lines.

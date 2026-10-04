@@ -42,6 +42,12 @@ You can also right-click a project image and choose Register as Brush Tip to ope
 
 Image brush tips use brightness and alpha as coverage: white paints strongly, while black or transparent areas do not paint. A 128×128 square PNG is recommended. Selecting a preset keeps your current color but adopts the preset’s painting channels. Reset this brush restores the selected preset, or defaults if none is selected. Saving a preset under an existing name replaces its settings.
 
+## Paint across UV-island boundaries in 3D {#brush-uv-island-boundaries}
+
+In [Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2), the ordinary brush in the 3D view can paint across UV-island boundaries on **connected surfaces of the same part**. Draw across the boundary on the model, then inspect the result in the 3D view and UV Editor.
+
+This improvement applies to the ordinary 3D brush. For the target areas of Polygon Fill and UV Shell Fill, see “Fill faces and UV islands” below. For strokes and fills on newly created 3D paths, see [path UV-island boundaries](./paths.md#path-uv-island-boundaries).
+
 ## Flow versus Opacity {#flow-opacity}
 
 A brush stroke is made from a sequence of small brush dabs. **Flow** controls the amount deposited by each dab; **Opacity** limits how strong a single stroke can become **before you lift the pen**.

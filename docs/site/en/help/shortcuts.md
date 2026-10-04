@@ -24,7 +24,7 @@ Use Reset to Default, Remove, or Cancel in the binding dialog. Fixed actions can
 <figcaption>Example of Key Config in Japanese. Displayed bindings depend on saved settings. Click the image to enlarge it.</figcaption>
 </figure>
 
-The tables show initial bindings and fixed gestures in Ver.0.1.1. If you have saved settings, use the bindings shown in Key Config. Tool keyboard shortcuts are unavailable during text entry, while Preferences is open, or while the pie menu is open.
+The tables show the initial bindings and fixed gestures from Ver.0.1.1, with the layer gestures added in Ver.0.1.2. If you have saved settings, use the bindings shown in Key Config. Tool keyboard shortcuts are unavailable during text entry, while Preferences is open, or while the pie menu is open.
 
 In Ver.0.1.1, use the listed default gestures for window focus and Toggle Corner / Smooth. Changes made in Key Config may not take effect for these actions.
 
@@ -156,6 +156,9 @@ Close Path is initially registered to C, which is also used by Toggle Transparen
 | Delete Selected Layer | Delete<br>Layers panel focused |
 | Turn Layer Mask On / Off | Shift+left click<br>On the mask thumbnail |
 | Open / Close Folder | left double-click<br>On a folder row |
+| Select a layer with the pie menu (Ver.0.1.2) | Hold the right button, slide into Layers, and release over a card in the thumbnail list<br>3D viewport / UV Editor |
+| Toggle a layer setting with the pie menu (Ver.0.1.2) | Slide onto a setting beside the card and release the right button there<br>Only the setting released over changes |
+| Browse and select layers with a pen (Ver.0.1.2) | Place the pointer at the top/bottom to scroll; return to the center to stop. Tap a card with the pen tip to select |
 
 ### UV Editor
 
@@ -196,4 +199,4 @@ Close Path is initially registered to C, which is also used by Toggle Transparen
 | Rename a layer, asset, or user material preset | Select the item, focus its panel, and press F2. Renaming a project asset also renames the file. |
 | Delete a project asset | Delete while the Asset Browser has focus. Moves the item to the Windows Recycle Bin; scene Undo does not restore it |
 
-For operation-specific requirements, see the [pie menu](./workspace.md#pie-menu), [paths](./paths.md), [UV Editor](./uv.md), [layers](./layers.md), and [Asset Browser](./assets.md).
+For operation-specific requirements, see the [pie menu](./workspace.md#pie-menu), [paths](./paths.md), [UV Editor](./uv.md), [layers](./layers.md), [layer pie menu](./layers.md#layer-pie-menu), and [Asset Browser](./assets.md).

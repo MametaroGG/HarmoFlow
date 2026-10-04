@@ -25,6 +25,12 @@ Use Layer Focus at the top of the viewport to move the camera toward the selecte
 
 Click X, Y, Z, or a negative axis in the top-right navigation widget to face that direction while keeping the current target and distance. Drag the widget to orbit. Use Toggle Floor Grid in the left tool strip or pie menu to show or hide the floor grid.
 
+## Switch layers close to your painting {#viewport-layer-pie}
+
+In Ver.0.1.2, hold the right mouse button over the 3D viewport, slide into Layers in the pie menu, and release over a card in the thumbnail list to select a layer. Controls beside the card also let you change settings such as visibility and locking. The same interaction works in the UV Editor.
+
+Selecting a Path layer switches to the Path tool. Selecting a Paint layer switches to the brush, while retaining Color blending / Blur, UV Shell Fill, or Polygon Fill if that mode is already in use. See the [layer pie menu](./layers.md#layer-pie-menu) for pen controls and which settings are available.
+
 ## Switch display modes
 
 The display menu includes PBR, NPR, individual views of the six channels, and layer masks. Choose the channel appropriate to your task, such as BaseColor for checking color or Roughness for its distribution. Use PBR to inspect surface properties with light reflections, and NPR to check a toon-style appearance. These views do not guarantee an exact match with external shaders.

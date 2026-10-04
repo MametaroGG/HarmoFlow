@@ -45,6 +45,8 @@ On the same screen, you can adjust the current brush's pressure size, stabilizat
 
 Pen side buttons work as the clicks assigned in your tablet driver. A button assigned to Right Click does not rotate the camera on its own; combined with Alt, it zooms. Touching the pen tip to the tablet while holding the right button does not paint. If the tip is still touching the tablet when you release the button, painting remains disabled until you lift the pen once. If the tip touches just before the button is pressed, the input is still treated as a right-click and any stroke that began is canceled. Touching the tip while holding Shift+Alt does not paint. Buttons assigned to Left Click or Middle Click work like the corresponding mouse buttons. Painting with a side button assigned to Left Click uses the same strength as mouse input because no pen pressure is available.
 
+In the Ver.0.1.2 [layer pie menu](./layers.md#layer-pie-menu), a pen tablet can browse layers by placing the pointer at the top or bottom of the list. Return to the center to stop, or tap a card with the pen tip to select it. This works in both the 3D viewport and UV Editor.
+
 ## Choose file dialogs
 
 File and folder selection uses the operating system's dialogs by default. Enable Preferences → General → Use internal file browser to switch to the built-in browser. This setting is retained after restarting. It applies to file selection for workflows such as opening models and scenes. Add Plugin and Run File in Scripting (Lua) continue to use the operating system's dialog. For a new project, create and select a project folder in the standard dialog.

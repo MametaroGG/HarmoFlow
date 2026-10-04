@@ -27,6 +27,24 @@ import { withBase } from 'vitepress'
 | Adjustment | Adjust the composited result below with Color Adjustment, Gradient Map, or Tone Curve |
 | Group | Organize layers into folders |
 
+## Select and configure layers with the pie menu {#layer-pie-menu}
+
+In Ver.0.1.2, the pie menu lets you choose layers by thumbnail in both the 3D viewport and UV Editor.
+
+1. Hold the right mouse button and slide into Layers in the pie menu.
+2. Move onto the desired layer card in the thumbnail list.
+3. Release the right button over the card to select that layer. Press Esc to cancel.
+
+With a pen tablet, place the pointer at the top or bottom of the list to scroll through layers. Return to the center to stop. You can also select a card by tapping it with the pen tip.
+
+The controls beside a card toggle Visibility, Lock, Clipping, Alpha lock, Stroke height, and Solo. While holding the right button, slide onto a setting and release there to change only that setting. Passing over other settings does not change them. Enabled settings have a blue background, and a brief animation stretches and connects the buttons to show the interaction.
+
+Available settings depend on the layer type. Alpha lock and Stroke height are Paint-layer controls. Clipping is unavailable on groups or without an eligible layer below. Hidden layers and layers inside hidden folders remain hidden in Solo.
+
+### Tool changes when selecting a layer {#layer-tool-selection}
+
+In Ver.0.1.2, selecting a Path layer switches to the Path tool. Selecting a Paint layer switches to the brush, while retaining Color blending / Blur, UV Shell Fill, or Polygon Fill if you are already using that mode.
+
 ## Editable adjustment layers
 
 <figure class="doc-diagram">

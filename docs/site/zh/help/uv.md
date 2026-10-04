@@ -33,6 +33,15 @@ import { withBase } from 'vitepress'
 
 选择路径图层后，可在UV编辑器中用左键拖动锚点。默认情况下，在远离已有锚点的路径线段上双击左键可插入锚点。此操作使用“偏好设置 → 按键配置”中的UV编辑器绑定，与3D视口中的路径编辑手势不同。
 
+## 检查3D绘制在UV岛边界处的效果 {#uv-island-boundaries}
+
+[Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2)的边界绘制改进适用于3D视图中的绘制。
+
+- 普通笔刷可以在同一部件的相连表面上跨越UV岛边界绘制。另请参阅[笔刷说明](./brush.md#brush-uv-island-boundaries)
+- 对于在3D视图中新建的路径，已修复描边与填充在UV岛边界处断开或跳到其他位置的问题。以前以UV坐标保存的路径需要在3D视图中重新创建
+
+请对照UV编辑器和3D视图，检查边界附近的结果。包含新3D路径的场景与旧版的兼容性，请参阅[路径说明](./paths.md#path-uv-island-boundaries)。
+
 ## 调整线框与背景
 
 通过“UV 线框”切换线条显示，通过“线框设置”调整颜色、不透明度和线宽。默认使用较细的线框。

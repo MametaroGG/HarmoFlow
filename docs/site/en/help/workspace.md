@@ -21,9 +21,9 @@ import { withBase } from 'vitepress'
 
 Use the search box at the top of the window to find commands such as saving, importing, opening Preferences, and toggling panels. Click a result to run it, or press Enter to run the first result. Press Esc or click outside to close the results. If the search box is hidden, widen the window. To find assets, use the search box inside the Asset Browser.
 
-## Switch tools with the pie menu {#pie-menu}
+## Switch tools and layers with the pie menu {#pie-menu}
 
-In Ver.0.1.1, you can open a pie menu around the cursor in the 3D viewport or UV canvas.
+Since Ver.0.1.1, you can open a pie menu around the cursor in the 3D viewport or UV canvas.
 
 1. Press the right mouse button over the 3D viewport or UV canvas.
 2. Keep the button held and slide toward the item you want.
@@ -32,6 +32,8 @@ In Ver.0.1.1, you can open a pie menu around the cursor in the 3D viewport or UV
 Switch between tools such as brush painting, color blending, and UV shell fill close to where you work. Existing right-button bindings, such as camera controls and brush-size adjustments, take priority when their key combinations are held. See the [shortcut reference](./shortcuts.md) for keyboard and mouse controls.
 
 The pie-menu trigger is a fixed gesture. If it does not open, release modifier keys such as Ctrl, Shift, or Alt and finish drawing or text entry before trying again.
+
+In Ver.0.1.2, keep the right button held and slide into Layers to open the thumbnail list. Release over a card to select that layer, or use the controls beside it to change visibility, locking, and other settings. See [layer selection and settings](./layers.md#layer-pie-menu).
 
 ## Texture sets and mesh parts
 

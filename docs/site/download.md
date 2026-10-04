@@ -44,6 +44,6 @@ Windows専用です。Vulkan 1.2に対応したGPUとドライバーが必要で
 
 ### 更新やサポートはどうなりますか？ {#faq-support}
 
-Ver.0.1.1は更新の自動確認と通知に対応しています。通知アイコンの操作は[アップデート自動通知](./help/start.md#automatic-update-notifications)を参照してください。
+Ver.0.1.1から、更新の自動確認と通知に対応しています。通知アイコンの操作は[アップデート自動通知](./help/start.md#automatic-update-notifications)を参照してください。
 
 最新版の案内や販売条件はBOOTHの商品ページをご確認ください。使用許諾契約の第5条では、別途明示した場合を除き、更新・機能追加・サポート・動作保証の義務を負わないものとしています。更新する際は[バックアップと更新手順](./help/start.md#update-backup)を確認してください。問い合わせはHarmoFlow商品ページのBOOTH問い合わせ、または[豆々庵ショップ](https://mametarovv.booth.pm/)の「メッセージ」から行えます。

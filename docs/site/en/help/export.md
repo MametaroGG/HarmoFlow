@@ -42,6 +42,14 @@ Texture export from the Export panel requires the Full edition. In the Trial, sa
 
 JPG does not preserve transparency. Use PNG or another suitable format when you need transparent pixels.
 
+### Unpainted areas and transparency in PNG {#png-transparency}
+
+In [Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2), PNG export excludes the **Base background added automatically for display**. Unpainted areas are transparent, and the output reflects semitransparent painting, masks, and layer opacity.
+
+Imported textures and Fill layers you add yourself are still included in PNG output. When checking a PNG background, distinguish these exported contents from the automatic display-only Base.
+
+Also check “Pixels outside mesh UVs” below for the separate settings that restore the source texture outside UVs, make those areas transparent, or keep the full texture.
+
 ### What PSD retains
 
 A separate PSD is created for each enabled channel in each output texture set. Paint, Fill, and path layers are saved as image layers with their original names, order, and visibility. Opacity and blend modes (Normal, Multiply, Add, and Overlay) remain editable PSD settings. Add maps to Linear Dodge (Add).

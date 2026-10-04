@@ -44,6 +44,6 @@ HarmoFlow仅支持Windows，需要兼容Vulkan 1.2的GPU及驱动程序。CPU、
 
 ### 更新和支持如何提供？ {#faq-support}
 
-Ver.0.1.1 支持自动检查更新并通知。通知图标的操作方法请参阅[自动更新通知](./help/start.md#automatic-update-notifications)。
+从 Ver.0.1.1 起，支持自动检查更新并通知。通知图标的操作方法请参阅[自动更新通知](./help/start.md#automatic-update-notifications)。
 
 最新版本信息与销售条件请查看BOOTH商品页面。根据使用许可协议第5条，除非另有说明，销售方没有提供更新、新功能、支持或运行保证的义务。更新前请参考[备份与更新步骤](./help/start.md#update-backup)。可通过HarmoFlow的BOOTH商品咨询入口，或[豆々庵店铺](https://mametarovv.booth.pm/)的消息功能（日文界面为「メッセージ」）联系销售方。

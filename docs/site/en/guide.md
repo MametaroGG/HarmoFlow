@@ -26,6 +26,8 @@ Learn the workspace layout, what each panel does, and how to switch between mesh
 
 Includes the right-click-and-slide pie menu for the 3D viewport and UV canvas.
 
+Ver.0.1.2 also adds thumbnail-based layer selection and layer settings to the pie menu.
+
 <a :href="withBase('/en/help/workspace.html')">Read the guide: Workspace and mesh parts</a>
 
 ## Viewport, meshes, and display {#viewport}
@@ -70,6 +72,8 @@ Place images, text, and shapes on a model and configure each type of stamp.
 
 Create and edit paths with anchors and handles, then adjust fills and two separate outlines.
 
+For new 3D paths in Ver.0.1.2, read the UV-island guidance and the compatibility warning before saving for older versions.
+
 <a :href="withBase('/en/help/paths.html')">Read the guide: Drawing and editing paths</a>
 
 ## Image fills, materials, and patterns {#materials}
@@ -111,6 +115,8 @@ Create projects and scenes, save and export packages, and recover work from auto
 ## Exporting images {#export}
 
 Export PNG, JPG, TGA, EXR, and PSD files; choose channels and normal orientation; and combine mesh parts.
+
+Ver.0.1.2 PNG export leaves unpainted areas transparent while retaining imported textures and user-added Fill layers.
 
 <a :href="withBase('/en/help/export.html')">Read the guide: Exporting images</a>
 
