@@ -72,9 +72,17 @@ See the [purchase FAQ](../download.md#purchase-faq) for purchase conditions and 
 
    The selection is linked across Channels, the UV Editor, and Texture Set Settings. Shift+Alt+right-click a model in the viewport to switch to the part under the cursor. Switching is disabled for models with only one part.
 
-3. **Edit with layers**
+3. **Select a layer and tool, then paint**
 
-   Paint on a paint layer, and add color and surface properties with Fill layers. Save your work, then export images from the Export panel.
+   Select a Paint layer, press B to choose the Paint tool, then drag on the model surface.
+
+4. **Save the scene**
+
+   Press Ctrl+S to save your work so you can continue editing layers and strokes later.
+
+5. **Export textures**
+
+   Choose the output location, format, and channels in the Export panel, then export the images.
 
 ::: tip Automatic baking
 Mesh maps are baked automatically when you import a model. If you configure weathering before baking finishes, it will take effect once the maps have been generated.
@@ -95,3 +103,10 @@ An unreadable image produces a Console warning; other supported images that can 
 Successfully imported AO images are retained in the project's asset library, but a dedicated channel for displaying or applying imported AO is not supported. This is separate from the automatically baked AO mesh map.
 
 Automatic image assignment uses UV0. Images referencing another UV set or texture-coordinate extensions such as KHR_texture_transform are skipped for automatic assignment, with a warning. This skips the referenced image; material color or scalar fallback values may still be generated.
+
+
+### External files and import limits {#model-import-limits}
+
+- Dropping a folder imports the files directly inside it. It does not automatically traverse subfolders.
+- glTF/GLB import does not download image or geometry dependencies from internet URLs. Keep the required external files locally before importing.
+- BLEND compatibility depends on the data stored in the file. If import fails, check the Console and try a model exported from Blender as FBX or glTF/GLB.

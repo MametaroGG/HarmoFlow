@@ -17,7 +17,11 @@ import { withBase } from 'vitepress'
 
 The Asset Browser shows assets in your working folder and shared material presets. Filter by asset type (images, meshes, or materials), folder, search terms, or favorites, and save your search criteria. Use Saved searches and Filter by path at the bottom to show or hide those filter columns. Their filters remain active when hidden; the text-search field at the top stays visible. If you cannot find an asset, reset the filters.
 
-Before applying a material, select the target texture set. A new material applied from the Asset Browser targets the currently selected texture set; other texture sets are not changed automatically.
+Before applying a material, select the target texture set. When you start a new painted material from the Asset Browser, it is recorded in the currently selected texture set. Painting on an existing layer targets the set that owns that layer. Parts using the same material can share their final texture, so overlapping UVs can show changes on another part.
+
+### Save search conditions {#saved-searches}
+
+Saved searches retain the text, type, library, folder and favorites filters together. Saving under the same name updates the criteria; remove an unwanted saved search from its context menu. Changing a filter manually clears the saved-search selection. After adding or restoring files outside the app, use the top Refresh button to rescan the list.
 
 ## Prepare library materials for offline use {#offline-materials}
 
@@ -30,6 +34,16 @@ Add assets with Import File... or by dragging them in from your operating system
 ## Register an image as a stamp or brush
 
 Right-click an image in the project and choose Register as Image Stamp or Register as Brush Tip. The first opens the Image tab in Stamps; the second opens the Brush panel. Import PNG Brush and the existing image-add/drop workflows are still available.
+
+## Organize folders and files {#organize-assets}
+
+Choose **New Folder** from the add menu, a folder's context menu, or an empty area's context menu. Enter its name after creation. To rename an existing file or folder, select it and press F2 or choose **Rename**. Press Enter or click outside the field to commit; press Esc to cancel. Renaming cannot overwrite a different file in the same location.
+
+Choose **Delete**, or press Delete while the Asset Browser has focus, to move the selected item to the Windows Recycle Bin without the usual confirmation dialog. Deleting a folder includes its contents. This is separate from scene Undo. To recover it, restore it to its original location from the Recycle Bin, then click **Refresh** in the Asset Browser.
+
+Deleting a model or image that the scene uses can leave a missing reference. Deleting project files is separate from **Uninstall material data...** for library materials.
+
+A location that cannot use the Recycle Bin may show a Windows warning or error. Check the item and its location before deleting it.
 
 ## Import a Unity Package {#unitypackage-import}
 

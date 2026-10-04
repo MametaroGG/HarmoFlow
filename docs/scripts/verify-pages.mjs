@@ -6,7 +6,7 @@ const docs = path.resolve(import.meta.dirname, '..');
 const dist = path.join(docs, '.vitepress/dist');
 const base = process.env.DOCS_BASE || '/HarmoFlow/';
 assert(base.startsWith('/') && base.endsWith('/'), 'Use a site-absolute base with trailing slash');
-const origin = 'https://mametarogg.github.io';
+const origin = process.env.DOCS_ORIGIN || 'https://mametarogg.github.io';
 const files = fs.readdirSync(dist, { recursive: true }).filter(file => fs.statSync(path.join(dist, file)).isFile());
 const htmlFiles = files.filter(file => file.endsWith('.html'));
 assert.equal(htmlFiles.length, 113);

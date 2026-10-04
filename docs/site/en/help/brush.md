@@ -29,12 +29,18 @@ Select a paint layer, press B to switch to the Paint tool, and drag over the mod
 | Stabilization | How strongly input motion is smoothed |
 | Pressure Size | Use pen pressure to control brush size |
 | Brush Tip | Choose a round tip or an imported image tip |
-| Symmetry | Paint symmetrically around the selected X / Y / Z axes |
+| Symmetry | Mirror strokes across a plane perpendicular to the selected X, Y, or Z axis |
 | Multi-Channel | Enable the channels to paint and set their values |
+
+Symmetry mirrors strokes across one plane through the model’s origin, perpendicular to the selected X, Y, or Z axis. Check the guide in the 3D view. The mirrored target must also belong to the target texture set.
 
 In the Brush panel, choose a preset from a category and save your adjusted settings as a preset. Use Import PNG Brush to add a custom tip. The eraser has its own panel for adjusting size, tip, and other settings.
 
 You can also right-click a project image and choose Register as Brush Tip to open it in the Brush panel.
+
+### Brush tips and presets {#brush-tip-presets}
+
+Image brush tips use brightness and alpha as coverage: white paints strongly, while black or transparent areas do not paint. A 128×128 square PNG is recommended. Selecting a preset keeps your current color but adopts the preset’s painting channels. Reset this brush restores the selected preset, or defaults if none is selected. Saving a preset under an existing name replaces its settings.
 
 ## Flow versus Opacity {#flow-opacity}
 
@@ -49,6 +55,8 @@ A brush stroke is made from a sequence of small brush dabs. **Flow** controls th
 For example, with Opacity at 50% and Flow at 10%, going over the same area without lifting the pen gradually builds up paint, up to that stroke's 50% limit. Lifting the pen and starting again creates another stroke that can add more paint. Flow at 0 deposits no ink. Compare the stroke preview at the top of the Brush panel and try a few strokes.
 
 The eraser also has Flow and Opacity: they control gradual removal and the erasing limit of one stroke. To fade an entire layer, use the layer's Opacity instead.
+
+On an ordinary Paint layer, the eraser affects all channels regardless of the brush’s channel switches. For erasing material coverage, see “Material painting channels” below.
 
 ## Remove UV padding (strict) {#strict-uv-padding}
 
@@ -78,6 +86,10 @@ Press U or click the fingertip icon to open Color blending. Select a paint layer
 
 Each brush retains settings such as size, strength, and density. Press B to return to ordinary painting. You can also soften masks and painted material regions.
 
+### Adjust blending and blur {#blend-controls}
+
+Strength controls the effect amount, Blur width controls the sampling area, and Brush density controls the amount applied per dab. Color mix, Fingertip, and Bristle blend also expose Color stretch and Grain. On ordinary Paint layers, choose the affected channels. Masks and material coverage can be blended, but an empty mask must contain painted coverage first.
+
 <GuideMedia name="blend-colors" />
 
 ## Fill faces and UV islands
@@ -88,10 +100,18 @@ Polygon Fill fills the clicked face. UV Shell Fill fills the UV island containin
 
 Select the target texture set, then choose a material in the Asset Browser and paint with a brush. Polygon Fill and UV Shell Fill apply color, normals, roughness, and other properties together to the region clicked in the 3D view or UV Editor. Changing the material keeps the current painting mode.
 
-Select a previously painted material layer or material folder to add more coverage. The eraser removes coverage within the brush area. Repainting an existing material layer stays within that layer's texture set. A new material targets the currently selected texture set; other texture sets are not changed automatically.
+Select a previously painted material layer or material folder to add more coverage. The eraser removes coverage within the brush area. When you start a new painted material from the Asset Browser, it is recorded in the currently selected texture set. Painting on an existing layer targets the set that owns that layer. Parts using the same material can share their final texture, so overlapping UVs can show changes on another part.
+
+### Material painting channels {#brush-material-channels}
+
+Material painting and erasing follow the viewport display mode. BaseColor, Normal, Roughness, Metallic, Height, or Emission view edits only that channel. PBR, NPR, and Layer Mask view target all channels. Check “Paint / erase target” in Properties before adding or removing material.
 
 ## Eyedropper and palette
 
 While using the Paint tool, hold Ctrl+Shift to preview the composited BaseColor on the model. Hold Ctrl+Shift+left mouse button and move the cursor, then release the mouse button to pick the color. Releasing Ctrl+Shift before the mouse button cancels the operation. The color is sampled from BaseColor, not the lit image on screen.
 
-The Color Palette includes color adjustments, similar colors, color history, and a mixer. Drag on the mixer to blend colors, and right-click or use Alt to pick a color. The Swatches panel lets you choose saved colors. Right-click a swatch to delete an unwanted color.
+The Color Palette offers a triangle or square picker, sliders, nearby colors, and a mixing pad. You can also enter RGB, HSV, or a hex code. Mix colors with the current brush. By default, hold Alt+left mouse button to preview a color on the pad, then release the button to adopt it. Clear resets the pad.
+
+Release the left button while still holding Alt. Releasing Alt first cancels the pick.
+
+By default, X switches foreground/background color, C toggles transparent color (eraser), and D resets the slots to black and white. In Swatches, choose a category and use Add Current Color to save a color. Click a saved color to use it or right-click to delete it.

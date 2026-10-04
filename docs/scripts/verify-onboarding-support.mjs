@@ -9,6 +9,7 @@ const root = path.dirname(docs);
 const site = path.join(docs, 'site');
 const dist = path.join(docs, '.vitepress/dist');
 const base = process.env.DOCS_BASE || '/HarmoFlow/';
+const origin = process.env.DOCS_ORIGIN || 'https://mametarogg.github.io';
 const read = (prefix, slug) => fs.readFileSync(path.join(site, prefix, slug + '.md'), 'utf8');
 const html = (prefix, slug) => fs.readFileSync(path.join(dist, prefix, slug + '.html'), 'utf8');
 const anchors = {
@@ -66,8 +67,8 @@ for (const prefix of ['', 'en', 'zh', 'ko']) {
     }
     const from = (prefix ? prefix + '/' : '') + slug + '.html';
     for (const match of rendered.matchAll(/\bhref="([^"]+)"/g)) {
-      const url = new URL(match[1].replaceAll('&amp;', '&'), 'https://mametarogg.github.io' + base + from);
-      if (url.origin !== 'https://mametarogg.github.io' || !url.hash) continue;
+      const url = new URL(match[1].replaceAll('&amp;', '&'), origin + base + from);
+      if (url.origin !== origin || !url.hash) continue;
       assert(url.pathname.startsWith(base), `${from}: link must remain under Pages base`);
       let target = decodeURIComponent(url.pathname.slice(base.length));
       if (!target || target.endsWith('/')) target += 'index.html';

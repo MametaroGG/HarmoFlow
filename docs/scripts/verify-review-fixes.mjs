@@ -8,7 +8,7 @@ import postcss from 'postcss';
 const docs = path.resolve(import.meta.dirname, '..');
 const dist = path.join(docs, '.vitepress/dist');
 const base = process.env.DOCS_BASE || '/HarmoFlow/';
-const origin = 'https://mametarogg.github.io';
+const origin = process.env.DOCS_ORIGIN || 'https://mametarogg.github.io';
 const locales = [['ja-JP', ''], ['en', 'en/'], ['zh-CN', 'zh/'], ['ko-KR', 'ko/']];
 const read = file => fs.readFileSync(path.join(dist, file), 'utf8');
 const alternates = html => Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(m => [m[1], m[2]]));

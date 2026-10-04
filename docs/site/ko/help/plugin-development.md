@@ -27,7 +27,7 @@ next: false
 [HarmoFlow Plugin SDK API 3 다운로드(ZIP)](/downloads/harmoflow-plugin-sdk-v3.zip). 공식 헤더 `harmoflow_api.h`, 이 가이드용 소형 C 예제 `guide_gray.c`, 빌드 방법이 들어 있습니다. 앱 본체는 포함하지 않습니다. Lua 최소 예제는 SDK 없이 시도할 수 있습니다.
 :::
 
-SDK API 3은 현재 개발 구현에 대응합니다. 사용 중인 HarmoFlow가 지원하는 API 버전을 확인하세요. 아래 기본 C 예제는 API 1 기능만 사용하며 API 1로 등록합니다.
+이 SDK는 HarmoFlow Ver.0.1.1의 DLL 플러그인 API 3에 대응합니다. 사용할 HarmoFlow 버전과 필요한 API 기능을 확인하세요. 이 페이지의 기본 C 예제는 API 1 기능만 사용하며 API 1로 등록합니다.
 
 ## 1. 최소 Lua 패널 만들기 {#first-lua-panel}
 
@@ -240,3 +240,8 @@ dumpbin /exports guide_gray.dll
 - **안내**: 제작자, 버전, 지원 HarmoFlow/API, 설치 위치, 조작 절차, 종속성, 알려진 제한 사항 명시
 
 이 가이드의 코드는 학습용 최소 예제입니다. C 예제는 Linux에서 컴파일과 CPU 처리(등록, 픽셀 변환, 알파 유지)를 확인했고, Lua 예제는 구문과 모의 API에서의 동작을 확인했습니다. 이 공개 가이드 작성 시점에는 Windows DLL 생성과 실제 HarmoFlow에서의 동작 확인을 수행하지 않았습니다. 사용하는 앱·SDK·개발 환경에서 위 절차를 검증하세요.
+
+
+### API 3 커브 전달하기 {#api3-curve-contract}
+
+각 커브는 입력값 0과 1인 끝점을 포함해야 하며, 입력값을 중복 없이 오름차순으로 배치해야 합니다. 입력값과 출력값은 모두 0〜1 범위의 유한한 수여야 합니다.

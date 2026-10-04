@@ -27,7 +27,7 @@ next: false
 [下载 HarmoFlow Plugin SDK API 3（ZIP）](/downloads/harmoflow-plugin-sdk-v3.zip)。压缩包包含官方头文件 `harmoflow_api.h`、本指南使用的小型 C 示例 `guide_gray.c`，以及构建说明，不包含应用本体。Lua 最小示例无需 SDK 即可尝试。
 :::
 
-SDK API 3 对应当前的开发实现。请确认所用 HarmoFlow 支持的 API 版本。下面的基础 C 示例仅使用 API 1 的功能，并以 API 1 注册。
+此SDK对应HarmoFlow Ver.0.1.1的DLL插件API 3。请核对目标HarmoFlow版本和使用的API功能。本页的基础C示例仅使用API 1功能，并以API 1注册。
 
 ## 1. 创建最小 Lua 面板 {#first-lua-panel}
 
@@ -240,3 +240,8 @@ dumpbin /exports guide_gray.dll
 - **说明**：附上作者、版本、支持的 HarmoFlow/API、安装位置、操作步骤、依赖关系和已知限制
 
 本指南中的代码是用于学习的最小示例。C 示例已在 Linux 上验证编译和 CPU 处理，包括注册、像素转换及 Alpha 保持；Lua 示例已验证语法和模拟 API 下的行为。在编写本公开指南时，尚未生成 Windows DLL，也未在实际 HarmoFlow 中进行运行验证。请使用自己的应用、SDK 和开发环境验证上述步骤。
+
+
+### 传入API 3曲线时 {#api3-curve-contract}
+
+每条曲线必须包含输入为0和1的端点，输入值需严格递增且不能重复。输入和输出都必须是0〜1范围内的有限数值。

@@ -1,0 +1,826 @@
+[
+  {
+    "labels": {
+      "ja": "環境設定",
+      "en": "Preferences",
+      "zh": "偏好设置",
+      "ko": "환경 설정"
+    },
+    "keys": [
+      "Ctrl+,"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "エンジン一時停止",
+      "en": "Pause Engine",
+      "zh": "暂停引擎",
+      "ko": "엔진 일시 중지"
+    },
+    "keys": [
+      "Shift+Esc"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "元に戻す",
+      "en": "Undo",
+      "zh": "撤销",
+      "ko": "실행 취소"
+    },
+    "keys": [
+      "Ctrl+Z"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "やり直す",
+      "en": "Redo",
+      "zh": "重做",
+      "ko": "다시 실행"
+    },
+    "keys": [
+      "Ctrl+Y",
+      "Ctrl+Shift+Z"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "新規シーン",
+      "en": "New Scene",
+      "zh": "新建场景",
+      "ko": "새 씬"
+    },
+    "keys": [
+      "Ctrl+N"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "プロジェクトを保存",
+      "en": "Save Project",
+      "zh": "保存项目",
+      "ko": "프로젝트 저장"
+    },
+    "keys": [
+      "Ctrl+S"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "名前を付けて保存",
+      "en": "Save Project As",
+      "zh": "项目另存为",
+      "ko": "프로젝트 다른 이름으로 저장"
+    },
+    "keys": [
+      "Ctrl+Shift+S"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "増分して保存",
+      "en": "Incremental Save",
+      "zh": "递增保存",
+      "ko": "증분 저장"
+    },
+    "keys": [
+      "Ctrl+Alt+S"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "ペイントツール",
+      "en": "Paint Tool",
+      "zh": "绘画工具",
+      "ko": "페인트 도구"
+    },
+    "keys": [
+      "B"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "色混ぜ・ぼかしツール",
+      "en": "Color Blending Tool",
+      "zh": "Color Blending Tool",
+      "ko": "Color Blending Tool"
+    },
+    "keys": [
+      "U"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "パスツール",
+      "en": "Path Tool",
+      "zh": "路径工具",
+      "ko": "패스 도구"
+    },
+    "keys": [
+      "P"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択ツール",
+      "en": "Select Tool",
+      "zh": "选择工具",
+      "ko": "선택 도구"
+    },
+    "keys": [
+      "V"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "テキストツール",
+      "en": "Text Tool",
+      "zh": "文字工具",
+      "ko": "텍스트 도구"
+    },
+    "keys": [
+      "T"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "ブラシ塗り",
+      "en": "Brush Fill Mode",
+      "zh": "画笔填充模式",
+      "ko": "브러시 채우기 모드"
+    },
+    "keys": [
+      "1"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "ポリゴン塗り",
+      "en": "Polygon Fill Mode",
+      "zh": "多边形填充模式",
+      "ko": "폴리곤 채우기 모드"
+    },
+    "keys": [
+      "2"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "UVシェル塗り",
+      "en": "UV Shell Fill Mode",
+      "zh": "UV 壳填充模式",
+      "ko": "UV 셸 채우기 모드"
+    },
+    "keys": [
+      "3"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "消しゴム切替",
+      "en": "Toggle Eraser",
+      "zh": "切换橡皮擦",
+      "ko": "지우개 전환"
+    },
+    "keys": [
+      "E"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "ブラシを小さく",
+      "en": "Smaller Brush",
+      "zh": "Smaller Brush",
+      "ko": "Smaller Brush"
+    },
+    "keys": [
+      "["
+    ]
+  },
+  {
+    "labels": {
+      "ja": "ブラシを大きく",
+      "en": "Larger Brush",
+      "zh": "Larger Brush",
+      "ko": "Larger Brush"
+    },
+    "keys": [
+      "]"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "シンメトリー切替",
+      "en": "Toggle Symmetry",
+      "zh": "切换对称",
+      "ko": "대칭 전환"
+    },
+    "keys": [
+      "M"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "シンメトリー X",
+      "en": "Symmetry X Axis",
+      "zh": "对称 X 轴",
+      "ko": "대칭 X축"
+    },
+    "keys": [
+      "Shift+X"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "シンメトリー Y",
+      "en": "Symmetry Y Axis",
+      "zh": "对称 Y 轴",
+      "ko": "대칭 Y축"
+    },
+    "keys": [
+      "Shift+Y"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "シンメトリー Z",
+      "en": "Symmetry Z Axis",
+      "zh": "对称 Z 轴",
+      "ko": "대칭 Z축"
+    },
+    "keys": [
+      "Shift+Z"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "疑似四角切替",
+      "en": "Toggle Pseudo Quad",
+      "zh": "切换近似四边形",
+      "ko": "유사 사각형 전환"
+    },
+    "keys": [
+      "Q"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "スポイト",
+      "en": "Eyedropper",
+      "zh": "吸管",
+      "ko": "스포이트"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "ブラシサイズを変更（ドラッグ）",
+      "en": "Adjust Brush Size (drag)",
+      "zh": "Adjust Brush Size (drag)",
+      "ko": "Adjust Brush Size (drag)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "前景色と背景色を入れ替え",
+      "en": "Swap Foreground / Background",
+      "zh": "交换前景色和背景色",
+      "ko": "전경색/배경색 교환"
+    },
+    "keys": [
+      "X"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "透明色を切り替え",
+      "en": "Toggle Transparent Color",
+      "zh": "切换透明色",
+      "ko": "투명색 전환"
+    },
+    "keys": [
+      "C"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "スロットをリセット",
+      "en": "Reset Color Slots",
+      "zh": "重置颜色槽",
+      "ko": "색상 슬롯 초기화"
+    },
+    "keys": [
+      "D"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "ミキサーのスポイト",
+      "en": "Mixer Eyedropper",
+      "zh": "Mixer Eyedropper",
+      "ko": "Mixer Eyedropper"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "スタンプのサイズ変更（ドラッグ）",
+      "en": "Resize Stamp (drag)",
+      "zh": "Resize Stamp (drag)",
+      "ko": "Resize Stamp (drag)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "スタンプを回転（ドラッグ）",
+      "en": "Rotate Stamp (drag)",
+      "zh": "Rotate Stamp (drag)",
+      "ko": "Rotate Stamp (drag)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "スタンプの回転を戻す",
+      "en": "Reset Stamp Rotation",
+      "zh": "重置印章旋转",
+      "ko": "스탬프 회전 초기화"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "ワイヤーフレーム切替",
+      "en": "Toggle Wireframe",
+      "zh": "切换线框",
+      "ko": "와이어프레임 전환"
+    },
+    "keys": [
+      "I"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "床グリッド切替",
+      "en": "Toggle Floor Grid",
+      "zh": "切换地面网格",
+      "ko": "바닥 격자 전환"
+    },
+    "keys": [
+      "G"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "ビューポートを保存",
+      "en": "Save Viewport Screenshot",
+      "zh": "保存视口截图",
+      "ko": "뷰포트 스크린샷 저장"
+    },
+    "keys": [
+      "F12"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "UV エディタ切替",
+      "en": "Toggle UV Editor",
+      "zh": "切换 UV 编辑器",
+      "ko": "UV 편집기 전환"
+    },
+    "keys": [
+      "Shift+P"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "カーソル下のテクスチャセットを開く",
+      "en": "Open Texture Set Under Cursor",
+      "zh": "打开光标下的纹理集",
+      "ko": "커서 아래 텍스처 세트 열기"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "カメラ回転",
+      "en": "Orbit Camera",
+      "zh": "旋转相机",
+      "ko": "카메라 회전"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "カメラパン",
+      "en": "Pan Camera",
+      "zh": "平移相机",
+      "ko": "카메라 이동"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "カメラズーム（ドラッグ）",
+      "en": "Zoom Camera (drag)",
+      "zh": "缩放相机（拖动）",
+      "ko": "카메라 줌 (드래그)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "カメラズーム（ホイール）",
+      "en": "Zoom Camera (wheel)",
+      "zh": "Zoom Camera (wheel)",
+      "ko": "Zoom Camera (wheel)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "開いたまま確定",
+      "en": "Finish Open Path",
+      "zh": "结束开放路径",
+      "ko": "열린 패스 완료"
+    },
+    "keys": [
+      "Enter"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "パスをキャンセル",
+      "en": "Cancel Path",
+      "zh": "取消路径",
+      "ko": "패스 취소"
+    },
+    "keys": [
+      "Esc"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "直前のアンカーを削除",
+      "en": "Remove Last Anchor",
+      "zh": "移除最后一个锚点",
+      "ko": "마지막 앵커 제거"
+    },
+    "keys": [
+      "Delete",
+      "Backspace"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "パスを閉じる",
+      "en": "Close Path",
+      "zh": "闭合路径",
+      "ko": "패스 닫기"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "閉じて塗り",
+      "en": "Close Path and Fill",
+      "zh": "闭合并填充路径",
+      "ko": "패스 닫고 채우기"
+    },
+    "keys": [
+      "F"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択アンカーを削除",
+      "en": "Delete Selected Anchor",
+      "zh": "删除所选锚点",
+      "ko": "선택한 앵커 삭제"
+    },
+    "keys": [
+      "Delete",
+      "Backspace"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "角と曲線を切り替え",
+      "en": "Toggle Corner / Smooth",
+      "zh": "Toggle Corner / Smooth",
+      "ko": "Toggle Corner / Smooth"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "メッシュ選択を解除",
+      "en": "Clear Mesh Selection",
+      "zh": "清除网格选择",
+      "ko": "메시 선택 해제"
+    },
+    "keys": [
+      "Esc"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択に追加・解除",
+      "en": "Add to / Remove from Selection",
+      "zh": "Add to / Remove from Selection",
+      "ko": "Add to / Remove from Selection"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "選択に追加・解除（パーツ一覧）",
+      "en": "Add to / Remove from Selection (part list)",
+      "zh": "Add to / Remove from Selection (part list)",
+      "ko": "Add to / Remove from Selection (part list)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "選択レイヤーをコピー",
+      "en": "Copy Selected Layer",
+      "zh": "Copy Selected Layer",
+      "ko": "Copy Selected Layer"
+    },
+    "keys": [
+      "Ctrl+C"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択レイヤーを切り取り",
+      "en": "Cut Selected Layer",
+      "zh": "Cut Selected Layer",
+      "ko": "Cut Selected Layer"
+    },
+    "keys": [
+      "Ctrl+X"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "レイヤーを貼り付け",
+      "en": "Paste Layer",
+      "zh": "Paste Layer",
+      "ko": "Paste Layer"
+    },
+    "keys": [
+      "Ctrl+V"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択レイヤーを複製",
+      "en": "Duplicate Selected Layer",
+      "zh": "Duplicate Selected Layer",
+      "ko": "Duplicate Selected Layer"
+    },
+    "keys": [
+      "Ctrl+D"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択レイヤーを削除",
+      "en": "Delete Selected Layer",
+      "zh": "删除所选图层",
+      "ko": "선택한 레이어 삭제"
+    },
+    "keys": [
+      "Delete"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "レイヤーマスクのオン・オフ",
+      "en": "Turn Layer Mask On / Off",
+      "zh": "Turn Layer Mask On / Off",
+      "ko": "Turn Layer Mask On / Off"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "フォルダを開閉",
+      "en": "Open / Close Folder",
+      "zh": "Open / Close Folder",
+      "ko": "Open / Close Folder"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "ブラシサイズを変更（ドラッグ）",
+      "en": "Adjust Brush Size (drag)",
+      "zh": "Adjust Brush Size (drag)",
+      "ko": "Adjust Brush Size (drag)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "キャンバスをズーム（ドラッグ）",
+      "en": "Zoom Canvas (drag)",
+      "zh": "缩放画布（拖动）",
+      "ko": "캔버스 확대/축소 (드래그)"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "キャンバスをズーム",
+      "en": "Zoom Canvas",
+      "zh": "缩放画布",
+      "ko": "캔버스 확대/축소"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "キャンバスをパン",
+      "en": "Pan Canvas",
+      "zh": "平移画布",
+      "ko": "캔버스 이동"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "キャンバスを回転",
+      "en": "Rotate Canvas",
+      "zh": "Rotate Canvas",
+      "ko": "Rotate Canvas"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "キャンバスの回転を戻す",
+      "en": "Reset Canvas Rotation",
+      "zh": "Reset Canvas Rotation",
+      "ko": "Reset Canvas Rotation"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "線の上にアンカーを追加",
+      "en": "Insert Anchor on Segment",
+      "zh": "Insert Anchor on Segment",
+      "ko": "Insert Anchor on Segment"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "次のウィンドウにフォーカス",
+      "en": "Focus Next Window",
+      "zh": "聚焦下一个窗口",
+      "ko": "다음 창으로 초점 이동"
+    },
+    "keys": [
+      "Ctrl+Tab"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "前のウィンドウにフォーカス",
+      "en": "Focus Previous Window",
+      "zh": "聚焦上一个窗口",
+      "ko": "이전 창으로 초점 이동"
+    },
+    "keys": [
+      "Ctrl+Shift+Tab"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "現在のツールで操作",
+      "en": "Use the Current Tool",
+      "zh": "Use the Current Tool",
+      "ko": "Use the Current Tool"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "ツールバーのパイメニュー",
+      "en": "Toolbar Pie Menu",
+      "zh": "Toolbar Pie Menu",
+      "ko": "Toolbar Pie Menu"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "次のウィジェットにフォーカス",
+      "en": "Focus Next Widget",
+      "zh": "聚焦下一个控件",
+      "ko": "다음 위젯으로 초점 이동"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "前のウィジェットにフォーカス",
+      "en": "Focus Previous Widget",
+      "zh": "聚焦上一个控件",
+      "ko": "이전 위젯으로 초점 이동"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "フォーカス解除 / ポップアップを閉じる",
+      "en": "Clear Focus / Close Popup",
+      "zh": "清除焦点 / 关闭弹出窗口",
+      "ko": "초점 해제 / 팝업 닫기"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "コマンドパレット",
+      "en": "Command Palette",
+      "zh": "命令面板",
+      "ko": "명령 팔레트"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "ハイライト中のコマンドを実行",
+      "en": "Run Highlighted Command",
+      "zh": "运行高亮命令",
+      "ko": "강조된 명령 실행"
+    },
+    "keys": [
+      "Enter"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "コマンドパレットを閉じる",
+      "en": "Close Command Palette",
+      "zh": "关闭命令面板",
+      "ko": "명령 팔레트 닫기"
+    },
+    "keys": [
+      "Esc"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "軸方向から見る",
+      "en": "View Along an Axis",
+      "zh": "View Along an Axis",
+      "ko": "View Along an Axis"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "項目のメニュー",
+      "en": "Item Menu",
+      "zh": "Item Menu",
+      "ko": "Item Menu"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "項目を開く",
+      "en": "Open Item",
+      "zh": "Open Item",
+      "ko": "Open Item"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "パネルをドック / アンドック",
+      "en": "Dock / Undock Panel",
+      "zh": "停靠 / 取消停靠面板",
+      "ko": "패널 도킹 / 도킹 해제"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "ドックタブを切り替え",
+      "en": "Switch Dock Tab",
+      "zh": "切换停靠选项卡",
+      "ko": "도킹 탭 전환"
+    },
+    "keys": []
+  }
+]

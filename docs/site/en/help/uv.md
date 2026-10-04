@@ -19,9 +19,17 @@ import { withBase } from 'vitepress'
 
 Select the Paint tool and a visible, unlocked paint layer, then drag on the UV Editor canvas to paint the corresponding model surface. Zoom with the mouse wheel, and pan with middle-button drag or Space + left drag. Rotate the view with Shift + Space + left or right drag. Shift + Space + left or right double-click resets only the angle, keeping the zoom and position. Fit resets rotation, position, and zoom. Dedicated cursors appear for panning and rotation. You can also edit path anchors here. The UV Editor does not unwrap or rearrange the UV layout itself.
 
+Besides painting on Paint layers, the UV Editor supports material painting and painting masks on Fill and Adjustment layers. Check the target layer and mask-editing state first. UV strokes currently use fixed pressure and do not use the 3D view’s stroke stabilization. Paint in the 3D viewport when you need pressure variation or stabilization.
+
 For text, shape, and image stamps in the viewport, use Ctrl + Alt + drag to adjust size and Shift + Space + drag to adjust angle. Both gestures work with either the left or right mouse button.
 
+By default, Ctrl+left drag also zooms; moving right or up zooms in.
+
 ## Edit path anchors in UV space {#uv-path-editing}
+
+To create a path in the UV Editor, select a Path layer and the Path tool (P). Click to place anchors, hold and drag to create handles, and click the first anchor to close it.
+
+While drafting a path, Finish commits it open, Close commits a closed path, and Cancel discards the draft.
 
 Select a path layer, then move an anchor by left-dragging it in the UV Editor. By default, double-click a path segment away from existing anchors with the left mouse button to insert an anchor. This gesture follows the UV Editor binding in Preferences → Key Config. Path-editing gestures in the 3D viewport are different.
 

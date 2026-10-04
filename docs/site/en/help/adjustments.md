@@ -38,7 +38,7 @@ Use this for overall brightness, vividness, or hue changes without repainting.
 | Hue | −180 to 180 / 0 | Rotates the hue to change the color family |
 | Gamma | 0.1 to 3 / 1 | Adjusts midtones: above 1 brightens them, below 1 darkens them |
 
-Start with small brightness and contrast changes, then adjust saturation and hue, and finish with gamma. Extreme settings can lose detail in highlights or shadows. Compare the BaseColor view with the normal shaded view. **Reset adjustment** restores the defaults.
+Start with small brightness and contrast changes, then adjust saturation and hue, and finish with gamma. Extreme settings can lose detail in highlights or shadows. Compare the BaseColor view with the normal shaded view. “Reset adjustment” restores the effect values. It keeps the effect type and target channel, so select the correct channel separately if needed.
 
 ## Tone Curve {#tone-curve}
 

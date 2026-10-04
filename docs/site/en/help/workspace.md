@@ -17,6 +17,10 @@ import { withBase } from 'vitepress'
 
 <GuideMedia name="workspace-overview" />
 
+## Find commands {#command-search}
+
+Use the search box at the top of the window to find commands such as saving, importing, opening Preferences, and toggling panels. Click a result to run it, or press Enter to run the first result. Press Esc or click outside to close the results. If the search box is hidden, widen the window. To find assets, use the search box inside the Asset Browser.
+
 ## Switch tools with the pie menu {#pie-menu}
 
 In Ver.0.1.1, you can open a pie menu around the cursor in the 3D viewport or UV canvas.
@@ -33,16 +37,37 @@ The pie-menu trigger is a fixed gesture. If it does not open, release modifier k
 
 In HarmoFlow, each mesh part has its own texture set. Parts that use the same material are still treated as separate texture sets.
 
-Ordinary brushes and stamps paint within the texture set of the selected existing layer. To paint another part, switch sets in the list at the top of the Layers panel or Shift+Alt+right-click the model. A new material painted from the Asset Browser also targets the currently selected texture set. Select the target set before painting. Other texture sets are not changed automatically.
+Ordinary brushes and stamps paint within the texture set of the selected existing layer. To paint another part, switch sets in the list at the top of the Layers panel or Shift+Alt+right-click the model. When you start a new painted material from the Asset Browser, it is recorded in the currently selected texture set. Painting on an existing layer targets the set that owns that layer. Parts using the same material can share their final texture, so overlapping UVs can show changes on another part.
 
 ## What each panel does
 
-| Panel | What you can do |
+These are the panel names in the Window menu. Follow a name to its related instructions.
+
+| Panel | What it does |
 | --- | --- |
-| Layers | Stack paint and Fill layers, and adjust visibility, opacity, and blending |
-| Channels | Select a part, set the working resolution, and inspect individual channels |
-| Texture Set Settings | A tab next to Layers for inspecting channels and mesh maps |
-| UV Editor | View the selected part's texture and UV wireframe |
+| [Viewport](./viewport.md#viewport) | Inspect and paint the model in 3D, control the camera, and switch between PBR and NPR. |
+| [Layers](./layers.md#layers) | Organize layers and folders, and adjust masks, visibility, opacity, and blending. |
+| [Texture Set Settings](./mesh-maps.md#mesh-maps) | Inspect channels and mesh maps for the selected set, enlarge previews, and rebake maps. |
+| [Properties](./layers.md#layers) | Edit the settings available for the selected layer type. |
+| [Brush](./brush.md#brush) | Choose brush presets and adjust size, flow, spacing, and other brush settings. |
+| [Stamp](./stamps.md#stamps) | Configure image, text, shape, and clone stamps. |
+| [Eraser](./brush.md#brush) | Adjust the eraser's size and behavior. |
+| [Color blending](./brush.md#blend-controls) | Choose a blending or blur brush and adjust its mixing or blur strength. |
+| [Color Palette](./brush.md#brush) | Choose and mix colors for painting. |
+| [Swatches](./brush.md#brush) | Save frequently used colors and select them again. |
+| [Asset Browser](./assets.md#assets) | Find, filter, and import assets from the project and library. |
+| [Meshes](./viewport.md#mesh-visibility) | Select mesh parts, toggle their visibility, and inspect material names and triangle counts. |
+| [Shape Keys](./viewport.md#shape-keys) | Filter imported shape keys and adjust their weights to preview deformation. |
+| [Channels](./channels.md#channels) | Select the texture set and resolutions, inspect six channels, and bind texture images. |
+| [Paths](./paths.md#paths) | Set path fill and outline styles, and edit paths. |
+| [UV Editor](./uv.md#uv) | Paint and edit paths in UV space, and inspect textures, mesh maps, and UV wires. |
+| [Export](./export.md#export) | Set the output location, format, and channels, then export textures. |
+| [Scripting (Lua)](./settings.md#lua-and-plugins) | Run Lua code or files and inspect their logs. |
+| [Plugins](./plugins.md#plugins) | Inspect installed plugins and add or manage them. |
+| [History](./settings.md#history-navigation) | Inspect the edit history and select rows to move through Undo and Redo states. |
+| [Console](./troubleshooting.md#diagnostic-info) | Inspect processing results and errors from the current session, and copy the log. |
+| [FPS / Frame time](./settings.md#performance-panel) | Inspect FPS and frame times to compare responsiveness. |
+| [Panel Rail](./settings.md#panel-rail-operations) | Stow panels as icons, open or close them, and reorder or group them. |
 
 ## Open panels and reset the layout
 

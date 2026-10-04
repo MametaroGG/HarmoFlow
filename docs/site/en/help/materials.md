@@ -22,7 +22,11 @@ import { withBase } from 'vitepress'
 
 In a material layer's properties, enable the target channel and select an image under Image Fill, or drag one from the project. Assigning an image replaces that channel's constant value. Scalar channels use the image's R channel, and transparency uses its alpha. Use Clear to remove the image.
 
-UV transforms include tiling, position, rotation, and image repeat, and apply to all images on that layer. Use Reset UV to restore the defaults. Normal from Height (whole scene) affects the entire scene. Turn it off when you want to use an assigned Normal image.
+UV transforms include tiling, position, rotation, and image repeat, and apply to all images on that layer. Use Reset UV to restore the defaults. Normal from Height (whole scene) affects the entire scene.
+
+### Add relief from a normal map {#normal-map-only}
+
+Use “Normal map only...” in Image Fill to add relief from a normal image alone. It enables only Normal and turns off Normal from Height for the whole scene. Check this scene-wide setting when returning to relief made from Height.
 
 ## Create patterns
 
@@ -40,7 +44,7 @@ Choose Add Pattern, then select grunge, rust, mud splashes, scratches, dust, or 
 | Invert | Reverse the pattern's distribution |
 | Mesh placement / Mesh influence | Placement using convexity, concavity, and AO. See [Weathering](/en/guide#weathering) |
 
-A pattern takes precedence over image Fill on the channels it uses. If an image does not appear, check the “(the pattern shapes this one)” indicator and whether the channel is enabled.
+Patterns shape BaseColor, Roughness, Metallic, and Height, taking priority over Image Fill on those channels. Normal and Emission are not patterned. If an image does not appear, check the pattern-in-use indicator and whether the channel is enabled. Random changes the seed, Invert reverses the distribution, and Drop the pattern returns to a plain Fill while retaining channel values.
 
 ## Material presets
 
@@ -56,7 +60,19 @@ Right-click a saved preset to update, rename, or delete it, or add it to favorit
 
 Select the target texture set before choosing a material in the Asset Browser. Brush, Polygon Fill, and UV Shell Fill paint areas within the currently selected texture set. Select its existing material layer or folder to add more coverage with the same material. See [Fill faces and UV islands](/en/help/brush).
 
-Filling with a material also affects only the currently selected texture set. Other texture sets in the model are not changed automatically.
+Filling with a material also targets the currently selected texture set. When you start a new painted material from the Asset Browser, it is recorded in the currently selected texture set. Painting on an existing layer targets the set that owns that layer. Parts using the same material can share their final texture, so overlapping UVs can show changes on another part.
+
+### What material presets save {#material-preset-data}
+
+Registering the current material saves one selected Fill layer’s channel values and switches, images and UV settings, and pattern settings. It does not save the whole scene, masks, or layer opacity. “Replace with the selected layer’s material” replaces the preset with channel values and pattern settings. Keep the original and register a separate name if you need to preserve images or a multilayer recipe. Up to 512 user presets can be saved.
+
+### Material painting channels {#material-paint-target}
+
+Material painting and erasing follow the viewport display mode. BaseColor, Normal, Roughness, Metallic, Height, or Emission view edits only that channel. PBR, NPR, and Layer Mask view target all channels. Check “Paint / erase target” in Properties before adding or removing material.
+
+### Continue painting or return to regular paint {#material-resume}
+
+Select a partially painted material’s Fill layer or folder to add more coverage. The folder’s affected layers must be Fill layers in the same set with enabled masks. To edit an unmasked full-surface Fill locally, add a mask first. Choose “Clear material selection” in Properties to return to ordinary color painting; existing material layers stay in the scene.
 
 ## Material downloads and offline use {#material-downloads}
 
@@ -78,14 +94,12 @@ To download a different material, wait for the current download or choose **Canc
 - If a material reports that its provider has not published download files, retrying the connection alone will not make those files available.
 - If a downloaded material is not applied, select it again and check the target layer and enabled channels.
 
-### Remove a downloaded material {#material-cache-uninstall}
+### Uninstall material data {#material-cache-uninstall}
 
-To free disk space, right-click the material and choose **Uninstall downloaded material...**. Check the material name and downloaded size in the confirmation before continuing.
+To free disk space, right-click the material and choose **Uninstall material data...**. Check the material name and installed size in the confirmation.
 
-| Removed | Kept |
-| --- | --- |
-| That material's downloaded data (cache) | Images already copied into projects, library entries and previews, and legacy bundled images if present |
+This removes the material's downloaded maps and any matching bundled maps remaining in the application folder. Images already copied into projects, library entries, material recipes and previews are kept.
 
-**Images already copied into your projects are kept.** The material also stays in the library, so its next use can download it again. An older installation may still have bundled images available to use. This does not mean that the current installer includes the source images for image materials. Keep the cache for materials you still need to use offline.
+Using the material again requires another download. Keep its installed data if you will need it offline.
 
 Removal is unavailable during a download, painting, or another active operation. If the button is disabled, wait for processing to finish and check whether removable data exists. If additional files or links prevent safe removal, inspect the reported reason rather than deleting the whole folder manually. If removal fails, check the cache folder's permissions and whether another app is using it, then retry.

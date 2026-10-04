@@ -27,7 +27,7 @@ A good starting point is **a Lua panel that adds one layer when you click a butt
 [Download HarmoFlow Plugin SDK API 3 (ZIP)](/downloads/harmoflow-plugin-sdk-v3.zip). The package contains the official `harmoflow_api.h` header, a small C sample for this guide, `guide_gray.c`, and build instructions. It does not contain the app itself. You can try the minimal Lua example without the SDK.
 :::
 
-SDK API 3 corresponds to the current development implementation. Check which API version your HarmoFlow supports. The basic C sample below uses only API 1 features and registers itself as API 1.
+This SDK matches DLL plugin API 3 in HarmoFlow Ver.0.1.1. Check the target HarmoFlow version and the API features you use. The basic C example on this page uses only API 1 features and registers as API 1.
 
 ## 1. Create a minimal Lua panel {#first-lua-panel}
 
@@ -240,3 +240,8 @@ A DLL that uses only the basic `HfImage` callback does not need to link directly
 - **Documentation:** Include the author, version, supported HarmoFlow / API versions, installation location, usage steps, dependencies, and known limitations
 
 The code in this guide consists of minimal learning examples. The C sample has been checked for compilation and CPU processing on Linux, including registration, pixel conversion, and alpha preservation. The Lua examples have been checked for syntax and behavior with a mock API. Building a Windows DLL and testing in the actual HarmoFlow app were not performed when this public guide was created. Verify the steps above with the app, SDK, and development environment you use.
+
+
+### Passing API 3 curves {#api3-curve-contract}
+
+Each curve must include points at input 0 and input 1, with input values in strictly increasing order. Input and output values must be finite and between 0 and 1.

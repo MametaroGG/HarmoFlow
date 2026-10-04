@@ -63,13 +63,14 @@ for (const name of ['file-menu-import', 'window-menu-panels']) {
 
 // Check exact internal link fragments throughout the four new guides, including the full JA guide.
 const base = process.env.DOCS_BASE || '/HarmoFlow/';
+const origin = process.env.DOCS_ORIGIN || 'https://mametarogg.github.io';
 for (const prefix of ['', 'en/', 'zh/', 'ko/']) {
   for (const slug of [...slugs, 'assets', 'viewport', 'projects', 'settings', 'layers']) {
     const file = prefix + 'help/' + slug + '.html';
     const html = fs.readFileSync(path.join(dist, file), 'utf8');
     for (const match of html.matchAll(/\bhref="([^"]+)"/g)) {
-      const url = new URL(match[1].replaceAll('&amp;', '&'), 'https://mametarogg.github.io' + base + file);
-      if (url.origin !== 'https://mametarogg.github.io' || !url.pathname.startsWith(base) || !url.hash) continue;
+      const url = new URL(match[1].replaceAll('&amp;', '&'), origin + base + file);
+      if (url.origin !== origin || !url.pathname.startsWith(base) || !url.hash) continue;
       const relative = decodeURIComponent(url.pathname.slice(base.length));
       const target = path.join(dist, !relative || relative.endsWith('/') ? relative + 'index.html' : relative);
       assert(fs.existsSync(target), `${file}: ${match[1]}`);

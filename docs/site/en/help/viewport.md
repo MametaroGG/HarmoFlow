@@ -15,17 +15,23 @@ import { withBase } from 'vitepress'
 
 ## Move the camera
 
-By default, rotate with Alt+left drag and pan with middle drag or Space+left drag. Zoom with the mouse wheel, Alt+right drag, or Ctrl+left drag; drag right or up to zoom in. Panning is unavailable in Pivot 360. If you have customized Key Config, check your current bindings.
+By default, rotate with Alt+left drag and pan with middle-button drag or Space+left drag. Zoom with the mouse wheel, Alt+right drag, or Ctrl+left drag; drag right or up to zoom in. Panning is unavailable in Pivot 360. If you have customized Key Config, check your current bindings.
 
 Use Front to return to the front view. In Free Orbit, panning moves the rotation center. Use Shot or F12 to save the viewport as a PNG.
 
 Use Layer Focus at the top of the viewport to move the camera toward the selected layer's painted area. Focus uses the strokes of a paint layer and the shape of a path layer. For material and adjustment layers, it uses mask strokes when an enabled mask contains them; otherwise it uses the target mesh's bounds. Selecting another layer while focused moves the view to that layer. Use Whole to show the entire model. Empty paint and path layers cannot be focused.
 
+### Axis views and the floor grid {#view-axis-grid}
+
+Click X, Y, Z, or a negative axis in the top-right navigation widget to face that direction while keeping the current target and distance. Drag the widget to orbit. Use Toggle Floor Grid in the left tool strip or pie menu to show or hide the floor grid.
+
 ## Switch display modes
 
 The display menu includes PBR, NPR, individual views of the six channels, and layer masks. Choose the channel appropriate to your task, such as BaseColor for checking color or Roughness for its distribution. Use PBR to inspect surface properties with light reflections, and NPR to check a toon-style appearance. These views do not guarantee an exact match with external shaders.
 
-Shading lets you adjust the light's azimuth, elevation, intensity, and color, along with ambient light intensity, saturation, and color. PBR settings include highlights, exposure, normal strength, base reflectance (F0), and ACES tone mapping. NPR settings include minimum and maximum brightness. Use Reset Shading Settings if you want to start over.
+Shading controls lighting direction, strength and color, environment lighting, highlights, exposure, and normal strength in both PBR and NPR. Env Saturation is stored separately for the two modes: its default is 0 for PBR and 1 for NPR. ACES Tone Map applies only to PBR. In NPR, Light Min, Light Max, and Reflectance (F0) apply to painted materials; imported lilToon materials use their own values. Reset Shading Settings restores the defaults for both modes.
+
+The current NPR preview does not render lilToon outlines.
 
 Wire Settings controls visibility, back-face display, color, opacity, line width, and whether to hide the diagonals of detected quads. These settings are separate from the UV Editor's wireframe settings.
 

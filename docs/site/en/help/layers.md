@@ -27,7 +27,7 @@ import { withBase } from 'vitepress'
 | Adjustment | Adjust the composited result below with Color Adjustment, Gradient Map, or Tone Curve |
 | Group | Organize layers into folders |
 
-### Editable adjustment layers
+## Editable adjustment layers
 
 <figure class="doc-diagram">
 <img :src="withBase('/graphics/guide/editable-adjustment-gradient-map.svg')" width="960" height="640" alt="Concept diagram: 1. Composite of the layers below. 2. Map brightness to colors. 3. Adjusted result. Gradient-map settings remain editable." loading="lazy" />
@@ -40,8 +40,12 @@ When launched from the Plugins menu, preview the result in the viewport. Apply c
 
 For steps, parameter ranges, and how to choose among the three effects, see [Built-in adjustments](./adjustments.md).
 
+## Add and organize layers
+
 Use the controls at the top of the Layers panel to add, duplicate, delete, or group layers. When the Layers panel has focus, you can also press Delete to remove the selected layer (deleting a group also deletes its child layers). Drag layers to reorder them, and double-click groups to expand or collapse them. Change names, opacity, and blending modes in Properties. Normal uses standard compositing, Multiply darkens the underlying result, Add adds brightness, and Overlay adds contrast while retaining the underlying appearance.
 
+
+Select a layer and press F2 to rename it. Drop a layer onto the middle of a folder row to move it inside, or onto the top/bottom edge to reorder it at the same level. The layer display settings gear toggles content previews and lets you choose Entire texture or Focus on painted area. Preview framing does not change the artwork.
 
 <GuideMedia name="organize-layers" />
 
@@ -57,8 +61,16 @@ New layers are inserted immediately above the selected layer in the target textu
 
 Pasting follows the same placement rule but retains the source texture set. If a different set is selected, the paste goes to the top of the source set and the view switches to that set.
 
-Toggle visibility to compare a layer's effect, or use Solo to view that layer alone. Lock a layer to prevent painting. Merge Down is available only for paint layers that meet conditions such as being visible, having no mask, using 100% opacity, and containing compatible strokes. If the button is disabled, the layers cannot be merged in their current state.
+Solo includes a group’s child layers. Soloing an adjustment also keeps its underlying input, while soloing an ordinary layer retains adjustments above it. Click Solo again or use Exit solo to return to the complete stack.
 
+Hidden layers and layers inside hidden folders remain hidden in Solo.
+
+Lock a layer to prevent painting.
+
+
+### When Merge Down is available {#merge-layers-down}
+
+Merge Down is limited to adjacent Paint layers in the same texture set and hierarchy level. Both must be visible, at 100% opacity, use Normal blending, have no enabled mask or mask strokes, and have no clipping. Their current Lock Transparent Pixels settings must match, and neither may contain strokes recorded with alpha lock. A clipping layer directly above them also prevents merging. An eraser stroke on the upper layer or mismatched height settings also prevents merging.
 
 ## Response when changing opacity {#recompositing-performance}
 
@@ -67,6 +79,8 @@ Ver.0.1.1 optimizes recompositing to reduce the wait for results after changing 
 Gains vary by operation and environment. See the [Ver.0.1.1 update notes](../updates.md#release-v0-1-1) for the workload, development environment, and measured results.
 
 ## Control visibility with masks
+
+Masks are available on Paint, Material (Fill), and Adjustment layers. Path and Group layers have no mask slot. Lock Transparent Pixels is available only on Paint layers and confines new strokes to the area already painted at that point.
 
 <figure class="doc-diagram">
 <img :src="withBase('/graphics/guide/layer-stack-mask.svg')" width="960" height="640" alt="Concept diagram: 1. Add a mask to the blue paint. 2. Reveal only the area inside the white circle. The gray layer underneath stays visible." loading="lazy" />
@@ -81,5 +95,7 @@ Gains vary by operation and environment. See the [Ver.0.1.1 update notes](../upd
 3. Switch back to the content to edit the original layer.
 
 Shift-click a mask to enable or disable it. Use the layer mask view to inspect its coverage. **Clipping** restricts a layer to the painted area of the layer below. **Lock Transparent Pixels** restricts new strokes to the existing painted area of the same paint layer.
+
+Clipping is unavailable on a group or when there is no eligible layer below. An empty Paint layer has no existing coverage for alpha lock, so leave alpha lock off for the first strokes.
 
 Stroke Height controls the height effect of painting. Use Raise/Lower and Height Amount to set the direction and amount of relief.

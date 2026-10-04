@@ -21,6 +21,10 @@ Press P to switch to the Path tool. Click the model to place a corner anchor, or
 
 Press Enter to finish an open path, C to close it, F to close and fill it, or Esc to cancel. While drawing, Delete / Backspace removes the last anchor. You can also click the starting point to close the path.
 
+C and F are the initial bindings. If Close Path is unassigned, choose a non-conflicting key in Key Config. See the [shortcut reference](./shortcuts.md).
+
+When closing a path by clicking its first anchor, “Fill when closed” in Properties controls whether it is filled. Turn on “Show paths on far side” to inspect paths on the other side of the model.
+
 Create each path within one texture set. Open paths need at least two anchors; closed paths need at least three. Use C/F while drawing with the pointer over the 3D viewport.
 
 Click a completed path in the 3D view to edit it again. Drag anchors or handles to refine the contour, click a curve to add a point, and press Delete to remove the selected point. Double-click an anchor to switch between corner and smooth. Click outside the path, or press Enter or Esc, to finish editing.
@@ -28,6 +32,10 @@ Click a completed path in the 3D view to edit it again. Drag anchors or handles 
 You can also edit in the UV Editor while checking the positions of UV islands. See [UV Editor](./uv.md#uv-path-editing) for its controls.
 
 <GuideMedia name="edit-path" />
+
+### Multiple anchors and rounded corners {#path-multiple-anchors}
+
+While editing a completed path in the 3D view, drag from empty space to box-select several anchors. Drag a selected anchor to move them together, or press Delete to remove them. Drag the small circle beside a selected corner anchor to adjust its rounding.
 
 ## Fills and two outlines
 
@@ -38,3 +46,8 @@ Set the fill, outer outline, and inner outline independently in the Paths panel.
 A path's fill, outer outline, and inner outline can each use a different material. Select the corresponding swatch, then choose a material with the Material button or drag it from the Asset Browser. Clicking a material in the browser also assigns it to the selected fill or outline. Choose Solid Color to return to the original color.
 
 Material maps and compositing are retained. Adjust width and opacity per path. These settings support scene saving and Undo/Redo.
+
+
+### Style targets and deleting anchors {#path-style-scope}
+
+Open an existing path before changing its appearance. When no path is open, the panel sets defaults for the next path. Swapping swatches exchanges RGB only, leaving widths and opacity unchanged. Right-click empty space in the Paths panel for Rebake Paths. Deleting anchors removes the whole path if fewer than two remain on an open path or three on a closed path.

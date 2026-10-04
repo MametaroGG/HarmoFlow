@@ -40,13 +40,16 @@ for (const file of pages) {
   assert(!prose.includes("**"), `Unrendered bold Markdown in ${file}`);
 }
 // Standardize authored Japanese asset terminology while retaining quoted terms.
+const authoredJapanese = text => text
+  .replaceAll('素材データをアンインストール...', '')
+  .replaceAll('選択中のレイヤーの素材で上書き', '');
 for (const file of pages.filter(file => !/^(en|zh|ko)\//.test(file) && file !== 'terms.html')) {
   let prose = fs.readFileSync(path.join(dist, file), 'utf8').replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<[^>]*>/g, '');
   // Preserve the developer-supplied 0.1.1 benchmark condition exactly.
   if (file === 'updates.html') prose = prose.replaceAll('不透明な素材1000レイヤー', '');
-  assert(!prose.includes('素材'), `Japanese asset terminology not standardized in ${file}`);
+  assert(!authoredJapanese(prose).includes('素材'), `Japanese asset terminology not standardized in ${file}`);
 }
-assert(articles.every(article => ![article.title, article.category, article.description, article.searchText].some(text => text.includes('素材'))), 'Japanese search uses asset terminology');
+assert(articles.every(article => ![article.title, article.category, article.description, article.searchText].some(text => authoredJapanese(text).includes('素材'))), 'Japanese search uses asset terminology');
 for (const file of ['help/assets.html', 'guide.html']) {
   const page = fs.readFileSync(path.join(dist, file), 'utf8');
   for (const id of ['素材を検索・絞り込む', '素材を取り込んて\u3099使う']) assert(page.includes(`id="${id}"`), `${file}: retain old Japanese heading anchor ${id}`);

@@ -71,7 +71,7 @@ onBeforeUnmount(() => {
         </div>
         <div class="paint-tool-replay"><button type="button" class="button secondary" :aria-label="t(titles[0]) + '：' + t('アニメーションを再生')" @click="replay(0)">{{ t('再生') }}</button></div>
         <div class="paint-tool-copy"><p class="card-kicker">01 / BRUSH</p><h3>{{ t('ブラシ') }}</h3>
-          <p>{{ t('筆圧で太さや濃淡を変えながらペイント。手ブレ補正や対称描画で、線を整えられます。') }}</p>
+          <p>{{ t('3Dビューでは、筆圧で太さや濃淡を変えながらペイント。手ブレ補正や対称描画で、線を整えられます。') }}</p>
           <p class="paint-tool-detail">{{ t('PNG画像のブラシ先端や、設定のプリセット保存にも対応。') }}</p>
         </div>
       </article>

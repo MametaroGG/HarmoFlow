@@ -43,3 +43,8 @@ This is self-baking based on all parts of the current model. AO uses 64 hemisphe
 
 Baking covers UV coordinates from 0–1. Overlapping UVs within a single texture set share the first face's result. High-poly projection, cages, UDIM, and baking of ID, thickness, and Bent Normal maps are not supported.
 :::
+
+
+### Manual baking and PNG output {#mesh-map-output}
+
+You can also open manual baking from Texture Set Settings → Bake / Export. Use “Use automatic bake (1024px)” to return to the automatic result. The four linear-data PNGs are curvature.png, ao.png, object_normal.png, and position.png, written into a new folder without overwriting earlier output. If the dialog warns that the mesh changed, rebake before exporting the current shape.

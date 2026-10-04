@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 const base = process.env.DOCS_BASE || "/HarmoFlow/";
+const origin = process.env.DOCS_ORIGIN || "https://mametarogg.github.io";
 export default defineConfig({
   lang: "ja-JP",
   title: "HarmoFlow",
@@ -16,13 +17,11 @@ export default defineConfig({
     if (relative === "404.html") return [];
     const route = relative === "index.html" ? "" : relative;
     const alternates = [["ja-JP", ""], ["en", "en/"], ["zh-CN", "zh/"], ["ko-KR", "ko/"]].map(([lang, prefix]) =>
-      ["link", { rel: "alternate", hreflang: lang, href: new URL(base + prefix + route, "https://mametarogg.github.io").href }]);
-    if (pageData.frontmatter.layout === "updates") {
-      for (const weight of ["Regular", "Bold"]) alternates.push(["link", {
-        rel: "preload", as: "font", type: "font/woff2", crossorigin: "",
-        href: `${base}fonts/line-seed-jp/LINESeedJP-${weight}.woff2`,
-      }]);
-    }
+      ["link", { rel: "alternate", hreflang: lang, href: new URL(base + prefix + route, origin).href }]);
+    for (const weight of ["Regular", "Bold"]) alternates.push(["link", {
+      rel: "preload", as: "font", type: "font/woff2", crossorigin: "",
+      href: `${base}fonts/line-seed-jp/LINESeedJP-${weight}.woff2`,
+    }]);
     return alternates;
   },
   srcDir: "site",
@@ -31,7 +30,7 @@ export default defineConfig({
   appearance: false,
   cleanUrls: false,
   scrollOffset: { selector: '.site-header', padding: 18 },
-  head: [["link", { rel: "icon", href: `${base}favicon.svg` }]],
+  head: [["link", { rel: "icon", href: `${base}favicon.svg` }], ...(process.env.DOCS_NOINDEX === '1' ? [["meta", { name: "robots", content: "noindex, nofollow" }]] : [])],
   markdown: { headers: { level: [2, 3] } },
   vite: { server: { host: "0.0.0.0" } },
   themeConfig: { outline: [2, 3] },

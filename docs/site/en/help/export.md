@@ -40,13 +40,15 @@ Texture export from the Export panel requires the Full edition. In the Trial, sa
 | PSD | One file per enabled channel in each output texture set, with raster layers and editable opacity/blend settings. Save .harmos too for editable HarmoFlow strokes and adjustment parameters. See the details below |
 | OpenGL / DirectX | Choose the green-channel orientation of tangent-space Normal maps to match the destination's settings |
 
+JPG does not preserve transparency. Use PNG or another suitable format when you need transparent pixels.
+
 ### What PSD retains
 
 A separate PSD is created for each enabled channel in each output texture set. Paint, Fill, and path layers are saved as image layers with their original names, order, and visibility. Opacity and blend modes (Normal, Multiply, Add, and Overlay) remain editable PSD settings. Add maps to Linear Dodge (Add).
 
-Masks and clipping are baked into pixel transparency. Folders retain their hierarchy, names, visibility, and collapsed state, using Pass Through blending. For ordinary Paint, Fill, and Path channel compositing, no extra layer is added solely to compensate for compositing differences.
+When editable mask preservation is off, masks and clipping are baked into pixel transparency. Folders retain their hierarchy, names, visibility, and collapsed state, using Pass Through blending. For ordinary Paint, Fill, and Path channel compositing, no extra layer is added solely to compensate for compositing differences.
 
-Results from generated normals, normal-map UV seam processing, and three-dimensional height effects are saved in separate layers as needed. Save the Scene as well if you want to edit the original strokes or settings later
+Results from generated normals, normal-map UV seam processing, and three-dimensional height effects are saved in separate layers as needed. Save the Scene as well if you want to edit the original strokes or settings later.
 
 ### Adjustment layers in PSD
 
@@ -54,7 +56,15 @@ Adjustment layers are exported as raster image layers for their target channels.
 
 The exported adjustment image depends on the composited layers below its position. Changing those underlying layers in the PSD does not automatically recalculate HarmoFlow's adjustment.
 
+### Masks and clipping in PSD {#psd-editable-masks}
+
+When you select PSD, you can independently enable **Keep editable clipping masks** and **Keep editable layer masks**. Both are off by default, which bakes their effects into layer pixels. Enable them to retain separate clipping settings or layer masks for editing in Photoshop. These options affect PSD only and are retained when you save the scene.
+
+Photoshop can composite translucent edges and consecutive clipping differently. Leave preservation off when the baked appearance matters most. Enable it when you need to edit masks later, then check the exported PSD.
+
 ## Merge parts for export
+
+Export is not limited to the part currently selected in the Channels panel. It creates files for the enabled channels in each output texture set. When parts sharing a material are merged into a PSD, their individual layers may be organized into mesh-named folders.
 
 Image and PSD exports create a file for each output texture set and enabled channel. Merge parts sharing a material is enabled by default. It combines the UV regions of parts assigned to the same material in the original model into one texture set for export, while keeping different materials separate. Where UVs overlap, painting from the first part takes priority. If you have painted different images on overlapping UVs, turn this setting off to export each part separately.
 

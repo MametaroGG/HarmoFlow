@@ -624,7 +624,7 @@
     "article": "export",
     "allOf": [
       ".harmos 씬도 저장하세요.",
-      "마스크와 클리핑은 픽셀 투명도에 베이크합니다."
+      "편집 가능한 마스크 유지 옵션이 꺼져 있으면 마스크와 클리핑을 픽셀 투명도에 베이크합니다."
     ]
   },
   {
@@ -1371,7 +1371,7 @@
       "Shot or F12",
       "Layer Focus",
       "Use Whole",
-      "Shading lets",
+      "Shading controls",
       "Wire Settings controls",
       "Reset Shading Settings"
     ],
@@ -1603,13 +1603,16 @@
     "locale": "ja",
     "article": "shortcuts",
     "allOf": [
-      "パス作図をキャンセル / 作図中の最後のアンカーを削除",
-      "Esc / DeleteまたはBackspace",
+      "パスをキャンセル",
+      "Esc",
+      "直前のアンカーを削除",
+      "Delete / Backspace",
       "Space+左ドラッグ",
-      "Ctrl+Alt+左または右ボタンで水平ドラッグ",
+      "Ctrl+Alt+左ドラッグ / Ctrl+Alt+右ドラッグ",
+      "左右にドラッグ",
       "C・Fはパス作図中、ビューポート上",
       "既存のパスを編集中は、選択したアンカーを削除",
-      "以下は既定の割り当てです"
+      "以下はVer.0.1.1の初期割り当てと固定操作です"
     ],
     "noneOf": []
   },
@@ -1618,12 +1621,16 @@
     "locale": "en",
     "article": "shortcuts",
     "allOf": [
-      "Cancel path drafting / remove the last draft anchor",
-      "Esc / Delete or Backspace",
+      "Cancel Path",
+      "Esc",
+      "Remove Last Anchor",
+      "Delete / Backspace",
       "Space+left drag",
-      "with either the left or right button",
+      "Ctrl+Alt+left drag / Ctrl+Alt+right drag",
+      "Drag horizontally",
       "viewport hovered while drafting a path",
-      "When editing an existing path, it deletes the selected anchor"
+      "When editing an existing path, it deletes the selected anchor",
+      "initial bindings and fixed gestures in Ver.0.1.1"
     ],
     "noneOf": []
   },
@@ -1632,12 +1639,16 @@
     "locale": "zh",
     "article": "shortcuts",
     "allOf": [
-      "取消路径绘制 / 删除绘制中的最后一个锚点",
-      "Esc / Delete或Backspace",
+      "取消路径",
+      "Esc",
+      "移除最后一个锚点",
+      "Delete / Backspace",
       "Space+左键拖动",
-      "Ctrl+Alt+左键或右键水平拖动",
+      "Ctrl+Alt+左键拖动 / Ctrl+Alt+右键拖动",
+      "水平拖动",
       "C、F仅在绘制路径时",
-      "编辑已有路径时，则删除选中的锚点"
+      "编辑已有路径时，则删除选中的锚点",
+      "初始绑定和固定操作"
     ],
     "noneOf": []
   },
@@ -1646,12 +1657,16 @@
     "locale": "ko",
     "article": "shortcuts",
     "allOf": [
-      "패스 작도 취소 / 작도 중 마지막 앵커 삭제",
-      "Esc / Delete 또는 Backspace",
+      "패스 취소",
+      "Esc",
+      "마지막 앵커 제거",
+      "Delete / Backspace",
       "Space+왼쪽 드래그",
-      "Ctrl+Alt+왼쪽 또는 오른쪽 버튼으로 가로 드래그",
+      "Ctrl+Alt+왼쪽 드래그 / Ctrl+Alt+오른쪽 드래그",
+      "가로로 드래그",
       "C·F는 패스 작도 중 뷰포트 위에서",
-      "기존 패스를 편집할 때는 선택한 앵커를 삭제"
+      "기존 패스를 편집할 때는 선택한 앵커를 삭제",
+      "초기 할당과 고정 조작"
     ],
     "noneOf": []
   },

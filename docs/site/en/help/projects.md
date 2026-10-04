@@ -20,12 +20,20 @@ A project is a working folder containing assets and scenes. Project Settings let
 
 For package assets, see [Unity Package import](./assets.md#unitypackage-import). For FBX deformation and part display, see [Meshes and shape keys](./viewport.md#mesh-visibility).
 
+### New scenes and project folders {#new-scene-project-root}
+
+**New Project** creates a folder containing scenes, assets, autosave and workspace.json. Save the new scene with Ctrl+S. Multiple scenes in one project can share the same assets.
+
+**File → New Scene** (Ctrl+N) starts a fresh scene at the current work resolution. If there are changes, choose **Save and create**, **Discard and create**, or **Cancel**. Camera changes can also trigger the save prompt.
+
+**Project Settings → Change...** and the home screen's project selector choose the project folder. They do not close the current scene or move existing scenes and assets. Use **Open Scene** to switch scenes. Opening a project folder or workspace.json selects the most recently modified scene in scenes; choose a specific .harmos file to open that version.
+
 ## Choose a save method
 
 | Action | Purpose |
 | --- | --- |
 | Save Scene | Save the current editing state. Ctrl+S |
-| Save Scene As | Save the editing state under a different name |
+| Save Scene As | Keep the edit state under another name. Ctrl+Shift+S. Saving into another project also copies the assets in the current library to that destination. |
 | Incremental Save | Keep a new numbered version. Ctrl+Alt+S |
 | Open Scene | Resume from a saved editing state |
 | Export Package | Bundle the project into a `.harmopackage` file to take with you |
@@ -35,7 +43,17 @@ For package assets, see [Unity Package import](./assets.md#unitypackage-import).
 
 Package export first saves the current scene. For unsaved work, it creates a project folder beside the package. The package includes workspace.json and the scenes, assets, and autosave folders; other files at the project root are not included. Before sharing a package, check its other scenes and autosaves for work you cannot share.
 
+### Incremental saves and package locations {#save-package-locations}
+
+**Incremental Save** writes a sibling scene such as name_001.harmos or name_002.harmos and continues working in that scene. The versions share the project's assets; it does not duplicate the whole project for each save.
+
+**Open Package** uses Downloads by default. Change this in **Preferences → General → Package Unpack Folder**. **Open Package Into...** chooses a destination for this one operation. If a nonempty folder with the same name exists, extraction uses a numbered sibling folder.
+
+The application remembers the destination for **Export Package Again**. Hover over the command to check it before use, including after switching projects.
+
 ## Autosave and recovery
+
+Timed autosave is off by default. Its initial settings are every five minutes, only when changed, keeping 20 snapshots. The UI retention range is 0–50; 0 keeps all snapshots. Scheduled saves wait during painting or other active operations. Autosave now also works when timed autosave is off.
 
 Enable autosave in Preferences → Autosave, then set the interval (1–60 minutes), filename prefix, whether to save only when changes have been made, and the number of saves to keep. A retention count of 0 keeps every save. You can also choose Autosave Now or open the save folder.
 

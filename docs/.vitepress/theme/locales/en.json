@@ -56,7 +56,6 @@
   "ヘルプセンターから必要な情報をお探しください。": "Find the information you need in the Help Center.",
   "ヘルプ一覧へ": "All help topics",
   "ベジェパスの編集": "Editable Bézier paths",
-  "ペイント、Fill、パスのレイヤーに対応。マスクで適用範囲を指定し、不透明度や合成方法を調整できます。": "Work with Paint, Fill, and Path layers. Use masks to control coverage, then adjust opacity and blending.",
   "ペイント・マスク・質感のレイヤーを重ねるイメージ": "Illustration of stacked paint, mask, and material layers",
   "ペイント・マテリアル・レイヤー": "Painting · Materials · Layers",
   "ページが見つかりません": "Page not found",
@@ -151,7 +150,6 @@
   "描き足す、消して整える、色をなじませる。目的に合わせて、塗り方を選べます。": "Add strokes, erase to refine, and blend colors. Choose the right tool for the way you want to paint.",
   "筆圧で太さが変わるブラシの線のイメージ": "Illustration of a brush stroke changing width with pen pressure",
   "ブラシ": "Brush",
-  "筆圧で太さや濃淡を変えながらペイント。手ブレ補正や対称描画で、線を整えられます。": "Paint with pressure-sensitive width and opacity. Refine your strokes with stabilization and symmetry.",
   "PNG画像のブラシ先端や、設定のプリセット保存にも対応。": "Use PNG images as brush tips and save your settings as presets.",
   "消しゴムで塗った部分を消して透明にするイメージ": "Illustration of an eraser removing paint to reveal transparency",
   "消しゴム": "Eraser",
@@ -222,5 +220,7 @@
   "購入前FAQ": "Purchase FAQ",
   "インストール・更新手順": "Install and update",
   "インストール、初回起動、更新前のバックアップから制作までをご案内します。": "Follow the steps from installation, first launch, and pre-update backups through your first painting.",
-  "更新情報": "Updates"
+  "更新情報": "Updates",
+  "ペイント、Fill、パス、調整のレイヤーに対応。ペイント・Fill・調整レイヤーでは、マスクで適用範囲を指定できます。不透明度や合成方法も調整できます。": "Work with Paint, Fill, Path, and Adjustment layers. Use masks on Paint, Fill, and Adjustment layers to control coverage. Adjust opacity and blending to refine the result.",
+  "3Dビューでは、筆圧で太さや濃淡を変えながらペイント。手ブレ補正や対称描画で、線を整えられます。": "In the 3D view, paint with pressure-sensitive width and opacity. Stabilization and symmetry help you shape your lines."
 }

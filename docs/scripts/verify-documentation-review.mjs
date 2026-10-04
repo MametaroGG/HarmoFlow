@@ -5,6 +5,7 @@ import { articles } from '../.vitepress/theme/help-data.js';
 
 const docs = path.resolve(import.meta.dirname, '..');
 const base = process.env.DOCS_BASE || '/HarmoFlow/';
+const origin = process.env.DOCS_ORIGIN || 'https://mametarogg.github.io';
 const cases = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, 'documentation-review-cases.json'), 'utf8'));
 const indexes = { ja: articles };
 for (const locale of ['en', 'zh', 'ko']) indexes[locale] = JSON.parse(fs.readFileSync(path.join(docs, '.vitepress/theme/locales', `help-${locale}.json`), 'utf8'));
@@ -30,9 +31,9 @@ for (const check of cases) {
       if (expected.startsWith('./')) {
         const renderedUrl = base + (prefix ? prefix + '/' : '') + 'help/' + expected.slice(2).replace('.md', '.html');
         if (kind === 'rendered') {
-          const from = 'https://mametarogg.github.io' + base + (prefix ? prefix + '/' : '') + 'help/' + check.article + '.html';
+          const from = origin + base + (prefix ? prefix + '/' : '') + 'help/' + check.article + '.html';
           const targets = [...raw.matchAll(/href="([^"]+)"/g)].map(match => new URL(match[1].replaceAll('&amp;', '&'), from).href);
-          assert(targets.includes('https://mametarogg.github.io' + renderedUrl), `${check.id}: missing rendered link ${renderedUrl}`);
+          assert(targets.includes(origin + renderedUrl), `${check.id}: missing rendered link ${renderedUrl}`);
         }
         else assert(content.includes(plain(expected)), `${check.id} ${kind}: missing link ${expected}`);
       } else if (/^\{#[^}]+\}$/.test(expected)) {
