@@ -1,7 +1,7 @@
 ---
 title: "查找与导入资源"
 category: "导出与资源"
-description: "搜索和筛选项目内的资源，以及导入图片和 Unity Package 的方法。"
+description: "查找和导入资源，为255种贴花着色，以及下载资源库供离线使用。"
 outline: [2, 3]
 prev: false
 next: false
@@ -22,6 +22,14 @@ import { withBase } from 'vitepress'
 ### 保存搜索条件 {#saved-searches}
 
 保存的搜索会一起保留搜索文字、类型、资源库、文件夹和收藏条件。使用同名保存可更新条件，不需要的保存搜索可从右键菜单删除。手动更改筛选条件后，会取消保存搜索的选中状态。在应用外添加或恢复文件后，请点击上方的刷新按钮重新读取列表。
+
+## 可着色的贴花资源库 {#decal-library}
+
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0)提供255种白色贴花，可用颜色选择器着色后放置。
+
+资源列表和预览随应用提供，源数据则在首次使用时按整个资源库一次下载。首次下载需要互联网连接；已下载的贴花可离线使用，请在离线工作前完成下载。能看到资源列表并不代表源数据已经下载。
+
+可通过缓存容量上限、无用数据清理和贴花资源库卸载来管理已下载的贴花。已放置贴花的源数据会保留在保存后的场景中。另请参阅[材质与贴花缓存管理](./materials.md#material-cache-management)。
 
 ## 为离线使用准备资源库材质 {#offline-materials}
 

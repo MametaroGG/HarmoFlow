@@ -1,7 +1,7 @@
 ---
 title: "Image fills, materials, and patterns"
 category: "Painting and editing"
-description: "Image fills and patterns, plus first-use material downloads, offline use, retries, and cache removal."
+description: "Image fills and patterns, first-use downloads, offline use, cache size limits and unused-data cleanup."
 outline: [2, 3]
 prev: false
 next: false
@@ -93,6 +93,12 @@ To download a different material, wait for the current download or choose **Canc
 - Hover over the error message to see any available details. **Dismiss** closes the failed/cancelled status.
 - If a material reports that its provider has not published download files, retrying the connection alone will not make those files available.
 - If a downloaded material is not applied, select it again and check the target layer and enabled channels.
+
+### Manage material and decal caches {#material-cache-management}
+
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) adds a cache size limit and unused-data cleanup for downloaded materials and decals. Use these controls to manage disk space. Initial downloads require an internet connection; downloaded assets can be used offline. Keep the data for assets you will need offline.
+
+Decal-library uninstall is also available. Placed decal sources remain in saved scenes. See the [decal library](./assets.md#decal-library) for the 255 decals and first-use whole-library download. The steps for uninstalling an individual material remain below.
 
 ### Uninstall material data {#material-cache-uninstall}
 

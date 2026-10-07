@@ -13,11 +13,25 @@ import { withBase } from 'vitepress'
 
 # Keyboard shortcut reference {#shortcuts}
 
+
+## Inspect the keyboard and mouse diagrams {#visual-key-config}
+
+In Ver.0.2.0, Key Config uses keyboard and mouse diagrams to inspect and edit bindings. It supports filtering by key, navigation and numeric keypad clusters, and Japanese, English, Korean, and Chinese layout displays. Long shortcuts are less likely to be clipped.
+
+If you have saved settings, use the bindings displayed in the app rather than the initial-binding tables below.
+
+### Selection tool controls (Ver.0.2.0) {#selection-tool-shortcuts}
+
+- Hold Shift while making a rectangle or ellipse selection to create a square or circle
+- The selection pen and selection eraser support pen pressure and brush-size shortcuts. Check Key Config for your current bindings
+- Selected paint can be moved, rotated, and scaled. See [select and transform paint](./brush.md#paint-selection-transform) for the available tools
 ## Check and change key bindings
 
 In Preferences → Key Config, search by action name, condition, or binding. Click a binding to change it; + adds an alternative. An action showing Add has no binding. Changes are saved per action.
 
 Use Reset to Default, Remove, or Cancel in the binding dialog. Fixed actions cannot be changed. Ordinary left-click and bindings that conflict with actions used at the same time cannot be assigned. If another action already uses the input you want, review that binding first.
+
+The image below shows Key Config in Ver.0.1.x. Ver.0.2.0 uses the redesigned keyboard and mouse diagram interface.
 
 <figure class="doc-diagram">
 <a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="757" height="531" alt="Example of Key Config in Japanese. Displayed bindings depend on saved settings. Click the image to enlarge it." loading="lazy" /></a>

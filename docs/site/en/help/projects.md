@@ -1,7 +1,7 @@
 ---
 title: "Projects, saving, and recovery"
 category: "Getting started"
-description: "Create projects and scenes, save and export packages, locate autosaves, and recover after a GPU error."
+description: "Reuse the Default project, save scenes, check older-version compatibility, export packages and recover work."
 outline: [2, 3]
 prev: false
 next: false
@@ -20,13 +20,15 @@ A project is a working folder containing assets and scenes. Project Settings let
 
 For package assets, see [Unity Package import](./assets.md#unitypackage-import). For FBX deformation and part display, see [Meshes and shape keys](./viewport.md#mesh-visibility).
 
+In [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0), new sessions reuse a shared Default project instead of creating another temporary project each time. The scene-open file filter uses `.harmos`; choose the scene file you want to resume.
+
 ### New scenes and project folders {#new-scene-project-root}
 
 **New Project** creates a folder containing scenes, assets, autosave and workspace.json. Save the new scene with Ctrl+S. Multiple scenes in one project can share the same assets.
 
 **File → New Scene** (Ctrl+N) starts a fresh scene at the current work resolution. If there are changes, choose **Save and create**, **Discard and create**, or **Cancel**. Camera changes can also trigger the save prompt.
 
-**Project Settings → Change...** and the home screen's project selector choose the project folder. They do not close the current scene or move existing scenes and assets. Use **Open Scene** to switch scenes. Opening a project folder or workspace.json selects the most recently modified scene in scenes; choose a specific .harmos file to open that version.
+**Project Settings → Change...** and the home screen's project selector choose the project folder. They do not close the current scene or move existing scenes and assets. Use **Open Scene** to switch scenes. Choose a specific .harmos file to open that version.
 
 ## Choose a save method
 
@@ -51,7 +53,11 @@ Package export first saves the current scene. For unsaved work, it creates a pro
 
 The application remembers the destination for **Export Package Again**. Hover over the command to check it before use, including after switching projects.
 
-## Compatibility of scenes with new 3D paths {#scene-version-compatibility}
+## Scene version compatibility {#scene-version-compatibility}
+
+::: warning Before saving with Ver.0.2.0 features
+Scenes saved with new [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) features may not open correctly in older releases. If you also need an older version, use Save Scene As or Incremental Save to work in a separate file, and keep the original without overwriting it.
+:::
 
 ::: warning If you also use Ver.0.1.1 or earlier
 Scenes containing the new 3D paths introduced in [Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2) cannot be opened in Ver.0.1.1 or earlier. Keep the file from before your changes if you also need to use the scene in an older version.

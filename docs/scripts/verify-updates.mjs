@@ -119,7 +119,7 @@ for (const locale of locales) {
 }
 // The 0.1.2 film, release notes and procedural guidance must ship together.
 const update012 = releases.find(item => item.id === 'v0-1-2');
-assert.equal(releases[0], update012, 'The latest release leads the history');
+assert(releases.indexOf(update012) < releases.indexOf(update011), 'Preserve the 0.1.2 archive before 0.1.1');
 assert.equal(update012.date, '2026-10-04', 'Use the date in the official release');
 assert.equal(update012.sourceUrl, 'https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2');
 assert.equal(update012.video.youtubeId, '7ICF2pMDIbM');

@@ -1,7 +1,7 @@
 ---
 title: "Drawing and editing paths"
 category: "Painting and editing"
-description: "Create and edit paths with anchors and handles, then adjust fills and two separate outlines."
+description: "Edit paths with anchors and handles, target the first anchor’s mesh, and follow its surface with fills and outlines."
 outline: [2, 3]
 prev: false
 next: false
@@ -36,6 +36,12 @@ You can also edit in the UV Editor while checking the positions of UV islands. S
 ### Multiple anchors and rounded corners {#path-multiple-anchors}
 
 While editing a completed path in the 3D view, drag from empty space to box-select several anchors. Drag a selected anchor to move them together, or press Delete to remove them. Drag the small circle beside a selected corner anchor to adjust its rounding.
+
+## Target mesh and surface-following for 3D paths {#path-surface-target}
+
+In [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0), new 3D paths target the mesh under their first anchor. Start on the mesh you intend to draw on. Paths also follow uneven surfaces more closely. Each path still needs to stay within one texture set.
+
+This release also fixes selected path points and handles moving unintentionally while orbiting, zooming or panning. Change the view after drawing to inspect how the stroke and fill follow the surface.
 
 ## New 3D paths and UV-island boundaries {#path-uv-island-boundaries}
 

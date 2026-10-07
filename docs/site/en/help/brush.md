@@ -1,7 +1,7 @@
 ---
 title: "Brushes, erasers, and color"
 category: "Painting and editing"
-description: "Brush Flow and Opacity, strict UV padding control, pen pressure and stabilization, face fills, and color picking."
+description: "Brush Flow, Opacity and UV padding, mesh and paint selections, and moving, rotating or scaling selected paint."
 outline: [2, 3]
 prev: false
 next: false
@@ -42,11 +42,23 @@ You can also right-click a project image and choose Register as Brush Tip to ope
 
 Image brush tips use brightness and alpha as coverage: white paints strongly, while black or transparent areas do not paint. A 128×128 square PNG is recommended. Selecting a preset keeps your current color but adopts the preset’s painting channels. Reset this brush restores the selected preset, or defaults if none is selected. Saving a preset under an existing name replaces its settings.
 
+## Select meshes and paint, then transform paint {#paint-selection-transform}
+
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) adds mesh and paint selection tools: rectangle, ellipse, lasso, polygon (polyline), selection pen, selection eraser and shrink selection. Choose the tool that suits the area you want to select.
+
+- Hold Shift while making a rectangle or ellipse selection to create a square or circle.
+- The selection pen and selection eraser support pressure and brush-size shortcuts. Check your bindings in [Key Config](./shortcuts.md).
+- Move, rotate or scale selected paint. In the 3D viewport, paint is placed along the surface, with support for UV shell boundaries, offscreen and hidden surfaces, and symmetry.
+
+After transforming paint, change the view to inspect boundaries and previously hidden areas. If you also use an older release, [keep the original scene file](./projects.md#scene-version-compatibility) before using new features.
+
 ## Paint across UV-island boundaries in 3D {#brush-uv-island-boundaries}
 
 In [Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2), the ordinary brush in the 3D view can paint across UV-island boundaries on **connected surfaces of the same part**. Draw across the boundary on the model, then inspect the result in the 3D view and UV Editor.
 
 This improvement applies to the ordinary 3D brush. For the target areas of Polygon Fill and UV Shell Fill, see “Fill faces and UV islands” below. For strokes and fills on newly created 3D paths, see [path UV-island boundaries](./paths.md#path-uv-island-boundaries).
+
+Ver.0.2.0 also fixes white streaks when painting areas where UV triangles converge, such as sphere poles.
 
 ## Flow versus Opacity {#flow-opacity}
 

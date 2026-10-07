@@ -1,7 +1,7 @@
 ---
 title: "笔刷、橡皮擦与颜色"
 category: "绘制与编辑"
-description: "笔刷流量与不透明度、严格控制UV边缘扩展、笔压与防抖、面填充及颜色拾取。"
+description: "笔刷流量、不透明度与UV边缘扩展，网格和绘制内容的选择，以及所选内容的移动、旋转和缩放。"
 outline: [2, 3]
 prev: false
 next: false
@@ -42,11 +42,23 @@ import { withBase } from 'vitepress'
 
 图片笔尖将亮度和透明度用作覆盖强度：白色部分绘制更强，黑色或透明部分不绘制。建议使用128×128的正方形PNG。选择预设会保留当前颜色，但绘制通道会切换到预设的设置。“Reset this brush”会恢复所选预设；未选择预设时恢复默认设置。用已有名称保存会替换该预设的设置。
 
+## 选择网格与绘制内容，并变换所选内容 {#paint-selection-transform}
+
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0)新增网格和绘制内容的选择工具：矩形、椭圆、套索、折线（多边形）、选择笔、选择橡皮擦和收缩选择。请根据需要选择的范围使用合适的工具。
+
+- 创建矩形或椭圆选区时按住Shift，可得到正方形或正圆。
+- 选择笔和选择橡皮擦支持笔压及笔刷大小快捷键。绑定可在[按键配置](./shortcuts.md)中确认。
+- 所选绘制内容可以移动、旋转和缩放。在3D视图中，内容沿表面放置，支持跨越UV壳边界、屏幕外或被遮挡的表面，并支持对称操作。
+
+变换后请切换视角，检查边界和此前被遮挡的区域。如仍需使用旧版，请在使用新功能前[保留原场景文件](./projects.md#scene-version-compatibility)。
+
 ## 在3D视图中跨越UV岛边界绘制 {#brush-uv-island-boundaries}
 
 在[Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2)中，3D视图的普通笔刷可以在**同一部件的相连表面**上跨越UV岛边界绘制。在模型上跨越边界绘制后，请在3D视图和UV编辑器中检查结果。
 
 此项改进针对3D视图的普通笔刷。多边形填充和UV壳填充的作用范围，请参阅下方的“填充面或 UV 岛”。新建3D路径的描边与填充请参阅[路径的UV岛边界](./paths.md#path-uv-island-boundaries)。
+
+Ver.0.2.0还修复了绘制球体两极等UV三角形密集汇聚区域时出现白色条纹的问题。
 
 ## 流量与不透明度的区别 {#flow-opacity}
 

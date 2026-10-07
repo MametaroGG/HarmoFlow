@@ -13,11 +13,25 @@ import { withBase } from 'vitepress'
 
 # 快捷键速查 {#shortcuts}
 
+
+## 通过键盘和鼠标示意图查看 {#visual-key-config}
+
+Ver.0.2.0 的快捷键设置支持通过键盘和鼠标示意图查看和编辑绑定。可以按键筛选，显示导航键和数字键盘，并切换日语、英语、韩语和中文键盘布局。较长快捷键被截断的问题也已改善。
+
+如果已有保存的设置，请以软件中显示的绑定为准，而非下方的初始绑定表。
+
+### 选择工具操作（Ver.0.2.0） {#selection-tool-shortcuts}
+
+- 创建矩形或椭圆选区时按住 Shift，可得到正方形或正圆
+- 选择画笔和选择橡皮支持压感与画笔大小快捷键。请在快捷键设置中确认当前绑定
+- 选中的绘画内容可移动、旋转和缩放。工具用法请参阅[选择和变换绘画内容](./brush.md#paint-selection-transform)
 ## 查看与修改按键设置
 
 在“偏好设置 → 按键配置”中，可按操作名称、条件或绑定搜索。点击绑定可修改，“+”可添加另一组绑定。显示“相加”的操作尚未绑定，可用此按钮添加绑定。更改会按操作保存。
 
 绑定窗口提供“恢复默认”、“Remove”（移除）和“取消”。固定操作无法修改。普通左键单击，以及与同时使用的操作冲突的组合，不能设为绑定。如果需要的按键已被其他操作使用，请先调整原有绑定。
+
+下图为 Ver.0.1.x 的快捷键设置示例。Ver.0.2.0 已改为包含键盘和鼠标示意图的界面。
 
 <figure class="doc-diagram">
 <a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="757" height="531" alt="日文版按键配置示例。显示的绑定取决于已保存的设置。点击图片可放大。" loading="lazy" /></a>

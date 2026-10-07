@@ -13,6 +13,12 @@ import { withBase } from 'vitepress'
 
 # 界面与网格部件 {#workspace}
 
+
+## Ver.0.2.0 的界面改进 {#workspace-020}
+
+整理了饼状菜单的工具分组，以及从图层列表返回的操作。画笔笔触预览与预设名称不再重叠，下拉选项也可使用鼠标滚轮更改。
+
+[外观设置](./settings.md#appearance-theme)支持深色、浅色、跟随系统、七种配色预设及自定义颜色。[快捷键设置](./shortcuts.md#visual-key-config)可通过键盘和鼠标示意图查看绑定。
 ## 界面布局
 
 <GuideMedia name="workspace-overview" />

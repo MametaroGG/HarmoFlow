@@ -1,7 +1,7 @@
 ---
 title: "项目、保存与恢复"
 category: "入门"
-description: "创建项目和场景、保存与打包导出、查找自动保存，以及在 GPU 错误后恢复工作。"
+description: "复用默认项目、保存场景、确认旧版兼容性，以及打包导出、自动保存和工作恢复。"
 outline: [2, 3]
 prev: false
 next: false
@@ -20,13 +20,15 @@ next: false
 
 导入包内素材请参阅[Unity Package导入](./assets.md#unitypackage-import)。FBX中的变形及部件显示请参阅[网格与形态键](./viewport.md#mesh-visibility)。
 
+在[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0)中，新启动的会话复用共用的“默认”项目，不再每次都创建新的临时项目。“打开场景”的文件筛选统一为`.harmos`，请选择需要继续编辑的场景文件。
+
 ### 新场景与项目文件夹 {#new-scene-project-root}
 
 “新建项目”会创建包含scenes、assets、autosave和workspace.json的文件夹。请按Ctrl+S保存新场景。同一项目中的多个场景可以共享资源。
 
 “文件 → 新建场景”（Ctrl+N）会使用当前工作分辨率开始一个新场景。如果已有更改，可选择“保存并新建”“不保存并新建”或“取消”。移动相机等操作也可能触发保存提示。
 
-“项目设置 → 更改...”以及主页的项目选择用于指定项目文件夹，不会关闭当前场景，也不会移动已有场景和资源。切换场景请使用“打开场景”。打开项目文件夹或workspace.json时，会选取scenes中最近修改的场景；需要打开特定版本时，请直接选择对应的.harmos文件。
+“项目设置 → 更改...”以及主页的项目选择用于指定项目文件夹，不会关闭当前场景，也不会移动已有场景和资源。切换场景请使用“打开场景”。需要打开特定版本时，请直接选择对应的.harmos文件。
 
 ## 选择合适的保存方式
 
@@ -51,7 +53,11 @@ next: false
 
 应用会记住“再次导出资源包”的目标位置。执行前请将鼠标悬停在该命令上核对路径，切换项目后也要确认。
 
-## 含新3D路径的场景兼容性 {#scene-version-compatibility}
+## 场景的版本兼容性 {#scene-version-compatibility}
+
+::: warning 使用Ver.0.2.0新功能保存前
+使用[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0)新功能保存的场景，可能无法在旧版中正确打开。如仍需使用旧版，请用“场景另存为”或“递增保存”创建独立文件，并保留修改前的原文件，避免覆盖。
+:::
 
 ::: warning 还需使用Ver.0.1.1或更早版本时
 包含[Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2)新增3D路径的场景，无法在Ver.0.1.1或更早版本中打开。还需在旧版中使用的场景，请保留修改前的文件。

@@ -11,6 +11,12 @@ next: false
 
 <span id="startup-and-drawing-preferences"></span>
 
+
+## Choose an appearance and color theme {#appearance-theme}
+
+Ver.0.2.0 offers Dark, Light, and System appearance modes, seven color presets, and custom colors. Home, loading screens, pie menus, the viewport, and the UV Editor follow the selected theme.
+
+The UI adapts to high-DPI display scaling so text and controls do not become too small on high-resolution screens. Dropdown values can also be changed with the mouse wheel.
 ## Home and recent scenes
 
 On the home screen, use the left side to create or select a project or load a scene. Resume work from Recent Scenes on the right. The history keeps up to 20 of the most recent successful loads and saves. Search by name or path, and use each row's menu to remove it from the history without deleting the file itself. Click Go to Workspace at the top right to return to editing, and File → Home to return to the home screen. Turn off Show Home at Startup to open directly in the workspace next time.
