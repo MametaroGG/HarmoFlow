@@ -13,6 +13,12 @@ import { withBase } from 'vitepress'
 
 # 작업 화면과 메시 파트 {#workspace}
 
+
+## Ver.0.2.0 작업 화면 개선 {#workspace-020}
+
+파이 메뉴의 도구 분류와 레이어 목록에서 돌아가는 동작을 정리했습니다. 브러시 스트로크 미리보기와 프리셋 이름이 겹치지 않게 배치했으며 드롭다운 값은 마우스 휠로도 바꿀 수 있습니다.
+
+[외관 설정](./settings.md#appearance-theme)에서 어둡게·밝게·시스템 모드, 일곱 가지 색상 프리셋과 사용자 지정 색상을 선택할 수 있습니다. [키 설정](./shortcuts.md#visual-key-config)에서는 키보드와 마우스 그림으로 할당을 확인합니다.
 ## 화면 구성
 
 <GuideMedia name="workspace-overview" />

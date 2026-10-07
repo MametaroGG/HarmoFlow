@@ -1,7 +1,7 @@
 ---
 title: "Layers, masks, and blending"
 category: "Painting and editing"
-description: "Use layer types, blending, groups, masks, and clipping to control where your edits appear."
+description: "Use layer types, 27 blending modes, groups, masks and clipping to control where your edits appear."
 outline: [2, 3]
 prev: false
 next: false
@@ -27,6 +27,12 @@ import { withBase } from 'vitepress'
 | Adjustment | Adjust the composited result below with Color Adjustment, Gradient Map, or Tone Curve |
 | Group | Organize layers into folders |
 
+## 27 layer blending modes {#layer-blend-modes}
+
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) expands layer blending to 27 modes. Alongside Normal, Multiply, Add and Overlay, the available modes include Screen, Soft Light, Hue, Saturation and Difference.
+
+Select a layer and change its blending mode in Properties to compare how it combines with the layers below. Adjust the layer’s opacity as needed.
+
 ## Select and configure layers with the pie menu {#layer-pie-menu}
 
 In Ver.0.1.2, the pie menu lets you choose layers by thumbnail in both the 3D viewport and UV Editor.
@@ -37,7 +43,7 @@ In Ver.0.1.2, the pie menu lets you choose layers by thumbnail in both the 3D vi
 
 With a pen tablet, place the pointer at the top or bottom of the list to scroll through layers. Return to the center to stop. You can also select a card by tapping it with the pen tip.
 
-The controls beside a card toggle Visibility, Lock, Clipping, Alpha lock, Stroke height, and Solo. While holding the right button, slide onto a setting and release there to change only that setting. Passing over other settings does not change them. Enabled settings have a blue background, and a brief animation stretches and connects the buttons to show the interaction.
+The controls beside a card toggle Visibility, Lock, Clipping, Alpha lock, Stroke height, and Solo. While holding the right button, slide onto a setting and release there to change only that setting. Passing over other settings does not change them. Enabled settings are distinguished by their background color, and a brief animation stretches and connects the buttons to show the interaction.
 
 Available settings depend on the layer type. Alpha lock and Stroke height are Paint-layer controls. Clipping is unavailable on groups or without an eligible layer below. Hidden layers and layers inside hidden folders remain hidden in Solo.
 

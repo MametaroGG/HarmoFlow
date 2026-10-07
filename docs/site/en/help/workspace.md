@@ -13,6 +13,12 @@ import { withBase } from 'vitepress'
 
 # Workspace and mesh parts {#workspace}
 
+
+## Workspace improvements in Ver.0.2.0 {#workspace-020}
+
+Pie-menu tool groups and the return action from the layer picker have been organized. Brush stroke previews no longer overlap preset names, and dropdown values can also be changed with the mouse wheel.
+
+Choose Dark, Light, or System appearance, seven presets, or a custom color in the [appearance settings](./settings.md#appearance-theme). Inspect bindings through keyboard and mouse diagrams in [Key Config](./shortcuts.md#visual-key-config).
 ## Workspace layout
 
 <GuideMedia name="workspace-overview" />

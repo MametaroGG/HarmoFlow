@@ -1,7 +1,7 @@
 ---
 title: "Finding and importing assets"
 category: "Export and assets"
-description: "Search and filter project assets, and import images and Unity Packages."
+description: "Find and import assets, tint 255 library decals, and prepare downloads for offline use."
 outline: [2, 3]
 prev: false
 next: false
@@ -22,6 +22,14 @@ Before applying a material, select the target texture set. When you start a new 
 ### Save search conditions {#saved-searches}
 
 Saved searches retain the text, type, library, folder and favorites filters together. Saving under the same name updates the criteria; remove an unwanted saved search from its context menu. Changing a filter manually clears the saved-search selection. After adding or restoring files outside the app, use the top Refresh button to rescan the list.
+
+## Tintable decal library {#decal-library}
+
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) includes 255 white decals. Use the color picker to tint them when placing them.
+
+The catalog and previews are included, while the source library downloads as one pack on first use. This first download requires an internet connection. Downloaded decals work offline, so prepare them before going offline. Seeing a catalog entry alone does not mean its source data is already downloaded.
+
+Manage downloaded decals with the cache size limit, unused-data cleanup and decal-library uninstall. Placed decal sources remain in saved scenes. See [material and decal cache management](./materials.md#material-cache-management).
 
 ## Prepare library materials for offline use {#offline-materials}
 

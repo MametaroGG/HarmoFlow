@@ -25,6 +25,170 @@ const performance = {
 };
 
 export const releases = [{
+  id: 'v0-2-0',
+  version: 'Ver.0.2.0',
+  date: '2026-10-08',
+  sourceUrl: 'https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0',
+  video: { youtubeId: 'fFjN-EyH7sQ', watchUrl: 'https://www.youtube.com/watch?v=fFjN-EyH7sQ' },
+  content: {
+    ja: {
+      title: 'Ver.0.2.0の更新内容',
+      videoTitle: 'HarmoFlow Ver.0.2.0 アップデート紹介動画',
+      summary: '描いた塗りを選んで、表面に沿って移動・回転・拡縮。27種類の合成モードと255種類のデカールで、重ね方や仕上げの選択肢が広がりました。外観やキーコンフィグも改善しています。新機能を使って保存したシーンは旧版で正しく開けない場合があるため、変更前のファイルを残してください。',
+      highlights: [
+        { title: '描いたあとから、位置も形も。', description: 'メッシュと塗りの選択ツールを追加。選んだ塗りを移動・回転・拡縮でき、3Dビューでは表面に沿った配置、UVシェル境界やカメラの死角をまたぐ操作、シンメトリーに対応します。', href: '/help/brush.html#paint-selection-transform' },
+        { title: '27通りの、重ね方。', description: 'レイヤーの合成モードを27種類に拡張。スクリーン、ソフトライト、色相、彩度、差の絶対値などから、色や明るさの重なり方を選べます。', href: '/help/layers.html#layer-blend-modes' },
+        { title: '255種類を、好きな色で。', description: '白いデカール255種類を追加。カラーピッカーで色を付けて配置できます。一覧とプレビューは同梱され、アセットデータは初回使用時にライブラリ単位で取得します。', href: '/help/assets.html#decal-library' },
+      ],
+      changes: {
+        added: [
+          'メッシュと塗りの選択ツールを追加しました。長方形・楕円・投げ縄・折れ線・選択ペン・選択消し・シュリンク選択を使い分けられます。',
+          '選択した塗りを移動・回転・拡縮できるようになりました。3Dビューでは表面に沿って配置し、UVシェル境界や画面外・カメラの死角をまたぐ操作とシンメトリーに対応します。',
+          '選択ペン・選択消しは筆圧とブラシサイズのショートカットに対応します。長方形・楕円の選択中にShiftを押すと、正方形・正円にできます。',
+          'レイヤーの合成モードを27種類に拡張しました。スクリーン、ソフトライト、色相、彩度、差の絶対値などを利用できます。',
+          'ダーク・ライト・システムの外観設定、7色の配色プリセットとカスタムカラーを追加しました。ホーム、ロード画面、パイメニュー、ビューポート、UVエディタも設定に合わせた配色になります。',
+          '白いデカール255種類を追加しました。カラーピッカーで色を付けて配置できます。一覧とプレビューを同梱し、アセットデータは初回使用時にライブラリ単位で取得します。',
+          'ダウンロードしたマテリアル・デカールのキャッシュ上限設定と不要データの削除、デカールライブラリのアンインストールを追加しました。配置済みのデカールは保存したシーンでも保持します。',
+        ],
+        improved: [
+          'キーコンフィグを、キーボードとマウスの図から割り当てを確認・編集できる画面へ改善しました。キーによる絞り込み、移動キー・テンキー、日本語・英語・韓国語・中国語の配列表示に対応し、長いショートカットの見切れも改善しました。',
+          'パイメニューのツール分類とレイヤー一覧からの戻り操作を整理しました。ブラシ一覧は線のプレビューと名前が重ならない配置にし、ドロップダウンはホイールでも変更できるようにしました。',
+          '新規起動では共通の「デフォルト」プロジェクトを使い、仮プロジェクトが毎回増えないようにしました。シーンを開く際の対象形式は.harmosに統一しました。',
+          '3Dパスの描画先を最初のアンカーを置いたメッシュへ合わせ、表面の凹凸への追従を改善しました。',
+          '起動時のアセット準備とUVワイヤー表示を最適化し、操作中の待ち時間を軽減しました。',
+        ],
+        fixed: [
+          '高DPIディスプレイの拡大率に合わせてUIを調整し、高解像度の画面で文字やボタンが小さくなりすぎる問題を修正しました。',
+          '球体の極など、UVが密集した部分を塗ったときに白い筋が入る問題を修正しました。',
+          '視点の回転・ズーム・パン中に、選択したパスの点やハンドルが動く問題を修正しました。',
+        ],
+        notes: [
+          '新機能を使って保存したシーンは、旧版では正しく開けない場合があります。旧版でも使う場合は、変更前のファイルを残してください。',
+          'マテリアルとデカールの初回取得にはインターネット接続が必要です。取得済みのアセットはオフラインでも使用できます。',
+          '製品版・体験版のインストーラーはBOOTHの配布ページから入手できます。選んだ版のZIPを展開し、中にあるEXEを実行してください。体験版は編集とシーン保存に対応し、テクスチャの書き出しは製品版で利用できます。',
+          'GitHubリリースに添付されたversion.jsonは、アプリの更新確認に使うバージョン情報です。',
+        ],
+      },
+    },
+    en: {
+      title: 'What changed in Ver.0.2.0',
+      videoTitle: 'HarmoFlow Ver.0.2.0 update showcase',
+      summary: 'Select painted areas, then move, rotate, and scale them along the surface. With 27 blend modes and 255 decals, there are more ways to build up and finish your work. Appearance settings and key configuration have also improved. Scenes saved with new features may not open correctly in older releases, so keep the original files.',
+      highlights: [
+        { title: 'Paint first. Adjust it afterward.', description: 'New mesh and paint selection tools let you move, rotate, and scale selected paint. In the 3D view, placement follows the surface across UV shell boundaries and hidden areas, with symmetry support.', href: '/help/brush.html#paint-selection-transform' },
+        { title: '27 ways to blend.', description: 'Layer blending expands to 27 modes. Choose how colors and brightness combine with Screen, Soft Light, Hue, Saturation, Difference, and more.', href: '/help/layers.html#layer-blend-modes' },
+        { title: '255 decals. Your choice of color.', description: 'Tint 255 new white decals with the color picker and place them on your work. The catalog and previews are included; each source library downloads as a pack on first use.', href: '/help/assets.html#decal-library' },
+      ],
+      changes: {
+        added: [
+          'Added mesh and paint selection tools: rectangle, ellipse, lasso, polygon, selection pen, selection eraser, and shrink selection.',
+          'Added move, rotate, and scale for selected paint. The 3D view places paint along the surface and supports operations across UV shell boundaries, offscreen and hidden surfaces, and symmetry.',
+          'Selection pens and erasers support pressure and brush-size shortcuts. Hold Shift when making rectangle or ellipse selections to create squares or circles.',
+          'Expanded layer blending to 27 modes, including Screen, Soft Light, Hue, Saturation, and Difference.',
+          'Added Dark, Light, and System appearance modes, seven color presets, and custom colors. Home, loading screens, pie menus, the viewport, and UV Editor follow the selected theme.',
+          'Added 255 white decals that can be tinted with the color picker. The catalog and previews are included; the source library downloads as one pack on first use.',
+          'Added a cache size limit and unused-data cleanup for downloaded materials and decals, plus decal-library uninstall. Placed decal sources remain in saved scenes.',
+        ],
+        improved: [
+          'Redesigned key configuration with keyboard and mouse diagrams for inspecting and editing bindings. Added key filtering, navigation and numeric keypad clusters, Japanese, English, Korean, and Chinese layout displays, and improved visibility of long shortcuts.',
+          'Organized pie-menu tool groups and the return action from the layer picker. Separated brush stroke previews from preset names and added mouse-wheel changes to dropdowns.',
+          'New sessions reuse a shared Default project instead of creating another temporary project each time. Scene-open file filters now use .harmos.',
+          'New 3D paths target the mesh under their first anchor and follow uneven surfaces more closely.',
+          'Optimized startup material preparation and UV wire rendering to reduce waits during use.',
+        ],
+        fixed: [
+          'Adapted the UI to high-DPI display scaling so text and controls do not become too small on high-resolution monitors.',
+          'Fixed white streaks in painted areas where UV triangles converge, such as sphere poles.',
+          'Fixed selected path points and handles moving while orbiting, zooming, or panning.',
+        ],
+        notes: [
+          'Scenes saved with new features may not open correctly in older releases. Keep the original files if you need to continue using an older version.',
+          'Initial material and decal downloads require an internet connection. Downloaded assets can be used offline.',
+          'Full and Trial installers are distributed through BOOTH. Extract the ZIP for your edition and run the EXE. The Trial supports editing and saving scenes; texture export is available in the Full edition.',
+          'The version.json attached to the GitHub release contains version information used by the app to check for updates.',
+        ],
+      },
+    },
+    zh: {
+      title: 'Ver.0.2.0 更新内容',
+      videoTitle: 'HarmoFlow Ver.0.2.0 更新介绍视频',
+      summary: '选中已绘制的内容，沿表面移动、旋转或缩放。27 种混合模式与 255 种贴花，为叠加和细节处理带来更多选择。外观设置和按键配置也有所改进。使用新功能保存的场景可能无法在旧版中正确打开，请保留修改前的文件。',
+      highlights: [
+        { title: '画好之后，还能调整。', description: '新增网格与绘制内容选择工具，可移动、旋转和缩放选中的绘制内容。在 3D 视图中可沿表面放置，支持跨 UV 壳边界与相机视角死角的操作，以及对称功能。', href: '/help/brush.html#paint-selection-transform' },
+        { title: '27 种混合方式。', description: '图层混合模式扩展至 27 种。可选择滤色、柔光、色相、饱和度、差值等模式，调整颜色与亮度的叠加方式。', href: '/help/layers.html#layer-blend-modes' },
+        { title: '255 种贴花，随心着色。', description: '新增 255 种白色贴花，可通过颜色选择器着色后放置。列表与预览随软件提供，首次使用时以整个素材库为单位下载素材数据。', href: '/help/assets.html#decal-library' },
+      ],
+      changes: {
+        added: [
+          '新增网格与绘制内容选择工具：矩形、椭圆、套索、多边形、选择笔、选择橡皮擦和收缩选择。',
+          '可移动、旋转和缩放选中的绘制内容。在 3D 视图中可沿表面放置，支持跨 UV 壳边界、画面外区域与相机视角死角的操作，以及对称功能。',
+          '选择笔与选择橡皮擦支持压感和画笔大小快捷键。创建矩形或椭圆选区时按住 Shift，可得到正方形或正圆。',
+          '图层混合模式扩展至 27 种，包括滤色、柔光、色相、饱和度和差值等。',
+          '新增深色、浅色与跟随系统的外观设置，以及 7 种配色预设和自定义颜色。主页、加载画面、饼状菜单、视口和 UV 编辑器都会跟随所选主题。',
+          '新增 255 种白色贴花，可通过颜色选择器着色后放置。列表与预览随软件提供，首次使用时以整个素材库为单位下载素材数据。',
+          '新增已下载材质与贴花的缓存容量上限设置、无用数据清理，以及贴花库卸载功能。已放置的贴花源数据会保留在保存的场景中。',
+        ],
+        improved: [
+          '重新设计按键配置界面，可通过键盘与鼠标示意图查看和编辑绑定。支持按键筛选、导航键与数字键盘区域，以及日语、英语、韩语和中文布局显示，并改善了较长快捷键显示不全的问题。',
+          '整理了饼状菜单的工具分组和从图层列表返回的操作。画笔列表中的笔触预览与预设名称不再重叠，下拉选项也可使用滚轮切换。',
+          '新启动的会话共用“默认”项目，避免每次都新增临时项目。打开场景时的文件类型筛选统一为 .harmos。',
+          '新建 3D 路径以第一个锚点所在的网格为绘制目标，并更好地贴合凹凸表面。',
+          '优化了启动时的素材准备与 UV 线框显示，减少使用过程中的等待。',
+        ],
+        fixed: [
+          '根据高 DPI 显示器的缩放比例调整界面，修复了高分辨率屏幕上文字和控件过小的问题。',
+          '修复了在球体极点等 UV 三角形密集汇聚的区域绘制时出现白色条纹的问题。',
+          '修复了旋转视角、缩放或平移时，选中路径的控制点和手柄会移动的问题。',
+        ],
+        notes: [
+          '使用新功能保存的场景可能无法在旧版中正确打开。如果还需要在旧版中使用，请保留修改前的文件。',
+          '首次下载材质和贴花需要互联网连接，已下载的素材可离线使用。',
+          '正式版和试用版安装程序均通过 BOOTH 提供。解压所选版本的 ZIP 后运行其中的 EXE。试用版支持编辑和保存场景，纹理导出功能需使用正式版。',
+          'GitHub 版本发布附件中的 version.json 是供软件检查更新使用的版本信息。',
+        ],
+      },
+    },
+    ko: {
+      title: 'Ver.0.2.0 업데이트 내용',
+      videoTitle: 'HarmoFlow Ver.0.2.0 업데이트 소개 영상',
+      summary: '그린 영역을 선택한 뒤 표면을 따라 이동·회전·크기 조절할 수 있습니다. 27가지 합성 모드와 255종의 데칼로 겹쳐 그리고 마무리하는 선택지가 넓어졌습니다. 외관 설정과 키 설정도 개선했습니다. 새 기능을 사용해 저장한 장면은 이전 버전에서 제대로 열리지 않을 수 있으므로 변경 전 파일을 보관하세요.',
+      highlights: [
+        { title: '그린 뒤에도 위치와 크기를 조절.', description: '메시와 페인트 선택 도구를 추가했습니다. 선택한 페인트를 이동·회전·크기 조절할 수 있으며, 3D 뷰에서는 표면을 따른 배치, UV 셸 경계와 카메라 사각지대를 넘는 작업, 대칭을 지원합니다.', href: '/help/brush.html#paint-selection-transform' },
+        { title: '27가지 방식으로 겹치기.', description: '레이어 합성 모드가 27가지로 늘어났습니다. 스크린, 소프트 라이트, 색조, 채도, 차이 등으로 색상과 밝기가 겹쳐지는 방식을 선택하세요.', href: '/help/layers.html#layer-blend-modes' },
+        { title: '255종 데칼을 원하는 색으로.', description: '흰색 데칼 255종을 추가했습니다. 색상 선택기로 색을 입혀 배치할 수 있습니다. 목록과 미리보기는 앱에 포함되며, 원본 데이터는 처음 사용할 때 라이브러리 단위로 다운로드합니다.', href: '/help/assets.html#decal-library' },
+      ],
+      changes: {
+        added: [
+          '메시와 페인트 선택 도구를 추가했습니다. 사각형, 타원, 올가미, 다각형, 선택 펜, 선택 지우개, 축소 선택을 사용할 수 있습니다.',
+          '선택한 페인트를 이동·회전·크기 조절할 수 있습니다. 3D 뷰에서는 표면을 따라 배치하며, UV 셸 경계와 화면 밖·카메라 사각지대를 넘는 작업 및 대칭을 지원합니다.',
+          '선택 펜과 선택 지우개는 필압과 브러시 크기 단축키를 지원합니다. 사각형이나 타원으로 선택하는 동안 Shift를 누르면 정사각형이나 완전한 원을 만들 수 있습니다.',
+          '레이어 합성 모드를 27가지로 확장했습니다. 스크린, 소프트 라이트, 색조, 채도, 차이 등을 사용할 수 있습니다.',
+          '다크·라이트·시스템 외관 설정, 7가지 색상 프리셋과 사용자 지정 색상을 추가했습니다. 홈, 로딩 화면, 파이 메뉴, 뷰포트, UV 에디터도 선택한 테마를 따릅니다.',
+          '색상 선택기로 색을 입혀 배치할 수 있는 흰색 데칼 255종을 추가했습니다. 목록과 미리보기는 앱에 포함되며, 원본 데이터는 처음 사용할 때 라이브러리 단위로 다운로드합니다.',
+          '다운로드한 머티리얼과 데칼의 캐시 용량 제한 및 불필요한 데이터 정리, 데칼 라이브러리 제거 기능을 추가했습니다. 배치한 데칼의 원본 데이터는 저장한 장면에 유지됩니다.',
+        ],
+        improved: [
+          '키보드와 마우스 그림에서 할당을 확인하고 편집할 수 있도록 키 설정 화면을 개선했습니다. 키별 필터링, 탐색 키와 숫자 키패드 영역, 일본어·영어·한국어·중국어 배열 표시를 지원하며 긴 단축키가 잘리는 문제도 개선했습니다.',
+          '파이 메뉴의 도구 분류와 레이어 목록에서 돌아가는 동작을 정리했습니다. 브러시 목록의 스트로크 미리보기와 프리셋 이름이 겹치지 않도록 배치하고, 드롭다운을 마우스 휠로 변경할 수 있게 했습니다.',
+          '새로 시작할 때 공통 기본 프로젝트를 사용해 임시 프로젝트가 매번 늘어나지 않도록 했습니다. 장면 열기의 파일 형식 필터는 .harmos로 통일했습니다.',
+          '새 3D 패스는 첫 앵커가 놓인 메시를 그리기 대상으로 삼고, 표면의 굴곡을 더 잘 따라갑니다.',
+          '시작 시 소재 준비와 UV 와이어 표시를 최적화해 사용 중 대기 시간을 줄였습니다.',
+        ],
+        fixed: [
+          '고 DPI 디스플레이의 배율에 맞춰 UI를 조정해 고해상도 화면에서 글자와 컨트롤이 지나치게 작아지는 문제를 수정했습니다.',
+          '구의 극점처럼 UV 삼각형이 밀집한 부분을 칠할 때 흰 줄이 생기는 문제를 수정했습니다.',
+          '시점 회전·확대/축소·이동 중에 선택한 패스의 점이나 핸들이 움직이는 문제를 수정했습니다.',
+        ],
+        notes: [
+          '새 기능을 사용해 저장한 장면은 이전 버전에서 제대로 열리지 않을 수 있습니다. 이전 버전에서도 사용해야 한다면 변경 전 파일을 보관하세요.',
+          '머티리얼과 데칼의 첫 다운로드에는 인터넷 연결이 필요합니다. 다운로드한 소재는 오프라인에서도 사용할 수 있습니다.',
+          '정식판과 체험판 설치 프로그램은 BOOTH에서 받을 수 있습니다. 선택한 버전의 ZIP을 압축 해제한 뒤 안에 있는 EXE를 실행하세요. 체험판은 편집과 장면 저장을 지원하며, 텍스처 내보내기는 정식판에서 사용할 수 있습니다.',
+          'GitHub 릴리스에 첨부된 version.json은 앱이 업데이트를 확인할 때 사용하는 버전 정보입니다.',
+        ],
+      },
+    },
+  },
+}, {
   id: 'v0-1-2',
   version: 'Ver.0.1.2',
   date: '2026-10-04',

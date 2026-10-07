@@ -13,6 +13,12 @@ import { withBase } from 'vitepress'
 
 # 画面とメッシュパーツ {#workspace}
 
+
+## Ver.0.2.0の操作画面 {#workspace-020}
+
+パイメニューのツール分類とレイヤー一覧からの戻り操作を整理しました。ブラシ一覧では線のプレビューと名前が重ならない配置になり、ドロップダウンはマウスホイールでも変更できます。
+
+[外観と配色](./settings.md#appearance-theme)はダーク・ライト・システム、7色のプリセットとカスタムカラーから選べます。[キーコンフィグ](./shortcuts.md#visual-key-config)ではキーボードとマウスの図から割り当てを確認できます。
 ## 画面の構成
 
 <GuideMedia name="workspace-overview" />

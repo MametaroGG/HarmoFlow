@@ -1,7 +1,7 @@
 ---
 title: "프로젝트·저장·복구"
 category: "시작 안내"
-description: "프로젝트와 씬 만들기, 저장·패키지 내보내기, 자동 저장 위치 확인과 GPU 오류 후 복구."
+description: "기본 프로젝트 재사용, 씬 저장과 구버전 호환성, 패키지 내보내기, 자동 저장과 작업 복구."
 outline: [2, 3]
 prev: false
 next: false
@@ -20,13 +20,15 @@ next: false
 
 패키지 에셋은 [Unity Package 가져오기](./assets.md#unitypackage-import)를, FBX 변형과 파트 표시는 [메시와 셰이프 키](./viewport.md#mesh-visibility)를 참고하세요.
 
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0)에서는 새로 실행할 때 공용 기본(Default) 프로젝트를 재사용하여 매번 임시 프로젝트가 늘어나지 않도록 했습니다. 씬 열기 파일 필터는 `.harmos`로 통일되었습니다. 이어서 작업할 씬 파일을 선택하세요.
+
 ### 새 씬과 프로젝트 폴더 {#new-scene-project-root}
 
 “새 프로젝트”는 scenes, assets, autosave와 workspace.json이 들어 있는 폴더를 만듭니다. 새 씬은 Ctrl+S로 저장하세요. 한 프로젝트의 여러 씬은 같은 에셋을 공유할 수 있습니다.
 
 “파일 → 새 씬”(Ctrl+N)은 현재 작업 해상도로 새 씬을 시작합니다. 변경 사항이 있으면 “저장 후 새로 만들기”, “저장하지 않고 새로 만들기”, “취소” 중에서 선택합니다. 카메라 이동도 저장 확인 대상이 될 수 있습니다.
 
-“프로젝트 설정 → 변경...”과 홈 화면의 프로젝트 선택은 프로젝트 폴더를 지정하는 기능입니다. 현재 씬을 닫거나 기존 씬과 에셋을 이동하지 않습니다. 씬을 바꾸려면 “씬 열기”를 사용하세요. 프로젝트 폴더나 workspace.json을 열면 scenes에서 가장 최근에 수정된 씬이 열립니다. 특정 버전을 열려면 해당 .harmos 파일을 직접 선택하세요.
+“프로젝트 설정 → 변경...”과 홈 화면의 프로젝트 선택은 프로젝트 폴더를 지정하는 기능입니다. 현재 씬을 닫거나 기존 씬과 에셋을 이동하지 않습니다. 씬을 바꾸려면 “씬 열기”를 사용하세요. 특정 버전을 열려면 해당 .harmos 파일을 직접 선택하세요.
 
 ## 저장 방법 구분하기
 
@@ -51,7 +53,11 @@ next: false
 
 앱은 “패키지 다시 내보내기”의 출력 위치를 기억합니다. 프로젝트를 바꾼 뒤에도 실행 전에 해당 명령에 커서를 올려 경로를 확인하세요.
 
-## 새 3D 패스가 포함된 씬의 호환성 {#scene-version-compatibility}
+## 씬의 버전 호환성 {#scene-version-compatibility}
+
+::: warning Ver.0.2.0의 새 기능을 사용해 저장하기 전에
+[Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0)의 새 기능을 사용해 저장한 씬은 구버전에서 올바르게 열리지 않을 수 있습니다. 구버전도 사용해야 한다면 “씬 다른 이름으로 저장”이나 “증분 저장”으로 별도 파일에서 작업하고 변경 전 원본을 덮어쓰지 말고 보관하세요.
+:::
 
 ::: warning Ver.0.1.1 또는 그보다 오래된 버전도 사용하는 경우
 [Ver.0.1.2](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.1.2)의 새 3D 패스가 포함된 씬은 Ver.0.1.1 및 그 이전 버전에서 열 수 없습니다. 구버전에서도 사용할 씬은 변경 전 파일을 보관하세요.
