@@ -18,6 +18,8 @@ import { withBase } from 'vitepress'
 
 ## Selected paint and UV boundaries (Ver.0.2.0) {#uv-paint-selection}
 
+Ver.0.2.1: Fixed missing or scattered paint, extra outlines at UV shell boundaries, and outlines separating from the paint when moving, rotating or scaling selected paint. Improved responsiveness while moving selected paint.
+
 Move, rotate, and scale selected paint. In the 3D viewport, placement follows the model surface and supports UV shell boundaries, offscreen and hidden surfaces, and symmetry. See [select and transform paint](./brush.md#paint-selection-transform).
 
 White streaks when painting dense UV areas, such as sphere poles, have been fixed. UV wire rendering has also been optimized to reduce waits during use.

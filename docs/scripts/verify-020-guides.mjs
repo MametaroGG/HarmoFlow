@@ -8,7 +8,7 @@ const docs = path.resolve(import.meta.dirname, '..');
 const dist = path.join(docs, '.vitepress/dist');
 const base = process.env.DOCS_BASE || '/HarmoFlow/';
 const release = releases.find(item => item.id === 'v0-2-0');
-assert.equal(releases[0], release, '0.2.0 leads the release history');
+assert(releases.includes(release), '0.2.0 remains in the release history');
 assert.equal(release.version, 'Ver.0.2.0');
 assert.equal(release.date, '2026-10-08', 'Date from the official release notes');
 assert.equal(release.sourceUrl, 'https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0');

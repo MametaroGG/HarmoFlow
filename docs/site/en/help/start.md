@@ -13,7 +13,7 @@ next: false
 
 <GuideFlow kind="app-install" />
 
-1. Download the Full or Trial installer from the [BOOTH product page](https://mametarovv.booth.pm/items/8754692). **Ver.0.1.2 is supplied as a ZIP. Download and extract the ZIP for your edition, then run the setup EXE inside.** `full` in the filename identifies the Full edition; `trial` identifies the Trial.
+1. Download the Full or Trial installer from the [BOOTH product page](https://mametarovv.booth.pm/items/8754692). **Download and extract the ZIP for your edition, then run the setup EXE inside.** `full` in the filename identifies the Full edition; `trial` identifies the Trial.
 2. Double-click the setup EXE. Choose Japanese, English, Simplified Chinese, or Korean for the wizard, read the license agreement, and continue only if you agree. You can also read the Full edition's [EULA](../terms.md) before purchasing.
 3. Choose the installation location and, optionally, a desktop shortcut. The Full installer also offers `.harmos` / `.harmopackage` file associations. The Trial does not change file associations.
 4. Launch from the completion screen or open **HarmoFlow** (**HarmoFlow Trial** for the Trial) from the Start menu. Keep the installed files together; do not move only the application EXE elsewhere.

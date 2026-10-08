@@ -25,6 +25,65 @@ const performance = {
 };
 
 export const releases = [{
+  "id": "v0-2-1",
+  "version": "Ver.0.2.1",
+  "date": "2026-10-08",
+  "sourceUrl": "https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.1",
+  "content": {
+    "ja": {
+      "title": "Ver.0.2.1の改善・修正",
+      "summary": "選択した塗りの変形時の欠け・飛び散りや選択線の表示を修正し、移動中の応答を改善しました。",
+      "highlights": [],
+      "changes": {
+        "improved": [
+          "選択した塗りを移動している間の応答を改善しました。"
+        ],
+        "fixed": [
+          "選択した塗りを移動・回転・拡縮したときの塗りの欠け・飛び散り、UVシェル境界の余分な選択線、塗りから選択線がずれる問題を修正しました。"
+        ]
+      }
+    },
+    "en": {
+      "title": "Improvements and fixes in Ver.0.2.1",
+      "summary": "Fixed paint and selection-outline issues during transforms and improved responsiveness while moving selected paint.",
+      "highlights": [],
+      "changes": {
+        "improved": [
+          "Improved responsiveness while moving selected paint."
+        ],
+        "fixed": [
+          "Fixed missing or scattered paint, extra outlines at UV shell boundaries, and outlines separating from the paint when moving, rotating or scaling selected paint."
+        ]
+      }
+    },
+    "zh": {
+      "title": "Ver.0.2.1 改进与修复",
+      "summary": "修复了变换选中绘画内容时的绘画和选区轮廓问题，并改善了移动时的响应。",
+      "highlights": [],
+      "changes": {
+        "improved": [
+          "改善了移动选中绘画内容时的响应。"
+        ],
+        "fixed": [
+          "修复了移动、旋转或缩放选中绘画内容时出现的绘画缺失或散落、UV 壳边界多余的选区轮廓，以及轮廓与绘画内容错位的问题。"
+        ]
+      }
+    },
+    "ko": {
+      "title": "Ver.0.2.1 개선 및 수정",
+      "summary": "선택한 페인트를 변형할 때의 페인트와 선택 윤곽선 문제를 수정하고 이동 중 반응성을 개선했습니다.",
+      "highlights": [],
+      "changes": {
+        "improved": [
+          "선택한 페인트를 이동하는 동안의 반응성을 개선했습니다."
+        ],
+        "fixed": [
+          "선택한 페인트를 이동·회전·확대 및 축소할 때 페인트가 누락되거나 흩어지는 문제, UV 셸 경계의 불필요한 선택 윤곽선, 윤곽선이 페인트와 어긋나는 문제를 수정했습니다."
+        ]
+      }
+    }
+  }
+}, {
   id: 'v0-2-0',
   version: 'Ver.0.2.0',
   date: '2026-10-08',

@@ -44,6 +44,8 @@ import { withBase } from 'vitepress'
 
 ## 选择网格与绘制内容，并变换所选内容 {#paint-selection-transform}
 
+Ver.0.2.1: 修复了移动、旋转或缩放选中绘画内容时出现的绘画缺失或散落、UV 壳边界多余的选区轮廓，以及轮廓与绘画内容错位的问题。 改善了移动选中绘画内容时的响应。
+
 [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0)新增网格和绘制内容的选择工具：矩形、椭圆、套索、折线（多边形）、选择笔、选择橡皮擦和收缩选择。请根据需要选择的范围使用合适的工具。
 
 - 创建矩形或椭圆选区时按住Shift，可得到正方形或正圆。

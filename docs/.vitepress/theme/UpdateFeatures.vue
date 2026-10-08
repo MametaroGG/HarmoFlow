@@ -7,11 +7,13 @@ import { localizedPath } from './locale-routing.js';
 
 const props = defineProps({ locale: { type: String, required: true } });
 const copy = {
-  ja: { title: 'パイメニューと、更新のお知らせ。', pie: 'パイメニュー', pieText: '右クリックしたままスライドし、離して選択。Ver.0.1.2では、3DビューとUVエディタでレイヤーの選択や設定も手元から行えます。', update: 'アップデート自動通知', updateText: '起動時に新しいバージョンを自動確認。通知アイコンから変更内容を読み、アップデートの入手先へ進めます。', guide: '使い方を見る', latest: 'Ver.0.2.0の新機能', history: 'すべての更新内容を見る' },
-  en: { title: 'A pie menu and update notifications.', pie: 'Pie menu', pieText: 'Hold right-click, slide, and release to select. In Ver.0.1.2, choose layers and change their settings near the cursor in the 3D viewport and UV Editor.', update: 'Automatic update notifications', updateText: 'Check for new versions automatically at startup. Use the notification icon to read the changes and open the download page.', guide: 'Read the guide', latest: 'New in Ver.0.2.0', history: 'Read all changes' },
-  zh: { title: '饼状菜单与更新通知。', pie: '饼状菜单', pieText: '按住右键滑动，松开即可选择。在 Ver.0.1.2 中，还可在 3D 视口和 UV 编辑器里直接选择图层、调整图层设置。', update: '自动更新通知', updateText: '启动时自动检查新版本。通过通知图标查看变更内容，并打开获取更新的页面。', guide: '查看使用方法', latest: 'Ver.0.2.0 新功能', history: '查看全部更新内容' },
-  ko: { title: '파이 메뉴와 업데이트 알림.', pie: '파이 메뉴', pieText: '오른쪽 버튼을 누른 채 슬라이드하고 놓아서 선택합니다. Ver.0.1.2에서는 3D 뷰포트와 UV 편집기에서 레이어 선택과 설정도 커서 가까이에서 할 수 있습니다.', update: '업데이트 자동 알림', updateText: '시작할 때 새 버전을 자동으로 확인합니다. 알림 아이콘에서 변경 내용을 읽고 업데이트를 받을 페이지를 열 수 있습니다.', guide: '사용 방법 보기', latest: 'Ver.0.2.0의 새 기능', history: '전체 변경 사항 보기' },
+  ja: { latestUpdate: '最新の更新', title: 'パイメニューと、更新のお知らせ。', pie: 'パイメニュー', pieText: '右クリックしたままスライドし、離して選択。Ver.0.1.2では、3DビューとUVエディタでレイヤーの選択や設定も手元から行えます。', update: 'アップデート自動通知', updateText: '起動時に新しいバージョンを自動確認。通知アイコンから変更内容を読み、アップデートの入手先へ進めます。', guide: '使い方を見る', latest: 'Ver.0.2.0の新機能', history: 'すべての更新内容を見る' },
+  en: { latestUpdate: 'Latest update', title: 'A pie menu and update notifications.', pie: 'Pie menu', pieText: 'Hold right-click, slide, and release to select. In Ver.0.1.2, choose layers and change their settings near the cursor in the 3D viewport and UV Editor.', update: 'Automatic update notifications', updateText: 'Check for new versions automatically at startup. Use the notification icon to read the changes and open the download page.', guide: 'Read the guide', latest: 'New in Ver.0.2.0', history: 'Read all changes' },
+  zh: { latestUpdate: '最新更新', title: '饼状菜单与更新通知。', pie: '饼状菜单', pieText: '按住右键滑动，松开即可选择。在 Ver.0.1.2 中，还可在 3D 视口和 UV 编辑器里直接选择图层、调整图层设置。', update: '自动更新通知', updateText: '启动时自动检查新版本。通过通知图标查看变更内容，并打开获取更新的页面。', guide: '查看使用方法', latest: 'Ver.0.2.0 新功能', history: '查看全部更新内容' },
+  ko: { latestUpdate: '최신 업데이트', title: '파이 메뉴와 업데이트 알림.', pie: '파이 메뉴', pieText: '오른쪽 버튼을 누른 채 슬라이드하고 놓아서 선택합니다. Ver.0.1.2에서는 3D 뷰포트와 UV 편집기에서 레이어 선택과 설정도 커서 가까이에서 할 수 있습니다.', update: '업데이트 자동 알림', updateText: '시작할 때 새 버전을 자동으로 확인합니다. 알림 아이콘에서 변경 내용을 읽고 업데이트를 받을 페이지를 열 수 있습니다.', guide: '사용 방법 보기', latest: 'Ver.0.2.0의 새 기능', history: '전체 변경 사항 보기' },
 };
+const newestRelease = computed(() => releases[0]);
+const newest = computed(() => newestRelease.value.content[props.locale]);
 const currentRelease = computed(() => releases.find(item => item.id === 'v0-2-0'));
 const latest = computed(() => currentRelease.value?.content[props.locale]);
 const text = computed(() => copy[props.locale]);
@@ -25,6 +27,12 @@ const link = (route) => {
 
 <template>
   <div class="update-features" aria-labelledby="update-features-title">
+    <section class="current-release latest-patch" aria-labelledby="latest-patch-title">
+      <p class="eyebrow">{{ text.latestUpdate }} · {{ newestRelease.version }}</p>
+      <h3 id="latest-patch-title">{{ newest.title }}</h3>
+      <p>{{ newest.summary }}</p>
+      <a class="text-link release-history-link" :href="link('/updates') + '#release-' + newestRelease.id">{{ text.history }}</a>
+    </section>
     <section v-if="latest" class="current-release" aria-labelledby="current-release-title">
       <p class="eyebrow">{{ currentRelease.version }}</p>
       <h3 id="current-release-title">{{ text.latest }}</h3>
