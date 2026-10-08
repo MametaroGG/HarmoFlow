@@ -13,7 +13,7 @@ next: false
 
 <GuideFlow kind="app-install" />
 
-1. 从[BOOTH商品页面](https://mametarovv.booth.pm/items/8754692)下载正式版或试用版安装程序。**Ver.0.1.2以ZIP提供。下载并解压所选版本类型的ZIP，再运行其中的安装EXE。** 文件名中的 `full` 表示正式版，`trial` 表示试用版。
+1. 从[BOOTH商品页面](https://mametarovv.booth.pm/items/8754692)下载正式版或试用版安装程序。**下载并解压所选版本类型的ZIP，再运行其中的安装EXE。** 文件名中的 `full` 表示正式版，`trial` 表示试用版。
 2. 双击安装EXE。安装向导可选择日语、英语、简体中文或韩语。阅读显示的许可协议，只有同意时才继续。购买前也可查看正式版的[使用许可协议](../terms.md)。
 3. 选择安装位置，并按需创建桌面快捷方式。正式版还可选择关联 `.harmos` / `.harmopackage` 文件，试用版不会更改文件关联。
 4. 从完成界面启动，或在开始菜单中打开 **HarmoFlow**（试用版为 **HarmoFlow Trial**）。请保持安装文件的完整结构，不要只把应用EXE移动到其他位置。

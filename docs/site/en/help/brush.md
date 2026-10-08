@@ -44,6 +44,8 @@ Image brush tips use brightness and alpha as coverage: white paints strongly, wh
 
 ## Select meshes and paint, then transform paint {#paint-selection-transform}
 
+Ver.0.2.1: Fixed missing or scattered paint, extra outlines at UV shell boundaries, and outlines separating from the paint when moving, rotating or scaling selected paint. Improved responsiveness while moving selected paint.
+
 [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) adds mesh and paint selection tools: rectangle, ellipse, lasso, polygon (polyline), selection pen, selection eraser and shrink selection. Choose the tool that suits the area you want to select.
 
 - Hold Shift while making a rectangle or ellipse selection to create a square or circle.
