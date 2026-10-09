@@ -129,7 +129,7 @@ This option is off by default. On supported GPUs, the selected and actively edit
 
 When the active layer targets all texture sets, all sets stay resident in memory. A single-set scene does not gain channel-memory savings. This mode takes priority over BC7, NTC, and the older virtual texture cache; switching sets may require waiting for restoration.
 
-For autosave, see [Saving and recovery](/en/guide#projects). General includes the package extraction location setting. In Key Config, search by action name or condition to change keyboard and mouse bindings.
+For autosave, see [Saving and recovery](/en/guide#projects). General includes the package extraction location setting. In Key Config, search by action name or shortcut to change keyboard and mouse bindings.
 
 <span id="lua-and-plugins"></span>
 

@@ -39,7 +39,7 @@ for (const locale of ['ja', 'en', 'zh', 'ko']) {
     checked++;
   }
   for (const term of caveats[locale]) assert(plain(shortcut).includes(plain(term)), `${locale}: missing shortcut condition ${term}`);
-  assert(shortcut.includes('width="757" height="531"'), `${locale}: supplied key-configuration image reserves its exact aspect ratio`);
+  assert(shortcut.includes('width="1420" height="876"'), `${locale}: supplied key-configuration image reserves its exact aspect ratio`);
   for (const [article, ids] of Object.entries(anchors)) {
     const html = rendered(article), markdown = source(article), search = index.find(item => item.slug === article).searchText;
     for (const id of ids) {

@@ -72,6 +72,9 @@ for (const locale of ['ja', 'en', 'zh', 'ko']) {
   assert(index.find(item => item.slug === 'projects').searchText.includes('.harmos'), locale + ': current scene filter is searchable');
   const notes = Object.values(release.content[locale].changes).flat().join(' ');
   for (const term of ['27', '255', 'Shift', '.harmos']) assert(notes.includes(term), locale + ': release detail ' + term);
-  assert(read('help/shortcuts.html').includes('Ver.0.1.x'), locale + ': legacy key-config screenshot is labeled');
+  const shortcut = read('help/shortcuts.html');
+  assert(!shortcut.includes('Ver.0.1.x'), locale + ': obsolete screenshot disclaimer removed');
+  assert(shortcut.includes('width="1420" height="876"'), locale + ': current screenshot dimensions');
+  assert(shortcut.includes(`href="${base}graphics/guide/key-config-example.png"`), locale + ': screenshot opens at full size');
 }
 console.log('PASS: four-language 0.2.0 release, homepage, guide anchors, localized links, compatibility notes and searchable content; no fabricated media.');

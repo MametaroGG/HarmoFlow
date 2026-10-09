@@ -27,14 +27,16 @@ Ver.0.2.0 的快捷键设置支持通过键盘和鼠标示意图查看和编辑�
 - 选中的绘画内容可移动、旋转和缩放。工具用法请参阅[选择和变换绘画内容](./brush.md#paint-selection-transform)
 ## 查看与修改按键设置
 
-在“偏好设置 → 按键配置”中，可按操作名称、条件或绑定搜索。点击绑定可修改，“+”可添加另一组绑定。显示“相加”的操作尚未绑定，可用此按钮添加绑定。更改会按操作保存。
+在“偏好设置 → 按键配置”中，可在左侧切换按操作名称或快捷键搜索，然后选择操作。右侧显示所选操作的当前绑定。点击绑定按钮可编辑，使用“+ 添加”可添加另一组绑定。没有绑定的操作会在列表中标为未绑定。
+
+在键盘和鼠标示意图中，带颜色的按键表示已有绑定。选择按键可筛选操作列表。面板提供键盘布局选择以及 Ctrl、Shift、Alt 控件；导航键和数字小键盘集中在可折叠区域中。
 
 绑定窗口提供“恢复默认”、“Remove”（移除）和“取消”。固定操作无法修改。普通左键单击，以及与同时使用的操作冲突的组合，不能设为绑定。如果需要的按键已被其他操作使用，请先调整原有绑定。
 
-下图为 Ver.0.1.x 的快捷键设置示例。Ver.0.2.0 已改为包含键盘和鼠标示意图的界面。
+下图展示了包含操作列表、键盘和鼠标示意图的按键配置界面。
 
 <figure class="doc-diagram">
-<a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="757" height="531" alt="日文版按键配置示例。显示的绑定取决于已保存的设置。点击图片可放大。" loading="lazy" /></a>
+<a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="1420" height="876" alt="日文版按键配置示例。显示的绑定取决于已保存的设置。点击图片可放大。" loading="lazy" /></a>
 <figcaption>日文版按键配置示例。显示的绑定取决于已保存的设置。点击图片可放大。</figcaption>
 </figure>
 

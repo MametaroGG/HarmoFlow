@@ -27,14 +27,16 @@ If you have saved settings, use the bindings displayed in the app rather than th
 - Selected paint can be moved, rotated, and scaled. See [select and transform paint](./brush.md#paint-selection-transform) for the available tools
 ## Check and change key bindings
 
-In Preferences → Key Config, search by action name, condition, or binding. Click a binding to change it; + adds an alternative. An action showing Add has no binding. Changes are saved per action.
+In Preferences → Key Config, switch between action-name and shortcut search on the left, then select an action. Its current bindings appear under Selected Action on the right. Click a binding button to edit it, or use + Add to add another binding. Actions without a binding are marked as unassigned in the list.
+
+In the keyboard and mouse diagram, colored keys already have bindings. Select a key to filter the action list. The panel includes a layout selector and Ctrl, Shift, and Alt controls; navigation keys and the numeric keypad are grouped in a collapsible section.
 
 Use Reset to Default, Remove, or Cancel in the binding dialog. Fixed actions cannot be changed. Ordinary left-click and bindings that conflict with actions used at the same time cannot be assigned. If another action already uses the input you want, review that binding first.
 
-The image below shows Key Config in Ver.0.1.x. Ver.0.2.0 uses the redesigned keyboard and mouse diagram interface.
+The screenshot below shows the Key Config interface with the action list and keyboard and mouse diagram.
 
 <figure class="doc-diagram">
-<a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="757" height="531" alt="Example of Key Config in Japanese. Displayed bindings depend on saved settings. Click the image to enlarge it." loading="lazy" /></a>
+<a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="1420" height="876" alt="Example of Key Config in Japanese. Displayed bindings depend on saved settings. Click the image to enlarge it." loading="lazy" /></a>
 <figcaption>Example of Key Config in Japanese. Displayed bindings depend on saved settings. Click the image to enlarge it.</figcaption>
 </figure>
 
