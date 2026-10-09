@@ -43,6 +43,12 @@ In [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0), 
 | Open Package | Extract the package to the configured location and open it |
 | Open Package Into... | Choose where to extract this package and open it |
 
+::: warning Before saving into another project
+Saving into another project merges all assets in the current working library into the destination, including assets not used by the current scene. Files at the same relative path are overwritten without confirmation, which can affect other scenes in the destination project. This copy does not delete files found only at the destination.
+
+Back up an existing project before saving into it. To make an independent copy, save into a new, empty project folder. Ordinary Save Scene As and Incremental Save operations using the same asset location do not perform this copy.
+:::
+
 Package export first saves the current scene. For unsaved work, it creates a project folder beside the package. The package includes workspace.json and the scenes, assets, and autosave folders; other files at the project root are not included. Before sharing a package, check its other scenes and autosaves for work you cannot share.
 
 ### Incremental saves and package locations {#save-package-locations}

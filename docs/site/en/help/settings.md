@@ -89,7 +89,9 @@ In Preferences → VRAM, start with a preset and adjust as needed. If performanc
 
 ### Presets and preview resolution {#vram-presets}
 
-Balanced is the default preset. Maximum quality uses full-resolution previews. Low VRAM uses quarter-resolution previews and BC7 display compression, among other changes. Changing an individual setting switches the preset to Custom. Selecting Maximum quality, Balanced, or Low VRAM turns off experimental features. Selecting Custom alone keeps the current settings.
+The defaults included with the Ver.0.2.1 release use Custom, with Reduce memory for non-edited texture sets and virtual texture caching enabled. Saved user settings take priority. Balanced is the built-in fallback when the bundled defaults cannot be loaded.
+
+Maximum quality uses full-resolution previews. Low VRAM uses quarter-resolution previews and BC7 display compression, among other changes. Changing an individual setting switches the preset to Custom. Selecting Maximum quality, Balanced, or Low VRAM turns off experimental features. Selecting Custom alone keeps the current settings.
 
 Half and Quarter refer to the width and height of the preview image. While the UV Editor is open, the UI preview resolution adjusts automatically to its canvas size. Export resolution is unchanged.
 
@@ -125,7 +127,7 @@ The selected set takes priority over the page budget. GPU residency is managed p
 
 ### Reduce memory for non-edited texture sets
 
-This option is off by default. On supported GPUs, the selected and actively edited sets stay at their original resolution. After at least three seconds without interaction, other sets are moved out of memory losslessly and displayed at quarter resolution.
+This option is enabled in the defaults included with the Ver.0.2.1 release. Saved user settings take priority, and actual operation depends on GPU support and the editing state. On supported GPUs, the selected and actively edited sets stay at their original resolution. After at least three seconds without interaction, other sets are moved out of memory losslessly and displayed at quarter resolution.
 
 When the active layer targets all texture sets, all sets stay resident in memory. A single-set scene does not gain channel-memory savings. This mode takes priority over BC7, NTC, and the older virtual texture cache; switching sets may require waiting for restoration.
 

@@ -110,6 +110,8 @@ Search and filter project assets, and import images and Unity Packages.
 
 Create projects and scenes, save and export packages, and recover work from autosaves.
 
+Saving into another project merges all assets in the current working library into the destination, including assets not used by the current scene. Files at the same relative path are overwritten without confirmation, which can affect other scenes in the destination project. This copy does not delete files found only at the destination. Back up an existing project before saving into it. To make an independent copy, save into a new, empty project folder. Ordinary Save Scene As and Incremental Save operations using the same asset location do not perform this copy.
+
 <a :href="withBase('/en/help/projects.html')">Read the guide: Projects, saving, and recovery</a>
 
 ## Exporting images {#export}
@@ -123,6 +125,8 @@ Ver.0.1.2 PNG export leaves unpainted areas transparent while retaining imported
 ## Preferences, history, and extensions {#settings}
 
 Configure the home screen, pen pressure and drawing behavior, workspace layout, VRAM, Lua, and plugins.
+
+The defaults included with the Ver.0.2.1 release use Custom, with Reduce memory for non-edited texture sets and virtual texture caching enabled. Saved user settings take priority. Balanced is the built-in fallback when the bundled defaults cannot be loaded.
 
 <a :href="withBase('/en/help/settings.html')">Read the guide: Preferences, history, and extensions</a>
 
