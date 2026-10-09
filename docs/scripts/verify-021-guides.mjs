@@ -32,6 +32,27 @@ for (const locale of ['ja', 'en', 'zh', 'ko']) {
     assert(read('help/' + slug + '.html').includes('Ver.0.2.1'), locale + ': relevant patch guidance');
     assert(index.find(item => item.slug === slug).searchText.includes('Ver.0.2.1'), locale + ': searchable patch guidance');
   }
+  const uvSource = fs.readFileSync(path.join(docs, 'site', prefix, 'help/uv.md'), 'utf8');
+  const uvSection = uvSource.match(/^## ([^\n]+) \{#uv-paint-selection\}\n([\s\S]*?)(?=^## |(?![\s\S]))/m);
+  assert(uvSection, locale + ': stable selected-paint UV anchor');
+  assert(!uvSection[1].includes('Ver.'), locale + ': version-neutral UV heading');
+  const paragraphs = uvSection[2].trim().split(/\n\n/);
+  assert(paragraphs[0].startsWith('Ver.0.2.0'), locale + ': feature introduction is explicitly 0.2.0');
+  assert(paragraphs[1].startsWith('Ver.0.2.1:'), locale + ': transform fixes and responsiveness are explicitly 0.2.1');
+  assert(paragraphs[2].startsWith('Ver.0.2.0'), locale + ': earlier UV fixes remain explicitly 0.2.0');
+  const uvHtml = read('help/uv.html');
+  assert(uvHtml.includes('id="uv-paint-selection"'), locale + ': generated stable UV anchor');
+  assert(uvHtml.includes(uvSection[1]) && !uvHtml.includes(uvSection[1] + ' (Ver.'), locale + ': generated version-neutral UV heading');
+  const uvIndex = index.find(item => item.slug === 'uv').searchText;
+  for (const paragraph of paragraphs) {
+    const lead = paragraph.split('. ')[0].split('。')[0];
+    assert(uvHtml.includes(lead) && uvIndex.includes(lead), locale + ': UV version wording synchronized in HTML and search');
+  }
+  if (locale === 'ja') {
+    const guide = fs.readFileSync(path.join(docs, 'site/guide.md'), 'utf8');
+    assert(guide.includes('### ' + uvSection[1] + ' {#uv-paint-selection}'), 'Japanese full guide: version-neutral heading');
+    for (const paragraph of paragraphs) assert(guide.includes(paragraph.replaceAll('](./', '](/help/')), 'Japanese full guide: matching UV version wording');
+  }
   const start = fs.readFileSync(path.join(docs, 'site', prefix, 'help/start.md'), 'utf8');
   const installation = start.split('\n').find(line => line.startsWith('1.') && line.includes('BOOTH'));
   assert(installation?.includes('ZIP') && installation.includes('EXE'), locale + ': BOOTH ZIP to EXE instructions');

@@ -16,13 +16,14 @@ import { withBase } from 'vitepress'
 <GuideMedia name="uv-editor" />
 
 
-## Selected paint and UV boundaries (Ver.0.2.0) {#uv-paint-selection}
+## Selected paint and UV boundaries {#uv-paint-selection}
+
+Ver.0.2.0 added moving, rotating, and scaling selected paint. In the 3D viewport, placement follows the model surface and supports UV shell boundaries, offscreen and hidden surfaces, and symmetry. See [select and transform paint](./brush.md#paint-selection-transform).
 
 Ver.0.2.1: Fixed missing or scattered paint, extra outlines at UV shell boundaries, and outlines separating from the paint when moving, rotating or scaling selected paint. Improved responsiveness while moving selected paint.
 
-Move, rotate, and scale selected paint. In the 3D viewport, placement follows the model surface and supports UV shell boundaries, offscreen and hidden surfaces, and symmetry. See [select and transform paint](./brush.md#paint-selection-transform).
+Ver.0.2.0 fixed white streaks when painting dense UV areas, such as sphere poles. UV wire rendering has also been optimized to reduce waits during use.
 
-White streaks when painting dense UV areas, such as sphere poles, have been fixed. UV wire rendering has also been optimized to reduce waits during use.
 ## Paint and navigate in the UV Editor
 
 Select the Paint tool and a visible, unlocked paint layer, then drag on the UV Editor canvas to paint the corresponding model surface. Zoom with the mouse wheel, and pan with middle-button drag or Space + left drag. Rotate the view with Shift + Space + left or right drag. Shift + Space + left or right double-click resets only the angle, keeping the zoom and position. Fit resets rotation, position, and zoom. Dedicated cursors appear for panning and rotation. You can also edit path anchors here. The UV Editor does not unwrap or rearrange the UV layout itself.
