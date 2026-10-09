@@ -141,7 +141,7 @@ C and F apply with the viewport hovered while drafting a path. Delete or Backspa
 
 Esc cancels an unfinished draft. When re-editing an existing path in the 3D viewport, it exits editing and keeps the changes.
 
-Close Path is initially registered to C, which is also used by Toggle Transparent Color. Loading saved settings can leave Close Path unassigned. If the action shows Add, assign an input that does not conflict with another action.
+Close Path is initially registered to C, which is also used by Toggle Transparent Color. Loading saved settings can leave Close Path unassigned. If the action is marked as unassigned, assign an input that does not conflict with another action.
 
 | Action | Key or mouse gesture and context |
 | --- | --- |
