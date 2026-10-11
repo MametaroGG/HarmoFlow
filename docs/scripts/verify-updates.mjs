@@ -170,3 +170,13 @@ assert(component.includes('grid-template-columns: 1fr'), 'Phone cards stack');
 assert(component.includes('prefers-reduced-motion: reduce'), 'Motion preference is respected');
 assert(!/scroll-margin-top:\s*108px/.test(component), 'Use the shared responsive anchor offset without doubling it');
 console.log(`PASS: four localized update pages, verified introduction, ${releases.length} evidenced release entries, stable media frames, guide/navigation links, future release contract, and unchanged licensed LINE Seed JP fonts (static; not physical-device QA).`);
+
+// The owner-published 0.3.0 film belongs to this release, not older entries.
+const update030 = releases.find(release => release.id === 'v0-3-0');
+assert.equal(update030.video.youtubeId, 'xpESrxevyHA');
+for (const locale of locales) {
+  const prefix = locale === 'ja' ? '' : locale + '/';
+  const html = fs.readFileSync(path.join(dist, prefix + 'updates.html'), 'utf8');
+  assert.equal((html.match(/youtube-nocookie\.com\/embed\/xpESrxevyHA/g) || []).length, 1);
+  assert(html.includes(update030.content[locale].videoTitle));
+}

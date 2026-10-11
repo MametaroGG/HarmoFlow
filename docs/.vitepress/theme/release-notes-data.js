@@ -27,11 +27,13 @@ const performance = {
 export const releases = [{
   "id": "v0-3-0",
   "version": "Ver.0.3.0",
+  "video": { "youtubeId": "xpESrxevyHA", "watchUrl": "https://www.youtube.com/watch?v=xpESrxevyHA" },
   "date": "2026-10-11",
   "sourceUrl": "https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.3.0",
   "content": {
     "zh": {
       "title": "Ver.0.3.0 更新内容",
+      "videoTitle": "HarmoFlow Ver.0.3.0 发布视频",
       "summary": "新增笔压自动流量、完整图层移动和独立面板，扩展选区与变换操作，并减小缩略图和预览处理的负担。",
       "highlights": [],
       "changes": {
@@ -58,6 +60,7 @@ export const releases = [{
     },
     "ko": {
       "title": "Ver.0.3.0 업데이트 내용",
+      "videoTitle": "HarmoFlow Ver.0.3.0 출시 영상",
       "summary": "필압 자동 유량, 전체 레이어 이동과 분리형 패널을 추가하고 선택·변형 조작을 개선했습니다. 썸네일과 미리보기 처리도 가벼워졌습니다.",
       "highlights": [],
       "changes": {
@@ -84,6 +87,7 @@ export const releases = [{
     },
     "ja": {
       "title": "Ver.0.3.0の更新内容",
+      "videoTitle": "HarmoFlow Ver.0.3.0 ローンチビデオ",
       "summary": "筆圧で流量を調整できるブラシ、選択・変形の操作、レイヤー移動、別ウィンドウのパネルを追加・改善しました。サムネイルと表示処理も軽量化しています。",
       "highlights": [],
       "changes": {
@@ -114,6 +118,7 @@ export const releases = [{
     },
     "en": {
       "title": "What changed in Ver.0.3.0",
+      "videoTitle": "HarmoFlow Ver.0.3.0 launch video",
       "summary": "Added pressure-controlled flow, expanded selection and transform controls, whole-layer movement, and detachable panels. Thumbnails and preview processing are also lighter.",
       "highlights": [],
       "changes": {

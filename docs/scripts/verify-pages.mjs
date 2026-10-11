@@ -40,7 +40,7 @@ for (const file of files.filter(file => file.endsWith('.css'))) {
 }
 for (const prefix of ['', 'en/', 'zh/', 'ko/']) {
   const home = fs.readFileSync(path.join(dist, prefix, 'index.html'), 'utf8');
-  assert(home.includes('x3csgJasBKg'), `${prefix || 'ja'}: launch YouTube link`);
+  assert(home.includes('xpESrxevyHA'), `${prefix || 'ja'}: launch YouTube link`);
   assert(home.includes(base + prefix + 'help.html'), `${prefix || 'ja'}: localized help link`);
   assert(home.includes(base + 'logo.svg'), `${prefix || 'ja'}: shared logo path`);
 }

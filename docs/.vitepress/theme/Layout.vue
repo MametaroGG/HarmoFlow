@@ -203,9 +203,9 @@ onUnmounted(() => {
         </div>
         <div class="hero-launch-video" role="group" :aria-label="t('HarmoFlow ローンチビデオ')">
           <div class="launch-video-frame">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/x3csgJasBKg?si=dQy3UtQ5mmITG1EL" :title="t('HarmoFlow ローンチビデオ')" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xpESrxevyHA" :title="t('HarmoFlow ローンチビデオ')" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
-          <a class="launch-video-link" href="https://www.youtube.com/watch?v=x3csgJasBKg" target="_blank" rel="noopener noreferrer">{{ t("YouTubeで見る") }}</a>
+          <a class="launch-video-link" href="https://www.youtube.com/watch?v=xpESrxevyHA" target="_blank" rel="noopener noreferrer">{{ t("YouTubeで見る") }}</a>
         </div>
         <div class="hero-product">
           <PaintDemo :active="animationEnabled" :t="t" @pause="animationEnabled = false" @play="animationEnabled = true" />

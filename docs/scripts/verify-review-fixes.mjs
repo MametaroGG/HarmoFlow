@@ -27,11 +27,11 @@ for (const [, prefix] of locales) {
   const home = read(prefix + 'index.html');
   assert.match(home, /<main id="main">(?:<!--[\s\S]*?-->)*<section class="[^"]*\bhero\b[^"]*"/, `${prefix}: original hero remains the first section`);
   assert(!home.includes('launch-video-section'), `${prefix}: no separate launch-video section`);
-  assert.equal((home.match(/youtube\.com\/embed\/x3csgJasBKg/g) || []).length, 1);
-  const player = home.match(/<iframe\b[^>]*src="https:\/\/www\.youtube\.com\/embed\/x3csgJasBKg[^>]+>/)?.[0];
+  assert.equal((home.match(/youtube\.com\/embed\/xpESrxevyHA/g) || []).length, 1);
+  const player = home.match(/<iframe\b[^>]*src="https:\/\/www\.youtube\.com\/embed\/xpESrxevyHA[^>]+>/)?.[0];
   assert(player && player.includes('loading="eager"') && player.includes('allowfullscreen'), `${prefix}: visible, controllable player`);
   assert(!player.includes('autoplay=1'), 'Launch video must not force autoplay');
-  assert(home.includes('href="https://www.youtube.com/watch?v=x3csgJasBKg"'), 'YouTube fallback missing');
+  assert(home.includes('href="https://www.youtube.com/watch?v=xpESrxevyHA"'), 'YouTube fallback missing');
   assert(player.includes('title="') && !player.includes('controls=0'), `${prefix}: named player keeps native controls`);
   assert.match(home, /<p class="hero-note">[\s\S]*?<\/p><\/div><div class="hero-launch-video" role="group" aria-label="[^"]+"><div class="launch-video-frame">[\s\S]*?<\/iframe><\/div><a class="launch-video-link"[^>]+>[^<]+<\/a><\/div><div class="hero-product">/, `${prefix}: player sits directly after requirements and before the existing layer demo`);
   assert(home.indexOf('</h1>') < home.indexOf('hero-launch-video'), `${prefix}: headline remains above the video`);
