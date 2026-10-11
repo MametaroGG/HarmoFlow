@@ -17,6 +17,8 @@ All three effects adjust the composite of the layers below them while keeping th
 
 ## Add and edit an adjustment {#add-and-edit}
 
+Ver.0.3.0 fixes adjustment layers so that all 27 blend modes shown in the UI are calculated. Adjustment layers modify the composite below, so their results differ from blending a Paint layer.
+
 1. In Layers, select the target texture set and the position where you want the adjustment.
 2. Click the half-circle **New adjustment layer** icon and choose an effect.
 3. Select the new layer and set **Target Channel** and the effect controls in Properties. Start with BaseColor when changing color.

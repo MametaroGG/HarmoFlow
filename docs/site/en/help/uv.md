@@ -28,7 +28,7 @@ Ver.0.2.0 fixed white streaks when painting dense UV areas, such as sphere poles
 
 Select the Paint tool and a visible, unlocked paint layer, then drag on the UV Editor canvas to paint the corresponding model surface. Zoom with the mouse wheel, and pan with middle-button drag or Space + left drag. Rotate the view with Shift + Space + left or right drag. Shift + Space + left or right double-click resets only the angle, keeping the zoom and position. Fit resets rotation, position, and zoom. Dedicated cursors appear for panning and rotation. You can also edit path anchors here. The UV Editor does not unwrap or rearrange the UV layout itself.
 
-Besides painting on Paint layers, the UV Editor supports material painting and painting masks on Fill and Adjustment layers. Check the target layer and mask-editing state first. UV strokes currently use fixed pressure and do not use the 3D view’s stroke stabilization. Paint in the 3D viewport when you need pressure variation or stabilization.
+Besides painting on Paint layers, the UV Editor supports material painting and painting masks on Fill and Adjustment layers. Check the target layer and mask-editing state first. In Ver.0.3.0, 2D painting in the UV Editor supports pen pressure and stroke stabilization, with improved fast input and stroke tapers. Pressing harder without moving the pen also paints a dot. See [pressure flow and drawing quality](./brush.md#pressure-flow-quality) for settings.
 
 For text, shape, and image stamps in the viewport, use Ctrl + Alt + drag to adjust size and Shift + Space + drag to adjust angle. Both gestures work with either the left or right mouse button.
 

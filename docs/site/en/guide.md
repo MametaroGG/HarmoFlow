@@ -126,7 +126,11 @@ Ver.0.1.2 PNG export leaves unpainted areas transparent while retaining imported
 
 Configure the home screen, pen pressure and drawing behavior, workspace layout, VRAM, Lua, and plugins.
 
-The defaults included with the Ver.0.2.1 release use Custom, with Reduce memory for non-edited texture sets and virtual texture caching enabled. Saved user settings take priority. Balanced is the built-in fallback when the bundled defaults cannot be loaded.
+In Ver.0.3.0, if you have not saved VRAM settings, HarmoFlow automatically selects Maximum quality, Balanced, or Low VRAM based on GPU memory capacity and system RAM. Saved user settings take priority. This is based on capacity, not moment-to-moment free memory.
+
+Balanced uses full-resolution viewport previews and half-resolution UI-panel previews. Editable data and export quality are retained.
+
+The automatically selected presets in Ver.0.3.0 leave Reduce memory for non-edited texture sets and virtual texture caching off. Saved user settings take priority, and actual operation depends on GPU support and the editing state. When enabled on supported GPUs, the selected and actively edited sets stay at their original resolution. After at least three seconds without interaction, other sets are moved out of memory losslessly and displayed at quarter resolution.
 
 <a :href="withBase('/en/help/settings.html')">Read the guide: Preferences, history, and extensions</a>
 

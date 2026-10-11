@@ -16,6 +16,8 @@ next: false
 
 Ver.0.2.0 offers Dark, Light, and System appearance modes, seven color presets, and custom colors. Home, loading screens, pie menus, the viewport, and the UV Editor follow the selected theme.
 
+The initial theme in Ver.0.3.0 is System, following the Windows light/dark setting. An existing saved appearance preference takes priority.
+
 The UI adapts to high-DPI display scaling so text and controls do not become too small on high-resolution screens. Dropdown values can also be changed with the mouse wheel.
 ## Home and recent scenes
 
@@ -33,7 +35,9 @@ Enable Speed-adaptive stabilization under Drawing Feel to suppress jitter while 
 
 ## Adjust pen pressure
 
-Pressure Size changes stroke width with pen pressure, while Pressure Opacity changes how opaque the stroke is. Turn off pressure opacity for uniform ink lines. Strokes in existing scenes are redrawn using the settings stored when they were saved.
+Ver.0.3.0 adds Automatic pressure flow and Antialiasing (None, Weak, Medium, Strong) to brushes, erasers, color blending, and blur. Lighter pressure applies less paint, erasing, or blending; antialiasing controls the smoothness of the brush edge. These are separate from pressure size and pressure opacity. The settings are stored with strokes and can also be saved in brush and eraser presets. Reproducing the new strokes requires Ver.0.3.0 or later.
+
+Pressure Size changes stroke width with pen pressure, while Pressure Opacity changes how opaque the stroke is. For uniform ink density, check both Pressure Opacity and Automatic pressure flow. Strokes in existing scenes are redrawn using the settings stored when they were saved.
 
 Load a model and finish any current loading operation or path edit before starting calibration. To calibrate pressure, go to Preferences → Drawing Feel → Calibrate with test strokes. Draw several strokes with varying pen pressure on the model in the viewport, then click Auto adjust and review. Try drawing again in the review screen, fine-tune with Softer or Firmer, and click Finish to save. Cancel leaves the settings unchanged. Mouse input is not used for automatic calibration. If there is insufficient pressure variation or too few samples, you will be prompted to add more test strokes. Test strokes are not added to the scene.
 
@@ -69,6 +73,10 @@ Brush, eraser, color blending/blur, stamp, and path tool settings support Undo/R
 
 Restoring a brush or stamp setting affects the next stroke. Not every setting or external file operation can be undone.
 
+### Detach a panel into its own window {#settings-detached-panels}
+
+In Ver.0.3.0, drag a panel tab outside the application to create a separate window. Moving it to another monitor adjusts panel, text, and control sizes to that monitor’s DPI. You can dock the tab back into the original layout.
+
 ### Use the panel rail {#panel-rail-operations}
 
 Drag a panel's title bar onto the Panel Rail to stow it as an icon. Click the icon to open it, and click again to close it. Opening another rail panel closes the one previously opened from the rail. Drag an opened panel's title away to place it as a regular panel. Right-click its icon and choose Remove from rail to remove the icon. The arrow at the top switches between icons only and icons with names.
@@ -89,7 +97,11 @@ In Preferences → VRAM, start with a preset and adjust as needed. If performanc
 
 ### Presets and preview resolution {#vram-presets}
 
-The defaults included with the Ver.0.2.1 release use Custom, with Reduce memory for non-edited texture sets and virtual texture caching enabled. Saved user settings take priority. Balanced is the built-in fallback when the bundled defaults cannot be loaded.
+In Ver.0.3.0, if you have not saved VRAM settings, HarmoFlow automatically selects Maximum quality, Balanced, or Low VRAM based on GPU memory capacity and system RAM. Saved user settings take priority. This is based on capacity, not moment-to-moment free memory.
+
+Balanced uses full-resolution viewport previews and half-resolution UI-panel previews. Editable data and export quality are retained.
+
+Memory use is also reduced for working images outside UV shells and temporary history/export data. The savings outside UV shells depend on GPU support and UV layout; editable data and export quality are retained.
 
 Maximum quality uses full-resolution previews. Low VRAM uses quarter-resolution previews and BC7 display compression, among other changes. Changing an individual setting switches the preset to Custom. Selecting Maximum quality, Balanced, or Low VRAM turns off experimental features. Selecting Custom alone keeps the current settings.
 
@@ -127,7 +139,7 @@ The selected set takes priority over the page budget. GPU residency is managed p
 
 ### Reduce memory for non-edited texture sets
 
-This option is enabled in the defaults included with the Ver.0.2.1 release. Saved user settings take priority, and actual operation depends on GPU support and the editing state. On supported GPUs, the selected and actively edited sets stay at their original resolution. After at least three seconds without interaction, other sets are moved out of memory losslessly and displayed at quarter resolution.
+The automatically selected presets in Ver.0.3.0 leave Reduce memory for non-edited texture sets and virtual texture caching off. Saved user settings take priority, and actual operation depends on GPU support and the editing state. When enabled on supported GPUs, the selected and actively edited sets stay at their original resolution. After at least three seconds without interaction, other sets are moved out of memory losslessly and displayed at quarter resolution.
 
 When the active layer targets all texture sets, all sets stay resident in memory. A single-set scene does not gain channel-memory savings. This mode takes priority over BC7, NTC, and the older virtual texture cache; switching sets may require waiting for restoration.
 

@@ -61,6 +61,12 @@ The application remembers the destination for **Export Package Again**. Hover ov
 
 ## Scene version compatibility {#scene-version-compatibility}
 
+::: warning Before using Ver.0.3.0 features
+Reopening projects containing transformed material masks requires Ver.0.3.0 or later. Reproducing the new pressure-flow, drawing-quality and fine-taper effects also requires Ver.0.3.0 or later. Existing saved strokes retain their previous width.
+
+Before saving with new features, use Save Scene As or Incremental Save to create a separate file, and retain the original project without overwriting it if you need to use older releases.
+:::
+
 ::: warning Before saving with Ver.0.2.0 features
 Scenes saved with new [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) features may not open correctly in older releases. If you also need an older version, use Save Scene As or Incremental Save to work in a separate file, and keep the original without overwriting it.
 :::

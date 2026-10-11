@@ -41,6 +41,8 @@ No notification appears when you are offline or the check fails. An absent icon 
 
 ## Back up before updating {#update-backup}
 
+When updating to Ver.0.3.0, review [compatibility of new strokes and transformed masks](./projects.md#scene-version-compatibility). Default keys are now M (paint selection), S (symmetry), Ctrl+T (transform) and K (Layer Move). Your custom bindings are preserved; check the [current key configuration](./shortcuts.md).
+
 <GuideFlow kind="update-backup" />
 
 ::: warning Ver.0.1.2 3D paths and older versions

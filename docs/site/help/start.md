@@ -41,6 +41,8 @@ Ver.0.1.1から、起動時に新しいバージョンをバックグラウン�
 
 ## 更新前にバックアップする {#update-backup}
 
+Ver.0.3.0へ更新する場合は、[新しい描画・マスク変形の互換性](./projects.md#scene-version-compatibility)も確認してください。初期キーはM（描画範囲選択）・S（対称描画）・Ctrl+T（変形）・K（レイヤー移動）に更新されています。自分で設定したキーは保持されるため、[現在のキー設定](./shortcuts.md)を確認します。
+
 <GuideFlow kind="update-backup" />
 
 ::: warning Ver.0.1.2の3Dパスと旧版の互換性

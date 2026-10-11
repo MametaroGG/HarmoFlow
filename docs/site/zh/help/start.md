@@ -41,6 +41,8 @@ next: false
 
 ## 更新前备份 {#update-backup}
 
+更新到Ver.0.3.0时，请确认[新笔画与蒙版变换的兼容性](./projects.md#scene-version-compatibility)。默认按键已更新为M（绘画选择）、S（对称）、Ctrl+T（变换）和K（图层移动）。自定义按键会保留，请查看[当前按键设置](./shortcuts.md)。
+
 <GuideFlow kind="update-backup" />
 
 ::: warning Ver.0.1.2的3D路径与旧版兼容性

@@ -14,7 +14,9 @@ import { withBase } from 'vitepress'
 # Workspace and mesh parts {#workspace}
 
 
-## Workspace improvements in Ver.0.2.0 {#workspace-020}
+## Workspace improvements in Ver.0.3.0 {#workspace-020}
+
+In Ver.0.3.0, the pie menu shows the focused tool’s name and assigned key, and you can select its round child icons. View navigation also shows pan, rotate, and zoom actions with their configured switching shortcuts.
 
 Pie-menu tool groups and the return action from the layer picker have been organized. Brush stroke previews no longer overlap preset names, and dropdown values can also be changed with the mouse wheel.
 
@@ -80,3 +82,7 @@ These are the panel names in the Window menu. Follow a name to its related instr
 ## Open panels and reset the layout
 
 Reopen closed panels from the Window menu. Use Reset Layout to restore the arrangement. Hover over controls to see additional guidance.
+
+## Detach a panel into its own window {#detached-panels}
+
+In Ver.0.3.0, drag a panel tab outside the application to create a separate window. Moving it to another monitor adjusts panel, text, and control sizes to that monitor’s DPI. You can dock the tab back into the original layout.

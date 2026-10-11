@@ -123,13 +123,13 @@
   },
   {
     "labels": {
-      "ja": "選択ツール",
-      "en": "Select Tool",
-      "zh": "选择工具",
-      "ko": "선택 도구"
+      "ja": "選択範囲",
+      "en": "Selection Area",
+      "zh": "选择范围",
+      "ko": "선택 영역"
     },
     "keys": [
-      "V"
+      "M"
     ]
   },
   {
@@ -183,9 +183,7 @@
       "zh": "切换橡皮擦",
       "ko": "지우개 전환"
     },
-    "keys": [
-      "E"
-    ]
+    "keys": []
   },
   {
     "labels": {
@@ -217,7 +215,7 @@
       "ko": "대칭 전환"
     },
     "keys": [
-      "M"
+      "S"
     ]
   },
   {
@@ -820,6 +818,240 @@
       "en": "Switch Dock Tab",
       "zh": "切换停靠选项卡",
       "ko": "도킹 탭 전환"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "選択部分を変形",
+      "en": "Transform Selected Paint",
+      "zh": "变换所选绘画内容",
+      "ko": "선택한 페인트 변형"
+    },
+    "keys": [
+      "Ctrl+T"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "レイヤー移動",
+      "en": "Move Layer",
+      "zh": "移动图层",
+      "ko": "레이어 이동"
+    },
+    "keys": [
+      "K"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択・変形を確定",
+      "en": "Confirm Selection / Transform",
+      "zh": "确认选择 / 变换",
+      "ko": "선택 / 변형 확정"
+    },
+    "keys": [
+      "Enter",
+      "NumEnter"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "直前の選択点を削除",
+      "en": "Remove Last Selection Point",
+      "zh": "移除最后一个选择点",
+      "ko": "마지막 선택점 제거"
+    },
+    "keys": [
+      "Delete",
+      "Backspace"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択メッシュを非表示",
+      "en": "Hide Selected Meshes",
+      "zh": "隐藏所选网格",
+      "ko": "선택한 메시 숨기기"
+    },
+    "keys": [
+      "Ctrl+H"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択メッシュを表示",
+      "en": "Show Selected Meshes",
+      "zh": "显示所选网格",
+      "ko": "선택한 메시 표시"
+    },
+    "keys": [
+      "Shift+H"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "選択以外のメッシュを非表示",
+      "en": "Hide Unselected Meshes",
+      "zh": "隐藏未选网格",
+      "ko": "선택하지 않은 메시 숨기기"
+    },
+    "keys": [
+      "Alt+H"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "最後に非表示にしたメッシュを表示",
+      "en": "Show Last Hidden Meshes",
+      "zh": "显示上次隐藏的网格",
+      "ko": "마지막으로 숨긴 메시 표시"
+    },
+    "keys": [
+      "Ctrl+Shift+H"
+    ]
+  },
+  {
+    "labels": {
+      "ja": "塗りツール",
+      "en": "Fill Tool",
+      "zh": "填充工具",
+      "ko": "채우기 도구"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "視点移動",
+      "en": "View Navigation",
+      "zh": "视图导航",
+      "ko": "시점 이동"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "視点移動: パン",
+      "en": "Navigation: Pan",
+      "zh": "视图导航：平移",
+      "ko": "시점 이동: 팬"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "視点移動: 回転",
+      "en": "Navigation: Rotate",
+      "zh": "视图导航：旋转",
+      "ko": "시점 이동: 회전"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "視点移動: 拡大縮小",
+      "en": "Navigation: Zoom",
+      "zh": "视图导航：缩放",
+      "ko": "시점 이동: 확대/축소"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "メッシュ選択",
+      "en": "Mesh Selection",
+      "zh": "网格选择",
+      "ko": "메시 선택"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "メッシュ投げ縄選択",
+      "en": "Mesh Lasso",
+      "zh": "网格套索选择",
+      "ko": "메시 올가미 선택"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "長方形選択",
+      "en": "Rectangle Selection",
+      "zh": "矩形选择",
+      "ko": "사각형 선택"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "楕円選択",
+      "en": "Ellipse Selection",
+      "zh": "椭圆选择",
+      "ko": "타원 선택"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "描画の投げ縄選択",
+      "en": "Paint Lasso",
+      "zh": "绘画套索选择",
+      "ko": "페인트 올가미 선택"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "折れ線選択",
+      "en": "Polygonal Selection",
+      "zh": "折线选择",
+      "ko": "다각형 선택"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "選択ペン",
+      "en": "Selection Pen",
+      "zh": "选择画笔",
+      "ko": "선택 펜"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "選択消し",
+      "en": "Selection Eraser",
+      "zh": "选择橡皮",
+      "ko": "선택 지우개"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "シュリンク選択",
+      "en": "Shrink Selection",
+      "zh": "收缩选择",
+      "ko": "슈링크 선택"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "選択部分を回転",
+      "en": "Rotate Selected Paint",
+      "zh": "旋转所选绘画内容",
+      "ko": "선택한 페인트 회전"
+    },
+    "keys": []
+  },
+  {
+    "labels": {
+      "ja": "選択部分を拡大縮小",
+      "en": "Scale Selected Paint",
+      "zh": "缩放所选绘画内容",
+      "ko": "선택한 페인트 확대/축소"
     },
     "keys": []
   }

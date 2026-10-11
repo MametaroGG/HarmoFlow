@@ -1612,7 +1612,7 @@
       "左右にドラッグ",
       "C・Fはパス作図中、ビューポート上",
       "既存のパスを編集中は、選択したアンカーを削除",
-      "以下はVer.0.1.1の初期割り当てと固定操作に、Ver.0.1.2のレイヤー操作を加えたものです"
+      "以下はVer.0.3.0の初期割り当てと固定操作です"
     ],
     "noneOf": []
   },
@@ -1630,7 +1630,7 @@
       "Drag horizontally",
       "viewport hovered while drafting a path",
       "When editing an existing path, it deletes the selected anchor",
-      "initial bindings and fixed gestures from Ver.0.1.1"
+      "Ver.0.3.0 initial bindings and fixed gestures"
     ],
     "noneOf": []
   },
@@ -1648,7 +1648,7 @@
       "水平拖动",
       "C、F仅在绘制路径时",
       "编辑已有路径时，则删除选中的锚点",
-      "初始绑定和固定操作"
+      "Ver.0.3.0 的初始绑定和固定操作"
     ],
     "noneOf": []
   },
@@ -1666,7 +1666,7 @@
       "가로로 드래그",
       "C·F는 패스 작도 중 뷰포트 위에서",
       "기존 패스를 편집할 때는 선택한 앵커를 삭제",
-      "초기 할당과 고정 조작"
+      "Ver.0.3.0의 초기 할당과 고정 조작"
     ],
     "noneOf": []
   },

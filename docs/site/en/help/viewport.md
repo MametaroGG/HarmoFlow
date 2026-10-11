@@ -45,6 +45,15 @@ Wire Settings controls visibility, back-face display, color, opacity, line width
 
 Click a part with the Selection tool. Hold Shift to add or remove parts, drag from an empty area for rectangular selection, and press Esc to clear the selection. Show or hide selected parts from the tool options. The Mesh panel lists part names, materials, and triangle counts, with individual visibility controls as well as Show All and Hide All.
 
+### Mesh visibility shortcuts (Ver.0.3.0) {#mesh-visibility-shortcuts}
+
+- Ctrl+H: hide selected meshes
+- Shift+H: show selected meshes
+- Alt+H: hide unselected meshes
+- Ctrl+Shift+H: show meshes hidden by the last hide operation
+
+These actions and visibility changes in the mesh list support Undo/Redo. Check [key configuration](./shortcuts.md) if you changed the bindings.
+
 ### Open the panel and toggle visibility {#mesh-visibility}
 
 Open **Window → Meshes**. Each row's **Show** checkbox controls that part's visibility. Clicking its name selects it; selection and visibility are separate controls.

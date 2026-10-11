@@ -16,11 +16,13 @@ import { withBase } from 'vitepress'
 
 ## Inspect the keyboard and mouse diagrams {#visual-key-config}
 
-In Ver.0.2.0, Key Config uses keyboard and mouse diagrams to inspect and edit bindings. It supports filtering by key, navigation and numeric keypad clusters, and Japanese, English, Korean, and Chinese layout displays. Long shortcuts are less likely to be clipped.
+In Ver.0.3.0, Key Config uses keyboard and mouse diagrams to inspect and edit bindings. It supports filtering by key, navigation and numeric keypad clusters, and Japanese, English, Korean, and Chinese layout displays. Long shortcuts are less likely to be clipped.
 
 If you have saved settings, use the bindings displayed in the app rather than the initial-binding tables below.
 
-### Selection tool controls (Ver.0.2.0) {#selection-tool-shortcuts}
+### Selection tool controls (Ver.0.3.0) {#selection-tool-shortcuts}
+
+In Ver.0.3.0, M recalls Selection Area and S toggles symmetry for brush-based tools. Ctrl+T opens the selected-paint transform; K opens Move Layer. Individual rectangle, ellipse, lasso, polygonal, selection pen, selection eraser, shrink, and mesh selection tools start unassigned. Choose them from the tool rail or pie menu, or assign keys in Key Config. Do not use the former V, W, E, or R bindings as current defaults.
 
 - Hold Shift while making a rectangle or ellipse selection to create a square or circle
 - The selection pen and selection eraser support pen pressure and brush-size shortcuts. Check Key Config for your current bindings
@@ -35,14 +37,16 @@ Use Reset to Default, Remove, or Cancel in the binding dialog. Fixed actions can
 
 The screenshot below shows the Key Config interface with the action list and keyboard and mouse diagram.
 
+Adding, changing, removing, or resetting a binding saves it immediately.
+
 <figure class="doc-diagram">
-<a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="1420" height="876" alt="Example of Key Config in Japanese. Displayed bindings depend on saved settings. Click the image to enlarge it." loading="lazy" /></a>
-<figcaption>Example of Key Config in Japanese. Displayed bindings depend on saved settings. Click the image to enlarge it.</figcaption>
+<a :href="withBase('/graphics/guide/key-config-example.png')" target="_blank" rel="noopener"><img :src="withBase('/graphics/guide/key-config-example.png')" width="1420" height="876" alt="Japanese Key Config screenshot from an earlier version, retained as an interface reference. For Ver.0.3.0 defaults use the tables below; check the app for your current bindings. Click to enlarge." loading="lazy" /></a>
+<figcaption>Japanese Key Config screenshot from an earlier version, retained as an interface reference. For Ver.0.3.0 defaults use the tables below; check the app for your current bindings. Click to enlarge.</figcaption>
 </figure>
 
-The tables show the initial bindings and fixed gestures from Ver.0.1.1, with the layer gestures added in Ver.0.1.2. If you have saved settings, use the bindings shown in Key Config. Tool keyboard shortcuts are unavailable during text entry, while Preferences is open, or while the pie menu is open.
+These tables show the Ver.0.3.0 initial bindings and fixed gestures. If you have saved settings, use the bindings shown in Key Config. Tool keyboard shortcuts are unavailable during text entry, while Preferences is open, or while the pie menu is open.
 
-In Ver.0.1.1, use the listed default gestures for window focus and Toggle Corner / Smooth. Changes made in Key Config may not take effect for these actions.
+Use the listed default gestures for window focus and Toggle Corner / Smooth. Changes made in Key Config may not take effect for these actions.
 
 ## Actions and keys or gestures
 
@@ -76,22 +80,29 @@ In Ver.0.1.1, use the listed default gestures for window focus and Toggle Corner
 | Paint Tool | B |
 | Color Blending Tool | U |
 | Path Tool | P |
-| Select Tool | V |
+| Selection Area | M<br>Recall the last paint-selection tool |
+| Transform Selected Paint | Ctrl+T |
+| Move Layer | K |
 | Text Tool | T |
+| Fill Tool | Unassigned |
+| View Navigation | Unassigned |
+| Navigation: Pan | Unassigned |
+| Navigation: Rotate | Unassigned |
+| Navigation: Zoom | Unassigned |
 
 ### Painting
 
-Use these with brush-based tools such as Paint and Color Blending. Keys 1, 2, and 3 switch the Paint fill mode; E toggles the eraser on or off. Enabling it uses the brush-shaped eraser.
+Use these with brush-based tools. Keys 1, 2, and 3 switch to the Fill tool in Brush, Polygon, or UV Shell mode. Use C to erase with transparent color. Toggle Eraser itself has no initial key binding.
 
 | Action | Key or mouse gesture and context |
 | --- | --- |
 | Brush Fill Mode | 1 |
 | Polygon Fill Mode | 2 |
 | UV Shell Fill Mode | 3 |
-| Toggle Eraser | E |
+| Toggle Eraser | Unassigned |
 | Smaller Brush | [ |
 | Larger Brush | ] |
-| Toggle Symmetry | M |
+| Toggle Symmetry | S |
 | Symmetry X Axis | Shift+X<br>When symmetry is enabled |
 | Symmetry Y Axis | Shift+Y<br>When symmetry is enabled |
 | Symmetry Z Axis | Shift+Z<br>When symmetry is enabled |
@@ -104,7 +115,7 @@ Use these with brush-based tools such as Paint and Color Blending. Keys 1, 2, an
 | Action | Key or mouse gesture and context |
 | --- | --- |
 | Swap Foreground / Background | X |
-| Toggle Transparent Color | C |
+| Toggle Transparent Color | C<br>Does not toggle transparent color while drafting a path |
 | Reset Color Slots | D |
 | Mixer Eyedropper | Alt+left drag<br>On the mixer canvas. Release the left button while holding Alt to apply; releasing Alt first cancels |
 
@@ -124,6 +135,10 @@ Use these with brush-based tools such as Paint and Color Blending. Keys 1, 2, an
 | Toggle Floor Grid | G |
 | Save Viewport Screenshot | F12 |
 | Toggle UV Editor | Shift+P |
+| Hide Selected Meshes | Ctrl+H |
+| Show Selected Meshes | Shift+H |
+| Hide Unselected Meshes | Alt+H |
+| Show Last Hidden Meshes | Ctrl+Shift+H |
 | Open Texture Set Under Cursor | Shift+Alt+right click<br>Click the model |
 
 ### 3D viewport
@@ -157,6 +172,19 @@ Close Path is initially registered to C, which is also used by Toggle Transparen
 
 | Action | Key or mouse gesture and context |
 | --- | --- |
+| Mesh Selection | Unassigned |
+| Mesh Lasso | Unassigned |
+| Rectangle Selection | Unassigned |
+| Ellipse Selection | Unassigned |
+| Paint Lasso | Unassigned |
+| Polygonal Selection | Unassigned |
+| Selection Pen | Unassigned |
+| Selection Eraser | Unassigned |
+| Shrink Selection | Unassigned |
+| Rotate Selected Paint | Unassigned |
+| Scale Selected Paint | Unassigned |
+| Confirm Selection / Transform | Enter / NumEnter<br>Confirm a polygonal selection (at least 3 points, canvas hovered) or a transform |
+| Remove Last Selection Point | Delete / Backspace<br>While drafting a polygonal selection with the canvas hovered |
 | Clear Mesh Selection | Esc<br>Select tool active, pointer over the 3D viewport |
 | Add to / Remove from Selection | Shift+left click<br>With Select active, Shift-click toggles a part. Shift-drag from empty space adds parts |
 | Add to / Remove from Selection (part list) | Shift+left click |

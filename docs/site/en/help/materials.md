@@ -76,6 +76,8 @@ Select a partially painted material’s Fill layer or folder to add more coverag
 
 ## Material downloads and offline use {#material-downloads}
 
+Ver.0.3.0 reduces thumbnail data in the material list, making installers and fresh installations smaller. The original material images used for painting retain their quality.
+
 The current installer includes the material catalog and previews, but excludes the source images for downloadable image materials. These image materials download on first use. **A download badge means the material still needs its images.** Browsing its entry offline does not mean the material itself is ready for offline use.
 
 Procedural materials and images you import yourself work without a material download. The full and trial editions maintain separate download caches.
@@ -109,3 +111,9 @@ This removes the material's downloaded maps and any matching bundled maps remain
 Using the material again requires another download. Keep its installed data if you will need it offline.
 
 Removal is unavailable during a download, painting, or another active operation. If the button is disabled, wait for processing to finish and check whether removable data exists. If additional files or links prevent safe removal, inspect the reported reason rather than deleting the whole folder manually. If removal fails, check the cache folder's permissions and whether another app is using it, then retry.
+
+## Transform material masks (Ver.0.3.0) {#material-mask-transform}
+
+Select a masked material layer and use shrink selection to follow its mask shape. The Ctrl+T transform frame moves, rotates and scales it. Material patterns remain fixed in material coordinates; only the masked area changes. K Layer Move also moves the mask.
+
+Reopening scenes with transformed masks requires Ver.0.3.0 or later. [Keep a copy from before the changes](./projects.md#scene-version-compatibility) if the project is also needed in older releases.

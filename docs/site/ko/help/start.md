@@ -41,6 +41,8 @@ Ver.0.1.1부터 시작할 때 백그라운드에서 새 버전을 확인합니�
 
 ## 업데이트 전에 백업하기 {#update-backup}
 
+Ver.0.3.0으로 업데이트할 때 [새 스트로크와 마스크 변형의 호환성](./projects.md#scene-version-compatibility)을 확인하세요. 기본 키는 M(페인트 선택)·S(대칭)·Ctrl+T(변형)·K(레이어 이동)로 바뀌었습니다. 사용자 키 설정은 유지되므로 [현재 키 설정](./shortcuts.md)을 확인하세요.
+
 <GuideFlow kind="update-backup" />
 
 ::: warning Ver.0.1.2의 3D 패스와 이전 버전 호환성

@@ -6,7 +6,7 @@ import { articles } from '../.vitepress/theme/help-data.js';
 const docs = path.resolve(import.meta.dirname, '..');
 const labels = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, 'shortcut-reference-labels.json'), 'utf8'));
 const plain = text => text.replace(/<[^>]+>/g, '').replace(/[|*`]/g, '').replace(/\s+/g, '').normalize('NFC');
-assert.equal(labels.length, 81, 'complete action reference');
+assert.equal(labels.length, 105, 'complete action reference');
 const anchors = {
   workspace: ['command-search'],
   brush: ['brush-material-channels', 'strict-uv-padding', 'blend-controls'],
@@ -29,6 +29,13 @@ for (const locale of ['ja', 'en', 'zh', 'ko']) {
   const rendered = article => fs.readFileSync(path.join(docs, '.vitepress/dist', prefix, 'help', article + '.html'), 'utf8');
   const index = locale === 'ja' ? articles : JSON.parse(fs.readFileSync(path.join(docs, '.vitepress/theme/locales', `help-${locale}.json`), 'utf8'));
   const shortcut = source('shortcuts');
+  assert(shortcut.includes('Ver.0.3.0'), `${locale}: current shortcut reference`);
+  const unassigned = { ja: '未割り当て', en: 'Unassigned', zh: '未绑定', ko: '미할당' }[locale];
+  for (const name of ['Toggle Eraser', 'Rectangle Selection', 'Ellipse Selection', 'Paint Lasso', 'Rotate Selected Paint', 'Scale Selected Paint', 'View Navigation']) {
+    const action = labels.find(item => item.labels.en === name);
+    const row = shortcut.split('\n').find(line => line.startsWith('| ' + action.labels[locale] + ' |'));
+    assert(row?.includes(unassigned), `${locale}: ${name} has no initial binding`);
+  }
   for (const weight of ['Regular', 'Bold']) assert(rendered('shortcuts').includes(`LINESeedJP-${weight}.woff2`), `${locale}: guide font preloaded`);
   for (const action of labels) {
     const rows = shortcut.split('\n').filter(line => line.startsWith('| ' + action.labels[locale] + ' |'));
@@ -58,4 +65,4 @@ assert(css.includes('"LINE Seed JP"') && !css.includes('fonts.googleapis.com'), 
 const fonts = fs.readFileSync(path.join(docs, '.vitepress/theme/release-fonts.css'), 'utf8');
 assert.equal((fonts.match(/font-display:\s*optional/g) || []).length, 2, 'both weights avoid a late font swap moving guide anchors');
 assert(fs.existsSync(path.join(docs, 'site/public/fonts/line-seed-jp/OFL.txt')), 'font license is distributed');
-console.log(`PASS: ${checked} localized action/section checks, all 81 actions and 23 Window panels, conditional gestures, reserved screenshot size, category consistency, and local licensed typography (static documentation checks).`);
+console.log(`PASS: ${checked} localized action/section checks, all 105 actions and 23 Window panels, conditional gestures, reserved screenshot size, category consistency, and local licensed typography (static documentation checks).`);

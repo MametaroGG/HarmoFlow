@@ -61,7 +61,7 @@ for (const locale of ['ja', 'en', 'zh', 'ko']) {
       if (locale === 'ja') assert(read('guide.html').includes(`id="${anchor}"`), 'Japanese full guide includes ' + anchor);
     }
     for (const content of [source, rendered, index.find(item => item.slug === slug).searchText]) {
-      assert(content.includes('Ver.0.2.0'), locale + ': searchable current guidance in ' + slug);
+      assert(content.includes(['shortcuts', 'settings', 'workspace'].includes(slug) ? 'Ver.0.3.0' : 'Ver.0.2.0'), locale + ': searchable current guidance in ' + slug);
     }
   }
   for (const [slug, term] of [['layers', '27'], ['assets', '255'], ['shortcuts', 'Shift']]) {

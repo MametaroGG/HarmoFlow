@@ -38,11 +38,31 @@ In the Brush panel, choose a preset from a category and save your adjusted setti
 
 You can also right-click a project image and choose Register as Brush Tip to open it in the Brush panel.
 
+### Pressure flow and drawing quality (Ver.0.3.0) {#pressure-flow-quality}
+
+Soft and textured erasers use pressure to control removal strength; hard and detail erasers are configured for full removal. Blending and blur respond gradually to pressure. Material-brush presets also retain a disabled color channel after saving and reloading.
+
+Automatic pressure flow reduces painting, erasing, blending and blur strength at light pressure. Adjust it separately from Pressure Size and Pressure Opacity. Antialiasing offers None, Weak, Medium and Strong to control brush-edge smoothness.
+
+Both the 3D view and UV Editor support pen pressure and stroke stabilization, including dots painted by pressing harder without moving the pen. Built-in watercolor, airbrush, pencil, pastel and stamp presets have been reviewed for their intended use. Edited and custom presets are preserved.
+
+The new flow and drawing-quality settings are saved with strokes and brush/eraser presets. Reproducing them, including the new fine tapers, requires Ver.0.3.0 or later. Existing saved strokes retain their previous width. [Keep a separate copy](./projects.md#scene-version-compatibility) of files needed in older releases.
+
 ### Brush tips and presets {#brush-tip-presets}
 
 Image brush tips use brightness and alpha as coverage: white paints strongly, while black or transparent areas do not paint. A 128×128 square PNG is recommended. Selecting a preset keeps your current color but adopts the preset’s painting channels. Reset this brush restores the selected preset, or defaults if none is selected. Saving a preset under an existing name replaces its settings.
 
 ## Select meshes and paint, then transform paint {#paint-selection-transform}
+
+### Select and transform painted areas (Ver.0.3.0) {#selection-transform-frame}
+
+1. Press M to recall the last paint-selection tool. Choose rectangle, ellipse, lasso, polygon, selection brush, selection eraser or shrink selection from the pie menu or tool list. Individual selection tools have no default key assignments.
+2. Select paint and press Ctrl+T to show the transform frame. Drag handles to scale with the aspect ratio preserved by default; hold Ctrl while dragging a corner or edge to deform freely. Drag inside to move, outside to rotate, and hold Shift for finer adjustments.
+3. The preview remains after dragging or navigating the view. In Properties, adjust scale, angle, displacement, rotation center, interpolation and Keep original image. The top icons reset, flip horizontally/vertically, apply or cancel. Enter applies; Esc cancels.
+
+3D rectangle, ellipse, lasso, polygon and shrink selections follow the surface using the starting normal and tangent. Draft outlines appear on the visible surface; Shift constrains surface-space squares and circles. Selection creation, addition, subtraction and clearing support Undo/Redo in the same history as painting.
+
+Use K for [whole-layer movement](./layers.md#whole-layer-move). M selects painted areas and is separate from mesh selection, which has no default key assignment. If you changed bindings, follow your [current key configuration](./shortcuts.md).
 
 Ver.0.2.1: Fixed missing or scattered paint, extra outlines at UV shell boundaries, and outlines separating from the paint when moving, rotating or scaling selected paint. Improved responsiveness while moving selected paint.
 
@@ -70,7 +90,7 @@ A brush stroke is made from a sequence of small brush dabs. **Flow** controls th
 | --- | --- |
 | Build up paint gradually as you go over the same area | Lower Flow |
 | Limit how strong one continuous stroke can become | Lower Opacity |
-| Add or remove pressure-dependent changes in strength | Toggle Pressure Opacity |
+| Add or remove pressure-dependent changes in strength | Check Pressure Opacity and Automatic pressure flow |
 
 For example, with Opacity at 50% and Flow at 10%, going over the same area without lifting the pen gradually builds up paint, up to that stroke's 50% limit. Lifting the pen and starting again creates another stroke that can add more paint. Flow at 0 deposits no ink. Compare the stroke preview at the top of the Brush panel and try a few strokes.
 

@@ -29,6 +29,8 @@ import { withBase } from 'vitepress'
 
 ## 27 layer blending modes {#layer-blend-modes}
 
+Ver.0.3.0 fixes adjustment layers so that all 27 blend modes shown in the UI are calculated. Adjustment layers modify the composite below, so their results differ from blending a Paint layer.
+
 [Ver.0.2.0](https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.2.0) expands layer blending to 27 modes. Alongside Normal, Multiply, Add and Overlay, the available modes include Screen, Soft Light, Hue, Saturation and Difference.
 
 Select a layer and change its blending mode in Properties to compare how it combines with the layers below. Adjust the layer’s opacity as needed.
@@ -123,3 +125,9 @@ Shift-click a mask to enable or disable it. Use the layer mask view to inspect i
 Clipping is unavailable on a group or when there is no eligible layer below. An empty Paint layer has no existing coverage for alpha lock, so leave alpha lock off for the first strokes.
 
 Stroke Height controls the height effect of painting. Use Raise/Lower and Height Amount to set the direction and amount of relief.
+
+## Move whole layers (Ver.0.3.0) {#whole-layer-move}
+
+Press K for Layer Move. In the 3D view, move along the surface across UV-shell seams; in the UV Editor, translate the whole layer. Properties let you choose the target at the click, move layers painted within a selection together, and select the moved targets.
+
+Release the drag to apply. The original selection is retained, and multiple moved layers form one Undo/Redo action. On material layers, the mask moves while the material pattern stays in place. To transform only selected paint, use the [Ctrl+T transform frame](./brush.md#selection-transform-frame).
