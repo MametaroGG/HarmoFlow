@@ -12,7 +12,7 @@ const origin = process.env.DOCS_ORIGIN || 'https://mametarogg.github.io';
 const locales = [['ja-JP', ''], ['en', 'en/'], ['zh-CN', 'zh/'], ['ko-KR', 'ko/']];
 const read = file => fs.readFileSync(path.join(dist, file), 'utf8');
 const alternates = html => Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(m => [m[1], m[2]]));
-const pages = fs.readdirSync(dist, { recursive: true }).filter(file => file.endsWith('.html') && file !== '404.html');
+const pages = fs.readdirSync(dist, { recursive: true }).map(file => file.replaceAll('\\', '/')).filter(file => file.endsWith('.html') && file !== '404.html');
 assert.equal(pages.length, 112);
 for (const file of pages) {
   const route = file.replace(/^(en|zh|ko)\//, '').replace(/^index\.html$/, '');

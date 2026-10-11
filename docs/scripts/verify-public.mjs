@@ -6,6 +6,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const dist = path.join(root, ".vitepress/dist");
 const files = fs
   .readdirSync(dist, { recursive: true })
+  .map(f => f.replaceAll('\\', '/'))
   .filter((f) => fs.statSync(path.join(dist, f)).isFile());
 const expected = new Set([
   "index.html",

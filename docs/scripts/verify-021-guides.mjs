@@ -5,7 +5,8 @@ import { releases } from '../.vitepress/theme/release-notes-data.js';
 import { articles as jaArticles } from '../.vitepress/theme/help-data.js';
 const docs = path.resolve(import.meta.dirname, '..');
 const base = process.env.DOCS_BASE || '/HarmoFlow/';
-const release = releases[0];
+const release = releases.find(item => item.id === 'v0-2-1');
+const latest = releases[0];
 assert.equal(release.id, 'v0-2-1');
 assert.equal(release.version, 'Ver.0.2.1');
 assert.equal(release.date, '2026-10-08');
@@ -21,12 +22,12 @@ for (const locale of ['ja', 'en', 'zh', 'ko']) {
   assert(updates.includes(release.sourceUrl), locale + ': official patch release source');
   assert.equal(content.highlights.length, 0, 'A small fix release adds no feature highlights');
   assert(!content.changes.added, 'No invented new features');
-  for (const html of [updates, home]) {
+  for (const html of [updates]) {
     assert(html.includes(content.title) && html.includes(content.summary), locale + ': patch summary');
     assert(html.includes('fFjN-EyH7sQ') && html.includes('Ver.0.2.0'), locale + ': retained feature release and film');
   }
   for (const text of [...content.changes.fixed, ...content.changes.improved]) assert(updates.includes(text), locale + ': complete patch details');
-  assert(home.includes(`href="${base}${prefix}updates.html#release-v0-2-1"`), locale + ': newest release link');
+  assert(home.includes(`href="${base}${prefix}updates.html#release-${latest.id}"`), locale + ': newest release link');
   const index = locale === 'ja' ? jaArticles : JSON.parse(fs.readFileSync(path.join(docs, '.vitepress/theme/locales/help-' + locale + '.json'), 'utf8'));
   for (const slug of ['brush', 'uv']) {
     assert(read('help/' + slug + '.html').includes('Ver.0.2.1'), locale + ': relevant patch guidance');

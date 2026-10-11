@@ -25,6 +25,125 @@ const performance = {
 };
 
 export const releases = [{
+  "id": "v0-3-0",
+  "version": "Ver.0.3.0",
+  "date": "2026-10-11",
+  "sourceUrl": "https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.3.0",
+  "content": {
+    "zh": {
+      "title": "Ver.0.3.0 更新内容",
+      "summary": "新增笔压自动流量、完整图层移动和独立面板，扩展选区与变换操作，并减小缩略图和预览处理的负担。",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "画笔、橡皮擦、混色和模糊新增笔压自动调节流量及无、弱、中、强四档抗锯齿。弱笔压减弱绘制、擦除与混合强度；设置随笔画和画笔、橡皮擦预设保存，重现新效果需要 Ver.0.3.0 或更新版本。",
+          "面板标签可拖出应用窗口成为独立窗口，按所在显示器的 DPI 缩放，也可恢复原停靠布局。",
+          "M 调出上次绘画选择工具，Ctrl+T 调出变换框；各选择工具默认不单独分配按键。绘制时 S 切换对称，C 用透明色擦除，自定义按键保持不变。",
+          "K 移动整个图层。3D 沿表面跨 UV 壳接缝，UV 视图移动整层；属性可指定点击位置的对象、选区内有绘画内容的图层和移动目标。松开即确认，保留选区，多层可一次撤销或重做；材质图层移动遮罩。",
+          "变换框支持保持比例、Ctrl 自由变形、框外旋转、框内移动、Shift 微调和保持预览。属性可调整比例、角度、偏移、旋转中心、插值、保留原图与翻转，并有重置、确认和取消图标。",
+          "Ctrl+H 隐藏所选网格，Shift+H 显示所选，Alt+H 隐藏其他，Ctrl+Shift+H 显示最近隐藏的网格；支持撤销、重做和自定义按键。",
+          "可沿材质遮罩形状收缩选择并移动、旋转、缩放遮罩，图案固定在材质坐标上。重开包含遮罩变换的项目需要此版本或更新版本。"
+        ],
+        "improved": [
+          "减小材质缩略图、安装程序和新安装所占空间，保留绘制用原图品质。初始主题跟随 Windows 明暗设置，并改善主题切换、滑块反馈与画笔设置布局。",
+          "未保存显存设置时按 GPU 和系统内存选择质量预设。“平衡”的 UI 面板使用一半分辨率。减少 UV 外工作图像及历史、导出临时内存，UI 纹理按 UV 壳轮廓显示；节省效果取决于 GPU 与 UV 布局，编辑数据及导出品质保持不变。",
+          "按用途调整内置画笔、橡皮擦、混色和模糊，包括水彩、喷枪、铅笔、粉彩与轻点印章。柔软或纹理橡皮擦随笔压调节力度，硬或细节橡皮擦保持有力擦除。只更新未修改的内置预设，保留自制或修改后的预设；材质画笔禁用颜色写入的设置可保存再读。",
+          "改善 3D、2D 细弱笔压、起收笔、稳定器轨迹和抬笔前输入。2D 支持笔压与稳定器，优化快速输入并支持静止按压点描。旧笔画保持原粗细，新起收笔效果需要 Ver.0.3.0 或更新版本。",
+          "修复调整图层对全部 27 种混合模式的支持。选区创建、添加、删除和清除可与绘画按顺序撤销、重做。减少确认绘画变换时的等待。",
+          "画笔只更新变化区域，减少不必要的 GPU 等待，后台压缩显示纹理，修复更改压缩设置后预览不更新的问题；光标移动或停笔时复用未变化的 3D 场景。",
+          "饼状菜单显示当前工具名、快捷键和子图标；视角操作可查看平移、旋转、缩放及切换快捷键。",
+          "3D 矩形、椭圆、套索、多边形及收缩选择沿起点法线、切线确定的表面展开。确认前显示可见表面的轮廓，Shift 可限制为表面正方形或正圆。"
+        ]
+      }
+    },
+    "ko": {
+      "title": "Ver.0.3.0 업데이트 내용",
+      "summary": "필압 자동 유량, 전체 레이어 이동과 분리형 패널을 추가하고 선택·변형 조작을 개선했습니다. 썸네일과 미리보기 처리도 가벼워졌습니다.",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "브러시·지우개·색 혼합·흐림에 필압 자동 유량과 안티앨리어싱 없음·약·중·강을 추가했습니다. 약한 필압으로 그리기·지우기·혼합 강도를 낮춥니다. 설정은 스트로크와 브러시·지우개 프리셋에 저장되며 재현에는 Ver.0.3.0 이상이 필요합니다.",
+          "패널 탭을 앱 밖으로 드래그해 별도 창으로 배치하고 모니터 DPI에 맞춰 확대하거나 원래 도킹 배치로 복원할 수 있습니다.",
+          "M으로 마지막 페인트 선택 도구, Ctrl+T로 변형 프레임을 호출합니다. 개별 선택 도구는 기본 키가 없습니다. 페인트 중 S는 대칭, C는 투명색 지우기이며 사용자 키 설정은 유지합니다.",
+          "K로 전체 레이어를 옮깁니다. 3D에서는 표면을 따라 UV 셸 경계를 넘고 UV에서는 전체 레이어를 옮깁니다. 속성에서 클릭 위치 대상, 선택 범위에 페인트가 있는 레이어와 이동 대상을 고릅니다. 놓으면 확정하고 선택 범위를 유지하며 여러 레이어도 한 번에 실행 취소·다시 실행합니다. 머티리얼 레이어는 마스크를 옮깁니다.",
+          "변형 프레임은 비율 유지, Ctrl 자유 변형, 바깥 회전, 안쪽 이동, Shift 미세 조절과 미리보기 유지를 지원합니다. 속성에서 배율·각도·이동량·회전 중심·보간·원본 유지·반전을 설정하고 아이콘으로 초기화·확정·취소합니다.",
+          "Ctrl+H는 선택 메시 숨기기, Shift+H는 선택 메시 표시, Alt+H는 나머지 숨기기, Ctrl+Shift+H는 마지막에 숨긴 메시 표시입니다. 실행 취소·다시 실행과 키 설정을 지원합니다.",
+          "머티리얼 마스크 모양을 따라 축소 선택하고 이동·회전·확대 및 축소할 수 있습니다. 무늬는 머티리얼 좌표에 고정됩니다. 마스크 변형 프로젝트를 다시 열려면 이 버전 이상이 필요합니다."
+        ],
+        "improved": [
+          "머티리얼 썸네일·설치 프로그램·신규 설치 용량을 줄이고 페인트 원본 품질을 유지합니다. 초기 테마는 Windows 밝기 설정을 따르며 테마 전환·슬라이더 피드백·브러시 배치를 개선했습니다.",
+          "VRAM 설정을 저장하지 않았다면 GPU와 PC 메모리에 따라 품질 프리셋을 고릅니다. 균형의 UI 패널은 절반 해상도입니다. UV 바깥 작업 이미지와 기록·출력 임시 메모리를 줄이고 UI 텍스처를 UV 셸 윤곽에 맞춥니다. 절약 효과는 GPU와 UV 배치에 따라 다르며 편집 데이터·출력 품질은 유지합니다.",
+          "수채화·에어브러시·연필·파스텔·가벼운 스탬프 등 용도별로 기본 브러시·지우개·혼합·흐림을 조정했습니다. 부드럽거나 질감 있는 지우개는 필압으로 강도를 조절하고 단단하거나 세부용은 확실하게 지웁니다. 수정하지 않은 기본 프리셋만 갱신하고 사용자 프리셋은 유지하며 머티리얼 브러시의 색 쓰기 비활성화도 저장·재로드 후 유지합니다.",
+          "3D·2D의 약한 필압, 가는 시작·끝, 보정 궤적과 펜을 떼기 직전 입력을 개선했습니다. 2D 필압·보정, 빠른 입력과 정지한 채 눌러 찍기를 지원합니다. 기존 선 두께는 유지하고 새 시작·끝 재현에는 Ver.0.3.0 이상이 필요합니다.",
+          "조정 레이어의 27가지 합성 모드를 모두 지원하도록 수정했습니다. 선택 범위 생성·추가·삭제·해제를 그리기와 같은 기록에서 순서대로 되돌리며 변형 확정 대기를 줄였습니다.",
+          "변경 영역만 갱신하고 불필요한 GPU 대기를 줄이며 표시 텍스처를 백그라운드에서 압축합니다. 압축 설정 변경 후 미리보기 갱신 문제를 수정하고 커서 이동·펜 정지 중 변하지 않은 3D 장면을 재사용합니다.",
+          "파이 메뉴에 현재 도구명·단축키·자식 아이콘을 표시하고 시점 이동에서 팬·회전·확대/축소·전환 단축키를 확인할 수 있습니다.",
+          "3D 사각형·타원·올가미·다각형·축소 선택이 시작 위치 법선과 접선을 기준으로 표면을 따릅니다. 확정 전 보이는 면 윤곽을 표시하고 Shift로 표면 정사각형·정원을 선택합니다."
+        ]
+      }
+    },
+    "ja": {
+      "title": "Ver.0.3.0の更新内容",
+      "summary": "筆圧で流量を調整できるブラシ、選択・変形の操作、レイヤー移動、別ウィンドウのパネルを追加・改善しました。サムネイルと表示処理も軽量化しています。",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "ブラシ・消しゴム・色混ぜ・ぼかしに「筆圧で流量を自動調整」とアンチエイリアス（なし・弱・中・強）を追加しました。弱い筆圧で塗り・消去・混ぜ具合を弱め、筆先の縁の滑らかさを選べます。設定は描画に保存され、ブラシ・消しゴムのプリセットにも保存できます。再現にはVer.0.3.0以降が必要です。",
+          "パネルのタブをアプリの外へドラッグして、別ウィンドウとして配置できます。表示先モニターのDPIに合わせてパネル・文字・操作ボタンのサイズが変わり、元のドッキング配置へ戻すこともできます。",
+          "Mで前回の描画選択ツール、Ctrl+Tで変形枠を呼び出せます。個別の選択ツールは初期状態ではキー未割り当てで、パイメニューやツール一覧から選べます。ペイント中のシンメトリー切替はS、透明色による消去はCです。独自のキー割り当ては保持します。",
+          "Kでレイヤーを移動できます。3D画面では面に沿ってUVシェルの継ぎ目をまたぎ、UV画面ではレイヤー全体を移動します。プロパティでクリック位置の対象、選択範囲に描画があるレイヤーの一括移動、移動対象の選択を設定できます。ドラッグを離すと確定し、元の選択範囲は保持され、複数レイヤーも一度のUndo／Redoで戻せます。マテリアルレイヤーではマスクを移動します。パン・変形・レイヤー移動は異なるアイコンで区別できます。",
+          "選択部分を細い変形枠と専用カーソルで操作できます。ハンドルは標準で縦横比を保ち、Ctrlで角・辺を自由変形、枠外で回転、枠内で移動します。ドラッグ後や視点移動後もプレビューを保持し、プロパティで倍率・角度・移動量・回転の中心・補間方式・元画像を残す設定を調整して、左右・上下反転も含めて確定・キャンセルできます。リセット・反転・確定・キャンセルはプロパティ上部のアイコンから操作できます。Shiftの微調整にも対応します。",
+          "Ctrl＋Hで選択メッシュを非表示、Shift＋Hで選択メッシュを表示、Alt＋Hで選択以外を非表示、Ctrl＋Shift＋Hで最後に隠したメッシュを表示できます。メッシュ一覧の表示切り替えも含めてUndo／Redoに対応し、キー割り当ては設定で変更できます。",
+          "マテリアルレイヤーのマスクを、シュリンク選択で形状に沿って選び、移動・回転・拡大縮小できるようになりました。材質の模様はマテリアルの座標に固定されます。",
+          "マスクの変形を含むプロジェクトの再読込には、このバージョン以降が必要です。"
+        ],
+        "improved": [
+          "マテリアル一覧のサムネイルを軽量化し、インストーラーと新規インストール時の容量を削減しました。描画に使うマテリアル画像の品質は保持します。",
+          "UIの初期テーマをWindowsの明暗設定に合わせ、テーマ切り替えとスライダーの見た目・操作フィードバックを改善しました。ブラシ設定や操作ボタンを整理し、筆圧・描画品質の設定を選びやすくしました。",
+          "VRAM設定をまだ保存していない場合は、GPUとPCのメモリ容量に応じて品質プリセットを選びます。「バランス」のUIパネルは半分の解像度で表示します。UV外の作業画像や履歴・書き出し時の一時メモリを削減し、UIのテクスチャ表示をUVシェルの輪郭に沿わせました。UV外の省メモリ効果はGPUの対応状況とUV配置によって異なり、編集データと書き出し品質は保持します。",
+          "標準ブラシ・消しゴムと色混ぜ・ぼかしの初期設定を用途別に見直しました。水彩やエアブラシの薄塗り、鉛筆やパステルの濃淡、スタンプの軽いタップに対応します。柔らかい消しゴム・質感付き消しゴムは筆圧で消去の強さを調整し、硬い消しゴム・細部用消しゴムはしっかり消せます。色混ぜ・ぼかしは筆圧で徐々になじませられます。未変更の標準プリセットは更新し、編集済み・自作プリセットは保持します。材質ブラシで色を書き込まない設定も、保存・再読込後に保持されます。",
+          "3D・2Dエディタのブラシで筆圧による太さの変化を滑らかにし、弱い筆圧でも細く描けるよう改善しました。手ブレ補正中の筆圧と軌跡を揃え、ペンを離す直前まで線を反映します。2Dでも筆圧と手ブレ補正を反映し、高速入力の処理を軽減しました。ペンを動かさず押し込む点描にも対応し、保存済みの線は従来の太さを保持します。新しい細い入り抜きを同じ見た目で再現するにはVer.0.3.0以降が必要です。",
+          "調整レイヤーの合成モードが、UIに表示される27種類すべてに対応するよう修正しました。",
+          "描画範囲の作成・追加・削除・解除をUndo／Redoで戻せるようになりました。描画と同じ履歴で、操作した順に戻せます。",
+          "選択した描画の変形で、確定時の待ち時間を減らしました。",
+          "通常のブラシ描画で変更範囲だけを更新し、プレビュー更新時の不要なGPU待機を減らしました。表示用テクスチャの圧縮をバックグラウンドで処理し、画面更新中の待ち時間を減らしました。圧縮設定を変更した後にプレビューが更新されない問題も修正しました。カーソル移動やペンを止めている間は、変化のない3Dシーンの再描画を省きます。",
+          "パイメニューにフォーカス中のツール名と割り当てキーを表示し、丸い子アイコンから選べます。視点移動ではパン・回転・ズームの操作と設定済みの切替ショートカットも確認できます。",
+          "3Dビューの長方形・楕円・投げ縄・折れ線・シュリンク選択が、開始位置の法線・接線を基準に表面に沿うようになりました。確定前から見えている面の輪郭を表示し、Shiftで表面上の正方形・正円を選択できます。"
+        ]
+      }
+    },
+    "en": {
+      "title": "What changed in Ver.0.3.0",
+      "summary": "Added pressure-controlled flow, expanded selection and transform controls, whole-layer movement, and detachable panels. Thumbnails and preview processing are also lighter.",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "Brushes, erasers, blending and blur now offer Automatic pressure flow and four antialiasing levels: None, Weak, Medium and Strong. Light pressure weakens painting, erasing and blending, and you can choose the smoothness of brush edges. Settings are saved with strokes and with brush/eraser presets; reproducing them requires Ver.0.3.0 or later.",
+          "Drag panel tabs outside the app to use separate windows, or dock them back into the main layout. Panel dimensions, text and controls adapt to the display monitor's DPI.",
+          "M recalls the last paint-selection subtool, and Ctrl+T opens the transform frame. Individual selection subtools have no default keys; choose them in the pie or tool list. S toggles painting symmetry and C enables transparent-color erasing. Custom bindings are preserved.",
+          "K moves layers along the surface across UV seams in the 3D view, or translates the whole layer in the UV view. Properties can target the layer at the click, all layers painted in a selection, and select the moved targets. Release the drag to apply; your original selection is retained. Multiple layers move as one Undo/Redo action, and material layers move their masks. Pan, Transform and Layer Move use distinct icons.",
+          "Transform selected paint with a thin frame and dedicated cursors. Handles preserve the aspect ratio by default; Ctrl freely deforms corners or edges. Rotate outside the frame or move inside it. The preview stays adjustable after dragging or navigating the view: adjust scale, angle, displacement, rotation center, interpolation and Keep original image in Properties, including horizontal and vertical flips, then apply or cancel. Icons at the top of Properties provide Reset, Flip, Apply and Cancel. Shift slows dragging.",
+          "Press Ctrl+H to hide selected meshes, Shift+H to show selected meshes, Alt+H to hide unselected meshes, or Ctrl+Shift+H to show the meshes hidden by the last hide operation. These actions and visibility changes in the mesh list support Undo/Redo. Shortcuts can be reassigned in Preferences.",
+          "Use shrink selection to follow a material layer's mask shape, then move, rotate or scale it. Material patterns stay at their material coordinates.",
+          "Projects containing transformed material masks require this version or later to reopen."
+        ],
+        "improved": [
+          "Reduced material thumbnail data to make installers and fresh installations smaller. Painting material images retain their original quality.",
+          "The initial UI theme follows the Windows light/dark setting. Improved theme transitions, slider appearance and interaction feedback, and reorganized brush controls so pressure and drawing quality settings are easier to choose.",
+          "When no VRAM settings have been saved, the quality preset is chosen from GPU and system memory capacity. Balanced uses half-resolution UI panels. Reduced temporary memory for textures outside UVs, history and export; UI texture displays now follow UV shell outlines. Memory savings outside UVs depend on GPU support and UV layout. Authored pixels and export quality are preserved.",
+          "Reviewed built-in brushes, erasers and blending defaults for each use: light watercolor and airbrush washes, pencil and pastel shading, and stamps that retain their shape with a light tap. Soft and textured erasers use pressure to control removal strength; hard and detail erasers remove paint fully. Blending and blur use pressure for gradual blending. Untouched built-in presets are updated; edited and custom presets are preserved. Material brushes also retain their disabled color channel after saving and reloading presets.",
+          "Brush width changes more smoothly with pen pressure in the 3D and 2D editors, with finer tips at light pressure. Stabilization keeps pressure aligned with the stroke and includes its final movement before pen lift. The 2D editor now applies pen pressure and stabilization, and processes fast input more efficiently. Pressing harder without moving the pen also paints or grows a dot. Saved strokes retain their original width. Reproducing the new fine tapers requires Ver.0.3.0 or later.",
+          "Adjustment layers now calculate all 27 blend modes shown in the UI.",
+          "Paint selection creation, addition, subtraction and clearing now support Undo/Redo in the same history as painting, following the order of your actions.",
+          "Reduced the wait when committing transforms of selected paint.",
+          "Ordinary brush strokes update only the changed area and avoid unnecessary GPU waits when updating previews. Display texture compression runs in the background to reduce waits during screen updates. Fixed previews failing to refresh after changing compression settings. Cursor movement and a held, stationary pen reuse the unchanged 3D scene.",
+          "Pie submenus use round icons, with the focused tool's name and assigned shortcuts shown beside the menu. View navigation also shows pan, rotate and zoom gestures and assigned tool-switch shortcuts.",
+          "Rectangle, ellipse, lasso, polygon and shrink selections in the 3D viewport now follow a surface chart based on the starting normal and tangent. Draft outlines remain visible on the visible surface, and Shift constrains squares and circles in surface dimensions."
+        ]
+      }
+    }
+  }
+}, {
   "id": "v0-2-1",
   "version": "Ver.0.2.1",
   "date": "2026-10-08",
