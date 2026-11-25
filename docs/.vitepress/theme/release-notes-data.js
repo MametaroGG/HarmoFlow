@@ -36,7 +36,7 @@ export const releases = [{
       "highlights": [],
       "changes": {
         "added": [
-          "任意拡張「HarmoAgent」を追加しました。拡張の画面からモデルを追加ダウンロードし、同梱マニュアルを参照した操作案内をPC内で回答します。Workでは自然文からブラシ・外観・ツール・表示・レイヤーなどの操作案を準備し、内容を確認して実行できます。表示中のテクスチャセット内でレイヤー名による対象指定と一意な空白表記の補完ができ、全27種の合成モードに対応します。取得の進捗・中止・再試行、PC内に保存・再開できる会話履歴・入力欄・操作確認をまとめたチャット画面、見出し・強調・箇条書き・表による回答表示、新しい会話、回答の参照箇所の表示に対応します。回答モデルは自動・速度優先・品質優先、または提供元別の一覧でLFM3-VL 2B、Qwen3.5 2B／4B／9B、Phi-4 mini 3.8B、Llama 3.2 3B、Gemma 3 4B、DeepSeek R1 Distill 7B、Ministral 3 3B／8Bから選択でき、取得済みファイルの再利用、選択の保存、モデルのメモリ解放、選択モデルまたは全AIモデル・エンジンの削除ができます。Windows x64に対応します。新規環境の初期選択は LFM3-VL 2B で、画像用データを含む初回取得は約2.06 GBです。約34MBの追加取得でGPU回答を有効にでき、CPU／GPUの切り替えとGPUを使えない場合のCPUへの自動切り替えに対応します。",
+          "任意拡張「HarmoAgent」を追加しました。拡張の画面からモデルを追加ダウンロードし、同梱マニュアルを参照した操作案内をPC内で回答します。Workでは自然文からブラシ・外観・ツール・表示・レイヤーなどの操作案を準備し、内容を確認して実行できます。表示中のテクスチャセット内でレイヤー名による対象指定と一意な空白表記の補完ができ、全27種の合成モードに対応します。取得の進捗・中止・再試行、PC内に保存・再開できる会話履歴・入力欄・操作確認をまとめたチャット画面、見出し・強調・箇条書き・表による回答表示、新しい会話、回答の参照箇所の表示に対応します。回答モデルは自動・速度優先・品質優先、または提供元別の一覧でLFM3-VL 2B、Qwen3.5 2B／4B／9Bから選択でき、取得済みファイルの再利用、選択の保存、モデルのメモリ解放、選択モデルまたは全AIモデル・エンジンの削除ができます。Windows x64に対応します。新規環境の初期選択は LFM3-VL 2B で、画像用データを含む初回取得は約2.06 GBです。約34MBの追加取得でGPU回答を有効にでき、CPU／GPUの切り替えとGPUを使えない場合のCPUへの自動切り替えに対応します。",
           "言語設定に繁体字を追加しました。"
         ],
         "improved": [
@@ -51,7 +51,7 @@ export const releases = [{
       "highlights": [],
       "changes": {
         "added": [
-          "Added the optional HarmoAgent extension. Download its models from the extension panel to receive local operation help grounded in the bundled manual. Work prepares natural-language requests for brush, appearance, tool, view, layer and command-search operations for review and execution, including named layer targets with unique space-variant resolution within the displayed texture set and all 27 layer blend modes. Supports download progress, cancellation and retry, source excerpts, and a chat panel with locally saved, resumable conversation history, a composer, operation review, new conversations, and answers with headings, emphasis, lists and tables. Use Automatic, Faster responses or Higher quality, or choose by provider: LFM3-VL 2B, Qwen3.5 2B/4B/9B, Phi-4 mini 3.8B, Llama 3.2 3B, Gemma 3 4B, DeepSeek R1 Distill 7B or Ministral 3 3B/8B, reuse downloaded files, retain the selection, unload model memory, or uninstall the selected model or all AI models and runtimes. Available on Windows x64. The default on a fresh profile is LFM3-VL 2B, with an initial download of about 2.06 GB including vision support. An additional download of approximately 34 MB enables GPU answers, with CPU/GPU selection and automatic CPU fallback when GPU execution is unavailable.",
+          "Added the optional HarmoAgent extension. Download its models from the extension panel to receive local operation help grounded in the bundled manual. Work prepares natural-language requests for brush, appearance, tool, view, layer and command-search operations for review and execution, including named layer targets with unique space-variant resolution within the displayed texture set and all 27 layer blend modes. Supports download progress, cancellation and retry, source excerpts, and a chat panel with locally saved, resumable conversation history, a composer, operation review, new conversations, and answers with headings, emphasis, lists and tables. Use Automatic, Faster responses or Higher quality, or choose by provider: LFM3-VL 2B, Qwen3.5 2B/4B/9B, reuse downloaded files, retain the selection, unload model memory, or uninstall the selected model or all AI models and runtimes. Available on Windows x64. The default on a fresh profile is LFM3-VL 2B, with an initial download of about 2.06 GB including vision support. An additional download of approximately 34 MB enables GPU answers, with CPU/GPU selection and automatic CPU fallback when GPU execution is unavailable.",
           "Added Traditional Chinese to the language settings."
         ],
         "improved": [
@@ -66,7 +66,7 @@ export const releases = [{
       "highlights": [],
       "changes": {
         "added": [
-          "선택 설치 확장 HarmoAgent를 추가했습니다. 확장 패널에서 모델을 다운로드하면 기본 제공 설명서에 근거한 로컬 사용법 안내를 받을 수 있습니다. Work는 자연어 요청으로 브러시, 모양, 도구, 표시, 레이어 및 명령 검색 작업을 준비하여 검토 후 실행합니다. 표시된 텍스처 세트에서 이름을 지정한 레이어와 유일한 공백 변형 이름 해석, 전체 27개 레이어 블렌드 모드를 지원합니다. 다운로드 진행률, 취소와 재시도, 참조 내용, 로컬 저장 및 복원 가능한 대화 기록, 입력창, 작업 검토, 새 대화 및 제목·강조·목록·표가 있는 답변을 제공합니다. 자동·속도 우선·품질 우선 모드 또는 제공사별 목록에서 LFM3-VL 2B, Qwen3.5 2B/4B/9B, Phi-4 mini 3.8B, Llama 3.2 3B, Gemma 3 4B, DeepSeek R1 Distill 7B 또는 Ministral 3 3B/8B를 선택하고 다운로드 파일 재사용, 선택 유지, 모델 메모리 해제, 선택 모델 제거 또는 모든 AI 모델과 런타임 제거가 가능합니다. Windows x64에서 사용할 수 있습니다. 새 프로필의 기본 모델은 LFM3-VL 2B이며 이미지 지원을 포함한 최초 다운로드는 약 2.06 GB입니다. 약 34 MB를 추가로 다운로드하면 GPU 답변을 사용할 수 있으며 CPU/GPU 선택과 GPU를 사용할 수 없을 때 자동 CPU 전환을 지원합니다.",
+          "선택 설치 확장 HarmoAgent를 추가했습니다. 확장 패널에서 모델을 다운로드하면 기본 제공 설명서에 근거한 로컬 사용법 안내를 받을 수 있습니다. Work는 자연어 요청으로 브러시, 모양, 도구, 표시, 레이어 및 명령 검색 작업을 준비하여 검토 후 실행합니다. 표시된 텍스처 세트에서 이름을 지정한 레이어와 유일한 공백 변형 이름 해석, 전체 27개 레이어 블렌드 모드를 지원합니다. 다운로드 진행률, 취소와 재시도, 참조 내용, 로컬 저장 및 복원 가능한 대화 기록, 입력창, 작업 검토, 새 대화 및 제목·강조·목록·표가 있는 답변을 제공합니다. 자동·속도 우선·품질 우선 모드 또는 제공사별 목록에서 LFM3-VL 2B, Qwen3.5 2B/4B/9B를 선택하고 다운로드 파일 재사용, 선택 유지, 모델 메모리 해제, 선택 모델 제거 또는 모든 AI 모델과 런타임 제거가 가능합니다. Windows x64에서 사용할 수 있습니다. 새 프로필의 기본 모델은 LFM3-VL 2B이며 이미지 지원을 포함한 최초 다운로드는 약 2.06 GB입니다. 약 34 MB를 추가로 다운로드하면 GPU 답변을 사용할 수 있으며 CPU/GPU 선택과 GPU를 사용할 수 없을 때 자동 CPU 전환을 지원합니다.",
           "언어 설정에 번체 중국어를 추가했습니다."
         ],
         "improved": [
@@ -81,7 +81,7 @@ export const releases = [{
       "highlights": [],
       "changes": {
         "added": [
-          "添加可选的 HarmoAgent 扩展。通过扩展面板下载模型，即可根据随附手册获得本地操作帮助。Work将自然语言请求转换为笔刷、外观、工具、显示、图层及命令搜索操作，供检查和执行。支持按名称指定图层，在显示的纹理集中唯一解析仅空格不同的名称，以及全部 27 种图层混合模式。支持下载进度、取消、重试、参考内容、保存并恢复本地对话历史、输入框、操作确认、新对话，以及带标题、强调、列表和表格的回答。可使用自动、速度优先、质量优先，或按提供商选择 LFM3-VL 2B、Qwen3.5 2B/4B/9B、Phi-4 mini 3.8B、Llama 3.2 3B、Gemma 3 4B、DeepSeek R1 Distill 7B 或 Ministral 3 3B/8B，复用已下载文件、保留选择、释放模型内存，或卸载选中模型及全部 AI 模型和运行时。适用于 Windows x64。新配置默认使用 LFM3-VL 2B，首次下载约 2.06 GB（含图像支持）。额外下载约 34 MB 后可使用 GPU 回答，支持 CPU/GPU 切换，并在 GPU 不可用时自动回退到 CPU。",
+          "添加可选的 HarmoAgent 扩展。通过扩展面板下载模型，即可根据随附手册获得本地操作帮助。Work将自然语言请求转换为笔刷、外观、工具、显示、图层及命令搜索操作，供检查和执行。支持按名称指定图层，在显示的纹理集中唯一解析仅空格不同的名称，以及全部 27 种图层混合模式。支持下载进度、取消、重试、参考内容、保存并恢复本地对话历史、输入框、操作确认、新对话，以及带标题、强调、列表和表格的回答。可使用自动、速度优先、质量优先，或按提供商选择 LFM3-VL 2B、Qwen3.5 2B/4B/9B，复用已下载文件、保留选择、释放模型内存，或卸载选中模型及全部 AI 模型和运行时。适用于 Windows x64。新配置默认使用 LFM3-VL 2B，首次下载约 2.06 GB（含图像支持）。额外下载约 34 MB 后可使用 GPU 回答，支持 CPU/GPU 切换，并在 GPU 不可用时自动回退到 CPU。",
           "在语言设置中添加繁体中文。"
         ],
         "improved": [
