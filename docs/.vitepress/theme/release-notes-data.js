@@ -25,6 +25,73 @@ const performance = {
 };
 
 export const releases = [{
+  "id": "v0-4-0",
+  "version": "Ver.0.4.0",
+  "date": "2026-11-25",
+  "sourceUrl": "https://github.com/MametaroGG/HarmoFlow/releases/tag/Ver.0.4.0",
+  "content": {
+    "ja": {
+      "title": "HarmoAgent",
+      "summary": "HarmoAgentによるローカル操作案内と繁体字中国語に対応しました。",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "任意拡張「HarmoAgent」を追加しました。拡張の画面からモデルを追加ダウンロードし、同梱マニュアルを参照した操作案内をPC内で回答します。Workでは自然文からブラシ・外観・ツール・表示・レイヤーなどの操作案を準備し、内容を確認して実行できます。表示中のテクスチャセット内でレイヤー名による対象指定と一意な空白表記の補完ができ、全27種の合成モードに対応します。取得の進捗・中止・再試行、PC内に保存・再開できる会話履歴・入力欄・操作確認をまとめたチャット画面、見出し・強調・箇条書き・表による回答表示、新しい会話、回答の参照箇所の表示に対応します。回答モデルは自動・速度優先・品質優先、または提供元別の一覧でQwen3.5 2B／4B／9B、Phi-4 mini、Llama 3.2、Gemma 3、DeepSeek R1 Distill、Ministral 3 3B／8Bから選択でき、取得済みファイルの再利用、選択の保存、モデルのメモリ解放、選択モデルまたは全AIモデル・エンジンの削除ができます。Windows x64に対応し、初回取得は2Bで約1.97GB、4Bで約3.59GBです。約34MBの追加取得でGPU回答を有効にでき、CPU／GPUの切り替えとGPUを使えない場合のCPUへの自動切り替えに対応します。",
+          "言語設定に繁体字を追加しました。"
+        ],
+        "improved": [
+          "日本語・英語・簡体字・繁体字・韓国語の操作ガイドを全項目揃えました。Chatは質問と同じ言語の資料から、ショートカット・数値入力・各パネル・保存・復旧・書き出しなどを回答し、質問に関係しない説明を省きます。",
+          "HarmoAgent・プラグインの設定・FPSパネル・素材・アプリ情報などの翻訳漏れを補いました。素材IDやユーザーが付けた名前を保持し、言語切り替えの応答を改善しました。"
+        ]
+      }
+    },
+    "en": {
+      "title": "HarmoAgent",
+      "summary": "Get local help with HarmoAgent and use the interface in Traditional Chinese.",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "Added the optional HarmoAgent extension. Download its models from the extension panel to receive local operation help grounded in the bundled manual. Work prepares natural-language requests for brush, appearance, tool, view, layer and command-search operations for review and execution, including named layer targets with unique space-variant resolution within the displayed texture set and all 27 layer blend modes. Supports download progress, cancellation and retry, source excerpts, and a chat panel with locally saved, resumable conversation history, a composer, operation review, new conversations, and answers with headings, emphasis, lists and tables. Use Automatic, Faster responses or Higher quality, or choose by provider: Qwen3.5 2B/4B/9B, Phi-4 mini, Llama 3.2, Gemma 3, DeepSeek R1 Distill or Ministral 3 3B/8B, reuse downloaded files, retain the selection, unload model memory, or uninstall the selected model or all AI models and runtimes. Available on Windows x64; initial downloads total approximately 1.97 GB for 2B or 3.59 GB for 4B. An additional download of approximately 34 MB enables GPU answers, with CPU/GPU selection and automatic CPU fallback when GPU execution is unavailable.",
+          "Added Traditional Chinese to the language settings."
+        ],
+        "improved": [
+          "Expanded the complete operation guides in Japanese, English, Simplified/Traditional Chinese and Korean. Chat answers from the same-language manuals, covering shortcuts, numeric entry, all panels, saving, recovery and export, and omits unrelated instructions.",
+          "Filled untranslated labels in HarmoAgent, plugin controls, the FPS panel, materials and About pages. Improved language-switching responsiveness while preserving resource identifiers and user-defined names."
+        ]
+      }
+    },
+    "ko": {
+      "title": "HarmoAgent",
+      "summary": "HarmoAgent의 로컬 사용 안내와 중국어 번체 인터페이스를 추가했습니다.",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "선택 설치 확장 HarmoAgent를 추가했습니다. 확장 패널에서 모델을 다운로드하면 기본 제공 설명서에 근거한 로컬 사용법 안내를 받을 수 있습니다. Work는 자연어 요청으로 브러시, 모양, 도구, 표시, 레이어 및 명령 검색 작업을 준비하여 검토 후 실행합니다. 표시된 텍스처 세트에서 이름을 지정한 레이어와 유일한 공백 변형 이름 해석, 전체 27개 레이어 블렌드 모드를 지원합니다. 다운로드 진행률, 취소와 재시도, 참조 내용, 로컬 저장 및 복원 가능한 대화 기록, 입력창, 작업 검토, 새 대화 및 제목·강조·목록·표가 있는 답변을 제공합니다. 자동·속도 우선·품질 우선 모드 또는 제공사별 목록에서 Qwen3.5 2B/4B/9B, Phi-4 mini, Llama 3.2, Gemma 3, DeepSeek R1 Distill 또는 Ministral 3 3B/8B를 선택하고 다운로드 파일 재사용, 선택 유지, 모델 메모리 해제, 선택 모델 제거 또는 모든 AI 모델과 런타임 제거가 가능합니다. Windows x64에서 사용하며 최초 다운로드는 2B 약 1.97 GB, 4B 약 3.59 GB입니다. 약 34 MB를 추가로 다운로드하면 GPU 답변을 사용할 수 있으며 CPU/GPU 선택과 GPU를 사용할 수 없을 때 자동 CPU 전환을 지원합니다.",
+          "언어 설정에 번체 중국어를 추가했습니다."
+        ],
+        "improved": [
+          "일본어, 영어, 간체 중국어, 번체 중국어 및 한국어 사용 안내를 전 항목 갖췄습니다. Chat은 질문과 같은 언어의 설명서에서 단축키, 숫자 입력, 모든 패널, 저장, 복구 및 내보내기를 답하며 관계없는 설명을 생략합니다.",
+          "HarmoAgent, 플러그인 설정, FPS 패널, 머티리얼 및 정보 페이지의 번역 누락을 보완했습니다. 리소스 식별자와 사용자 이름을 유지하며 언어 전환의 반응 속도를 개선했습니다."
+        ]
+      }
+    },
+    "zh": {
+      "title": "HarmoAgent",
+      "summary": "新增 HarmoAgent 本地操作指南和繁体中文界面。",
+      "highlights": [],
+      "changes": {
+        "added": [
+          "添加可选的 HarmoAgent 扩展。通过扩展面板下载模型，即可根据随附手册获得本地操作帮助。Work将自然语言请求转换为笔刷、外观、工具、显示、图层及命令搜索操作，供检查和执行。支持按名称指定图层，在显示的纹理集中唯一解析仅空格不同的名称，以及全部 27 种图层混合模式。支持下载进度、取消、重试、参考内容、保存并恢复本地对话历史、输入框、操作确认、新对话，以及带标题、强调、列表和表格的回答。可使用自动、速度优先、质量优先，或按提供商选择 Qwen3.5 2B/4B/9B、Phi-4 mini、Llama 3.2、Gemma 3、DeepSeek R1 Distill 或 Ministral 3 3B/8B，复用已下载文件、保留选择、释放模型内存，或卸载选中模型及全部 AI 模型和运行时。适用于 Windows x64；首次下载量约为 2B 的 1.97 GB 或 4B 的 3.59 GB。额外下载约 34 MB 后可使用 GPU 回答，支持 CPU/GPU 切换，并在 GPU 不可用时自动回退到 CPU。",
+          "在语言设置中添加繁体中文。"
+        ],
+        "improved": [
+          "全面扩充日语、英语、简体中文、繁体中文和韩语操作指南。Chat 根据与问题相同语言的手册回答快捷键、数值输入、各个面板、保存、恢复和导出，省略无关说明。",
+          "补全 HarmoAgent、插件设置、FPS 面板、材质和关于页面的未翻译文字。保留素材标识与用户命名，并改进语言切换的响应速度。"
+        ]
+      }
+    }
+  }
+}, {
   "id": "v0-3-0",
   "version": "Ver.0.3.0",
   "video": { "youtubeId": "xpESrxevyHA", "watchUrl": "https://www.youtube.com/watch?v=xpESrxevyHA" },
